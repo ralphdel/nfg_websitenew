@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nigerian Foundries Group — We Keep Africa's Industries Moving</title>
+<meta name="description" content="Nigerian Foundries Group manufactures tailor-made products and innovative solutions for every industry that keeps Nigeria running. On time. Every time.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════ */
+:root{
+  --navy:      #0D2240;
+  --navy-l:    #1a3a5c;
+  --navy-mid:  #163060;
+  --navy-d:    #081628;
+  --amber:     #F5A623;
+  --amber-d:   #D97706;
+  --amber-l:   #FEF3C7;
+  --red:       #C82E29;
+  --red-d:     #A82520;
+  --red-l:     #FCA5A5;
+  --green:     #10B981;
+  --green-l:   #D1FAE5;
+  --grey:      #6B7280;
+  --grey-d:    #4B5563;
+  --grey-l:    #9CA3AF;
+  --border:    #E5E7EB;
+  --off:       #F8FAFC;
+  --white:     #FFFFFF;
+  --nav-h:     74px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;color:var(--navy);background:var(--white);overflow-x:hidden;}
+
+/* ═══════════════════════════════════════════
+   UTILITY
+═══════════════════════════════════════════ */
+.wrap{max-width:1300px;margin:0 auto;padding:0 40px;}
+.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.ey-line{width:38px;height:3px;border-radius:2px;background:var(--red);}
+.ey-line.a{background:var(--amber);}
+.ey-line.w{background:rgba(255,255,255,.4);}
+.ey-txt{font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:2px;}
+.ey-txt.a{color:var(--amber-d);}
+.ey-txt.w{color:rgba(255,255,255,.6);}
+.sec{padding:96px 0;}
+.sec.off{background:var(--off);}
+.sec.navy{background:linear-gradient(135deg,var(--navy),var(--navy-l));}
+.sec.dark{background:var(--navy-d);}
+.sec-hdr{text-align:center;margin-bottom:56px;}
+.sec-hdr .eyebrow{justify-content:center;}
+.h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:42px;font-weight:900;color:var(--navy);line-height:1.18;margin-bottom:14px;}
+.h2 em{color:var(--amber);font-style:normal;}
+.h2.w{color:#fff;}
+.lead{font-size:17px;color:var(--grey);line-height:1.75;max-width:640px;margin:0 auto;}
+.lead.w{color:rgba(255,255,255,.68);}
+
+/* ═══════════════════════════════════════════
+   NAVBAR
+═══════════════════════════════════════════ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:9999;
+  background:var(--navy);
+  border-bottom:1px solid rgba(245,166,35,.1);
+  transition:background .3s,box-shadow .3s;
+}
+.nav.scrolled{
+  background:rgba(8,22,40,.96);
+  backdrop-filter:blur(18px);
+  box-shadow:0 4px 32px rgba(8,22,40,.5);
+}
+.nav-row{
+  max-width:1300px;margin:0 auto;padding:0 40px;
+  height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+/* Logo */
+.nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none;flex-shrink:0;}
+.logo-gem{
+  width:44px;height:44px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--red),var(--red-d));
+  border-radius:10px;display:flex;align-items:center;justify-content:center;
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:900;font-size:13px;color:#fff;
+  box-shadow:0 0 20px rgba(200,46,41,.35);position:relative;
+}
+.logo-gem::after{content:'';position:absolute;inset:-2px;border-radius:12px;background:linear-gradient(135deg,rgba(245,166,35,.25),transparent);z-index:-1;}
+.logo-words{display:flex;flex-direction:column;gap:1px;}
+.logo-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#fff;letter-spacing:.2px;line-height:1;}
+.logo-name em{color:var(--amber);font-style:normal;}
+.logo-tagline{font-size:10px;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.8px;}
+
+/* Desktop links */
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;}
+.nav-item{position:relative;}
+.nav-btn{
+  display:flex;align-items:center;gap:5px;padding:9px 13px;
+  font-size:13.5px;font-weight:500;color:rgba(255,255,255,.8);
+  background:none;border:none;font-family:'Inter',sans-serif;
+  cursor:pointer;border-radius:8px;transition:all .2s;white-space:nowrap;
+}
+.nav-btn:hover,.nav-item:hover>.nav-btn{color:#fff;background:rgba(255,255,255,.07);}
+.nav-chev{font-size:9px;opacity:.5;transition:transform .25s;margin-top:1px;}
+.nav-item:hover>.nav-btn .nav-chev{transform:rotate(180deg);opacity:1;}
+
+/* Dropdown panels */
+.dd{
+  position:absolute;top:calc(100% + 10px);left:50%;
+  transform:translateX(-50%) translateY(-6px) scale(.97);
+  background:#fff;border-radius:16px;
+  box-shadow:0 20px 70px rgba(13,34,64,.15),0 0 0 1px rgba(13,34,64,.05);
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:all .25s cubic-bezier(.4,0,.2,1);
+  transform-origin:top center;z-index:100;min-width:480px;
+}
+.dd.wide{min-width:660px;}
+.nav-item:hover .dd{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0) scale(1);}
+.dd-top{background:linear-gradient(135deg,var(--navy),var(--navy-l));padding:18px 24px;border-radius:16px 16px 0 0;display:flex;align-items:center;gap:12px;}
+.dd-top-ico{width:34px;height:34px;background:rgba(245,166,35,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+.dd-top-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#fff;}
+.dd-top-sub{font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;}
+.dd-body{padding:16px 18px 18px;}
+.dd-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--grey-l);margin:8px 8px 6px;}
+.dd-grid{display:grid;gap:2px;}
+.dd-grid.c2{grid-template-columns:1fr 1fr;}
+.dd-item{
+  display:flex;align-items:flex-start;gap:11px;padding:11px 12px;
+  border-radius:10px;cursor:pointer;transition:background .15s;text-decoration:none;color:inherit;
+}
+.dd-item:hover{background:var(--off);}
+.dd-item-ico{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;background:var(--off);}
+.dd-item-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:2px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.dd-item-desc{font-size:11.5px;color:var(--grey-l);line-height:1.5;}
+.pill{font-size:9px;font-weight:700;padding:1px 6px;border-radius:4px;text-transform:uppercase;letter-spacing:.3px;white-space:nowrap;}
+.pa{background:var(--amber-l);color:var(--amber-d);}
+.pg{background:var(--green-l);color:#065F46;}
+.pr{background:#FEF2F2;color:var(--red-d);}
+.dd-hr{height:1px;background:var(--border);margin:10px 0;}
+.dd-foot{background:var(--off);padding:12px 24px;border-radius:0 0 16px 16px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.dd-foot-txt{font-size:11px;color:var(--grey-l);}
+.dd-foot-lnk{font-size:12px;font-weight:700;color:var(--amber-d);cursor:pointer;}
+
+/* Nav right */
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.btn-cta{
+  background:var(--amber);color:var(--navy);
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:13px;
+  padding:10px 20px;border-radius:8px;border:none;cursor:pointer;
+  transition:all .2s;white-space:nowrap;
+  box-shadow:0 4px 14px rgba(245,166,35,.3);
+}
+.btn-cta:hover{background:var(--amber-d);transform:translateY(-1px);box-shadow:0 6px 20px rgba(245,166,35,.4);}
+
+/* Hamburger */
+.ham{
+  display:none;flex-direction:column;align-items:center;justify-content:center;
+  width:40px;height:40px;background:rgba(255,255,255,.07);
+  border:1.5px solid rgba(255,255,255,.15);border-radius:8px;
+  cursor:pointer;gap:5px;flex-shrink:0;transition:background .2s;
+}
+.ham:hover{background:rgba(255,255,255,.12);}
+.ham-bar{width:20px;height:2px;background:#fff;border-radius:2px;transition:all .3s cubic-bezier(.4,0,.2,1);transform-origin:center;}
+.ham.open .ham-bar:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.ham.open .ham-bar:nth-child(2){opacity:0;transform:scaleX(0);}
+.ham.open .ham-bar:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* Mobile drawer */
+.mob-menu{
+  display:block;position:fixed;
+  top:var(--nav-h);left:0;right:0;bottom:0;
+  background:var(--navy-d);overflow-y:auto;z-index:9998;
+  transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);
+  visibility:hidden;padding-bottom:40px;
+}
+.mob-menu.open{transform:translateX(0);visibility:visible;}
+.mob-sec{border-bottom:1px solid rgba(255,255,255,.06);}
+.mob-trig{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 24px;font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:700;font-size:15px;color:#fff;cursor:pointer;
+  background:none;border:none;width:100%;text-align:left;transition:background .2s;
+}
+.mob-trig:hover{background:rgba(255,255,255,.04);}
+.mob-trig-l{display:flex;align-items:center;gap:10px;}
+.mob-chev{font-size:12px;color:var(--amber);transition:transform .3s;flex-shrink:0;}
+.mob-sec.open .mob-chev{transform:rotate(180deg);}
+.mob-body{max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1);background:rgba(0,0,0,.12);}
+.mob-sec.open .mob-body{max-height:800px;}
+.mob-lnk{
+  display:flex;align-items:center;gap:12px;padding:13px 24px 13px 36px;
+  color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;font-weight:500;
+  border-left:2px solid transparent;transition:all .2s;cursor:pointer;
+}
+.mob-lnk:hover{color:var(--amber);border-left-color:var(--amber);background:rgba(245,166,35,.05);padding-left:40px;}
+.mob-lnk-ico{font-size:15px;width:22px;text-align:center;flex-shrink:0;}
+.mob-sub-label{padding:10px 24px 4px 24px;font-size:10px;font-weight:700;color:rgba(245,166,35,.6);text-transform:uppercase;letter-spacing:1px;}
+.mob-bottom{padding:20px 24px;}
+.btn-mob-cta{display:block;width:100%;background:var(--amber);color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;padding:15px;border-radius:10px;border:none;cursor:pointer;text-align:center;margin-bottom:12px;box-shadow:0 8px 24px rgba(245,166,35,.3);}
+.mob-contacts{display:flex;gap:8px;}
+.mob-contact-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:11px 8px;border-radius:8px;font-size:12px;font-weight:600;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.7);cursor:pointer;text-decoration:none;transition:background .2s;}
+.mob-contact-btn:hover{background:rgba(255,255,255,.1);color:#fff;}
+
+/* ═══════════════════════════════════════════
+   HERO — 5-SLIDE ROTATING BANNER
+═══════════════════════════════════════════ */
+.hero{
+  min-height:100vh;padding-top:var(--nav-h);
+  background:linear-gradient(135deg,var(--navy-d),var(--navy),var(--navy-l));
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.hero-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,.03) 1px,transparent 1px);background-size:64px 64px;}
+.hero-blob1{position:absolute;top:-30%;right:-15%;width:70%;height:150%;background:radial-gradient(circle,rgba(200,46,41,.12),transparent 60%);animation:blob 14s ease-in-out infinite;}
+.hero-blob2{position:absolute;bottom:-30%;left:-10%;width:60%;height:130%;background:radial-gradient(circle,rgba(245,166,35,.06),transparent 65%);animation:blob 18s ease-in-out infinite reverse;}
+@keyframes blob{0%,100%{transform:scale(1);opacity:.5;}50%{transform:scale(1.1);opacity:.8;}}
+
+/* Slider system */
+.slider{position:relative;z-index:2;flex:1;min-height:calc(100vh - var(--nav-h));overflow:hidden;display:flex;flex-direction:column;}
+.slide-track{display:flex;flex:1;transition:transform .9s cubic-bezier(.77,0,.175,1);will-change:transform;}
+
+/* Individual slide */
+.slide{
+  min-width:100%;width:100%;
+  display:flex;align-items:center;
+  padding:60px 0 96px;position:relative;overflow:hidden;
+}
+
+/* Video background system */
+.vbg{position:absolute;inset:0;z-index:0;overflow:hidden;}
+.vbg video{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;width:auto;height:auto;object-fit:cover;animation:vzoom 20s ease-in-out infinite alternate;}
+@keyframes vzoom{from{transform:translate(-50%,-50%) scale(1);}to{transform:translate(-50%,-50%) scale(1.06);}}
+.vbg-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(8,22,40,.84),rgba(13,34,64,.65),rgba(26,58,92,.72));}
+.vbg-fallback{position:absolute;inset:0;z-index:-1;}
+.vbg::before{content:'';position:absolute;inset:0;z-index:2;opacity:1;transition:opacity .8s ease;}
+.vbg.vloaded::before{opacity:0;pointer-events:none;}
+
+/* Video file label (for developer reference) */
+.v-label{position:absolute;bottom:68px;right:20px;z-index:10;display:flex;align-items:center;gap:6px;background:rgba(8,22,40,.7);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(8px);padding:5px 12px;border-radius:20px;font-size:10px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px;transition:opacity .3s;}
+.v-label:hover{opacity:0;}
+.v-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);animation:vdot 1.5s infinite;flex-shrink:0;}
+@keyframes vdot{0%,100%{opacity:1;}50%{opacity:.3;}}
+
+/* Slide inner content */
+.slide-inner{max-width:1300px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;width:100%;position:relative;z-index:2;}
+
+/* Slide left */
+.slide-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:30px;font-size:11px;font-weight:600;letter-spacing:.5px;margin-bottom:22px;}
+.badge-red{background:rgba(200,46,41,.15);border:1px solid rgba(200,46,41,.3);color:#FCA5A5;}
+.badge-amber{background:rgba(245,166,35,.15);border:1px solid rgba(245,166,35,.3);color:var(--amber);}
+.badge-green{background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.3);color:#6EE7B7;}
+.badge-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;animation:vdot 2s infinite;}
+.slide-h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:54px;font-weight:900;color:#fff;line-height:1.12;margin-bottom:18px;letter-spacing:-.5px;}
+.slide-h1 em{color:var(--amber);font-style:normal;}
+.slide-sub{font-size:17px;color:rgba(255,255,255,.72);line-height:1.8;margin-bottom:30px;max-width:540px;}
+.slide-sub strong{color:rgba(255,255,255,.95);}
+.slide-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px;}
+.btn-primary{background:var(--amber);color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;padding:14px 30px;border-radius:10px;border:none;cursor:pointer;transition:all .25s;box-shadow:0 8px 24px rgba(245,166,35,.35);text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+.btn-primary:hover{background:var(--amber-d);transform:translateY(-2px);box-shadow:0 12px 32px rgba(245,166,35,.45);}
+.btn-ghost{background:transparent;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:15px;padding:14px 30px;border-radius:10px;border:1.5px solid rgba(255,255,255,.25);cursor:pointer;transition:all .25s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber);}
+.slide-stats{display:flex;gap:24px;flex-wrap:wrap;}
+.slide-stat-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:28px;font-weight:900;color:var(--amber);line-height:1;margin-bottom:3px;}
+.slide-stat-lab{font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.6px;}
+.slide-stat-div{width:1px;background:rgba(255,255,255,.12);align-self:stretch;}
+
+/* Slide right visual cards */
+.slide-cards{display:flex;flex-direction:column;gap:12px;}
+.scard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:20px 22px;display:flex;align-items:flex-start;gap:14px;backdrop-filter:blur(8px);transition:all .25s;}
+.scard:hover{background:rgba(255,255,255,.1);border-color:rgba(245,166,35,.3);transform:translateX(4px);}
+.scard-ico{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.scard-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;}
+.scard-desc{font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.55;}
+.scard-badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;margin-top:5px;}
+/* Big single card for some slides */
+.slide-big-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:40px 36px;backdrop-filter:blur(10px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:280px;gap:16px;}
+.big-ico{font-size:72px;line-height:1;}
+.big-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:800;color:#fff;line-height:1.35;}
+.big-stat{font-family:'Plus Jakarta Sans',sans-serif;font-size:52px;font-weight:900;color:var(--amber);line-height:1;}
+.big-lab{font-size:13px;color:rgba(255,255,255,.55);}
+.big-badge{display:inline-block;padding:7px 18px;border-radius:20px;font-size:12px;font-weight:700;}
+
+/* Slider controls */
+.slider-ctrls{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:16px;z-index:10;}
+.sdots{display:flex;gap:7px;align-items:center;}
+.sdot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);border:none;cursor:pointer;padding:0;transition:all .3s;}
+.sdot.on{background:var(--amber);width:22px;border-radius:4px;}
+.sarrow{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);color:#fff;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.sarrow:hover{background:var(--amber);border-color:var(--amber);color:var(--navy);}
+.scounter{font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.8px;min-width:30px;text-align:center;font-variant-numeric:tabular-nums;}
+/* Progress bar */
+.sprogress{position:absolute;bottom:0;left:0;height:3px;background:linear-gradient(90deg,var(--amber),var(--amber-d));transition:width .1s linear;z-index:10;box-shadow:0 0 10px rgba(245,166,35,.4);}
+
+/* ═══════════════════════════════════════════
+   TRUST BAR
+═══════════════════════════════════════════ */
+.trust{background:#fff;border-bottom:1px solid var(--border);padding:22px 0;}
+.trust-row{max-width:1300px;margin:0 auto;padding:0 40px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;}
+.trust-lbl{font-size:11px;font-weight:700;color:var(--grey-l);text-transform:uppercase;letter-spacing:1px;white-space:nowrap;flex-shrink:0;}
+.trust-sep{width:1px;height:28px;background:var(--border);flex-shrink:0;}
+.trust-badges{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.cbadge{display:flex;align-items:center;gap:6px;padding:6px 13px;border-radius:7px;font-size:12px;font-weight:700;border:1.5px solid;}
+.cbadge.g{color:#065F46;background:#ECFDF5;border-color:#A7F3D0;}
+.cbadge.n{color:var(--navy);background:rgba(13,34,64,.06);border-color:rgba(13,34,64,.15);}
+.cbadge.r{color:var(--red-d);background:#FEF2F2;border-color:#FECACA;}
+.cbadge.am{color:var(--amber-d);background:var(--amber-l);border-color:#FCD34D;}
+.clients{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-left:auto;}
+.client-nm{font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:var(--grey-l);transition:color .2s;cursor:default;}
+.client-nm:hover{color:var(--navy);}
+
+/* ═══════════════════════════════════════════
+   THE PROBLEM — Simple, Human
+═══════════════════════════════════════════ */
+.prob-inner{max-width:1300px;margin:0 auto;padding:0 40px;}
+.prob-intro{text-align:center;margin-bottom:56px;}
+.prob-headline{font-family:'Plus Jakarta Sans',sans-serif;font-size:44px;font-weight:900;color:#fff;line-height:1.18;margin-bottom:16px;}
+.prob-headline em{color:var(--amber);font-style:normal;}
+.prob-headline span.rl{color:var(--red-l);}
+.prob-body{font-size:18px;color:rgba(255,255,255,.62);line-height:1.75;max-width:800px;margin:0 auto;}
+.prob-body strong{color:rgba(255,255,255,.9);}
+.prob-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:44px;}
+.pcard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:32px 26px;position:relative;overflow:hidden;transition:all .3s;}
+.pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.pcard.rc::before{background:linear-gradient(90deg,var(--red),var(--red-d));}
+.pcard.ac::before{background:linear-gradient(90deg,var(--amber),var(--amber-d));}
+.pcard.gc::before{background:linear-gradient(90deg,var(--green),#059669);}
+.pcard:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15);transform:translateY(-3px);}
+.pcard-ico{font-size:34px;margin-bottom:14px;display:block;}
+.pcard-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px;color:rgba(200,46,41,.8);}
+.pcard.ac .pcard-tag{color:rgba(245,166,35,.8);}
+.pcard.gc .pcard-tag{color:rgba(16,185,129,.8);}
+.pcard-stat{font-family:'Plus Jakarta Sans',sans-serif;font-size:38px;font-weight:900;line-height:1;margin-bottom:7px;color:#FCA5A5;}
+.pcard.ac .pcard-stat{color:var(--amber);}
+.pcard.gc .pcard-stat{color:#6EE7B7;}
+.pcard-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:9px;line-height:1.35;}
+.pcard-desc{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.65;}
+.prob-banner{background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.2);border-radius:16px;padding:32px 40px;text-align:center;}
+.prob-banner-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:26px;font-weight:800;color:#fff;margin-bottom:10px;line-height:1.35;}
+.prob-banner-title em{color:var(--amber);font-style:normal;}
+.prob-banner-desc{font-size:15px;color:rgba(255,255,255,.62);line-height:1.7;max-width:700px;margin:0 auto 22px;}
+.prob-chips{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.prob-chip{background:rgba(245,166,35,.12);color:var(--amber);border:1px solid rgba(245,166,35,.25);padding:8px 18px;border-radius:20px;font-size:13px;font-weight:600;}
+
+/* ═══════════════════════════════════════════
+   HOW WE WORK — 3 Steps
+═══════════════════════════════════════════ */
+.steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;}
+.steps-row::before{content:'';position:absolute;top:40px;left:calc(16.67% + 16px);right:calc(16.67% + 16px);height:2px;background:linear-gradient(90deg,var(--amber),var(--amber-d));opacity:.3;}
+.step-card{background:#fff;border:2px solid var(--border);border-radius:20px;padding:36px 28px;text-align:center;transition:all .3s;position:relative;}
+.step-card:hover{border-color:var(--amber);transform:translateY(-4px);box-shadow:0 16px 48px rgba(13,34,64,.1);}
+.step-num{width:56px;height:56px;background:linear-gradient(135deg,var(--amber),var(--amber-d));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:900;font-size:22px;color:var(--navy);margin:0 auto 20px;}
+.step-ico{font-size:28px;margin-bottom:14px;}
+.step-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:800;color:var(--navy);margin-bottom:10px;}
+.step-desc{font-size:14px;color:var(--grey);line-height:1.7;}
+.step-detail{margin-top:16px;padding-top:16px;border-top:1px solid var(--border);}
+.step-detail-item{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--grey-d);padding:4px 0;}
+.step-detail-item::before{content:'→';color:var(--amber);font-weight:700;flex-shrink:0;}
+
+/* ═══════════════════════════════════════════
+   INDUSTRIES WE SERVE — Regrouped
+═══════════════════════════════════════════ */
+.ind-main{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:20px;}
+.ind-major{background:#fff;border:2px solid var(--border);border-radius:20px;overflow:hidden;transition:all .3s;cursor:default;}
+.ind-major:hover{border-color:var(--amber);transform:translateY(-4px);box-shadow:0 16px 48px rgba(13,34,64,.1);}
+.ind-major-top{padding:32px 32px 24px;display:flex;align-items:flex-start;gap:16px;}
+.ind-major-ico{font-size:48px;flex-shrink:0;}
+.ind-major-content{}
+.ind-major-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;}
+.ind-major-pain{font-size:12px;font-weight:700;color:var(--red);margin-bottom:8px;display:flex;align-items:center;gap:5px;}
+.ind-major-pain::before{content:'⚠';font-size:11px;}
+.ind-major-desc{font-size:13.5px;color:var(--grey);line-height:1.65;}
+.ind-major-bottom{background:var(--off);padding:16px 32px;border-top:1px solid var(--border);display:flex;gap:8px;flex-wrap:wrap;}
+.ind-tag{display:inline-block;font-size:11px;font-weight:600;background:var(--amber-l);color:var(--amber-d);padding:4px 10px;border-radius:5px;}
+.ind-tag.g{background:var(--green-l);color:#065F46;}
+/* Secondary industries — smaller cards */
+.ind-secondary{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.ind-minor{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:22px 18px;cursor:default;transition:all .25s;position:relative;overflow:hidden;}
+.ind-minor::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--amber),var(--amber-d));transform:scaleX(0);transition:transform .3s;}
+.ind-minor:hover{border-color:var(--amber);transform:translateY(-3px);box-shadow:0 10px 32px rgba(13,34,64,.08);}
+.ind-minor:hover::after{transform:scaleX(1);}
+.ind-minor-ico{font-size:28px;margin-bottom:10px;}
+.ind-minor-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.ind-minor-desc{font-size:12px;color:var(--grey);line-height:1.6;}
+.ind-note{text-align:center;margin-top:20px;font-size:14px;color:var(--grey);}
+.ind-note a{color:var(--amber-d);font-weight:700;cursor:pointer;}
+
+/* ═══════════════════════════════════════════
+   WHAT WE MAKE — Manufacturing Capabilities
+═══════════════════════════════════════════ */
+.make-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.make-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px 22px;transition:all .3s;}
+.make-card:hover{background:rgba(255,255,255,.1);border-color:rgba(245,166,35,.3);transform:translateY(-3px);}
+.make-ico{font-size:36px;margin-bottom:14px;display:block;}
+.make-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#fff;margin-bottom:8px;}
+.make-items{list-style:none;}
+.make-items li{font-size:13px;color:rgba(255,255,255,.55);padding:4px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:7px;}
+.make-items li::before{content:'·';color:var(--amber);font-size:18px;flex-shrink:0;}
+.make-items li:last-child{border-bottom:none;}
+
+/* ═══════════════════════════════════════════
+   VEZAPP — We've Gone Digital
+═══════════════════════════════════════════ */
+.vezapp-inner{max-width:1300px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center;}
+.vezapp-left{}
+.vezapp-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:42px;font-weight:900;color:var(--navy);line-height:1.18;margin-bottom:16px;}
+.vezapp-title em{color:var(--amber);font-style:normal;}
+.vezapp-desc{font-size:16px;color:var(--grey);line-height:1.75;margin-bottom:28px;}
+.vezapp-points{display:flex;flex-direction:column;gap:14px;margin-bottom:32px;}
+.vezapp-point{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--border);transition:all .25s;}
+.vezapp-point:hover{border-color:var(--amber);box-shadow:0 8px 24px rgba(13,34,64,.08);}
+.vezapp-point-ico{width:40px;height:40px;border-radius:9px;background:linear-gradient(135deg,var(--amber),var(--amber-d));display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.vezapp-point-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:3px;}
+.vezapp-point-desc{font-size:13px;color:var(--grey);line-height:1.55;}
+.vezapp-right{}
+.vezapp-screen{background:linear-gradient(135deg,var(--navy),var(--navy-l));border-radius:20px;padding:28px;box-shadow:0 16px 64px rgba(13,34,64,.2);border:2px solid rgba(245,166,35,.2);}
+.vezapp-screen-top{display:flex;align-items:center;gap:8px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.1);}
+.screen-dot{width:10px;height:10px;border-radius:50%;}
+.screen-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:rgba(255,255,255,.6);margin-left:6px;}
+.vezapp-metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
+.vmetric{background:rgba(255,255,255,.06);border-radius:10px;padding:16px;}
+.vmetric-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:28px;font-weight:900;color:var(--amber);line-height:1;margin-bottom:4px;}
+.vmetric-lab{font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.5px;}
+.vezapp-bar-section{background:rgba(255,255,255,.04);border-radius:10px;padding:14px;}
+.vbar-label{font-size:11px;color:rgba(255,255,255,.5);margin-bottom:10px;display:flex;justify-content:space-between;}
+.vbar-track{background:rgba(255,255,255,.1);border-radius:4px;height:8px;overflow:hidden;margin-bottom:8px;}
+.vbar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--amber),var(--amber-d));animation:barfill 2s ease-out forwards;}
+@keyframes barfill{from{width:0;}to{width:var(--w,80%);}}
+
+/* ═══════════════════════════════════════════
+   TVET + INNOVATION
+═══════════════════════════════════════════ */
+.tvet-inner{max-width:1300px;margin:0 auto;padding:0 40px;}
+.tvet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.tvet-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(13,34,64,.07);border:1px solid var(--border);transition:all .3s;}
+.tvet-card:hover{transform:translateY(-5px);box-shadow:0 20px 60px rgba(13,34,64,.12);}
+.tvet-card-top{height:140px;display:flex;align-items:center;justify-content:center;position:relative;font-size:56px;}
+.tvet-card-body{padding:24px;}
+.tvet-card-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:19px;font-weight:800;color:var(--navy);margin-bottom:10px;}
+.tvet-card-desc{font-size:13.5px;color:var(--grey);line-height:1.7;margin-bottom:16px;}
+.tvet-nums{display:flex;gap:20px;}
+.tvet-num-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:26px;font-weight:900;color:var(--amber);line-height:1;}
+.tvet-num-lab{font-size:11px;color:var(--grey-l);text-transform:uppercase;letter-spacing:.5px;}
+
+/* ═══════════════════════════════════════════
+   REAL RESULTS
+═══════════════════════════════════════════ */
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:44px;}
+.rcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:32px 28px;position:relative;overflow:hidden;transition:all .3s;}
+.rcard::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--amber),var(--amber-d));}
+.rcard:hover{background:rgba(255,255,255,.08);border-color:rgba(245,166,35,.3);transform:translateY(-3px);}
+.rcard-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6);font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:18px;}
+.rcard-metrics{display:flex;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+.rmetric{background:rgba(245,166,35,.1);border:1px solid rgba(245,166,35,.2);border-radius:10px;padding:12px 16px;flex:1;min-width:90px;}
+.rmetric-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:28px;font-weight:900;color:var(--amber);line-height:1;margin-bottom:3px;}
+.rmetric-lab{font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.4px;line-height:1.4;}
+.rcard-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:9px;line-height:1.4;}
+.rcard-desc{font-size:13.5px;color:rgba(255,255,255,.55);line-height:1.7;}
+.rcard-quote{margin-top:14px;padding:12px 16px;background:rgba(255,255,255,.05);border-left:3px solid var(--amber);border-radius:0 8px 8px 0;font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;font-style:italic;}
+.results-strip{background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.2);border-radius:16px;padding:32px 40px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;}
+.results-strip-ico{font-size:52px;}
+.results-strip-hl{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:800;color:var(--amber);margin-bottom:8px;line-height:1.35;}
+.results-strip-body{font-size:14.5px;color:rgba(255,255,255,.62);line-height:1.7;}
+.results-strip-body strong{color:#fff;font-weight:700;}
+
+/* ═══════════════════════════════════════════
+   NFG ADVANTAGE TABLE
+═══════════════════════════════════════════ */
+.adv-wrap{overflow-x:auto;border-radius:20px;box-shadow:0 8px 48px rgba(13,34,64,.1);border:1px solid var(--border);}
+.adv-tbl{width:100%;border-collapse:collapse;min-width:720px;}
+.adv-tbl thead tr{background:var(--navy);}
+.adv-tbl th{padding:20px 22px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;text-align:center;color:rgba(255,255,255,.65);}
+.adv-tbl th:first-child{text-align:left;color:rgba(255,255,255,.45);font-size:12px;}
+.adv-tbl th.nfg{background:var(--amber);color:var(--navy);font-size:14px;letter-spacing:0;text-transform:none;}
+.adv-tbl tbody tr{border-bottom:1px solid var(--border);transition:background .15s;}
+.adv-tbl tbody tr:last-child{border-bottom:none;}
+.adv-tbl tbody tr:hover{background:var(--off);}
+.adv-tbl td{padding:16px 22px;font-size:13.5px;color:var(--grey-d);text-align:center;vertical-align:middle;line-height:1.5;}
+.adv-tbl td:first-child{text-align:left;font-weight:700;color:var(--navy);font-size:13px;background:var(--off);}
+.adv-tbl td.nfg{background:rgba(245,166,35,.06);font-weight:700;color:var(--navy);border-left:2px solid rgba(245,166,35,.3);border-right:2px solid rgba(245,166,35,.3);}
+.tg{color:var(--green);font-weight:700;}
+.tb{color:var(--red);font-weight:600;}
+.tm{color:var(--amber-d);font-weight:600;}
+.adv-note{margin-top:20px;display:flex;gap:28px;justify-content:center;flex-wrap:wrap;}
+.adv-note-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--grey);}
+.adv-note-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+
+/* ═══════════════════════════════════════════
+   MD VOICE
+═══════════════════════════════════════════ */
+.md-inner{max-width:1300px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 1.8fr;gap:80px;align-items:center;}
+.md-visual{position:relative;}
+.md-amber-bar{position:absolute;top:32px;left:-16px;width:6px;height:100px;background:linear-gradient(to bottom,var(--amber),var(--amber-d));border-radius:3px;}
+.md-photo{background:linear-gradient(135deg,var(--navy),var(--navy-l));border-radius:24px;aspect-ratio:3/4;max-height:480px;display:flex;align-items:center;justify-content:center;font-size:110px;position:relative;overflow:hidden;border:3px solid rgba(245,166,35,.2);}
+.md-photo::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,34,64,.7),transparent 50%);}
+.md-plate{position:absolute;bottom:24px;left:24px;right:24px;}
+.md-plate-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:19px;font-weight:800;color:#fff;margin-bottom:4px;}
+.md-plate-role{font-size:13px;color:rgba(255,255,255,.55);}
+.md-right{}
+.md-quote-box{position:relative;padding:36px 44px;background:#fff;border-radius:20px;border:2px solid var(--border);margin-bottom:28px;box-shadow:0 8px 40px rgba(13,34,64,.06);}
+.md-open-q{font-family:Georgia,serif;font-size:110px;color:var(--amber);line-height:.7;opacity:.25;position:absolute;top:20px;left:20px;pointer-events:none;}
+.md-q-text{font-family:'Plus Jakarta Sans',sans-serif;font-size:21px;font-weight:700;color:var(--navy);line-height:1.65;position:relative;z-index:1;}
+.md-q-text em{color:var(--amber);font-style:normal;}
+.md-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.md-fact{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;transition:all .25s;}
+.md-fact:hover{border-color:var(--amber);transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,34,64,.08);}
+.md-fact-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:30px;font-weight:900;color:var(--amber);line-height:1;margin-bottom:5px;}
+.md-fact-lab{font-size:11px;color:var(--grey);text-transform:uppercase;letter-spacing:.6px;line-height:1.5;}
+
+/* ═══════════════════════════════════════════
+   LEADERSHIP
+═══════════════════════════════════════════ */
+.exec-row{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;margin-bottom:48px;}
+/* MD hero card */
+.md-card{background:linear-gradient(160deg,var(--navy),var(--navy-l));border:2px solid rgba(245,166,35,.3);border-radius:24px;overflow:hidden;transition:all .3s;box-shadow:0 8px 40px rgba(13,34,64,.15);}
+.md-card:hover{transform:translateY(-5px);box-shadow:0 20px 64px rgba(13,34,64,.22);border-color:var(--amber);}
+.md-card-photo{height:250px;display:flex;align-items:center;justify-content:center;font-size:96px;position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(200,46,41,.2),rgba(245,166,35,.1));}
+.md-ribbon{position:absolute;top:0;left:0;right:0;background:linear-gradient(90deg,var(--amber),var(--amber-d));padding:8px 20px;display:flex;align-items:center;justify-content:space-between;}
+.md-ribbon-txt{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:12px;color:var(--navy);text-transform:uppercase;letter-spacing:1px;}
+.md-ribbon-badge{font-size:10px;font-weight:700;background:rgba(13,34,64,.15);color:var(--navy);padding:2px 8px;border-radius:4px;}
+.md-card-body{padding:26px 28px;}
+.md-card-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:23px;font-weight:900;color:#fff;margin-bottom:5px;}
+.md-card-role{font-size:12px;font-weight:700;color:var(--amber);margin-bottom:13px;text-transform:uppercase;letter-spacing:.6px;}
+.md-card-desc{font-size:13.5px;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:14px;}
+.card-note{display:inline-flex;align-items:center;gap:6px;background:rgba(245,166,35,.15);color:var(--amber);font-size:11px;font-weight:600;padding:5px 10px;border-radius:6px;}
+/* DMD card */
+.dmd-card{background:#fff;border:2px solid rgba(13,34,64,.1);border-radius:24px;overflow:hidden;transition:all .3s;}
+.dmd-card:hover{transform:translateY(-5px);box-shadow:0 20px 64px rgba(13,34,64,.12);border-color:var(--navy);}
+.dmd-card-photo{height:250px;display:flex;align-items:center;justify-content:center;font-size:88px;position:relative;overflow:hidden;background:linear-gradient(135deg,#F8FAFC,#E5E7EB);}
+.dmd-ribbon{position:absolute;top:0;left:0;right:0;background:var(--navy);padding:8px 20px;display:flex;align-items:center;justify-content:space-between;}
+.dmd-ribbon-txt{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:12px;color:#fff;text-transform:uppercase;letter-spacing:.8px;}
+.dmd-ribbon-badge{font-size:10px;font-weight:700;background:rgba(245,166,35,.2);color:var(--amber);padding:2px 8px;border-radius:4px;}
+.dmd-card-body{padding:26px 28px;}
+.dmd-card-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:21px;font-weight:900;color:var(--navy);margin-bottom:5px;}
+.dmd-card-role{font-size:12px;font-weight:700;color:var(--grey-d);margin-bottom:13px;text-transform:uppercase;letter-spacing:.5px;}
+.dmd-card-desc{font-size:13.5px;color:var(--grey);line-height:1.7;margin-bottom:14px;}
+.dmd-note{display:inline-flex;align-items:center;gap:6px;background:rgba(13,34,64,.07);color:var(--navy);font-size:11px;font-weight:600;padding:5px 10px;border-radius:6px;}
+/* Dr Cynthia spotlight */
+.cynthia{background:linear-gradient(135deg,var(--navy-d),#4A0E0B 40%,var(--navy));border-radius:24px;padding:0;overflow:hidden;display:grid;grid-template-columns:1fr 1.7fr;border:1px solid rgba(200,46,41,.2);box-shadow:0 8px 48px rgba(200,46,41,.1);transition:box-shadow .3s;}
+.cynthia:hover{box-shadow:0 16px 64px rgba(200,46,41,.18);}
+.cynthia-vis{background:linear-gradient(160deg,rgba(200,46,41,.3),rgba(8,22,40,.8));display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px 28px;gap:18px;position:relative;overflow:hidden;min-height:300px;}
+.cynthia-vis::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,rgba(200,46,41,.2),transparent 70%);}
+.cynthia-em{font-size:96px;position:relative;z-index:1;}
+.cynthia-vis-badge{position:relative;z-index:1;background:rgba(200,46,41,.3);border:1px solid rgba(200,46,41,.5);color:#FCA5A5;font-size:11px;font-weight:700;padding:6px 16px;border-radius:20px;text-align:center;letter-spacing:.5px;}
+.cynthia-red-bar{position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(to bottom,var(--red),var(--red-d));}
+.cynthia-body{padding:36px 44px;display:flex;flex-direction:column;justify-content:center;gap:16px;}
+.cynthia-ey{display:flex;align-items:center;gap:10px;}
+.cynthia-ey-line{width:30px;height:3px;background:var(--red);border-radius:2px;}
+.cynthia-ey-txt{font-size:11px;font-weight:700;color:var(--red-l);text-transform:uppercase;letter-spacing:2px;}
+.cynthia-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:28px;font-weight:900;color:#fff;line-height:1.2;}
+.cynthia-role{font-size:13px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.6px;margin-top:-6px;}
+.cynthia-quote{font-family:'Plus Jakarta Sans',sans-serif;font-size:19px;font-weight:700;color:#fff;line-height:1.55;padding-left:18px;border-left:3px solid var(--red);font-style:italic;}
+.cynthia-desc{font-size:14px;color:rgba(255,255,255,.6);line-height:1.75;}
+.cynthia-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.ctag{padding:6px 13px;border-radius:8px;font-size:11.5px;font-weight:700;background:rgba(200,46,41,.15);color:#FCA5A5;border:1px solid rgba(200,46,41,.25);}
+.cynthia-note{display:inline-flex;align-items:center;gap:6px;background:rgba(245,166,35,.1);color:var(--amber);font-size:11px;font-weight:600;padding:5px 10px;border-radius:6px;}
+.team-link{text-align:center;margin-top:36px;}
+.team-link a{display:inline-flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;color:var(--navy);text-decoration:none;padding:12px 28px;border:2px solid var(--border);border-radius:10px;transition:all .25s;}
+.team-link a:hover{border-color:var(--amber);color:var(--amber-d);background:var(--amber-l);}
+
+/* ═══════════════════════════════════════════
+   IMPACT
+═══════════════════════════════════════════ */
+.impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.icard{background:#fff;border:1px solid var(--border);border-radius:16px;padding:30px;transition:all .3s;}
+.icard:hover{box-shadow:0 12px 40px rgba(13,34,64,.08);transform:translateY(-3px);}
+.icard-ico{font-size:34px;margin-bottom:14px;}
+.icard-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:9px;}
+.icard-desc{font-size:13.5px;color:var(--grey);line-height:1.7;margin-bottom:14px;}
+.icard-nums{display:flex;gap:20px;}
+.inum-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:26px;font-weight:900;color:var(--amber);line-height:1;}
+.inum-lab{font-size:11px;color:var(--grey-l);text-transform:uppercase;letter-spacing:.5px;}
+
+/* ═══════════════════════════════════════════
+   BLOG PREVIEW
+═══════════════════════════════════════════ */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.bcard{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s;cursor:default;}
+.bcard:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(13,34,64,.1);}
+.bcard-thumb{height:148px;display:flex;align-items:center;justify-content:center;font-size:50px;position:relative;}
+.bcard-cat{position:absolute;top:14px;left:14px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:4px 10px;border-radius:5px;}
+.bcard-body{padding:20px;}
+.bcard-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:7px;line-height:1.4;}
+.bcard-exc{font-size:13px;color:var(--grey);line-height:1.6;margin-bottom:14px;}
+.bcard-meta{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--grey-l);text-transform:uppercase;letter-spacing:.5px;}
+
+/* ═══════════════════════════════════════════
+   FOOTER CTA
+═══════════════════════════════════════════ */
+.fcta{background:var(--amber);padding:76px 0;position:relative;overflow:hidden;}
+.fcta::before{content:'';position:absolute;top:-50%;right:-10%;width:60%;height:200%;background:rgba(255,255,255,.06);border-radius:50%;}
+.fcta-inner{position:relative;z-index:1;text-align:center;max-width:740px;margin:0 auto;padding:0 40px;}
+.fcta-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(13,34,64,.5);margin-bottom:14px;}
+.fcta-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:44px;font-weight:900;color:var(--navy);line-height:1.18;margin-bottom:16px;}
+.fcta-desc{font-size:16px;color:rgba(13,34,64,.65);line-height:1.7;margin-bottom:36px;}
+.fcta-btns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;}
+.btn-dark{background:var(--navy);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;padding:14px 28px;border-radius:9px;border:none;cursor:not-allowed;display:inline-flex;align-items:center;gap:7px;}
+.btn-dark-o{background:transparent;color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:14px;padding:14px 28px;border-radius:9px;border:2px solid rgba(13,34,64,.22);cursor:not-allowed;display:inline-flex;align-items:center;gap:7px;}
+.fcta-contacts{display:flex;gap:28px;justify-content:center;margin-top:24px;flex-wrap:wrap;}
+.fcta-contact{display:flex;align-items:center;gap:7px;font-size:14px;color:rgba(13,34,64,.6);}
+.fcta-contact strong{color:var(--navy);font-weight:700;}
+
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
+.footer{background:var(--navy-d);padding:68px 0 30px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
+.footer-logo-row{display:flex;align-items:center;gap:11px;margin-bottom:14px;}
+.footer-gem{width:38px;height:38px;background:linear-gradient(135deg,var(--red),var(--red-d));border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:900;font-size:12px;color:#fff;}
+.footer-logo-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:13px;color:#fff;}
+.footer-logo-name em{color:var(--amber);font-style:normal;}
+.footer-tagline{font-size:12px;color:rgba(255,255,255,.35);line-height:1.65;margin-bottom:18px;max-width:240px;}
+.footer-socials{display:flex;gap:9px;}
+.soc-btn{width:34px;height:34px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;cursor:not-allowed;transition:all .2s;}
+.soc-btn:hover{background:rgba(255,255,255,.1);}
+.footer-col-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:700;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.8px;margin-bottom:16px;}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:9px;}
+.footer-links a{color:rgba(255,255,255,.4);text-decoration:none;font-size:13px;transition:color .2s;cursor:not-allowed;}
+.footer-links a:hover{color:var(--amber);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.26);}
+.footer-certs-row{display:flex;gap:10px;flex-wrap:wrap;}
+.fcert{font-size:11px;color:rgba(255,255,255,.26);border:1px solid rgba(255,255,255,.1);padding:3px 9px;border-radius:4px;}
+
+/* WhatsApp float */
+.wa{position:fixed;bottom:28px;right:28px;z-index:8888;display:flex;flex-direction:column;align-items:flex-end;gap:9px;}
+.wa-tip{background:var(--navy);color:#fff;font-size:12px;font-weight:600;padding:7px 13px;border-radius:7px;box-shadow:0 4px 16px rgba(0,0,0,.2);opacity:0;transform:translateX(8px);transition:all .3s;white-space:nowrap;cursor:not-allowed;}
+.wa:hover .wa-tip{opacity:1;transform:translateX(0);}
+.wa-btn{width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 8px 24px rgba(37,211,102,.4);cursor:not-allowed;animation:wapulse 3s infinite;}
+@keyframes wapulse{0%,100%{box-shadow:0 8px 24px rgba(37,211,102,.4);}50%{box-shadow:0 8px 40px rgba(37,211,102,.6);}}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — 6 BREAKPOINTS
+═══════════════════════════════════════════ */
+@media(max-width:1200px){
+  .slide-h1{font-size:46px;}
+  .vezapp-inner{grid-template-columns:1fr;gap:48px;}
+  .footer-grid{grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;}
+}
+@media(max-width:1100px){
+  .nav-links{display:none;}
+  .ham{display:flex;}
+  .slide-inner{grid-template-columns:1fr;gap:28px;padding:0 32px;}
+  .slide-cards{display:none;}
+  .slide-big-card{display:none;}
+  .slide-h1{font-size:44px;}
+  .prob-cards{grid-template-columns:1fr 1fr;}
+  .steps-row{grid-template-columns:1fr;}
+  .steps-row::before{display:none;}
+  .ind-main{grid-template-columns:1fr;}
+  .ind-secondary{grid-template-columns:repeat(2,1fr);}
+  .make-grid{grid-template-columns:1fr 1fr;}
+  .results-grid{grid-template-columns:1fr 1fr;}
+  .exec-row{grid-template-columns:1fr;}
+  .cynthia{grid-template-columns:1fr;}
+  .cynthia-vis{min-height:180px;}
+  .md-inner{grid-template-columns:1fr;gap:36px;}
+  .md-photo{max-height:280px;aspect-ratio:auto;}
+  .md-amber-bar{display:none;}
+  .impact-grid{grid-template-columns:1fr 1fr;}
+  .tvet-grid{grid-template-columns:1fr 1fr;}
+  .blog-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:900px){
+  .slide-h1{font-size:38px;}
+  .h2{font-size:34px;}
+  .prob-cards{grid-template-columns:1fr;}
+  .results-grid{grid-template-columns:1fr;}
+  .impact-grid{grid-template-columns:1fr;}
+  .exec-row{gap:16px;}
+  .cynthia-body{padding:28px 24px;}
+  .cynthia-name{font-size:24px;}
+  .cynthia-quote{font-size:17px;}
+}
+@media(max-width:768px){
+  :root{--nav-h:64px;}
+  .nav-row{padding:0 16px;}
+  .logo-tagline{display:none;}
+  .logo-name{font-size:13px;}
+  .logo-gem{width:38px;height:38px;font-size:11px;}
+  .wrap{padding:0 16px;}
+  .sec{padding:60px 0;}
+  .slide{padding:36px 0 72px;}
+  .slide-inner{padding:0 16px;}
+  .slide-h1{font-size:32px;}
+  .slide-sub{font-size:14px;}
+  .slide-badge{font-size:10px;padding:5px 12px;}
+  .slide-btns .btn-ghost{display:none;}
+  .slide-stats{gap:12px;}
+  .slide-stat-val{font-size:22px;}
+  .slide-stat-div{display:none;}
+  .slider-ctrls{bottom:14px;gap:10px;}
+  .scounter{font-size:10px;}
+  .sdot{width:6px;height:6px;}
+  .sdot.on{width:18px;}
+  .v-label{display:none;}
+  .trust-row{padding:0 16px;gap:14px;}
+  .trust-lbl{display:none;}
+  .trust-sep{display:none;}
+  .clients{display:none;}
+  .trust-badges{gap:7px;}
+  .cbadge{font-size:11px;padding:5px 10px;}
+  .prob-inner{padding:0 16px;}
+  .prob-headline{font-size:28px;}
+  .prob-body{font-size:15px;}
+  .prob-banner{padding:24px 20px;}
+  .prob-banner-title{font-size:20px;}
+  .prob-chips{flex-direction:column;align-items:center;}
+  .h2{font-size:28px;}
+  .lead{font-size:15px;}
+  .steps-row{grid-template-columns:1fr;gap:16px;}
+  .ind-secondary{grid-template-columns:1fr 1fr;gap:12px;}
+  .make-grid{grid-template-columns:1fr;}
+  .tvet-grid{grid-template-columns:1fr;}
+  .blog-grid{grid-template-columns:1fr;}
+  .results-strip{grid-template-columns:1fr;padding:22px;gap:14px;}
+  .exec-row{grid-template-columns:1fr;}
+  .md-card-photo,.dmd-card-photo{height:190px;font-size:72px;}
+  .md-card-name{font-size:20px;}
+  .dmd-card-name{font-size:18px;}
+  .cynthia-body{padding:24px 18px;gap:12px;}
+  .cynthia-name{font-size:22px;}
+  .cynthia-quote{font-size:15px;}
+  .cynthia-desc{font-size:13px;}
+  .md-quote-box{padding:24px 20px;}
+  .md-q-text{font-size:17px;}
+  .md-facts{grid-template-columns:1fr 1fr 1fr;gap:10px;}
+  .md-fact{padding:14px 10px;}
+  .md-fact-val{font-size:24px;}
+  .vezapp-inner{padding:0 16px;}
+  .impact-grid{grid-template-columns:1fr;}
+  .fcta-title{font-size:30px;}
+  .fcta-btns{flex-direction:column;align-items:center;}
+  .fcta-contacts{flex-direction:column;align-items:center;gap:10px;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:24px;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;}
+}
+@media(max-width:480px){
+  :root{--nav-h:60px;}
+  .btn-cta{font-size:12px;padding:8px 15px;}
+  .slide-h1{font-size:26px;}
+  .slide-sub{font-size:13px;}
+  .btn-primary{font-size:14px;padding:12px 20px;}
+  .slide-stat-val{font-size:20px;}
+  .h2{font-size:24px;}
+  .ind-secondary{grid-template-columns:1fr 1fr;gap:10px;}
+  .ind-minor{padding:18px 14px;}
+  .footer-grid{grid-template-columns:1fr;}
+  .adv-note{flex-direction:column;align-items:center;}
+}
+@media(max-width:380px){
+  :root{--nav-h:56px;}
+  .logo-words{display:none;}
+  .btn-cta{font-size:11px;padding:7px 13px;}
+  .slide-h1{font-size:22px;}
+  .slide-sub{display:none;}
+  .btn-primary{font-size:13px;padding:11px 18px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav class="nav" id="navbar">
+<div class="nav-row">
+  <a href="#home" class="nav-logo">
+    <div class="logo-gem">NFG</div>
+    <div class="logo-words">
+      <span class="logo-name">NIGERIAN FOUNDRIES <em>GROUP</em></span>
+      <span class="logo-tagline">We Keep Africa's Industries Moving</span>
+    </div>
+  </a>
+
+  <div class="nav-links">
+
+    <!-- WHAT WE DO -->
+    <div class="nav-item">
+      <button class="nav-btn" onclick="sTo('#capabilities')">What We Do <span class="nav-chev">▼</span></button>
+      <div class="dd wide">
+        <div class="dd-top"><div class="dd-top-ico">⚙️</div><div><div class="dd-top-title">What We Do</div><div class="dd-top-sub">From raw material to finished solution — every capability under one roof</div></div></div>
+        <div class="dd-body">
+          <div class="dd-label">Our Process</div>
+          <div class="dd-grid">
+            <div class="dd-item" onclick="sTo('#how-we-work')"><div class="dd-item-ico">🔍</div><div><div class="dd-item-title">Scan, Design &amp; Build <span class="pill pa">Our Process</span></div><div class="dd-item-desc">Laser scan → CAD design → prototype → manufacture → deliver</div></div></div>
+          </div>
+          <div class="dd-hr"></div>
+          <div class="dd-label">What We Make</div>
+          <div class="dd-grid c2">
+            <div class="dd-item" onclick="sTo('#capabilities')"><div class="dd-item-ico">🔩</div><div><div class="dd-item-title">Castings <span class="pill pa">Soon</span></div><div class="dd-item-desc">Ferrous &amp; non-ferrous — steel, iron, aluminium, bronze</div></div></div>
+            <div class="dd-item" onclick="sTo('#capabilities')"><div class="dd-item-ico">⚙️</div><div><div class="dd-item-title">Fabrication &amp; Machining <span class="pill pa">Soon</span></div><div class="dd-item-desc">Precision CNC, heavy fabrication, complex assemblies</div></div></div>
+            <div class="dd-item" onclick="sTo('#capabilities')"><div class="dd-item-ico">🖨️</div><div><div class="dd-item-title">3D Printing — Metal &amp; Plastic <span class="pill pa">Soon</span></div><div class="dd-item-desc">Shell-validated additive manufacturing — 7-day delivery</div></div></div>
+            <div class="dd-item" onclick="sTo('#capabilities')"><div class="dd-item-ico">🛡️</div><div><div class="dd-item-title">Wear Solutions <span class="pill pg">Hardox Certified</span></div><div class="dd-item-desc">Hardox wearparts &amp; Enduraclad CCO — 3× longer life</div></div></div>
+            <div class="dd-item" onclick="sTo('#capabilities')"><div class="dd-item-ico">⚓</div><div><div class="dd-item-title">Corrosion Protection <span class="pill pa">Soon</span></div><div class="dd-item-desc">Metec anodes, ICCP systems — NCDMB compliant</div></div></div>
+            <div class="dd-item" onclick="sTo('#capabilities')"><div class="dd-item-ico">🔁</div><div><div class="dd-item-title">Reverse Engineering <span class="pill pa">Soon</span></div><div class="dd-item-desc">We recreate any obsolete part — 3 weeks from scan to delivery</div></div></div>
+          </div>
+        </div>
+        <div class="dd-foot"><span class="dd-foot-txt">Manufactured in Nigeria. Delivered across Africa.</span><span class="dd-foot-lnk" onclick="sTo('#capabilities')">See All Capabilities ↓</span></div>
+      </div>
+    </div>
+
+    <!-- INDUSTRIES -->
+    <div class="nav-item">
+      <button class="nav-btn" onclick="sTo('#industries')">Industries <span class="nav-chev">▼</span></button>
+      <div class="dd wide">
+        <div class="dd-top"><div class="dd-top-ico">🌍</div><div><div class="dd-top-title">Industries We Serve</div><div class="dd-top-sub">Every industry that keeps Nigeria moving — we're in it with you</div></div></div>
+        <div class="dd-body">
+          <div class="dd-label">Main Sectors</div>
+          <div class="dd-grid c2">
+            <div class="dd-item" onclick="sTo('#industries')"><div class="dd-item-ico" style="background:#FEF3C7;">⛏️</div><div><div class="dd-item-title">Mining, Quarry &amp; Cement <span class="pill pa">Soon</span></div><div class="dd-item-desc">Wear parts, castings, Hardox, Enduraclad, abrasion solutions</div></div></div>
+            <div class="dd-item" onclick="sTo('#industries')"><div class="dd-item-ico" style="background:#FEF2F2;">🛢️</div><div><div class="dd-item-title">Oil &amp; Gas, Offshore &amp; Marine <span class="pill pa">Soon</span></div><div class="dd-item-desc">Corrosion protection, anodes, ICCP, 3D printed parts</div></div></div>
+          </div>
+          <div class="dd-hr"></div>
+          <div class="dd-label">Other Industries</div>
+          <div class="dd-grid c2">
+            <div class="dd-item" onclick="sTo('#industries')"><div class="dd-item-ico" style="background:#FFFBEB;">⚡</div><div><div class="dd-item-title">Power &amp; Utilities <span class="pill pa">Soon</span></div><div class="dd-item-desc">Turbine parts, heat-resistant alloys, rapid supply</div></div></div>
+            <div class="dd-item" onclick="sTo('#industries')"><div class="dd-item-ico" style="background:#F5F3FF;">🌉</div><div><div class="dd-item-title">Infrastructure <span class="pill pa">Soon</span></div><div class="dd-item-desc">Bridge components, rail parts, NCDMB-compliant supply</div></div></div>
+            <div class="dd-item" onclick="sTo('#industries')"><div class="dd-item-ico" style="background:#F0FDF4;">🌾</div><div><div class="dd-item-title">Agro-Allied &amp; Food <span class="pill pa">Soon</span></div><div class="dd-item-desc">Food-grade stainless castings, processing equipment</div></div></div>
+            <div class="dd-item" onclick="sTo('#industries')"><div class="dd-item-ico" style="background:#FEF2F2;">🚢</div><div><div class="dd-item-title">Defence &amp; Vessels <span class="pill pa">Soon</span></div><div class="dd-item-desc">Military-grade precision, legacy system reverse engineering</div></div></div>
+          </div>
+          <div class="dd-hr"></div>
+          <div style="padding:8px 12px;font-size:13px;color:var(--grey);display:flex;align-items:center;gap:8px;">🤝 <span>Don't see your industry? <strong style="color:var(--amber-d);cursor:pointer;" onclick="sTo('#contact')">Talk to us →</strong></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOW WE WORK -->
+    <div class="nav-item">
+      <button class="nav-btn" onclick="sTo('#how-we-work')">How We Work <span class="nav-chev">▼</span></button>
+      <div class="dd">
+        <div class="dd-top"><div class="dd-top-ico">🔄</div><div><div class="dd-top-title">How We Work</div><div class="dd-top-sub">Simple 4-step process — from your problem to your solution</div></div></div>
+        <div class="dd-body">
+          <div class="dd-grid">
+            <div class="dd-item" onclick="sTo('#how-we-work')"><div class="dd-item-ico" style="background:#FFFBEB;">👂</div><div><div class="dd-item-title">Step 1: We Listen</div><div class="dd-item-desc">Tell us your problem. Bring the broken part, drawing, or just describe the challenge.</div></div></div>
+            <div class="dd-item" onclick="sTo('#how-we-work')"><div class="dd-item-ico" style="background:#FEF3C7;">📐</div><div><div class="dd-item-title">Step 2: We Scan &amp; Design</div><div class="dd-item-desc">Laser scanning, 3D CAD modelling, rapid prototyping — we engineer the solution.</div></div></div>
+            <div class="dd-item" onclick="sTo('#how-we-work')"><div class="dd-item-ico" style="background:#FEF2F2;">🔨</div><div><div class="dd-item-title">Step 3: We Manufacture</div><div class="dd-item-desc">Foundry, fabrication, CNC machining or 3D printing — right here in Nigeria.</div></div></div>
+            <div class="dd-item" onclick="sTo('#how-we-work')"><div class="dd-item-ico" style="background:#ECFDF5;">🚚</div><div><div class="dd-item-title">Step 4: We Deliver</div><div class="dd-item-desc">On time. Every time. With Vezapp digital tracking at every stage.</div></div></div>
+            <div class="dd-item" onclick="sTo('#vezapp')" style="background:rgba(245,166,35,.05);border-radius:10px;border:1px solid rgba(245,166,35,.2);"><div class="dd-item-ico" style="background:var(--amber-l);">📊</div><div><div class="dd-item-title" style="color:var(--amber-d);">Vezapp — Our Digital Advantage <span class="pill pa">New</span></div><div class="dd-item-desc">Real-time job tracking, quality data and delivery prediction — powered by AI.</div></div></div>
+          </div>
+        </div>
+        <div class="dd-foot"><span class="dd-foot-txt">Transparent process. No surprises.</span><span class="dd-foot-lnk" onclick="sTo('#how-we-work')">Learn More ↓</span></div>
+      </div>
+    </div>
+
+    <!-- INNOVATION -->
+    <div class="nav-item">
+      <button class="nav-btn" onclick="sTo('#innovation')">Innovation <span class="nav-chev">▼</span></button>
+      <div class="dd">
+        <div class="dd-top"><div class="dd-top-ico">🚀</div><div><div class="dd-top-title">Innovation &amp; Education</div><div class="dd-top-sub">Not just a foundry — Africa's smartest industrial manufacturer</div></div></div>
+        <div class="dd-body">
+          <div class="dd-grid">
+            <div class="dd-item" onclick="sTo('#vezapp')"><div class="dd-item-ico" style="background:var(--amber-l);">📊</div><div><div class="dd-item-title">Vezapp — Digital Manufacturing <span class="pill pa">Live</span></div><div class="dd-item-desc">Real-time tracking, quality control, AI-powered delivery prediction</div></div></div>
+            <div class="dd-item" onclick="sTo('#innovation')"><div class="dd-item-ico" style="background:#ECFDF5;">🎓</div><div><div class="dd-item-title">TVET Programme <span class="pill pa">Soon</span></div><div class="dd-item-desc">Training Nigeria's next generation of industrial engineers</div></div></div>
+            <div class="dd-item" onclick="sTo('#innovation')"><div class="dd-item-ico" style="background:#EFF6FF;">🏫</div><div><div class="dd-item-title">14 University Partnerships <span class="pill pa">Active</span></div><div class="dd-item-desc">Research, curriculum development, graduate pipeline</div></div></div>
+            <div class="dd-item" onclick="sTo('#innovation')"><div class="dd-item-ico" style="background:#FEF2F2;">👩‍🔧</div><div><div class="dd-item-title">Gender &amp; Inclusion <span class="pill pa">Soon</span></div><div class="dd-item-desc">Championing women in engineering across West Africa</div></div></div>
+            <div class="dd-item" onclick="sTo('#innovation')"><div class="dd-item-ico" style="background:#FEF3C7;">🔬</div><div><div class="dd-item-title">NFG Educational Foundation <span class="pill pa">Active</span></div><div class="dd-item-desc">Scholarships, internships, industrial attachments</div></div></div>
+          </div>
+        </div>
+        <div class="dd-foot"><span class="dd-foot-txt">Building Nigeria's industrial independence since 1969</span><span class="dd-foot-lnk" onclick="sTo('#innovation')">Explore Innovation ↓</span></div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="nav-item">
+      <button class="nav-btn" onclick="sTo('#about')">About <span class="nav-chev">▼</span></button>
+      <div class="dd">
+        <div class="dd-top"><div class="dd-top-ico">🏭</div><div><div class="dd-top-title">About Nigerian Foundries Group</div><div class="dd-top-sub">56 years of excellence — 1969 to today and beyond</div></div></div>
+        <div class="dd-body">
+          <div class="dd-label">Leadership</div>
+          <div class="dd-grid">
+            <div class="dd-item" onclick="sTo('#leadership')"><div class="dd-item-ico" style="background:#FEF2F2;">👨‍💼</div><div><div class="dd-item-title">Vassily Barberopoulos <span class="pill pr">MD</span></div><div class="dd-item-desc">Managing Director — The vision behind NFG's transformation</div></div></div>
+            <div class="dd-item" onclick="sTo('#leadership')"><div class="dd-item-ico" style="background:#ECFDF5;">👨‍💼</div><div><div class="dd-item-title">Mr. Baberopoulos <span class="pill pg">DMD</span></div><div class="dd-item-desc">Deputy MD — Engineering excellence across all facilities</div></div></div>
+            <div class="dd-item" onclick="sTo('#cynthia')" style="background:rgba(200,46,41,.04);border-radius:10px;"><div class="dd-item-ico" style="background:#FEF2F2;">👩‍🔧</div><div><div class="dd-item-title" style="color:var(--red-d);">Dr. Cynthia Abima <span class="pill pr">Spotlight</span></div><div class="dd-item-desc">Trailblazing female leader in African heavy manufacturing</div></div></div>
+            <div class="dd-item" onclick="sTo('#leadership')"><div class="dd-item-ico">👥</div><div><div class="dd-item-title">Meet Our Full Team <span class="pill pa">Soon</span></div><div class="dd-item-desc">Complete leadership team — all directors and department heads</div></div></div>
+          </div>
+          <div class="dd-hr"></div>
+          <div class="dd-label">Company</div>
+          <div class="dd-grid c2">
+            <div class="dd-item" onclick="sTo('#about')"><div class="dd-item-ico" style="background:#FEF2F2;">📖</div><div><div class="dd-item-title">Our Story <span class="pill pa">Soon</span></div><div class="dd-item-desc">From 1969 to West Africa's industrial platform</div></div></div>
+            <div class="dd-item" onclick="sTo('#about')"><div class="dd-item-ico" style="background:#ECFDF5;">🏗️</div><div><div class="dd-item-title">Our Facilities <span class="pill pa">Soon</span></div><div class="dd-item-desc">Otta Foundry · Ilupeju · Fabrication Yard</div></div></div>
+            <div class="dd-item" onclick="sTo('#impact')"><div class="dd-item-ico" style="background:#F0FDF4;">🌱</div><div><div class="dd-item-title">ESG &amp; Impact <span class="pill pa">Soon</span></div><div class="dd-item-desc">Sustainability, gender inclusion, community</div></div></div>
+            <div class="dd-item" onclick="sTo('#about')"><div class="dd-item-ico" style="background:#EFF6FF;">💼</div><div><div class="dd-item-title">Careers <span class="pill pa">Soon</span></div><div class="dd-item-desc">Build the machines that build Nigeria</div></div></div>
+          </div>
+        </div>
+        <div class="dd-foot"><span class="dd-foot-txt">RC 6297 · Est. 1969 · Lagos, Nigeria</span><span class="dd-foot-lnk" onclick="sTo('#leadership')">Meet the Team ↓</span></div>
+      </div>
+    </div>
+
+  </div><!-- end nav-links -->
+
+  <div class="nav-right">
+    <button class="btn-cta" onclick="sTo('#contact')">Tell Us Your Challenge</button>
+    <div class="ham" id="ham" onclick="toggleMenu()">
+      <div class="ham-bar"></div><div class="ham-bar"></div><div class="ham-bar"></div>
+    </div>
+  </div>
+</div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <!-- What We Do -->
+  <div class="mob-sec" id="ms-do">
+    <button class="mob-trig" onclick="mToggle('ms-do')"><span class="mob-trig-l"><span>⚙️</span> What We Do</span><span class="mob-chev">▼</span></button>
+    <div class="mob-body">
+      <a class="mob-lnk" onclick="mGo('#how-we-work')"><span class="mob-lnk-ico">🔍</span><div>Scan, Design &amp; Build<div style="font-size:10px;color:rgba(255,255,255,.4);">Our complete process</div></div></a>
+      <a class="mob-lnk" onclick="mGo('#capabilities')"><span class="mob-lnk-ico">🔩</span>Castings &amp; Foundry</a>
+      <a class="mob-lnk" onclick="mGo('#capabilities')"><span class="mob-lnk-ico">⚙️</span>Fabrication &amp; Machining</a>
+      <a class="mob-lnk" onclick="mGo('#capabilities')"><span class="mob-lnk-ico">🖨️</span>3D Printing — Metal &amp; Plastic</a>
+      <a class="mob-lnk" onclick="mGo('#capabilities')"><span class="mob-lnk-ico">🛡️</span>Wear Solutions (Hardox)</a>
+      <a class="mob-lnk" onclick="mGo('#capabilities')"><span class="mob-lnk-ico">⚓</span>Corrosion Protection</a>
+      <a class="mob-lnk" onclick="mGo('#capabilities')"><span class="mob-lnk-ico">🔁</span>Reverse Engineering</a>
+    </div>
+  </div>
+  <!-- Industries -->
+  <div class="mob-sec" id="ms-ind">
+    <button class="mob-trig" onclick="mToggle('ms-ind')"><span class="mob-trig-l"><span>🌍</span> Industries</span><span class="mob-chev">▼</span></button>
+    <div class="mob-body">
+      <a class="mob-lnk" onclick="mGo('#industries')"><span class="mob-lnk-ico">⛏️</span><div>Mining, Quarry &amp; Cement<div style="font-size:10px;color:rgba(255,255,255,.4);">Wear · Castings · Hardox · Enduraclad</div></div></a>
+      <a class="mob-lnk" onclick="mGo('#industries')"><span class="mob-lnk-ico">🛢️</span><div>Oil &amp; Gas, Offshore &amp; Marine<div style="font-size:10px;color:rgba(255,255,255,.4);">Anodes · ICCP · Ferrous parts · 3D print</div></div></a>
+      <a class="mob-lnk" onclick="mGo('#industries')"><span class="mob-lnk-ico">⚡</span>Power &amp; Utilities</a>
+      <a class="mob-lnk" onclick="mGo('#industries')"><span class="mob-lnk-ico">🌉</span>Infrastructure</a>
+      <a class="mob-lnk" onclick="mGo('#industries')"><span class="mob-lnk-ico">🌾</span>Agro-Allied &amp; Food</a>
+      <a class="mob-lnk" onclick="mGo('#industries')"><span class="mob-lnk-ico">🚢</span>Defence &amp; Vessels</a>
+    </div>
+  </div>
+  <!-- How We Work -->
+  <div class="mob-sec" id="ms-how">
+    <button class="mob-trig" onclick="mToggle('ms-how')"><span class="mob-trig-l"><span>🔄</span> How We Work</span><span class="mob-chev">▼</span></button>
+    <div class="mob-body">
+      <a class="mob-lnk" onclick="mGo('#how-we-work')"><span class="mob-lnk-ico">👂</span>Step 1: We Listen</a>
+      <a class="mob-lnk" onclick="mGo('#how-we-work')"><span class="mob-lnk-ico">📐</span>Step 2: We Scan &amp; Design</a>
+      <a class="mob-lnk" onclick="mGo('#how-we-work')"><span class="mob-lnk-ico">🔨</span>Step 3: We Manufacture</a>
+      <a class="mob-lnk" onclick="mGo('#how-we-work')"><span class="mob-lnk-ico">🚚</span>Step 4: We Deliver</a>
+      <a class="mob-lnk" onclick="mGo('#vezapp')" style="border-left:2px solid var(--amber);"><span class="mob-lnk-ico">📊</span><div>Vezapp Digital Advantage<div style="font-size:10px;color:rgba(245,166,35,.6);">Real-time tracking &amp; quality data</div></div></a>
+    </div>
+  </div>
+  <!-- Innovation -->
+  <div class="mob-sec" id="ms-inn">
+    <button class="mob-trig" onclick="mToggle('ms-inn')"><span class="mob-trig-l"><span>🚀</span> Innovation</span><span class="mob-chev">▼</span></button>
+    <div class="mob-body">
+      <a class="mob-lnk" onclick="mGo('#vezapp')"><span class="mob-lnk-ico">📊</span>Vezapp — Digital Manufacturing</a>
+      <a class="mob-lnk" onclick="mGo('#innovation')"><span class="mob-lnk-ico">🎓</span>TVET Programme</a>
+      <a class="mob-lnk" onclick="mGo('#innovation')"><span class="mob-lnk-ico">🏫</span>14 University Partnerships</a>
+      <a class="mob-lnk" onclick="mGo('#innovation')"><span class="mob-lnk-ico">👩‍🔧</span>Gender &amp; Inclusion</a>
+      <a class="mob-lnk" onclick="mGo('#innovation')"><span class="mob-lnk-ico">🔬</span>NFG Educational Foundation</a>
+    </div>
+  </div>
+  <!-- About -->
+  <div class="mob-sec" id="ms-abt">
+    <button class="mob-trig" onclick="mToggle('ms-abt')"><span class="mob-trig-l"><span>🏭</span> About</span><span class="mob-chev">▼</span></button>
+    <div class="mob-body">
+      <div class="mob-sub-label">Leadership</div>
+      <a class="mob-lnk" onclick="mGo('#leadership')"><span class="mob-lnk-ico">👨‍💼</span><div>Vassily Barberopoulos<div style="font-size:10px;color:rgba(255,255,255,.4);">Managing Director</div></div></a>
+      <a class="mob-lnk" onclick="mGo('#leadership')"><span class="mob-lnk-ico">👨‍💼</span><div>Mr. Baberopoulos<div style="font-size:10px;color:rgba(255,255,255,.4);">Deputy Managing Director</div></div></a>
+      <a class="mob-lnk" onclick="mGo('#cynthia')" style="border-left:2px solid rgba(200,46,41,.5);"><span class="mob-lnk-ico">👩‍🔧</span><div>Dr. Cynthia Abima<div style="font-size:10px;color:rgba(200,46,41,.5);">Leadership Spotlight</div></div></a>
+      <a class="mob-lnk" onclick="mGo('#leadership')"><span class="mob-lnk-ico">👥</span>Meet Our Full Team</a>
+      <div class="mob-sub-label">Company</div>
+      <a class="mob-lnk" onclick="mGo('#about')"><span class="mob-lnk-ico">📖</span>Our Story</a>
+      <a class="mob-lnk" onclick="mGo('#about')"><span class="mob-lnk-ico">🏗️</span>Our Facilities</a>
+      <a class="mob-lnk" onclick="mGo('#impact')"><span class="mob-lnk-ico">🌱</span>ESG &amp; Impact</a>
+      <a class="mob-lnk" onclick="mGo('#about')"><span class="mob-lnk-ico">💼</span>Careers</a>
+    </div>
+  </div>
+  <div class="mob-bottom">
+    <button class="btn-mob-cta" onclick="mGo('#contact')">💬 Tell Us Your Challenge</button>
+    <div class="mob-contacts">
+      <a class="mob-contact-btn" href="tel:+234000000000">📞 Call</a>
+      <a class="mob-contact-btn" href="#">💬 WhatsApp</a>
+      <a class="mob-contact-btn" href="mailto:info@nfg.com.ng">✉️ Email</a>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     HERO — 5-SLIDE ROTATING BANNER
+════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-blob1"></div>
+  <div class="hero-blob2"></div>
+  <div class="slider" id="heroSlider">
+    <div class="slide-track" id="slideTrack">
+
+      <!-- SLIDE 1 — Brand Promise -->
+      <div class="slide">
+        <div class="vbg" id="vbg1">
+          <video autoplay muted loop playsinline preload="auto" oncanplay="this.parentElement.classList.add('vloaded')" poster="">
+            <source src="videos/slide1-facility-aerial.mp4" type="video/mp4">
+          </video>
+          <div class="vbg-fallback" style="background:linear-gradient(135deg,#081628,#0D2240,#1a3a5c);"></div>
+          <div class="vbg-overlay"></div>
+        </div>
+        <div class="v-label"><div class="v-dot"></div>Aerial Facility · Molten Metal Pour</div>
+        <div class="slide-inner">
+          <div>
+            <div class="slide-badge badge-red"><div class="badge-dot" style="background:var(--red);"></div>Est. 1969 · Made in Nigeria</div>
+            <h1 class="slide-h1">We Keep Africa's<br><em>Industries Moving.</em></h1>
+            <p class="slide-sub">By manufacturing <strong>tailor-made products</strong>, building <strong>innovative solutions</strong> — on time and every time. Whatever your industry needs to keep running, we make it right here in Nigeria.</p>
+            <div class="slide-btns">
+              <a href="#how-we-work" class="btn-primary" onclick="sTo('#how-we-work');return false;">See How We Do It ↓</a>
+              <a href="#" class="btn-ghost">▶ Watch Our Story</a>
+            </div>
+            <div class="slide-stats">
+              <div><div class="slide-stat-val">56+</div><div class="slide-stat-lab">Years</div></div>
+              <div class="slide-stat-div"></div>
+              <div><div class="slide-stat-val">8</div><div class="slide-stat-lab">Industries</div></div>
+              <div class="slide-stat-div"></div>
+              <div><div class="slide-stat-val">$50M+</div><div class="slide-stat-lab">Import Saved / yr</div></div>
+              <div class="slide-stat-div"></div>
+              <div><div class="slide-stat-val">On Time</div><div class="slide-stat-lab">Every Time</div></div>
+            </div>
+          </div>
+          <div class="slide-cards">
+            <div class="scard"><div class="scard-ico" style="background:rgba(245,166,35,.15);">🏭</div><div><div class="scard-title">One Call. Everything Made.</div><div class="scard-desc">Castings, fabrications, 3D-printed metal, wear plates, corrosion protection — all manufactured in Lagos.</div></div></div>
+            <div class="scard"><div class="scard-ico" style="background:rgba(16,185,129,.15);">✅</div><div><div class="scard-title">Certified Quality You Can Trust</div><div class="scard-desc">ISO 9001. Hardox Wearparts Centre. NCDMB recognised. Shell-validated 3D printing. World-class standards, Nigerian address.</div></div></div>
+            <div class="scard"><div class="scard-ico" style="background:rgba(200,46,41,.15);">🇳🇬</div><div><div class="scard-title">Days, Not Months</div><div class="scard-desc">No import delays. No forex exposure. No waiting 6 months. When your industry needs it, we deliver it — fast.</div><span class="scard-badge" style="background:rgba(200,46,41,.15);color:#FCA5A5;">Local. Fast. Reliable.</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2 — Our Process -->
+      <div class="slide">
+        <div class="vbg" id="vbg2">
+          <video muted loop playsinline preload="none" oncanplay="this.parentElement.classList.add('vloaded')" poster="">
+            <source src="videos/slide2-laser-scan-cad-workshop.mp4" type="video/mp4">
+          </video>
+          <div class="vbg-fallback" style="background:linear-gradient(135deg,#0F172A,#1E3A5F,#0D2240);"></div>
+          <div class="vbg-overlay" style="background:linear-gradient(135deg,rgba(15,23,42,.86),rgba(13,34,64,.66),rgba(30,58,95,.74));"></div>
+        </div>
+        <div class="v-label"><div class="v-dot"></div>Laser Scanner · CAD Screen · Workshop Floor</div>
+        <div class="slide-inner">
+          <div>
+            <div class="slide-badge badge-amber"><div class="badge-dot" style="background:var(--amber);"></div>Our Process — Simple &amp; Transparent</div>
+            <h1 class="slide-h1">We <em>Scan It.</em><br>We Design It.<br>We Build It.</h1>
+            <p class="slide-sub">Bring us your <strong>broken part</strong>, your drawing, or just your problem. Our engineers reverse-engineer, design and manufacture — turning a 6-month import headache into a <strong>3-week local solution.</strong></p>
+            <div class="slide-btns">
+              <a href="#how-we-work" class="btn-primary" onclick="sTo('#how-we-work');return false;">Learn Our Process ↓</a>
+              <a href="#contact" class="btn-ghost" onclick="sTo('#contact');return false;">Submit a Part →</a>
+            </div>
+            <div class="slide-stats">
+              <div><div class="slide-stat-val">3 Wks</div><div class="slide-stat-lab">Avg. Turnaround</div></div>
+              <div class="slide-stat-div"></div>
+              <div><div class="slide-stat-val">±0.01</div><div class="slide-stat-lab">mm Precision</div></div>
+              <div class="slide-stat-div"></div>
+              <div><div class="slide-stat-val">Any</div><div class="slide-stat-lab">Part Recreated</div></div>
+            </div>
+          </div>
+          <div class="slide-big-card" style="border-color:rgba(245,166,35,.25);">
+            <div class="big-ico">🔍</div>
+            <div class="big-title">Scan → Design → Build → Deliver</div>
+            <div class="big-stat">4</div>
+            <div class="big-lab">Simple steps from your problem to your solution</div>
+            <div class="big-badge" style="background:rgba(245,166,35,.15);color:var(--amber);border:1px solid rgba(245,166,35,.3);">No OEM required — we recreate anything</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 — What We Make -->
+      <div class="slide">
+        <div class="vbg" id="vbg3">
+          <video muted loop playsinline preload="none" oncanplay="this.parentElement.classList.add('vloaded')" poster="">
+            <source src="videos/slide3-foundry-fab-3dprint-montage.mp4" type="video/mp4">
+          </video>
+          <div class="vbg-fallback" style="background:linear-gradient(135deg,#3B1A08,#78350F,#0D2240);"></div>
+          <div class="vbg-overlay" style="background:linear-gradient(135deg,rgba(59,26,8,.84),rgba(13,34,64,.68),rgba(26,58,92,.76));"></div>
+        </div>
+        <div class="v-label"><div class="v-dot"></div>Foundry Pour · Fabrication · 3D Printing Montage</div>
+        <div class="slide-inner">
+          <div>
+            <div class="slide-badge badge-amber"><div class="badge-dot" style="background:var(--amber);"></div>Manufacturing Capabilities</div>
+            <h1 class="slide-h1">Whatever Your<br>Industry Needs —<br><em>We Can Make It.</em></h1>
+            <p class="slide-sub">Castings. Fabrications. Precision machined parts. <strong>3D printed metal and plastic.</strong> Abrasion-resistant wear plates. Corrosion protection systems. If your industry depends on it, <strong>we build it in Nigeria.</strong></p>
+            <div class="slide-btns">
+              <a href="#capabilities" class="btn-primary" onclick="sTo('#capabilities');return false;">See What We Make ↓</a>
+              <a href="#industries" class="btn-ghost" onclick="sTo('#industries');return false;">Find Your Industry →</a>
+            </div>
+            <div class="slide-stats">
+              <div><div class="slide-stat-val">4</div><div class="slide-stat-lab">Processes</div></div>
+              <div class="slide-stat-div"></div>
+              <div><div class="slide-stat-val">8T</div><div class="slide-stat-lab">Max Cast Weight</div></div>
+              <div class="slide-stat-div"></div>
+              <div><div class="slide-stat-val">ISO</div><div class="slide-stat-lab">9001 Certified</div></div>
+            </div>
+          </div>
+          <div class="slide-cards">
+            <div class="scard"><div class="scard-ico" style="background:rgba(200,46,41,.15);">🔩</div><div><div class="scard-title">Foundry — Ferrous &amp; Non-Ferrous</div><div class="scard-desc">Steel, iron, aluminium, bronze, copper — 1kg to 8,000kg. All grades, all applications.</div></div></div>
+            <div class="scard"><div class="scard-ico" style="background:rgba(245,166,35,.15);">⚙️</div><div><div class="scard-title">Fabrication, Machining &amp; Assembly</div><div class="scard-desc">Heavy structural fab to precision CNC. Up to 50-ton assemblies. Single-source — no vendor juggling.</div></div></div>
+            <div class="scard"><div class="scard-ico" style="background:rgba(16,185,129,.15);">🖨️</div><div><div class="scard-title">3D Printing — Metal &amp; Plastic</div><div class="scard-desc">Shell-validated metal additive manufacturing. Polymer patterns for faster casting. 7-day prototyping.</div><span class="scard-badge" style="background:rgba(200,46,41,.15);color:#FCA5A5;">Shell Partnership</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4 — Vezapp: We've Gone Digital -->
+      <div class="slide">
+        <div class="vbg" id="vbg4">
+          <video muted loop playsinline preload="none" oncanplay="this.parentElement.classList.add('vloaded')" poster="">
+            <source src="videos/slide4-vezapp-dashboard-3dprint.mp4" type="video/mp4">
+          </video>
+          <div class="vbg-fallback" style="background:linear-gradient(135deg,#0F172A,#1a3a5c,#0D2240);"></div>
+          <div class="vbg-overlay" style="background:linear-gradient(135deg,rgba(15,23,42,.87),rgba(13,34,64,.67),rgba(26,58,92,.76));"></div>
+        </div>
+        <div class="v-label"><div class="v-dot"></div>Vezapp Dashboard · 3D Printer Running · Data Screens</div>
+        <div class="slide-inner">
+          <div>
+            <div class="slide-badge badge-amber"><div class="badge-dot" style="background:var(--amber);"></div>NFG Has Gone Digital — Vezapp</div>
+            <h1 class="slide-h1">We Don't Just<br>Manufacture.<br><em>We Think.</em></h1>
+            <p class="slide-sub">NFG now runs on <strong>Vezapp</strong> — our real-time manufacturing intelligence platform. Every job tracked. Every quality point measured. Every delivery predicted. We're not a traditional foundry. <strong>We're Africa's smartest industrial manufacturer.</strong></p>
+            <div class="slide-btns">
+              <a href="#vezapp" class="btn-primary" onclick="sTo('#vezapp');return false;">Our Digital Advantage ↓</a>
+              <a href="#how-we-work" class="btn-ghost" onclick="sTo('#how-we-work');return false;">How It Works →</a>
+            </div>
+            <div class="slide-stats">
+              <div><div class="slide-stat-val">Live</div><div class="slide-stat-lab">Job Tracking</div></div>
+              <div class="slide-stat-div"></div>
+              <div><div class="slide-stat-val">Real-Time</div><div class="slide-stat-lab">Quality Data</div></div>
+              <div class="slide-stat-div"></div>
+              <div><div class="slide-stat-val">On Time</div><div class="slide-stat-lab">Every Time</div></div>
+            </div>
+          </div>
+          <div class="slide-big-card" style="border-color:rgba(245,166,35,.3);background:rgba(245,166,35,.04);">
+            <div class="big-ico">📊</div>
+            <div class="big-title">Real-Time Manufacturing Intelligence</div>
+            <div class="big-stat" style="font-size:40px;">Vezapp</div>
+            <div class="big-lab">Data-driven quality · Predictive delivery · Zero surprises</div>
+            <div class="big-badge" style="background:rgba(245,166,35,.15);color:var(--amber);border:1px solid rgba(245,166,35,.3);">NFG — Africa's Smartest Industrial Manufacturer</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 5 — Legacy & People -->
+      <div class="slide">
+        <div class="vbg" id="vbg5">
+          <video muted loop playsinline preload="none" oncanplay="this.parentElement.classList.add('vloaded')" poster="">
+            <source src="videos/slide5-tvet-engineers-md-facility.mp4" type="video/mp4">
+          </video>
+          <div class="vbg-fallback" style="background:linear-gradient(135deg,#0D2240,#081628,#163060);"></div>
+          <div class="vbg-overlay" style="background:linear-gradient(135deg,rgba(13,34,64,.86),rgba(8,22,40,.70),rgba(22,48,96,.78));"></div>
+        </div>
+        <div class="v-label"><div class="v-dot"></div>TVET Training · Engineers at Work · MD on Floor</div>
+        <div class="slide-inner">
+          <div>
+            <div class="slide-badge badge-red"><div class="badge-dot" style="background:var(--red);"></div>56 Years of Building Nigeria</div>
+            <h1 class="slide-h1">We Build More<br>Than Products.<br><em>We Build Nigeria.</em></h1>
+            <p class="slide-sub">Since 1969 we have kept Nigeria's industries running. Today we train engineers through <strong>TVET</strong>, partner with <strong>14 universities</strong> and use cutting-edge digital technology — because industrial independence is not just our business. <strong>It is our mission.</strong></p>
+            <div class="slide-btns">
+              <a href="#innovation" class="btn-primary" onclick="sTo('#innovation');return false;">Our Innovation Story ↓</a>
+              <a href="#leadership" class="btn-ghost" onclick="sTo('#leadership');return false;">Meet Our Team →</a>
+            </div>
+            <div class="slide-stats">
+              <div><div class="slide-stat-val">1969</div><div class="slide-stat-lab">Founded</div></div>
+              <div class="slide-stat-div"></div>
+              <div><div class="slide-stat-val">14</div><div class="slide-stat-lab">University MOUs</div></div>
+              <div class="slide-stat-div"></div>
+              <div><div class="slide-stat-val">500+</div><div class="slide-stat-lab">Nigerian Jobs</div></div>
+            </div>
+          </div>
+          <div class="slide-cards">
+            <div class="scard"><div class="scard-ico" style="background:rgba(200,46,41,.15);">🎓</div><div><div class="scard-title">TVET — Training Tomorrow's Engineers</div><div class="scard-desc">Nigeria's industrial future depends on local talent. Our TVET programme builds the engineers who will run Africa's factories.</div></div></div>
+            <div class="scard"><div class="scard-ico" style="background:rgba(245,166,35,.15);">🏫</div><div><div class="scard-title">14 University Partnerships</div><div class="scard-desc">Research, curriculum development and internships across Nigeria's top engineering schools. Knowledge built locally, applied locally.</div></div></div>
+            <div class="scard"><div class="scard-ico" style="background:rgba(16,185,129,.15);">🇳🇬</div><div><div class="scard-title">₦2T+ in Annual Import Savings</div><div class="scard-desc">Every part we make locally is forex Nigeria doesn't spend. Industrial sovereignty — one component at a time.</div><span class="scard-badge" style="background:rgba(16,185,129,.15);color:#6EE7B7;">Building Nigeria Since 1969</span></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end slide-track -->
+
+    <!-- Slider Controls -->
+    <div class="slider-ctrls">
+      <button class="sarrow" id="sPrev">←</button>
+      <div class="sdots" id="sDots"></div>
+      <span class="scounter" id="sCtr">1/5</span>
+      <button class="sarrow" id="sNext">→</button>
+    </div>
+    <div class="sprogress" id="sProgress"></div>
+  </div><!-- end slider -->
+</section>
+
+<!-- ════════ TRUST BAR ════════ -->
+<div class="trust">
+  <div class="trust-row">
+    <span class="trust-lbl">Certified &amp; Recognised</span>
+    <div class="trust-sep"></div>
+    <div class="trust-badges">
+      <div class="cbadge g">✅ Hardox Wearparts Centre</div>
+      <div class="cbadge n">🏛 ISO 9001:2015</div>
+      <div class="cbadge r">🇳🇬 NCDMB Recognised</div>
+      <div class="cbadge am">⭐ Enduraclad Partner</div>
+    </div>
+    <div class="clients">
+      <span class="client-nm">Shell</span>
+      <span class="client-nm">Dangote</span>
+      <span class="client-nm">BUA Group</span>
+      <span class="client-nm">Lafarge</span>
+      <span class="client-nm">NNPC</span>
+      <span class="client-nm">Nigerian Navy</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ THE PROBLEM ════════ -->
+<section class="sec dark" id="the-problem">
+  <div class="prob-inner">
+    <div class="prob-intro">
+      <div class="eyebrow" style="justify-content:center;"><div class="ey-line w"></div><span class="ey-txt w">Why We Exist</span><div class="ey-line w"></div></div>
+      <h2 class="prob-headline">When Industry Stops,<br><em>Everything Stops.</em></h2>
+      <p class="prob-body">Every hour a plant is idle, money is lost. Every month waiting for an import, production suffers. Every dollar spent overseas is a naira that left Nigeria. For 56 years, <strong>NFG has been the answer</strong> — manufacturing what Africa needs, right here at home.</p>
+    </div>
+    <div class="prob-cards">
+      <div class="pcard rc">
+        <span class="pcard-ico">⛏️</span>
+        <div class="pcard-tag">The Downtime Problem</div>
+        <div class="pcard-stat">$50K+</div>
+        <div class="pcard-title">Lost every single hour a mine or plant is idle</div>
+        <div class="pcard-desc">When your equipment wears out or breaks down, time is money — and not small money. Every hour counts. NFG manufactures wear solutions and replacement parts that arrive in days, not months, keeping your operation running.</div>
+      </div>
+      <div class="pcard ac">
+        <span class="pcard-ico">⏳</span>
+        <div class="pcard-tag">The Import Delay Problem</div>
+        <div class="pcard-stat">6 Months</div>
+        <div class="pcard-title">Average wait for critical industrial parts from overseas</div>
+        <div class="pcard-desc">Foreign suppliers quote long lead times. Parts get stuck at ports. Forex is spent. Your plant sits waiting. NFG manufactures locally — 3 weeks average turnaround, zero import complications, naira transactions.</div>
+      </div>
+      <div class="pcard gc">
+        <span class="pcard-ico">🇳🇬</span>
+        <div class="pcard-tag">The Dependency Problem</div>
+        <div class="pcard-stat">₦2T+</div>
+        <div class="pcard-title">Nigeria spends this annually importing what we can make locally</div>
+        <div class="pcard-desc">Industrial dependency on foreign suppliers costs Nigeria billions in forex annually. Every component NFG makes locally keeps that money inside Nigeria — creating jobs, building skills, strengthening the economy.</div>
+      </div>
+    </div>
+    <div class="prob-banner">
+      <div class="prob-banner-title">NFG is the <em>Solution</em> to All Three</div>
+      <p class="prob-banner-desc">One call. We manufacture, innovate and deliver — tailor-made products and solutions for every Nigerian industry. On time. Every time. No imports. No delays. No excuses.</p>
+      <div class="prob-chips">
+        <span class="prob-chip">⚡ Same-day technical response</span>
+        <span class="prob-chip">🏭 Made in Lagos, not overseas</span>
+        <span class="prob-chip">🇳🇬 NCDMB compliant</span>
+        <span class="prob-chip">💰 Naira transactions, zero forex risk</span>
+        <span class="prob-chip">📦 Days, not months</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ HOW WE WORK ════════ -->
+<section class="sec off" id="how-we-work">
+  <div class="wrap">
+    <div class="sec-hdr">
+      <div class="eyebrow"><div class="ey-line"></div><span class="ey-txt">How We Work</span><div class="ey-line"></div></div>
+      <h2 class="h2">Simple Process.<br><em>Serious Results.</em></h2>
+      <p class="lead">Bring us your problem — broken part, drawing, or just a description. We take it from there. Four steps from challenge to solution.</p>
+    </div>
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-ico">👂</div>
+        <div class="step-title">We Listen</div>
+        <div class="step-desc">Tell us your problem. Bring the broken part, share a drawing, or just describe what you need. No jargon required — just tell us what's going wrong.</div>
+        <div class="step-detail">
+          <div class="step-detail-item">Bring the broken component</div>
+          <div class="step-detail-item">Share a drawing or photo</div>
+          <div class="step-detail-item">Describe the challenge</div>
+          <div class="step-detail-item">We assess &amp; advise — free</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-ico">📐</div>
+        <div class="step-title">We Scan &amp; Design</div>
+        <div class="step-desc">Our engineers laser-scan your component, build a precise 3D model and design the optimal manufacturing solution — casting, fabrication, machining or 3D printing.</div>
+        <div class="step-detail">
+          <div class="step-detail-item">Laser scanning to ±0.01mm</div>
+          <div class="step-detail-item">3D CAD modelling</div>
+          <div class="step-detail-item">Rapid prototype if needed</div>
+          <div class="step-detail-item">Quotation provided</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-ico">🔨</div>
+        <div class="step-title">We Manufacture</div>
+        <div class="step-desc">We produce your solution in our Lagos facilities — foundry, fabrication shop, CNC machining centre or 3D printing centre. ISO-certified quality at every step.</div>
+        <div class="step-detail">
+          <div class="step-detail-item">Ferrous &amp; non-ferrous foundry</div>
+          <div class="step-detail-item">Fabrication &amp; machining</div>
+          <div class="step-detail-item">3D printing — metal &amp; plastic</div>
+          <div class="step-detail-item">Quality checked &amp; certified</div>
+        </div>
+      </div>
+    </div>
+    <!-- Vezapp delivery step — full width -->
+    <div style="margin-top:24px;background:#fff;border:2px solid var(--amber);border-radius:20px;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+      <div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+          <div style="width:56px;height:56px;background:linear-gradient(135deg,var(--amber),var(--amber-d));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:900;font-size:22px;color:var(--navy);flex-shrink:0;">4</div>
+          <div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;color:var(--navy);">We Deliver — On Time. Every Time.</div>
+            <div style="font-size:13px;color:var(--grey);margin-top:3px;">Powered by Vezapp digital tracking</div>
+          </div>
+        </div>
+        <p style="font-size:14px;color:var(--grey);line-height:1.75;margin-bottom:16px;">Your finished product arrives on the date we promised. Not a day later. Every job on our Vezapp platform is tracked in real-time — you can see exactly where your order is at any moment.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <span style="background:var(--amber-l);color:var(--amber-d);padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;">📊 Live job tracking</span>
+          <span style="background:var(--amber-l);color:var(--amber-d);padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;">✅ Quality certified</span>
+          <span style="background:var(--amber-l);color:var(--amber-d);padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;">🚚 On-time guarantee</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="background:var(--off);border-radius:12px;padding:18px;text-align:center;">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:32px;font-weight:900;color:var(--amber);line-height:1;margin-bottom:5px;">3 Wks</div>
+          <div style="font-size:11px;color:var(--grey);text-transform:uppercase;letter-spacing:.5px;">Average Delivery</div>
+        </div>
+        <div style="background:var(--off);border-radius:12px;padding:18px;text-align:center;">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:32px;font-weight:900;color:var(--amber);line-height:1;margin-bottom:5px;">100%</div>
+          <div style="font-size:11px;color:var(--grey);text-transform:uppercase;letter-spacing:.5px;">Digital Tracked</div>
+        </div>
+        <div style="background:var(--off);border-radius:12px;padding:18px;text-align:center;grid-column:span 2;">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:900;color:var(--navy);line-height:1;margin-bottom:5px;">On Time &amp; Every Time</div>
+          <div style="font-size:11px;color:var(--grey);text-transform:uppercase;letter-spacing:.5px;">Our Promise to You</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ INDUSTRIES ════════ -->
+<section class="sec" id="industries">
+  <div class="wrap">
+    <div class="sec-hdr">
+      <div class="eyebrow"><div class="ey-line"></div><span class="ey-txt">Industries We Serve</span><div class="ey-line"></div></div>
+      <h2 class="h2">Which Industry <em>Are You In?</em></h2>
+      <p class="lead">Every industry that keeps Nigeria moving — we serve them all. Find yours and see exactly how NFG keeps your operation running.</p>
+    </div>
+    <!-- Two main grouped industries -->
+    <div class="ind-main">
+      <div class="ind-major">
+        <div class="ind-major-top">
+          <div class="ind-major-ico">⛏️🏭</div>
+          <div class="ind-major-content">
+            <div class="ind-major-title">Mining, Quarry &amp; Cement</div>
+            <div class="ind-major-pain">Equipment downtime costs $50K–$100K per hour</div>
+            <div class="ind-major-desc">For the industries that crush, grind and process Africa's raw materials — NFG provides the abrasion-resistant parts and wear solutions that keep your equipment running longer between replacements. Less downtime. More production.</div>
+          </div>
+        </div>
+        <div class="ind-major-bottom">
+          <span class="ind-tag">Abrasion-Resistant Castings</span>
+          <span class="ind-tag">Hardox Wear Plates</span>
+          <span class="ind-tag">Enduraclad VRM</span>
+          <span class="ind-tag">Chromium Carbide Plates</span>
+          <span class="ind-tag">Fabrication</span>
+        </div>
+      </div>
+      <div class="ind-major">
+        <div class="ind-major-top">
+          <div class="ind-major-ico">🛢️⚓</div>
+          <div class="ind-major-content">
+            <div class="ind-major-title">Oil &amp; Gas, Offshore &amp; Marine</div>
+            <div class="ind-major-pain">Corrosion costs offshore operators billions annually</div>
+            <div class="ind-major-desc">For the industries operating in Nigeria's waters and on her continental shelf — NFG provides the corrosion protection systems, precision castings and locally-manufactured parts that keep platforms and vessels safe and operational.</div>
+          </div>
+        </div>
+        <div class="ind-major-bottom">
+          <span class="ind-tag g">Sacrificial Anodes</span>
+          <span class="ind-tag g">ICCP Systems</span>
+          <span class="ind-tag g">Ferrous Castings</span>
+          <span class="ind-tag g">3D Printed Metal Parts</span>
+          <span class="ind-tag g">NCDMB Compliant</span>
+        </div>
+      </div>
+    </div>
+    <!-- Four secondary industries -->
+    <div class="ind-secondary">
+      <div class="ind-minor">
+        <div class="ind-minor-ico">⚡</div>
+        <div class="ind-minor-title">Power &amp; Utilities</div>
+        <div class="ind-minor-desc">Turbine components, heat-resistant alloys and rapid reverse-engineering for critical parts that keep lights on across Nigeria.</div>
+      </div>
+      <div class="ind-minor">
+        <div class="ind-minor-ico">🌉</div>
+        <div class="ind-minor-title">Infrastructure</div>
+        <div class="ind-minor-desc">Bridge components, rail track parts, structural fabrication — building Nigeria's physical backbone. NCDMB-compliant, local supply.</div>
+      </div>
+      <div class="ind-minor">
+        <div class="ind-minor-ico">🌾</div>
+        <div class="ind-minor-title">Agro-Allied &amp; Food</div>
+        <div class="ind-minor-desc">Food-grade stainless castings, processing equipment and crusher components — keeping Nigeria's food supply chain moving.</div>
+      </div>
+      <div class="ind-minor">
+        <div class="ind-minor-ico">🚢</div>
+        <div class="ind-minor-title">Defence &amp; Vessels</div>
+        <div class="ind-minor-desc">Military-grade precision castings and reverse-engineering for legacy vessel components. Trusted by the Nigerian Navy. Complete discretion.</div>
+      </div>
+    </div>
+    <div class="ind-note">Don't see your industry? <a onclick="sTo('#contact')">Tell us your challenge →</a> — if you need it made, we can make it.</div>
+  </div>
+</section>
+
+<!-- ════════ WHAT WE MAKE ════════ -->
+<section class="sec navy" id="capabilities">
+  <div class="wrap">
+    <div class="sec-hdr">
+      <div class="eyebrow"><div class="ey-line a"></div><span class="ey-txt a">Manufacturing Capabilities</span><div class="ey-line a"></div></div>
+      <h2 class="h2 w">Four Ways We <em>Build</em> What You Need</h2>
+      <p class="lead w">No forming. No forging. Four proven manufacturing processes — all under one roof in Lagos. Any material. Any complexity. Any volume.</p>
+    </div>
+    <div class="make-grid">
+      <div class="make-card">
+        <span class="make-ico">🔩</span>
+        <div class="make-title">Ferrous Foundry</div>
+        <ul class="make-items">
+          <li>Manganese Steel</li>
+          <li>High Chrome Iron</li>
+          <li>Ni-Hard</li>
+          <li>SG Iron (Ductile)</li>
+          <li>Stainless &amp; Heat-Resistant Steel</li>
+          <li>1kg to 8,000kg castings</li>
+        </ul>
+      </div>
+      <div class="make-card">
+        <span class="make-ico">🥉</span>
+        <div class="make-title">Non-Ferrous Foundry</div>
+        <ul class="make-items">
+          <li>Aluminium Alloys</li>
+          <li>Bronze &amp; Copper</li>
+          <li>Zinc</li>
+          <li>Sacrificial Anodes (Zinc / Al / Mg)</li>
+          <li>Marine &amp; offshore grades</li>
+          <li>Food-grade stainless</li>
+        </ul>
+      </div>
+      <div class="make-card">
+        <span class="make-ico">⚙️</span>
+        <div class="make-title">Fabrication &amp; Machining</div>
+        <ul class="make-items">
+          <li>5-axis CNC Precision Machining</li>
+          <li>Heavy Structural Fabrication</li>
+          <li>Welding — MIG, TIG, Arc</li>
+          <li>Complete Assemblies</li>
+          <li>Up to 50-ton capacity</li>
+          <li>±0.01mm tolerances</li>
+        </ul>
+      </div>
+      <div class="make-card">
+        <span class="make-ico">🖨️</span>
+        <div class="make-title">3D Printing</div>
+        <ul class="make-items">
+          <li>Metal — Inconel, Stainless, Titanium</li>
+          <li>Tool Steel, Aluminium</li>
+          <li>Polymer — Patterns &amp; Tooling</li>
+          <li>Shell-validated builds</li>
+          <li>7-day prototype delivery</li>
+          <li>Complex geometries</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ VEZAPP — DIGITAL ════════ -->
+<section class="sec off" id="vezapp">
+  <div class="vezapp-inner">
+    <div class="vezapp-left">
+      <div class="eyebrow"><div class="ey-line a"></div><span class="ey-txt a">NFG Has Gone Digital</span></div>
+      <h2 class="vezapp-title">We Don't Just<br>Manufacture.<br><em>We Think.</em></h2>
+      <p class="vezapp-desc">NFG now runs on Vezapp — our real-time manufacturing intelligence platform. It is not just about making things. It is about using data to make sure every thing we make is right, and arrives on time.</p>
+      <div class="vezapp-points">
+        <div class="vezapp-point">
+          <div class="vezapp-point-ico">📊</div>
+          <div>
+            <div class="vezapp-point-title">Real-Time Job Tracking</div>
+            <div class="vezapp-point-desc">Every order tracked from the moment it enters our system to the moment it leaves our gates. You always know where your job is.</div>
+          </div>
+        </div>
+        <div class="vezapp-point">
+          <div class="vezapp-point-ico">✅</div>
+          <div>
+            <div class="vezapp-point-title">Data-Driven Quality Control</div>
+            <div class="vezapp-point-desc">Every quality checkpoint recorded and analysed. Patterns identified before they become problems. Defects caught before they reach you.</div>
+          </div>
+        </div>
+        <div class="vezapp-point">
+          <div class="vezapp-point-ico">🔮</div>
+          <div>
+            <div class="vezapp-point-title">Predictive Delivery</div>
+            <div class="vezapp-point-desc">AI-powered scheduling means we know exactly when your order will be ready — and we're held accountable to it. On time. Every time.</div>
+          </div>
+        </div>
+        <div class="vezapp-point">
+          <div class="vezapp-point-ico">⚙️</div>
+          <div>
+            <div class="vezapp-point-title">Continuous Process Improvement</div>
+            <div class="vezapp-point-desc">Every job teaches us something. Our manufacturing processes improve continuously — faster, better, more efficient with every cycle.</div>
+          </div>
+        </div>
+      </div>
+      <button class="btn-primary" style="cursor:not-allowed;opacity:.8;">Learn More About Vezapp (Coming Soon)</button>
+    </div>
+    <div class="vezapp-right">
+      <div class="vezapp-screen">
+        <div class="vezapp-screen-top">
+          <div class="screen-dot" style="background:#FF5F57;"></div>
+          <div class="screen-dot" style="background:#FEBC2E;"></div>
+          <div class="screen-dot" style="background:#28C840;"></div>
+          <div class="screen-title">Vezapp — NFG Manufacturing Intelligence</div>
+        </div>
+        <div class="vezapp-metrics">
+          <div class="vmetric"><div class="vmetric-val">47</div><div class="vmetric-lab">Jobs In Progress</div></div>
+          <div class="vmetric"><div class="vmetric-val">98.3%</div><div class="vmetric-lab">On-Time Delivery</div></div>
+          <div class="vmetric"><div class="vmetric-val">0</div><div class="vmetric-lab">Quality Failures Today</div></div>
+          <div class="vmetric"><div class="vmetric-val">Live</div><div class="vmetric-lab" style="color:var(--green);">System Status</div></div>
+        </div>
+        <div class="vezapp-bar-section">
+          <div class="vbar-label"><span>Production Capacity Utilisation</span><span style="color:var(--amber);">83%</span></div>
+          <div class="vbar-track"><div class="vbar-fill" style="--w:83%;"></div></div>
+          <div class="vbar-label"><span>Quality Score (This Month)</span><span style="color:var(--green);">98.3%</span></div>
+          <div class="vbar-track"><div class="vbar-fill" style="--w:98.3%;background:linear-gradient(90deg,var(--green),#059669);"></div></div>
+          <div class="vbar-label"><span>On-Time Delivery Rate</span><span style="color:var(--green);">97.1%</span></div>
+          <div class="vbar-track"><div class="vbar-fill" style="--w:97.1%;background:linear-gradient(90deg,#3B82F6,#1D4ED8);animation-delay:.3s;"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ TVET + INNOVATION ════════ -->
+<section class="sec" id="innovation">
+  <div class="tvet-inner">
+    <div class="sec-hdr">
+      <div class="eyebrow"><div class="ey-line"></div><span class="ey-txt">Innovation &amp; Education</span><div class="ey-line"></div></div>
+      <h2 class="h2">We Don't Just Build Products.<br><em>We Build Nigeria.</em></h2>
+      <p class="lead">Industrial independence starts with people. NFG invests in the engineers, technicians and thinkers who will power Africa's industrial future.</p>
+    </div>
+    <div class="tvet-grid">
+      <div class="tvet-card">
+        <div class="tvet-card-top" style="background:linear-gradient(135deg,#064E3B,#10B981);">🎓</div>
+        <div class="tvet-card-body">
+          <div class="tvet-card-title">TVET Programme</div>
+          <div class="tvet-card-desc">NFG's Technical and Vocational Education and Training programme develops Nigeria's next generation of industrial engineers and technicians. Hands-on training in our live facilities — not just classrooms.</div>
+          <div class="tvet-nums">
+            <div><div class="tvet-num-val">Live</div><div class="tvet-num-lab">Programme</div></div>
+            <div><div class="tvet-num-val">Real</div><div class="tvet-num-lab">Factory Training</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="tvet-card">
+        <div class="tvet-card-top" style="background:linear-gradient(135deg,#1E3A5F,#3B82F6);">🏫</div>
+        <div class="tvet-card-body">
+          <div class="tvet-card-title">14 University Partnerships</div>
+          <div class="tvet-card-desc">MOUs with Nigeria's leading engineering universities — curriculum development, research collaboration, industrial attachments and a direct pipeline of graduate talent into Nigeria's manufacturing sector.</div>
+          <div class="tvet-nums">
+            <div><div class="tvet-num-val">14</div><div class="tvet-num-lab">University Partners</div></div>
+            <div><div class="tvet-num-val">100+</div><div class="tvet-num-lab">Graduates / yr</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="tvet-card">
+        <div class="tvet-card-top" style="background:linear-gradient(135deg,#7C2D12,#C82E29);">👩‍🔧</div>
+        <div class="tvet-card-body">
+          <div class="tvet-card-title">NFG Educational Foundation</div>
+          <div class="tvet-card-desc">Scholarships, internships and industrial attachments for Nigerian students — with a particular focus on creating pathways for women in engineering. Because Africa's industrial future will be built by all Nigerians.</div>
+          <div class="tvet-nums">
+            <div><div class="tvet-num-val">Active</div><div class="tvet-num-lab">Foundation</div></div>
+            <div><div class="tvet-num-val">500+</div><div class="tvet-num-lab">Nigerian Jobs</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ REAL RESULTS ════════ -->
+<section class="sec navy" id="results">
+  <div class="wrap">
+    <div class="sec-hdr">
+      <div class="eyebrow"><div class="ey-line a"></div><span class="ey-txt a">Proven Results</span><div class="ey-line a"></div></div>
+      <h2 class="h2 w">Real Projects. <em>Real Numbers.</em><br>Real Nigeria.</h2>
+      <p class="lead w">Not claims. Not projections. These are actual outcomes for real Nigerian clients — in plain language.</p>
+    </div>
+    <div class="results-grid">
+      <div class="rcard">
+        <div class="rcard-badge">🏭 Nigerian Cement Plant</div>
+        <div class="rcard-metrics">
+          <div class="rmetric"><div class="rmetric-val">$1.8M</div><div class="rmetric-lab">Saved annually</div></div>
+          <div class="rmetric"><div class="rmetric-val">4×</div><div class="rmetric-lab">Longer part life</div></div>
+        </div>
+        <div class="rcard-title">Grinding table lasting 140 days instead of 35 — and the plant finally stopped bleeding money</div>
+        <div class="rcard-desc">A cement plant was replacing its grinding table every 5 weeks, causing repeated shutdowns and massive daily losses. NFG applied Enduraclad CCO technology. The table now lasts 140+ days. Downtime dropped from 100+ days annually to under 25.</div>
+        <div class="rcard-quote">"We used to replace it every 5 weeks. Now we replace it twice a year. The plant manager can plan — not just react."</div>
+      </div>
+      <div class="rcard">
+        <div class="rcard-badge">⛏️ Nigerian Mining Operation</div>
+        <div class="rcard-metrics">
+          <div class="rmetric"><div class="rmetric-val">3×</div><div class="rmetric-lab">Longer service life</div></div>
+          <div class="rmetric"><div class="rmetric-val">$180K</div><div class="rmetric-lab">Saved per year</div></div>
+        </div>
+        <div class="rcard-title">Dump truck bodies lasting 24 months instead of 8 — the replacement budget disappeared</div>
+        <div class="rcard-desc">A mining operation's dump truck bodies failed every 8 months — constant replacements, constant downtime. NFG fabricated Hardox 450 bodies. They've been running 24+ months and counting. Plus 15% fuel saving from reduced body weight.</div>
+        <div class="rcard-quote">"We used to budget for replacements twice a year. Now it's off our radar entirely."</div>
+      </div>
+      <div class="rcard">
+        <div class="rcard-badge">🛢️ Shell — Oil &amp; Gas</div>
+        <div class="rcard-metrics">
+          <div class="rmetric"><div class="rmetric-val">7 days</div><div class="rmetric-lab">vs 6-month OEM quote</div></div>
+          <div class="rmetric"><div class="rmetric-val">✅</div><div class="rmetric-lab">Shell-validated</div></div>
+        </div>
+        <div class="rcard-title">Critical offshore component delivered in 7 days — while the OEM said wait 6 months</div>
+        <div class="rcard-desc">Shell needed a critical offshore Inconel component urgently. The OEM quoted 6 months. Every day offline cost hundreds of thousands. NFG's additive manufacturing centre produced a Shell-validated qualified build in 7 days — certified and delivered from Lagos.</div>
+        <div class="rcard-quote">"This is exactly why we supported NFG's additive facility. When it matters most, local capability saves the day."</div>
+      </div>
+    </div>
+    <div class="results-strip">
+      <div class="results-strip-ico">🇳🇬</div>
+      <div>
+        <div class="results-strip-hl">$50M+ Kept Inside Nigeria — Every Single Year</div>
+        <div class="results-strip-body">Every component NFG manufactures locally is a component Nigeria doesn't import. <strong>Across 56 years of operation, NFG has kept billions of naira inside the Nigerian economy</strong> — creating jobs, developing engineers, building a supply chain that doesn't depend on foreign goodwill or forex availability. This is industrial sovereignty.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ NFG ADVANTAGE TABLE ════════ -->
+<section class="sec off" id="why-nfg">
+  <div class="wrap">
+    <div class="sec-hdr">
+      <div class="eyebrow"><div class="ey-line"></div><span class="ey-txt">The NFG Advantage</span><div class="ey-line"></div></div>
+      <h2 class="h2">Why NFG vs. <em>Every Alternative</em></h2>
+      <p class="lead">Before you call an overseas supplier or settle for a local workshop — see exactly what each option delivers on every dimension that matters.</p>
+    </div>
+    <div class="adv-wrap">
+      <table class="adv-tbl">
+        <thead>
+          <tr>
+            <th style="width:22%;">What Matters</th>
+            <th>🌍 Overseas Import</th>
+            <th>🔧 Local Workshop</th>
+            <th class="nfg">⭐ Nigerian Foundries Group</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Delivery Time</td><td><span class="tb">3–6 months</span><br><small>Plus customs delays</small></td><td><span class="tm">2–6 weeks</span></td><td class="nfg"><span class="tg">Days to 3 weeks</span><br><small>Committed turnaround</small></td></tr>
+          <tr><td>Emergency Response</td><td><span class="tb">None — you wait</span></td><td><span class="tm">Variable</span></td><td class="nfg"><span class="tg">Same-day site visit</span></td></tr>
+          <tr><td>Quality Standard</td><td><span class="tg">High (when correct)</span></td><td><span class="tb">Unverified</span></td><td class="nfg"><span class="tg">ISO 9001 · Full certs</span></td></tr>
+          <tr><td>Hardox Wear Parts</td><td><span class="tm">Available — long lead</span></td><td><span class="tb">Not available ❌</span></td><td class="nfg"><span class="tg">✅ Certified Centre</span></td></tr>
+          <tr><td>VRM / Cement Solutions</td><td><span class="tm">European only — slow</span></td><td><span class="tb">Not available ❌</span></td><td class="nfg"><span class="tg">Enduraclad CCO — 3-day</span></td></tr>
+          <tr><td>Metal 3D Printing</td><td><span class="tm">Yes — overseas, slow</span></td><td><span class="tb">Not available ❌</span></td><td class="nfg"><span class="tg">✅ Shell-validated · 7 days</span></td></tr>
+          <tr><td>Reverse Engineering</td><td><span class="tb">Expensive, months</span></td><td><span class="tm">Basic only</span></td><td class="nfg"><span class="tg">Laser scan → 3 weeks</span></td></tr>
+          <tr><td>NCDMB Compliance</td><td><span class="tb">❌ Foreign content</span></td><td><span class="tb">❌ Usually none</span></td><td class="nfg"><span class="tg">✅ NCDMB Recognised</span></td></tr>
+          <tr><td>Forex / Currency Risk</td><td><span class="tb">100% forex exposure</span></td><td><span class="tg">Local naira pricing</span></td><td class="nfg"><span class="tg">Local naira — zero forex</span></td></tr>
+          <tr><td>Technical Support</td><td><span class="tb">Email / phone only</span></td><td><span class="tm">Limited expertise</span></td><td class="nfg"><span class="tg">On-site engineers, 56 yrs</span></td></tr>
+          <tr><td>Digital Tracking (Vezapp)</td><td><span class="tb">None</span></td><td><span class="tb">None</span></td><td class="nfg"><span class="tg">✅ Real-time live tracking</span></td></tr>
+          <tr><td style="font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:800;color:var(--navy);">Verdict</td><td style="color:var(--red);font-weight:600;text-align:center;">Quality but<br>slow &amp; expensive</td><td style="color:var(--amber-d);font-weight:600;text-align:center;">Fast but<br>limited &amp; unverified</td><td class="nfg" style="font-size:14px;font-weight:800;color:var(--navy);text-align:center;">Quality + Speed +<br>Compliance + Digital</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="adv-note">
+      <div class="adv-note-item"><div class="adv-note-dot" style="background:var(--green);"></div>NFG leads on 10 of 11 dimensions</div>
+      <div class="adv-note-item"><div class="adv-note-dot" style="background:var(--amber);"></div>Based on verified client experience &amp; industry benchmarks</div>
+      <div class="adv-note-item"><div class="adv-note-dot" style="background:var(--red);"></div>NCDMB compliance only from recognised Nigerian suppliers</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ MD VOICE ════════ -->
+<section class="sec off" id="founder">
+  <div class="md-inner">
+    <div class="md-visual">
+      <div class="md-amber-bar"></div>
+      <div class="md-photo">
+        👨‍💼
+        <div class="md-plate">
+          <div class="md-plate-name">Vassily Barberopoulos</div>
+          <div class="md-plate-role">Managing Director, Nigerian Foundries Group</div>
+        </div>
+      </div>
+    </div>
+    <div class="md-right">
+      <div class="eyebrow"><div class="ey-line"></div><span class="ey-txt">From the Managing Director</span></div>
+      <div class="md-quote-box">
+        <div class="md-open-q">"</div>
+        <p class="md-q-text">Nigeria has everything it needs to manufacture world-class industrial components. The talent is here. The will is here. <em>We have been proving it since 1969.</em><br><br>Every part we make locally is a step toward industrial sovereignty. Every engineer we train is a step toward self-reliance. Every naira we keep in Nigeria is a step away from dependency.<br><br>When a cement plant calls us at midnight because their mill is down, we don't tell them to wait for a European quote. We drive to the site. <em>That is what on time and every time actually means.</em></p>
+      </div>
+      <div class="md-facts">
+        <div class="md-fact"><div class="md-fact-val">56+</div><div class="md-fact-lab">Years of Nigerian Manufacturing</div></div>
+        <div class="md-fact"><div class="md-fact-val">500+</div><div class="md-fact-lab">Nigerian Jobs Created</div></div>
+        <div class="md-fact"><div class="md-fact-val">14</div><div class="md-fact-lab">University Partnerships</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ LEADERSHIP ════════ -->
+<section class="sec" id="leadership">
+  <div class="wrap">
+    <div class="sec-hdr">
+      <div class="eyebrow"><div class="ey-line"></div><span class="ey-txt">Our Leadership</span><div class="ey-line"></div></div>
+      <h2 class="h2">The People Behind <em>56 Years of Excellence</em></h2>
+      <p class="lead">Visionary leaders who built Nigeria's most integrated industrial engineering group — and continue to shape Africa's manufacturing future.</p>
+    </div>
+    <div style="background:var(--amber-l);border-left:4px solid var(--amber);padding:16px 24px;border-radius:10px;margin-bottom:40px;font-size:14px;color:var(--grey-d);line-height:1.7;">
+      <strong>📌 Note:</strong> Professional studio photography is being commissioned for all leadership profiles. Final cards will include high-resolution portraits and full verified bios from the MD.
+    </div>
+    <!-- MD + DMD -->
+    <div class="exec-row">
+      <div class="md-card">
+        <div class="md-card-photo">
+          <div class="md-ribbon"><span class="md-ribbon-txt">Managing Director</span><span class="md-ribbon-badge">Principal Executive</span></div>
+          👨‍💼
+        </div>
+        <div class="md-card-body">
+          <div class="md-card-name">Vassily Barberopoulos</div>
+          <div class="md-card-role">Managing Director — Nigerian Foundries Group</div>
+          <div class="md-card-desc">The visionary driving NFG's transformation from a respected Nigerian foundry into West Africa's most advanced industrial engineering platform. Under Vassily's leadership, NFG has secured Hardox certification, launched metal 3D printing with Shell, deployed Vezapp AI systems and formed 14 university partnerships — building Nigeria's industrial future.</div>
+          <div class="card-note">📷 Studio portrait being commissioned · Full bio to be supplied</div>
+        </div>
+      </div>
+      <div class="dmd-card">
+        <div class="dmd-card-photo">
+          <div class="dmd-ribbon"><span class="dmd-ribbon-txt">Deputy Managing Director</span><span class="dmd-ribbon-badge">DMD</span></div>
+          👨‍💼
+        </div>
+        <div class="dmd-card-body">
+          <div class="dmd-card-name">Mr. Baberopoulos</div>
+          <div class="dmd-card-role">Deputy Managing Director</div>
+          <div class="dmd-card-desc">Ensuring operational excellence and engineering delivery standards across all NFG facilities. Mr. Baberopoulos oversees the full manufacturing value chain — from raw materials through casting, machining, fabrication and dispatch — guaranteeing the reliability clients depend on for critical infrastructure components.</div>
+          <div class="dmd-note">📷 Studio portrait being commissioned · Full name &amp; bio to be confirmed</div>
+        </div>
+      </div>
+    </div>
+    <!-- Dr. Cynthia Spotlight -->
+    <div class="cynthia" id="cynthia">
+      <div class="cynthia-vis">
+        <div class="cynthia-red-bar"></div>
+        <div class="cynthia-em">👩🏾‍🔧</div>
+        <div class="cynthia-vis-badge">Breaking Barriers in African Heavy Industry</div>
+      </div>
+      <div class="cynthia-body">
+        <div class="cynthia-ey"><div class="cynthia-ey-line"></div><span class="cynthia-ey-txt">Leadership Spotlight · Women in Engineering</span></div>
+        <div class="cynthia-name">Dr. Cynthia Abima</div>
+        <div class="cynthia-role">Role — To be confirmed by MD · Nigerian Foundries Group</div>
+        <blockquote class="cynthia-quote">Manufacturing isn't about muscle — it's about mind. Nigeria needs more women building the machines that build the nation.</blockquote>
+        <p class="cynthia-desc">In an industry overwhelmingly dominated by men, Dr. Cynthia Abima has spent years proving that excellence in heavy manufacturing knows no gender. Her journey through Nigerian industrial engineering is both a personal story of determination and a powerful institutional signal — NFG's commitment to building a workforce where every Nigerian engineer, male or female, can reach their full potential. Her full profile, confirmed title and video interview will be featured once role details are verified with the MD.</p>
+        <div class="cynthia-tags">
+          <span class="ctag">🔥 Women in Engineering</span>
+          <span class="ctag">🎓 STEM Advocate</span>
+          <span class="ctag">🏭 Heavy Industry Leader</span>
+          <span class="ctag">🇳🇬 Nigerian Icon</span>
+        </div>
+        <div class="cynthia-note">⏳ Role being confirmed with MD · Full spotlight coming soon</div>
+      </div>
+    </div>
+    <div class="team-link"><a href="#" onclick="return false;">👥 Meet the Full NFG Team → (Coming Soon)</a></div>
+  </div>
+</section>
+
+<!-- ════════ IMPACT ════════ -->
+<section class="sec off" id="impact">
+  <div class="wrap">
+    <div class="sec-hdr">
+      <div class="eyebrow"><div class="ey-line"></div><span class="ey-txt">Our Impact</span><div class="ey-line"></div></div>
+      <h2 class="h2">Beyond the <em>Factory Floor</em></h2>
+      <p class="lead">NFG is not just a manufacturer. We are a force for Nigeria's industrial sovereignty, education and gender equality.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="icard">
+        <div class="icard-ico">🏭</div>
+        <div class="icard-title">Economic Sovereignty</div>
+        <div class="icard-desc">Every component we produce locally keeps Nigerian capital in Nigeria. We replace imports, create employment and strengthen the naira economy through industrial self-reliance — one product at a time.</div>
+        <div class="icard-nums"><div><div class="inum-val">$50M+</div><div class="inum-lab">Import substitution / yr</div></div><div><div class="inum-val">500+</div><div class="inum-lab">Direct jobs</div></div></div>
+      </div>
+      <div class="icard">
+        <div class="icard-ico">🎓</div>
+        <div class="icard-title">Education &amp; Youth</div>
+        <div class="icard-desc">Through 14 university partnerships, TVET programmes and the NFG Educational Foundation, we are building the engineering talent pipeline that Nigeria's industrial future demands.</div>
+        <div class="icard-nums"><div><div class="inum-val">14</div><div class="inum-lab">University MOUs</div></div><div><div class="inum-val">100+</div><div class="inum-lab">Graduates / year</div></div></div>
+      </div>
+      <div class="icard">
+        <div class="icard-ico">👩‍🔧</div>
+        <div class="icard-title">Inclusion &amp; Diversity</div>
+        <div class="icard-desc">NFG champions women in engineering. Our leadership includes female professionals driving innovation at the highest levels — proving Africa's industrial renaissance will be built by all Nigerians.</div>
+        <div class="icard-nums"><div><div class="inum-val">56</div><div class="inum-lab">Years of leadership</div></div><div><div class="inum-val">1969</div><div class="inum-lab">Heritage</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ BLOG PREVIEW ════════ -->
+<section class="sec" id="insights">
+  <div class="wrap">
+    <div class="sec-hdr">
+      <div class="eyebrow"><div class="ey-line a"></div><span class="ey-txt a">Knowledge Hub</span><div class="ey-line a"></div></div>
+      <h2 class="h2">Latest <em>Insights</em></h2>
+      <p class="lead">Industry expertise shared openly — from wear solutions to digital manufacturing.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="bcard"><div class="bcard-thumb" style="background:linear-gradient(135deg,#064E3B,#10B981);">⛏️<div class="bcard-cat" style="background:rgba(16,185,129,.2);color:#D1FAE5;">Mining</div></div><div class="bcard-body"><div class="bcard-title">Why Your Mining Equipment Wears Out Too Fast — And What To Do About It</div><div class="bcard-exc">Most operations compare unit price when buying wear parts. The real number is what they cost you in downtime. Here's the calculation every site manager needs.</div><div class="bcard-meta"><span>Coming Soon</span><span style="color:var(--amber-d);cursor:not-allowed;font-weight:700;">Read →</span></div></div></div>
+      <div class="bcard"><div class="bcard-thumb" style="background:linear-gradient(135deg,#78350F,#F59E0B);">🏭<div class="bcard-cat" style="background:rgba(245,166,35,.2);color:#FEF3C7;">Cement</div></div><div class="bcard-body"><div class="bcard-title">How One Cement Plant Went From 100 Days of Downtime to 25 — In One Year</div><div class="bcard-exc">A real story. A real Nigerian plant. A real $1.8M annual saving. This is what the right wear solution looks like in practice.</div><div class="bcard-meta"><span>Coming Soon</span><span style="color:var(--amber-d);cursor:not-allowed;font-weight:700;">Read →</span></div></div></div>
+      <div class="bcard"><div class="bcard-thumb" style="background:linear-gradient(135deg,#1E3A5F,#3B82F6);">📊<div class="bcard-cat" style="background:rgba(59,130,246,.2);color:#DBEAFE;">Digital</div></div><div class="bcard-body"><div class="bcard-title">Vezapp: What Real-Time Manufacturing Intelligence Actually Means for Your Order</div><div class="bcard-exc">We went digital. Here is what that means for you — less waiting, more certainty, and a delivery date you can actually rely on.</div><div class="bcard-meta"><span>Coming Soon</span><span style="color:var(--amber-d);cursor:not-allowed;font-weight:700;">Read →</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<div id="about"></div>
+
+<!-- ════════ FOOTER CTA ════════ -->
+<div class="fcta" id="contact">
+  <div class="fcta-inner">
+    <div class="fcta-lbl">Ready to Begin?</div>
+    <h2 class="fcta-title">Tell Us Your Challenge.</h2>
+    <p class="fcta-desc">You don't need a formal tender to start a conversation. Tell us what's broken, what you need or what's slowing your operation down — and we'll tell you exactly how we fix it.</p>
+    <div class="fcta-btns">
+      <button class="btn-dark">💬 Tell Us Your Challenge</button>
+      <button class="btn-dark-o">🏭 Schedule a Facility Tour</button>
+      <button class="btn-dark-o">📄 Download Our Brochure</button>
+    </div>
+    <div class="fcta-contacts">
+      <div class="fcta-contact">📞 <strong>+234 xxx xxx xxxx</strong></div>
+      <div class="fcta-contact">✉️ <strong>info@nfg.com.ng</strong></div>
+      <div class="fcta-contact">💬 <strong>WhatsApp Us</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-row"><div class="footer-gem">NFG</div><div class="footer-logo-name">NIGERIAN FOUNDRIES <em>GROUP</em></div></div>
+        <p class="footer-tagline">We Keep Africa's Industries Moving. Manufacturing tailor-made products and innovative solutions — on time and every time — since 1969.</p>
+        <div class="footer-socials"><div class="soc-btn">in</div><div class="soc-btn">𝕏</div><div class="soc-btn">▶</div><div class="soc-btn">📘</div></div>
+      </div>
+      <div>
+        <div class="footer-col-title">What We Do</div>
+        <ul class="footer-links"><li><a href="#">Ferrous Castings</a></li><li><a href="#">Non-Ferrous Castings</a></li><li><a href="#">Fabrication &amp; Machining</a></li><li><a href="#">3D Printing</a></li><li><a href="#">Hardox Wearparts ★</a></li><li><a href="#">Enduraclad VRM ★</a></li><li><a href="#">Corrosion Protection</a></li><li><a href="#">Reverse Engineering</a></li></ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Industries</div>
+        <ul class="footer-links"><li><a href="#">Mining, Quarry &amp; Cement</a></li><li><a href="#">Oil &amp; Gas, Offshore &amp; Marine</a></li><li><a href="#">Power &amp; Utilities</a></li><li><a href="#">Infrastructure</a></li><li><a href="#">Agro-Allied &amp; Food</a></li><li><a href="#">Defence &amp; Vessels</a></li></ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links"><li><a href="#">Our Story</a></li><li><a href="#">Meet Our Team</a></li><li><a href="#">Vezapp — Digital</a></li><li><a href="#">TVET Programme</a></li><li><a href="#">ESG &amp; Impact</a></li><li><a href="#">Careers</a></li></ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links"><li><a href="#">Tell Us Your Challenge</a></li><li><a href="#">Knowledge Hub</a></li><li><a href="#">Project Portfolio</a></li><li><a href="#">Downloads</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Nigerian Foundries Group Limited (RC 6297). All rights reserved.</span>
+      <div class="footer-certs-row"><span class="fcert">ISO 9001:2015</span><span class="fcert">Hardox Certified</span><span class="fcert">NCDMB Recognised</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp -->
+<div class="wa"><div class="wa-tip">Chat with us on WhatsApp</div><div class="wa-btn">💬</div></div>
+
+<!-- ════════ SCRIPTS ════════ -->
+<script>
+// ── Navbar scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60);
+});
+
+// ── Smooth scroll
+function sTo(sel){
+  const el=document.querySelector(sel);
+  if(!el)return;
+  const h=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'))||74;
+  window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-h-16,behavior:'smooth'});
+}
+
+// ── Mobile menu
+function toggleMenu(){
+  const ham=document.getElementById('ham');
+  const menu=document.getElementById('mobMenu');
+  const open=ham.classList.toggle('open');
+  menu.classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+function mToggle(id){
+  const s=document.getElementById(id);
+  document.querySelectorAll('.mob-sec.open').forEach(x=>{if(x.id!==id)x.classList.remove('open');});
+  s.classList.toggle('open');
+}
+function mGo(sel){
+  const ham=document.getElementById('ham');
+  const menu=document.getElementById('mobMenu');
+  ham.classList.remove('open');
+  menu.classList.remove('open');
+  document.body.style.overflow='';
+  setTimeout(()=>sTo(sel),350);
+}
+document.addEventListener('click',e=>{
+  const menu=document.getElementById('mobMenu');
+  const nav=document.getElementById('navbar');
+  if(menu.classList.contains('open')&&!nav.contains(e.target)&&!menu.contains(e.target)){
+    document.getElementById('ham').classList.remove('open');
+    menu.classList.remove('open');
+    document.body.style.overflow='';
+  }
+});
+window.addEventListener('resize',()=>{
+  if(window.innerWidth>1100){
+    document.getElementById('ham').classList.remove('open');
+    document.getElementById('mobMenu').classList.remove('open');
+    document.body.style.overflow='';
+  }
+});
+
+// ════════ HERO SLIDER ════════
+(function(){
+  const TOTAL=5,INTERVAL=6000,TICK=60;
+  let cur=0,timer=null,prog=null,elapsed=0,paused=false;
+  const track=document.getElementById('slideTrack');
+  const dots=document.getElementById('sDots');
+  const ctr=document.getElementById('sCtr');
+  const bar=document.getElementById('sProgress');
+  const prev=document.getElementById('sPrev');
+  const next=document.getElementById('sNext');
+  if(!track)return;
+
+  // Build dots
+  for(let i=0;i<TOTAL;i++){
+    const d=document.createElement('button');
+    d.className='sdot'+(i===0?' on':'');
+    d.setAttribute('aria-label','Slide '+(i+1));
+    d.onclick=()=>{goTo(i);reset();};
+    dots.appendChild(d);
+  }
+
+  // Video lazy loader
+  function loadVid(idx){
+    const vbg=document.getElementById('vbg'+(idx+1));
+    if(!vbg)return;
+    const v=vbg.querySelector('video');
+    if(!v||v.dataset.loaded)return;
+    v.dataset.loaded='1';
+    v.load();
+    const p=v.play();
+    if(p)p.catch(()=>{});
+  }
+
+  function render(){
+    track.style.transform='translateX(-'+cur*100+'%)';
+    dots.querySelectorAll('.sdot').forEach((d,i)=>d.classList.toggle('on',i===cur));
+    ctr.textContent=(cur+1)+'/'+TOTAL;
+    prev.style.opacity=cur===0?'.35':'1';
+    next.style.opacity=cur===TOTAL-1?'.35':'1';
+    loadVid(cur);
+    loadVid((cur+1)%TOTAL);
+  }
+
+  function goTo(n){
+    cur=((n%TOTAL)+TOTAL)%TOTAL;
+    elapsed=0;
+    render();
+  }
+
+  function startTimer(){
+    clearInterval(timer);clearInterval(prog);elapsed=0;
+    timer=setInterval(()=>{if(!paused)goTo(cur+1);},INTERVAL);
+    prog=setInterval(()=>{
+      if(!paused){
+        elapsed+=TICK;
+        bar.style.width=Math.min((elapsed/INTERVAL)*100,100)+'%';
+        if(elapsed>=INTERVAL)elapsed=0;
+      }
+    },TICK);
+  }
+
+  function reset(){startTimer();}
+
+  prev.addEventListener('click',()=>{goTo(cur-1);reset();});
+  next.addEventListener('click',()=>{goTo(cur+1);reset();});
+
+  const hero=document.getElementById('home');
+  if(hero){
+    hero.addEventListener('mouseenter',()=>{paused=true;});
+    hero.addEventListener('mouseleave',()=>{paused=false;});
+  }
+
+  // Touch swipe
+  let tx=0;
+  track.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;},{passive:true});
+  track.addEventListener('touchend',e=>{
+    const d=tx-e.changedTouches[0].clientX;
+    if(Math.abs(d)>50){goTo(d>0?cur+1:cur-1);reset();}
+  },{passive:true});
+
+  // Keyboard
+  document.addEventListener('keydown',e=>{
+    if(window.scrollY<window.innerHeight){
+      if(e.key==='ArrowRight'){goTo(cur+1);reset();}
+      if(e.key==='ArrowLeft'){goTo(cur-1);reset();}
+    }
+  });
+
+  // Init
+  render();startTimer();
+  loadVid(0);
+  setTimeout(()=>loadVid(1),2000);
+})();
+</script>
+</body>
+</html>
