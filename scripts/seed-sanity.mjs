@@ -410,12 +410,12 @@ const homepageDoc = {
 
 const documents = [
   siteSettingsDoc,
-  ...solutionDocs,
   ...industryDocs,
   ...capabilityDocs,
   ...certificationDocs,
   ...leaderDocs,
   ...caseStudyDocs,
+  ...solutionDocs,
   ...blogDocs,
   ...downloadDocs,
   ...faqDocs,
@@ -424,13 +424,20 @@ const documents = [
   homepageDoc
 ];
 
+const transaction = client.transaction();
+
 for (const document of documents) {
   if (replaceExisting) {
-    await client.createOrReplace(document);
+    transaction.createOrReplace(document);
   } else {
-    await client.createIfNotExists(document);
+    transaction.createIfNotExists(document);
   }
+}
+
+await transaction.commit();
+
+for (const document of documents) {
   console.log(`${replaceExisting ? "Upserted" : "Created if missing"} ${document._id}`);
 }
 
-console.log(`Seed complete for Sanity project ${projectId}, dataset ${dataset}.`);
+console.log(`Seed complete: ${documents.length} documents committed to Sanity project ${projectId}, dataset ${dataset}.`);
