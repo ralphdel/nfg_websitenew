@@ -1,20 +1,36 @@
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { siteSettings } from "@/data/siteContent";
+import { getLayoutContent, getSiteSettings } from "@/lib/content";
 
-export const metadata = {
-  title: "Nigerian Foundries Group | Industrial Manufacturing and Reverse Engineering",
-  description:
-    "Nigerian Foundries Group manufactures industrial castings, sacrificial anodes, wear parts, machined components, fabricated assemblies and 3D-printed parts for cement, mining, oil & gas, marine, power and infrastructure industries across Nigeria and West Africa."
-};
+export const revalidate = 60;
 
-export default function RootLayout({ children }) {
+export async function generateMetadata() {
+  const settings = await getSiteSettings();
+  const title = settings.defaultSeoTitle || siteSettings.defaultSeoTitle;
+  const description = settings.defaultSeoDescription || siteSettings.defaultSeoDescription;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "website"
+    }
+  };
+}
+
+export default async function RootLayout({ children }) {
+  const { siteSettings, navItems, footerNavigation, trustBadges } = await getLayoutContent();
+
   return (
     <html lang="en">
       <body>
-        <Navbar />
+        <Navbar navItems={navItems} siteSettings={siteSettings} />
         {children}
-        <Footer />
+        <Footer footerNavigation={footerNavigation} siteSettings={siteSettings} trustBadges={trustBadges} />
       </body>
     </html>
   );

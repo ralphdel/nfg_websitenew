@@ -4,9 +4,9 @@ import { SectionHeader } from "@/components/common/SectionHeader";
 
 const vezappPoints = [
   {
-    title: "Live job tracking",
+    title: "Production tracking",
     icon: Gauge,
-    body: "Know where each order is in the process."
+    body: "Create clearer visibility on where each order is in the process."
   },
   {
     title: "Quality checkpoints",
@@ -21,22 +21,24 @@ const vezappPoints = [
   {
     title: "Management accountability",
     icon: ListChecks,
-    body: "Data replaces guesswork."
+    body: "Structured information improves follow-up and accountability."
   }
 ];
 
-export function VezappSection() {
+export function VezappSection({ items = vezappPoints }) {
+  const points = items.length ? items : vezappPoints;
+
   return (
     <section className="section section-off" id="vezapp">
       <div className="container split">
         <SectionHeader
           align="left"
           eyebrow="Digital production control"
-          title="Digital Production Control Has Arrived at NFG."
-          body="With Vezapp, we are moving from manual follow-up to live production visibility, better scheduling discipline, quality checkpoints and clearer delivery accountability."
+          title="From Manual Follow-Up to Digital Production Control"
+          body="With Vezapp, NFG is improving production tracking, scheduling discipline, quality checkpoints and communication between sales, planning, production and management."
         />
         <div className="grid grid-2 compact-grid">
-          {vezappPoints.map((point) => (
+          {points.map((point) => (
             <Card title={point.title} body={point.body} icon={point.icon} key={point.title} />
           ))}
         </div>

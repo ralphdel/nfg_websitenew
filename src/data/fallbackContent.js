@@ -8,6 +8,9 @@ import {
   partnerships,
   problems,
   processSteps,
+  skillsEducationCards,
+  skillsEducationPage,
+  trainingExposureAreas,
   trustBadges
 } from "./siteContent";
 
@@ -20,6 +23,9 @@ export const fallbackContent = {
   processSteps,
   caseStudies,
   partnerships,
+  skillsEducationCards,
+  skillsEducationPage,
+  trainingExposureAreas,
   leadership,
   landingPages
 };

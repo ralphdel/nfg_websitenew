@@ -3,21 +3,26 @@ import { industries } from "@/data/siteContent";
 import { Card } from "@/components/common/Card";
 import { SectionHeader } from "@/components/common/SectionHeader";
 
-export function IndustriesSection() {
+export function IndustriesSection({ industries: industriesProp = industries }) {
   return (
     <section className="section" id="industries">
       <div className="container">
         <SectionHeader
-          eyebrow="Industries we serve"
-          title="Industrial sectors where local response matters."
-          body="Each sector has different operating pressure. NFG starts with the failure mode, material requirement and service condition before recommending a route."
+          eyebrow="Industries"
+          title="Built for the sectors where downtime is expensive."
+          body="Plant managers, maintenance teams, technical directors and procurement teams need credible local support. Each sector has different operating pressure, so NFG starts with the application and failure condition."
         />
         <div className="grid grid-3">
-          {industries.map((industry) => (
+          {industriesProp.map((industry) => (
             <Card title={industry.title} icon={industry.icon} key={industry.slug}>
               <p><strong>Pain:</strong> {industry.pain}</p>
-              <p><strong>Solution:</strong> {industry.solution}</p>
-              <Link className="text-link" href={`/industries/${industry.slug}`}>View sector focus</Link>
+              <p><strong>NFG fit:</strong> {industry.solution}</p>
+              <div className="tag-list">
+                {(industry.commonParts || []).slice(0, 3).map((part) => (
+                  <span key={part}>{part}</span>
+                ))}
+              </div>
+              <Link className="text-link" href={`/industries/${industry.slug}`}>View industry page</Link>
             </Card>
           ))}
         </div>

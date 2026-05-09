@@ -1,15 +1,59 @@
-import { capability } from "./capability";
-import { caseStudy } from "./caseStudy";
-import { homepage } from "./homepage";
-import { industry } from "./industry";
-import { leadershipProfile } from "./leadershipProfile";
-import { partnership } from "./partnership";
+import {
+  card,
+  cta,
+  heroSlide,
+  mediaAsset,
+  portableContent,
+  processStep,
+  seo,
+  skillsCard
+} from "./objects";
+import {
+  blogPost,
+  capabilityPage,
+  caseStudy,
+  certificationOrAward,
+  downloadAsset,
+  educationPage,
+  faq,
+  foundationInitiative,
+  homepage,
+  industrialTrainingProgram,
+  industryPage,
+  leader,
+  navigationSettings,
+  partner,
+  siteSettings,
+  solutionPage,
+  tvetDevelopment,
+  universityPartnership
+} from "./documents";
 
 export const schemaTypes = [
+  seo,
+  mediaAsset,
+  cta,
+  card,
+  skillsCard,
+  processStep,
+  heroSlide,
+  portableContent,
+  siteSettings,
+  navigationSettings,
   homepage,
-  industry,
-  capability,
+  solutionPage,
+  industryPage,
+  capabilityPage,
   caseStudy,
-  partnership,
-  leadershipProfile
+  certificationOrAward,
+  partner,
+  leader,
+  blogPost,
+  downloadAsset,
+  faq,
+  educationPage,
+  universityPartnership,
+  industrialTrainingProgram,
+  foundationInitiative,
+  tvetDevelopment
 ];
