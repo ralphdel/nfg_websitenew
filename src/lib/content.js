@@ -589,13 +589,29 @@ function buildFooterNavigation(content) {
 async function fetchEditableContent() {
   if (!projectId || projectId === "replace-me") return { source: "fallback" };
 
-  try {
-    const data = await sanityClient.fetch(allEditableContentQuery, {}, { next: { revalidate: 60 } });
-    return { ...(data || {}), source: "sanity" };
-  } catch (error) {
-    console.warn("Sanity content fetch failed; using local fallback content.", error);
-    return { source: "fallback" };
+  const maxRetries = 2;
+
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      const data = await sanityClient.fetch(allEditableContentQuery, {}, { next: { revalidate: 60 } });
+
+      if (!data || (!data.homepage && !data.siteSettings)) {
+        console.warn(`Sanity returned empty data on attempt ${attempt}/${maxRetries}`);
+        if (attempt < maxRetries) continue;
+        return { source: "fallback" };
+      }
+
+      return { ...data, source: "sanity" };
+    } catch (error) {
+      console.warn(`Sanity fetch attempt ${attempt}/${maxRetries} failed:`, error.message || error);
+      if (attempt < maxRetries) {
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+      }
+    }
   }
+
+  console.warn("All Sanity fetch attempts failed; using local fallback content.");
+  return { source: "fallback" };
 }
 
 export const getEditableContent = cache(async () => normalizeCollections(await fetchEditableContent()));
