@@ -209,7 +209,7 @@ function normalizeMedia(media, fallbackMedia) {
     videoMaxWidth: media?.videoMaxWidth || fallbackMedia?.videoMaxWidth,
     videoAutoplay: media?.videoAutoplay ?? fallbackMedia?.videoAutoplay ?? true,
     altText: media?.altText || fallbackMedia?.altText || media?.caption || fallbackMedia?.caption || "NFG media",
-    caption: media?.caption || fallbackMedia?.caption,
+    caption: media ? media.caption : fallbackMedia?.caption,
     overlayOpacity: media?.overlayOpacity ?? fallbackMedia?.overlayOpacity,
     theme: media?.theme || fallbackMedia?.theme || "foundry"
   };

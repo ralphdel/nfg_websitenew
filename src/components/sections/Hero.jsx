@@ -18,6 +18,7 @@ export function Hero({ slides = heroSlides }) {
   const heroImage = activeSlide?.media?.desktopImage || heroPoster;
   const heroVideo = activeSlide?.media?.videoFileUrl || activeSlide?.media?.videoUrl;
   const showVideo = activeSlide?.media?.mediaType === "video" && heroVideo;
+  const mediaCaption = showVideo ? activeSlide?.media?.caption : "";
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -103,6 +104,7 @@ export function Hero({ slides = heroSlides }) {
             ) : (
               <div className="hero-media-empty" aria-hidden="true" />
             )}
+            {mediaCaption ? <div className="hero-media-caption">{mediaCaption}</div> : null}
           </div>
         </aside>
       </div>

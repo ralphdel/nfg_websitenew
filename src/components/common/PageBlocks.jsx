@@ -27,6 +27,7 @@ export function MediaPlaceholder({ label, alt, theme = "foundry", media }) {
   const poster = media?.posterImage?.asset?.url || media?.posterImage;
   const image = media?.desktopImage || media?.image?.asset?.url || poster;
   const showVideo = media?.mediaType === "video" && video;
+  const caption = showVideo ? media?.caption : "";
 
   if (showVideo) {
     return (
@@ -41,7 +42,7 @@ export function MediaPlaceholder({ label, alt, theme = "foundry", media }) {
         <video controls preload="metadata" playsInline poster={poster || image} aria-label={alt}>
           <source src={video} />
         </video>
-        <span>{label}</span>
+        {caption ? <div className="media-video-caption">{caption}</div> : null}
       </div>
     );
   }
