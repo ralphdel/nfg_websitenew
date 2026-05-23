@@ -298,7 +298,7 @@ function normalizeHeroSlides(slides, fallbackSlides = []) {
         secondaryCta: normalizeCta(slide?.secondaryCta, fallbackSlide.secondaryCta),
         media: normalizeMedia(slide?.media, fallbackSlide.media),
         featureCards: normalizeCards(slide?.featureCards, fallbackSlide.featureCards || []).map(({ icon, ...card }) => card),
-        stats: slide?.stats || fallbackSlide.stats || []
+        stats: Array.isArray(slide?.stats) ? slide.stats : hasItems(slides) ? [] : fallbackSlide.stats || []
       };
     })
     .filter((slide) => slide.headline);

@@ -104,21 +104,6 @@ export function Hero({ slides = heroSlides }) {
               <div className="hero-media-empty" aria-hidden="true" />
             )}
           </div>
-          <div className="hero-media-note">
-            <span>{String(activeIndex + 1).padStart(2, "0")}</span>
-            <strong>{activeSlide.media?.caption || activeSlide.eyebrow}</strong>
-            {activeSlide.media?.focalPoint ? <p>{activeSlide.media.focalPoint}</p> : null}
-          </div>
-          {activeSlide.stats?.length ? (
-            <div className="hero-stats">
-              {activeSlide.stats.map((stat) => (
-                <div key={stat.label}>
-                  <strong>{stat.value}</strong>
-                  <span>{stat.label}</span>
-                </div>
-              ))}
-            </div>
-          ) : null}
         </aside>
       </div>
 
