@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 import { Button } from "@/components/common/Button";
 import { heroSlides } from "@/data/siteContent";
 
-const ROTATION_MS = 7000;
+const ROTATION_MS = 11000;
 
 export function Hero({ slides = heroSlides }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -14,10 +14,10 @@ export function Hero({ slides = heroSlides }) {
   const [reducedMotion, setReducedMotion] = useState(false);
   const activeSlide = useMemo(() => slides[activeIndex] || slides[0], [activeIndex, slides]);
   const isPaused = hoverPaused || userPaused || reducedMotion;
-  const heroImage = activeSlide?.media?.desktopImage || activeSlide?.media?.posterImage;
+  const heroPoster = activeSlide?.media?.posterImage;
+  const heroImage = activeSlide?.media?.desktopImage || heroPoster;
   const heroVideo = activeSlide?.media?.videoFileUrl || activeSlide?.media?.videoUrl;
   const showVideo = activeSlide?.media?.mediaType === "video" && heroVideo;
-  const overlayOpacity = activeSlide?.media?.overlayOpacity ?? 0.68;
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -57,29 +57,9 @@ export function Hero({ slides = heroSlides }) {
       aria-label="NFG homepage highlights"
     >
       <div
-        className={`hero-backdrop ${showVideo ? "has-video" : ""}`}
-        role="img"
-        aria-label={activeSlide.media?.altText || activeSlide.headline}
-        style={!showVideo && heroImage ? {
-          backgroundImage: `linear-gradient(90deg, rgba(8, 22, 40, ${Math.min(0.98, overlayOpacity + 0.18)}), rgba(8, 22, 40, ${overlayOpacity}), rgba(8, 22, 40, ${Math.min(0.98, overlayOpacity + 0.12)})), url("${heroImage}")`,
-          backgroundPosition: "center",
-          backgroundSize: "cover"
-        } : undefined}
+        className="hero-backdrop"
+        aria-hidden="true"
       >
-        {showVideo ? (
-          <video
-            key={heroVideo}
-            className="hero-video"
-            autoPlay={activeSlide.media?.videoAutoplay !== false && !reducedMotion}
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            poster={activeSlide.media?.posterImage || heroImage}
-          >
-            <source src={heroVideo} />
-          </video>
-        ) : null}
         <div className="hero-backdrop-grid" aria-hidden="true" />
       </div>
 
@@ -97,10 +77,38 @@ export function Hero({ slides = heroSlides }) {
           </div>
         </div>
 
-        <aside className="hero-media-card" aria-label="Current hero media note">
-          <span>{String(activeIndex + 1).padStart(2, "0")}</span>
-          <strong>{activeSlide.media?.caption || activeSlide.eyebrow}</strong>
-          <p>{activeSlide.media?.focalPoint || activeSlide.media?.desktopImage || activeSlide.media?.caption}</p>
+        <aside className="hero-media-card" aria-label="Current hero media">
+          <div
+            className="hero-media-frame"
+            style={{
+              "--media-aspect-ratio": activeSlide.media?.videoAspectRatio || "16 / 9",
+              "--media-fit": activeSlide.media?.videoObjectFit || "cover"
+            }}
+          >
+            {showVideo ? (
+              <video
+                key={heroVideo}
+                autoPlay={activeSlide.media?.videoAutoplay !== false && !reducedMotion}
+                muted
+                loop
+                controls
+                playsInline
+                preload="metadata"
+                poster={heroPoster || heroImage}
+              >
+                <source src={heroVideo} />
+              </video>
+            ) : heroImage ? (
+              <img src={heroImage} alt={activeSlide.media?.altText || activeSlide.headline} />
+            ) : (
+              <div className="hero-media-empty" aria-hidden="true" />
+            )}
+          </div>
+          <div className="hero-media-note">
+            <span>{String(activeIndex + 1).padStart(2, "0")}</span>
+            <strong>{activeSlide.media?.caption || activeSlide.eyebrow}</strong>
+            {activeSlide.media?.focalPoint ? <p>{activeSlide.media.focalPoint}</p> : null}
+          </div>
           {activeSlide.stats?.length ? (
             <div className="hero-stats">
               {activeSlide.stats.map((stat) => (
