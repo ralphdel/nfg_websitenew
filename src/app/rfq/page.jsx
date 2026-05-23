@@ -11,6 +11,7 @@ export const revalidate = 60;
 
 export default async function RFQPage() {
   const [industries, siteSettings] = await Promise.all([getIndustries(), getSiteSettings()]);
+  const formIndustries = industries.map(({ title, slug }) => ({ title, slug }));
 
   return (
     <main>
@@ -38,7 +39,7 @@ export default async function RFQPage() {
               Confidential RFQ uploads should use secure backend/private storage in production. Public Sanity assets are for website media, brochures and approved documents only.
             </p>
           </div>
-          <RFQForm industries={industries} siteSettings={siteSettings} />
+          <RFQForm industries={formIndustries} siteSettings={siteSettings} />
         </div>
       </section>
     </main>

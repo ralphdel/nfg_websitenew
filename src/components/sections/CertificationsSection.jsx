@@ -15,8 +15,13 @@ export function CertificationsSection({ items = certifications }) {
           body="Certificates, awards and recognitions are CMS-managed. Items remain marked pending until management-approved evidence is uploaded."
         />
         <div className="grid grid-3">
-          {homepageItems.map((item) => (
-            <Card title={item.title} body={item.description} label={item.verificationStatus} key={item.title}>
+          {homepageItems.map((item, index) => (
+            <Card
+              title={item.title}
+              body={item.description}
+              label={item.verificationStatus}
+              key={item._id || item.title || `${item.issuingBody || "certification"}-${index}`}
+            >
               <p><strong>Issuing body:</strong> {item.issuingBody}</p>
               <p><strong>Year:</strong> {item.year}</p>
             </Card>

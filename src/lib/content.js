@@ -233,6 +233,18 @@ function normalizeCards(cards, fallbackCards = []) {
   return source.map((card, index) => normalizeCard(card, fallbackCards[index])).filter((card) => card.title);
 }
 
+function normalizeCollection(items, fallbackItems = [], normalizeItem, isValid = (item) => item.title) {
+  const normalized = (hasItems(items) ? items : fallbackItems)
+    .map((item, index) => normalizeItem(item, fallbackItems[index]))
+    .filter(isValid);
+
+  if (normalized.length) return normalized;
+
+  return fallbackItems
+    .map((item, index) => normalizeItem(item, fallbackItems[index]))
+    .filter(isValid);
+}
+
 function normalizeStep(step, fallbackStep = {}) {
   const source = step || {};
   const description = source.description || source.body || fallbackStep.description || fallbackStep.body || "";
@@ -461,41 +473,15 @@ function normalizeCollections(raw = {}) {
     globalCta: normalizeCta(raw.siteSettings?.globalCta, fallback.siteSettings.globalCta)
   };
 
-  const solutions = hasItems(raw.solutions)
-    ? raw.solutions.map((item) => normalizeSolution(item))
-    : fallback.solutions.map((item) => normalizeSolution(item));
-
-  const industries = hasItems(raw.industries)
-    ? raw.industries.map((item) => normalizeIndustry(item))
-    : fallback.industries.map((item) => normalizeIndustry(item));
-
-  const capabilities = hasItems(raw.capabilities)
-    ? raw.capabilities.map((item) => normalizeCapability(item))
-    : fallback.capabilities.map((item) => normalizeCapability(item));
-
-  const certifications = hasItems(raw.certifications)
-    ? raw.certifications.map((item) => normalizeCertification(item))
-    : fallback.certifications.map((item) => normalizeCertification(item));
-
-  const leadership = hasItems(raw.leaders)
-    ? raw.leaders.map((item) => normalizeLeader(item))
-    : fallback.leadership.map((item) => normalizeLeader(item));
-
-  const caseStudies = hasItems(raw.caseStudies)
-    ? raw.caseStudies.map((item) => normalizeCaseStudy(item))
-    : fallback.caseStudies.map((item) => normalizeCaseStudy(item));
-
-  const downloads = hasItems(raw.downloads)
-    ? raw.downloads.map((item) => normalizeDownload(item))
-    : fallback.downloads.map((item) => normalizeDownload(item));
-
-  const faqs = hasItems(raw.faqs)
-    ? raw.faqs.map((item) => normalizeFaq(item))
-    : fallback.faqs.map((item) => normalizeFaq(item));
-
-  const blogPosts = hasItems(raw.blogPosts)
-    ? raw.blogPosts.map((item) => normalizeBlogPost(item))
-    : fallback.blogPosts.map((item) => normalizeBlogPost(item));
+  const solutions = normalizeCollection(raw.solutions, fallback.solutions, normalizeSolution, (item) => item.title && item.slug);
+  const industries = normalizeCollection(raw.industries, fallback.industries, normalizeIndustry, (item) => item.title && item.slug);
+  const capabilities = normalizeCollection(raw.capabilities, fallback.capabilities, normalizeCapability, (item) => item.title && item.slug);
+  const certifications = normalizeCollection(raw.certifications, fallback.certifications, normalizeCertification);
+  const leadership = normalizeCollection(raw.leaders, fallback.leadership, normalizeLeader, (item) => item.name);
+  const caseStudies = normalizeCollection(raw.caseStudies, fallback.caseStudies, normalizeCaseStudy, (item) => item.title && item.slug);
+  const downloads = normalizeCollection(raw.downloads, fallback.downloads, normalizeDownload);
+  const faqs = normalizeCollection(raw.faqs, fallback.faqs, normalizeFaq, (item) => item.question);
+  const blogPosts = normalizeCollection(raw.blogPosts, fallback.blogPosts, normalizeBlogPost, (item) => item.title && item.slug);
 
   const homepage = raw.homepage || {};
 
@@ -521,8 +507,8 @@ function normalizeCollections(raw = {}) {
       ),
       problems: normalizeCards(homepage.problemSection, fallback.problemCards),
       methodSteps: normalizeSteps(homepage.methodSteps, fallback.processSteps),
-      solutions: hasItems(homepage.solutionCards) ? homepage.solutionCards.map((item) => normalizeSolution(item)) : solutions,
-      industries: hasItems(homepage.industryCards) ? homepage.industryCards.map((item) => normalizeIndustry(item)) : industries,
+      solutions: normalizeCollection(homepage.solutionCards, solutions, normalizeSolution, (item) => item.title && item.slug),
+      industries: normalizeCollection(homepage.industryCards, industries, normalizeIndustry, (item) => item.title && item.slug),
       capabilities,
       wearComparison: normalizeWearCards(homepage.wearComparison, fallback.wearComparison),
       reverseEngineeringHighlights: hasItems(homepage.reverseEngineeringHighlight)
@@ -531,15 +517,23 @@ function normalizeCollections(raw = {}) {
       nigerianContent: normalizeCards(homepage.nigerianContentSection, fallback.partnerships),
       skillsEducation: normalizeSkillsCards(homepage.skillsEducationSection, fallback.skillsEducationCards),
       vezapp: normalizeCards(homepage.vezappSection, defaultVezappPoints),
-      certifications: hasItems(homepage.certificationsSection)
-        ? homepage.certificationsSection.map((item) => normalizeCertification(item))
-        : certifications.filter((item) => item.displayOnHomepage),
-      caseStudies: hasItems(homepage.caseStudyReferences)
-        ? homepage.caseStudyReferences.map((item) => normalizeCaseStudy(item))
-        : caseStudies.filter((item) => item.featured),
-      leadership: hasItems(homepage.leadershipReferences)
-        ? homepage.leadershipReferences.map((item) => normalizeLeader(item))
-        : leadership.filter((item) => item.featuredOnHomepage !== false),
+      certifications: normalizeCollection(
+        homepage.certificationsSection,
+        certifications.filter((item) => item.displayOnHomepage),
+        normalizeCertification
+      ),
+      caseStudies: normalizeCollection(
+        homepage.caseStudyReferences,
+        caseStudies.filter((item) => item.featured),
+        normalizeCaseStudy,
+        (item) => item.title && item.slug
+      ),
+      leadership: normalizeCollection(
+        homepage.leadershipReferences,
+        leadership.filter((item) => item.featuredOnHomepage !== false),
+        normalizeLeader,
+        (item) => item.name
+      ),
       finalCta: normalizeCta(homepage.finalCta)
     }
   };

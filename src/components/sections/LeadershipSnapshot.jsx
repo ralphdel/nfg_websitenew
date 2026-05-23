@@ -14,8 +14,13 @@ export function LeadershipSnapshot({ people = leadership }) {
           body="A short homepage view of the people leading NFG's manufacturing, operational and technical transformation. Full profiles, photos and approval status are CMS-managed."
         />
         <div className="grid grid-3">
-          {people.map((person) => (
-            <Card title={person.name} body={person.body} label={person.role} key={person.name} />
+          {people.map((person, index) => (
+            <Card
+              title={person.name}
+              body={person.body}
+              label={person.role}
+              key={person._id || person.name || `${person.role || "leader"}-${index}`}
+            />
           ))}
         </div>
         <div className="center-action">

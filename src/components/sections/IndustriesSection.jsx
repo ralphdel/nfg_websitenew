@@ -13,8 +13,12 @@ export function IndustriesSection({ industries: industriesProp = industries }) {
           body="Plant managers, maintenance teams, technical directors and procurement teams need credible local support. Each sector has different operating pressure, so NFG starts with the application and failure condition."
         />
         <div className="grid grid-3">
-          {industriesProp.map((industry) => (
-            <Card title={industry.title} icon={industry.icon} key={industry.slug}>
+          {industriesProp.map((industry, index) => (
+            <Card
+              title={industry.title}
+              icon={industry.icon}
+              key={industry.slug || industry._id || `${industry.title || "industry"}-${index}`}
+            >
               <p><strong>Pain:</strong> {industry.pain}</p>
               <p><strong>NFG fit:</strong> {industry.solution}</p>
               <div className="tag-list">

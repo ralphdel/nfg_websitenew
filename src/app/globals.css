@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Jost:wght@500;600;700;800;900&display=swap");
 
 :root {
   --navy: #0D2240;
@@ -28,8 +28,8 @@
   --nav-h: 74px;
   --ink: #102033;
   --shadow: 0 18px 52px rgba(13, 34, 64, 0.12);
-  --font-primary: "Inter", Arial, sans-serif;
-  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-primary: "IBM Plex Sans", Arial, sans-serif;
+  --font-display: "Jost", "IBM Plex Sans", sans-serif;
 }
 
 * {
@@ -46,7 +46,7 @@ body {
   background: var(--white);
   font-family: var(--font-primary);
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 a {
@@ -446,12 +446,11 @@ strong {
 }
 
 .eyebrow,
-.hero-kicker,
-.hero-proof {
+.hero-kicker {
   color: var(--amber);
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.11em;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
 }
 
@@ -460,24 +459,26 @@ strong {
   margin: 16px 0;
   color: var(--white);
   font-family: var(--font-display);
-  font-size: 60px;
-  font-weight: 900;
-  line-height: 1.06;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.08;
 }
 
 .hero-sub {
-  max-width: 760px;
+  max-width: 700px;
   margin: 0;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 19px;
-  line-height: 1.72;
+  font-size: 17px;
+  line-height: 1.62;
 }
 
 .hero-proof {
-  max-width: 820px;
-  margin-top: 24px;
+  max-width: 700px;
+  margin: 18px 0 0;
   color: rgba(255, 255, 255, 0.66);
-  line-height: 1.65;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.55;
 }
 
 .hero-actions,
@@ -503,21 +504,21 @@ strong {
 .hero-media-card > span {
   color: var(--amber);
   font-family: var(--font-display);
-  font-size: 40px;
-  font-weight: 900;
+  font-size: 32px;
+  font-weight: 800;
 }
 
 .hero-media-card > strong {
   color: var(--white);
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.18;
 }
 
 .hero-media-card > p {
   margin: 0;
   color: rgba(255, 255, 255, 0.62);
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .hero-feature-strip {
@@ -530,8 +531,8 @@ strong {
 }
 
 .hero-feature-strip article {
-  min-height: 124px;
-  padding: 18px;
+  min-height: 112px;
+  padding: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   background: rgba(8, 22, 40, 0.58);
@@ -542,15 +543,16 @@ strong {
   margin: 0 0 8px;
   color: var(--white);
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 800;
 }
 
 .hero-feature-strip p,
 .hero-stats span {
   margin: 0;
   color: rgba(255, 255, 255, 0.66);
-  font-size: 13px;
-  line-height: 1.55;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .hero-stats {
@@ -569,8 +571,8 @@ strong {
   display: block;
   color: var(--amber);
   font-family: var(--font-display);
-  font-size: 24px;
-  font-weight: 900;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 .hero-controls {
@@ -718,8 +720,8 @@ strong {
   margin: 10px 0 14px;
   color: var(--navy);
   font-family: var(--font-display);
-  font-size: 42px;
-  font-weight: 900;
+  font-size: 36px;
+  font-weight: 800;
   line-height: 1.12;
 }
 
@@ -736,8 +738,8 @@ strong {
 .map-panel p {
   margin: 0;
   color: var(--grey);
-  font-size: 17px;
-  line-height: 1.78;
+  font-size: 16px;
+  line-height: 1.68;
 }
 
 .section-dark .section-header p,
@@ -752,7 +754,7 @@ strong {
   margin: 34px auto 0;
   color: rgba(255, 255, 255, 0.75);
   text-align: center;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .split {
@@ -822,8 +824,8 @@ strong {
   margin: 0 0 10px;
   color: var(--navy);
   font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 800;
   line-height: 1.25;
 }
 
@@ -837,8 +839,8 @@ strong {
 .card p {
   margin: 0 0 12px;
   color: var(--grey);
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.62;
 }
 
 .card .text-link {
@@ -909,8 +911,8 @@ strong {
   right: 20px;
   color: rgba(13, 34, 64, 0.16);
   font-family: var(--font-display);
-  font-size: 34px;
-  font-weight: 900;
+  font-size: 30px;
+  font-weight: 800;
 }
 
 .timeline-card {
@@ -964,14 +966,14 @@ strong {
 }
 
 .page-hero h1 {
-  font-size: 56px;
+  font-size: 44px;
 }
 
 .page-hero p {
   max-width: 760px;
   color: rgba(255, 255, 255, 0.76);
-  font-size: 18px;
-  line-height: 1.72;
+  font-size: 16px;
+  line-height: 1.62;
 }
 
 .media-placeholder {
@@ -1024,15 +1026,15 @@ strong {
 }
 
 .content-block h2 {
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .content-block h3 {
   margin: 24px 0 12px;
   color: var(--navy);
   font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 900;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 .content-card-grid {
@@ -1137,8 +1139,8 @@ strong {
 }
 
 .final-cta p {
-  font-size: 17px;
-  line-height: 1.78;
+  font-size: 16px;
+  line-height: 1.68;
 }
 
 .rfq-form {
@@ -1248,7 +1250,7 @@ strong {
 }
 
 .rfq-guidance h2 {
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .rfq-guidance ul {
@@ -1550,12 +1552,15 @@ strong {
 
   .hero h1,
   .page-hero h1 {
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1.12;
   }
 
-  .hero-sub,
   .page-hero p {
+    font-size: 15px;
+  }
+
+  .hero-sub {
     font-size: 16px;
   }
 
@@ -1595,7 +1600,7 @@ strong {
   .content-block h2,
   .rfq-guidance h2,
   .map-panel h2 {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .split,
@@ -1628,6 +1633,6 @@ strong {
 @media (min-width: 761px) and (max-width: 1024px) {
   .hero h1,
   .page-hero h1 {
-    font-size: 44px;
+    font-size: 38px;
   }
 }

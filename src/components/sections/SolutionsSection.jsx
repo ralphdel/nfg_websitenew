@@ -13,8 +13,13 @@ export function SolutionsSection({ solutions: solutionsProp = solutions }) {
           body="Send the broken part, drawing, photo or problem. NFG helps identify the part, understand the failure condition and select the route that fits the application."
         />
         <div className="grid grid-3">
-          {solutionsProp.map((solution) => (
-            <Card title={solution.navTitle || solution.title} body={solution.summary} icon={solution.icon} key={solution.slug}>
+          {solutionsProp.map((solution, index) => (
+            <Card
+              title={solution.navTitle || solution.title}
+              body={solution.summary}
+              icon={solution.icon}
+              key={solution.slug || solution._id || `${solution.title || "solution"}-${index}`}
+            >
               <div className="tag-list">
                 {(solution.technologies || []).slice(0, 3).map((item) => (
                   <span key={item}>{item}</span>
