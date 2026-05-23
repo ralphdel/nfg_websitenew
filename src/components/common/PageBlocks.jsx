@@ -23,7 +23,28 @@ export function PageHero({ eyebrow, title, body, primaryCta, secondaryCta, theme
 }
 
 export function MediaPlaceholder({ label, alt, theme = "foundry", media }) {
-  const image = media?.desktopImage || media?.image?.asset?.url;
+  const video = media?.videoFileUrl || media?.videoFile?.asset?.url || media?.videoUrl;
+  const poster = media?.posterImage?.asset?.url || media?.posterImage;
+  const image = media?.desktopImage || media?.image?.asset?.url || poster;
+  const showVideo = media?.mediaType === "video" && video;
+
+  if (showVideo) {
+    return (
+      <div
+        className={`media-placeholder media-${theme} has-video`}
+        style={{
+          "--media-aspect-ratio": media?.videoAspectRatio || "16 / 9",
+          "--media-fit": media?.videoObjectFit || "cover",
+          "--media-max-width": media?.videoMaxWidth ? `${media.videoMaxWidth}px` : "none"
+        }}
+      >
+        <video controls preload="metadata" playsInline poster={poster || image} aria-label={alt}>
+          <source src={video} />
+        </video>
+        <span>{label}</span>
+      </div>
+    );
+  }
 
   return (
     <div

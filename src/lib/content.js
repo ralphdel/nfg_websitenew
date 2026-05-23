@@ -191,13 +191,23 @@ function normalizeMedia(media, fallbackMedia) {
   const imageUrl = media?.image?.asset?.url || media?.imageUrl || media?.desktopImage;
   const mobileImageUrl = media?.mobileImage?.asset?.url || media?.mobileImage;
   const posterUrl = media?.posterImage?.asset?.url;
+  const videoFileUrl = media?.videoFile?.asset?.url || media?.videoFileUrl;
+  const videoUrl = media?.videoUrl || fallbackMedia?.videoUrl;
+  const mediaType = media?.mediaType || fallbackMedia?.mediaType || (videoFileUrl || videoUrl ? "video" : "image");
 
   return {
     ...fallbackMedia,
     ...media,
+    mediaType,
     desktopImage: imageUrl || fallbackMedia?.desktopImage || fallbackMedia?.image,
     mobileImage: mobileImageUrl || fallbackMedia?.mobileImage || fallbackMedia?.desktopImage,
     posterImage: posterUrl || fallbackMedia?.posterImage,
+    videoFileUrl: videoFileUrl || fallbackMedia?.videoFileUrl,
+    videoUrl,
+    videoAspectRatio: media?.videoAspectRatio || fallbackMedia?.videoAspectRatio || "16 / 9",
+    videoObjectFit: media?.videoObjectFit || fallbackMedia?.videoObjectFit || "cover",
+    videoMaxWidth: media?.videoMaxWidth || fallbackMedia?.videoMaxWidth,
+    videoAutoplay: media?.videoAutoplay ?? fallbackMedia?.videoAutoplay ?? true,
     altText: media?.altText || fallbackMedia?.altText || media?.caption || fallbackMedia?.caption || "NFG media",
     caption: media?.caption || fallbackMedia?.caption,
     overlayOpacity: media?.overlayOpacity ?? fallbackMedia?.overlayOpacity,

@@ -14,7 +14,9 @@ export function Hero({ slides = heroSlides }) {
   const [reducedMotion, setReducedMotion] = useState(false);
   const activeSlide = useMemo(() => slides[activeIndex] || slides[0], [activeIndex, slides]);
   const isPaused = hoverPaused || userPaused || reducedMotion;
-  const heroImage = activeSlide?.media?.desktopImage;
+  const heroImage = activeSlide?.media?.desktopImage || activeSlide?.media?.posterImage;
+  const heroVideo = activeSlide?.media?.videoFileUrl || activeSlide?.media?.videoUrl;
+  const showVideo = activeSlide?.media?.mediaType === "video" && heroVideo;
   const overlayOpacity = activeSlide?.media?.overlayOpacity ?? 0.68;
 
   useEffect(() => {
@@ -55,15 +57,29 @@ export function Hero({ slides = heroSlides }) {
       aria-label="NFG homepage highlights"
     >
       <div
-        className="hero-backdrop"
+        className={`hero-backdrop ${showVideo ? "has-video" : ""}`}
         role="img"
         aria-label={activeSlide.media?.altText || activeSlide.headline}
-        style={heroImage ? {
+        style={!showVideo && heroImage ? {
           backgroundImage: `linear-gradient(90deg, rgba(8, 22, 40, ${Math.min(0.98, overlayOpacity + 0.18)}), rgba(8, 22, 40, ${overlayOpacity}), rgba(8, 22, 40, ${Math.min(0.98, overlayOpacity + 0.12)})), url("${heroImage}")`,
           backgroundPosition: "center",
           backgroundSize: "cover"
         } : undefined}
       >
+        {showVideo ? (
+          <video
+            key={heroVideo}
+            className="hero-video"
+            autoPlay={activeSlide.media?.videoAutoplay !== false && !reducedMotion}
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster={activeSlide.media?.posterImage || heroImage}
+          >
+            <source src={heroVideo} />
+          </video>
+        ) : null}
         <div className="hero-backdrop-grid" aria-hidden="true" />
       </div>
 

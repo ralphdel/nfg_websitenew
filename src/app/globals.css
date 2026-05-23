@@ -372,9 +372,27 @@ strong {
 .hero-backdrop {
   position: absolute;
   inset: 0;
+  overflow: hidden;
   background:
     linear-gradient(90deg, rgba(8, 22, 40, 0.96), rgba(8, 22, 40, 0.75), rgba(8, 22, 40, 0.92)),
     linear-gradient(135deg, var(--navy-d), var(--navy-mid));
+}
+
+.hero-backdrop.has-video::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(8, 22, 40, 0.94), rgba(8, 22, 40, 0.68), rgba(8, 22, 40, 0.88));
+  pointer-events: none;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-theme-foundry .hero-backdrop,
@@ -425,6 +443,7 @@ strong {
 .hero-backdrop-grid {
   position: absolute;
   inset: 0;
+  z-index: 2;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
@@ -977,6 +996,7 @@ strong {
 }
 
 .media-placeholder {
+  position: relative;
   min-height: 320px;
   display: grid;
   place-items: end start;
@@ -987,7 +1007,34 @@ strong {
   box-shadow: var(--shadow);
 }
 
+.media-placeholder.has-video {
+  width: 100%;
+  max-width: var(--media-max-width);
+  min-height: 0;
+  display: block;
+  aspect-ratio: var(--media-aspect-ratio);
+  padding: 0;
+  background: var(--navy-d);
+}
+
+.media-placeholder.has-video::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(8, 22, 40, 0.78));
+  pointer-events: none;
+}
+
+.media-placeholder.has-video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: var(--media-fit);
+}
+
 .media-placeholder span {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   max-width: 280px;
   padding: 9px 12px;
@@ -996,6 +1043,12 @@ strong {
   background: var(--amber);
   font-family: var(--font-display);
   font-weight: 900;
+}
+
+.media-placeholder.has-video span {
+  position: absolute;
+  left: 22px;
+  top: 22px;
 }
 
 .detail-grid {

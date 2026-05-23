@@ -1,5 +1,8 @@
 import { defineField, defineType } from "sanity";
 
+const videoAccept = "video/mp4,video/webm,video/ogg,video/quicktime";
+const videoFieldHidden = ({ parent }) => parent?.mediaType !== "video";
+
 export const seo = defineType({
   name: "seo",
   title: "SEO",
@@ -25,11 +28,84 @@ export const mediaAsset = defineType({
       options: { list: ["image", "video"] },
       initialValue: "image"
     }),
-    defineField({ name: "image", title: "Desktop image", type: "image", options: { hotspot: true } }),
-    defineField({ name: "mobileImage", title: "Mobile image", type: "image", options: { hotspot: true } }),
-    defineField({ name: "videoFile", title: "Video file", type: "file" }),
-    defineField({ name: "videoUrl", title: "Video URL", type: "url" }),
-    defineField({ name: "posterImage", title: "Video poster image", type: "image", options: { hotspot: true } }),
+    defineField({
+      name: "image",
+      title: "Desktop image",
+      type: "image",
+      options: { hotspot: true },
+      hidden: ({ parent }) => parent?.mediaType === "video"
+    }),
+    defineField({
+      name: "mobileImage",
+      title: "Mobile image",
+      type: "image",
+      options: { hotspot: true },
+      hidden: ({ parent }) => parent?.mediaType === "video"
+    }),
+    defineField({
+      name: "videoFile",
+      title: "Video file",
+      type: "file",
+      options: { accept: videoAccept },
+      hidden: videoFieldHidden
+    }),
+    defineField({
+      name: "videoUrl",
+      title: "Video URL",
+      type: "url",
+      description: "Use a direct video file URL such as .mp4 or .webm when the video is hosted elsewhere.",
+      hidden: videoFieldHidden
+    }),
+    defineField({
+      name: "posterImage",
+      title: "Video poster image",
+      type: "image",
+      options: { hotspot: true },
+      hidden: videoFieldHidden
+    }),
+    defineField({
+      name: "videoAspectRatio",
+      title: "Video display ratio",
+      type: "string",
+      options: {
+        list: [
+          { title: "Wide 16:9", value: "16 / 9" },
+          { title: "Standard 4:3", value: "4 / 3" },
+          { title: "Square 1:1", value: "1 / 1" },
+          { title: "Vertical 9:16", value: "9 / 16" }
+        ]
+      },
+      initialValue: "16 / 9",
+      hidden: videoFieldHidden
+    }),
+    defineField({
+      name: "videoObjectFit",
+      title: "Video fit",
+      type: "string",
+      options: {
+        list: [
+          { title: "Cover frame", value: "cover" },
+          { title: "Show full video", value: "contain" }
+        ]
+      },
+      initialValue: "cover",
+      hidden: videoFieldHidden
+    }),
+    defineField({
+      name: "videoMaxWidth",
+      title: "Video max width",
+      type: "number",
+      description: "Optional display width in pixels for page media. Leave empty to use the layout default.",
+      validation: (Rule) => Rule.min(240).max(1600),
+      hidden: videoFieldHidden
+    }),
+    defineField({
+      name: "videoAutoplay",
+      title: "Autoplay when used as hero/background",
+      type: "boolean",
+      initialValue: true,
+      hidden: videoFieldHidden
+    }),
     defineField({ name: "altText", title: "Alt text", type: "string", validation: (Rule) => Rule.required() }),
     defineField({ name: "caption", title: "Caption / internal media note", type: "string" }),
     defineField({

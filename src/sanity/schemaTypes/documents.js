@@ -1,5 +1,7 @@
 import { defineField, defineType } from "sanity";
 
+const videoAccept = "video/mp4,video/webm,video/ogg,video/quicktime";
+
 const slugField = defineField({
   name: "slug",
   title: "Slug",
@@ -317,7 +319,12 @@ export const educationPage = defineType({
     defineField({ name: "heroHeadline", title: "Hero headline", type: "string" }),
     defineField({ name: "heroSubheadline", title: "Hero subheadline", type: "text", rows: 3 }),
     defineField({ name: "heroImage", title: "Hero image", type: "image", options: { hotspot: true } }),
-    defineField({ name: "heroVideoOptional", title: "Hero video optional", type: "file" }),
+    defineField({
+      name: "heroVideoOptional",
+      title: "Hero video optional",
+      type: "file",
+      options: { accept: videoAccept }
+    }),
     defineField({ name: "introSection", title: "Intro section", type: "portableContent" }),
     defineField({ name: "skillsCards", title: "Homepage skills cards", type: "array", of: [{ type: "skillsCard" }] }),
     defineField({ name: "universityPartnershipsReference", title: "University partnerships", type: "array", of: [{ type: "reference", to: [{ type: "universityPartnership" }] }] }),
