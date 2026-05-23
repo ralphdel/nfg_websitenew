@@ -107,7 +107,12 @@ export const mediaAsset = defineType({
       hidden: videoFieldHidden
     }),
     defineField({ name: "altText", title: "Alt text", type: "string", validation: (Rule) => Rule.required() }),
-    defineField({ name: "caption", title: "Caption / internal media note", type: "string" }),
+    defineField({
+      name: "caption",
+      title: "Caption / internal media note",
+      type: "string",
+      description: "For videos, this displays as an optional caption overlay. Leave empty for full clean media."
+    }),
     defineField({
       name: "theme",
       title: "Visual theme",

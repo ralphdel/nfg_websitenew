@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 import { Button } from "@/components/common/Button";
 import { heroSlides } from "@/data/siteContent";
@@ -12,6 +12,8 @@ export function Hero({ slides = heroSlides }) {
   const [hoverPaused, setHoverPaused] = useState(false);
   const [userPaused, setUserPaused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const pointerStart = useRef(null);
+  const lastWheelSlideAt = useRef(0);
   const activeSlide = useMemo(() => slides[activeIndex] || slides[0], [activeIndex, slides]);
   const isPaused = hoverPaused || userPaused || reducedMotion;
   const heroPoster = activeSlide?.media?.posterImage;
@@ -46,6 +48,71 @@ export function Hero({ slides = heroSlides }) {
   const nextSlide = () => showSlide(activeIndex + 1);
   const previousSlide = () => showSlide(activeIndex - 1);
 
+  useEffect(() => {
+    const onKeyDown = (event) => {
+      const target = event.target;
+      const isTyping = target?.closest?.("input, textarea, select, [contenteditable='true']");
+
+      if (isTyping || slides.length <= 1) return;
+
+      if (event.key === "ArrowRight" || event.key === "PageDown") {
+        event.preventDefault();
+        setActiveIndex((current) => (current + 1) % slides.length);
+        setUserPaused(true);
+      }
+
+      if (event.key === "ArrowLeft" || event.key === "PageUp") {
+        event.preventDefault();
+        setActiveIndex((current) => (current - 1 + slides.length) % slides.length);
+        setUserPaused(true);
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [slides.length]);
+
+  const onPointerDown = (event) => {
+    if (slides.length <= 1 || event.button > 0) return;
+    pointerStart.current = {
+      id: event.pointerId,
+      x: event.clientX,
+      y: event.clientY
+    };
+  };
+
+  const onPointerUp = (event) => {
+    const start = pointerStart.current;
+    pointerStart.current = null;
+
+    if (!start || start.id !== event.pointerId) return;
+
+    const deltaX = event.clientX - start.x;
+    const deltaY = event.clientY - start.y;
+    const isHorizontalSwipe = Math.abs(deltaX) > 64 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25;
+
+    if (!isHorizontalSwipe) return;
+
+    if (deltaX < 0) nextSlide();
+    if (deltaX > 0) previousSlide();
+  };
+
+  const onWheel = (event) => {
+    const isHorizontal = Math.abs(event.deltaX) > Math.abs(event.deltaY) && Math.abs(event.deltaX) > 36;
+    const now = Date.now();
+
+    if (slides.length <= 1 || !isHorizontal || now - lastWheelSlideAt.current < 700) return;
+
+    lastWheelSlideAt.current = now;
+    setUserPaused(true);
+
+    if (event.deltaX > 0) {
+      setActiveIndex((current) => (current + 1) % slides.length);
+    } else {
+      setActiveIndex((current) => (current - 1 + slides.length) % slides.length);
+    }
+  };
+
   if (!activeSlide) return null;
 
   return (
@@ -56,6 +123,12 @@ export function Hero({ slides = heroSlides }) {
       onMouseLeave={() => setHoverPaused(false)}
       aria-roledescription="carousel"
       aria-label="NFG homepage highlights"
+      onPointerDown={onPointerDown}
+      onPointerUp={onPointerUp}
+      onPointerCancel={() => {
+        pointerStart.current = null;
+      }}
+      onWheel={onWheel}
     >
       <div
         className="hero-backdrop"
@@ -92,10 +165,13 @@ export function Hero({ slides = heroSlides }) {
                 autoPlay={activeSlide.media?.videoAutoplay !== false && !reducedMotion}
                 muted
                 loop
-                controls
+                controlsList="nodownload nofullscreen noplaybackrate noremoteplayback"
+                disablePictureInPicture
+                disableRemotePlayback
                 playsInline
                 preload="metadata"
                 poster={heroPoster || heroImage}
+                onContextMenu={(event) => event.preventDefault()}
               >
                 <source src={heroVideo} />
               </video>

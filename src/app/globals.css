@@ -367,6 +367,7 @@ strong {
 .hero {
   min-height: 720px;
   padding: calc(var(--nav-h) + 78px) 0 44px;
+  touch-action: pan-y;
 }
 
 .hero-backdrop {

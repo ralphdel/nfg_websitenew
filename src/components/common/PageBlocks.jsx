@@ -39,7 +39,19 @@ export function MediaPlaceholder({ label, alt, theme = "foundry", media }) {
           "--media-max-width": media?.videoMaxWidth ? `${media.videoMaxWidth}px` : "none"
         }}
       >
-        <video controls preload="metadata" playsInline poster={poster || image} aria-label={alt}>
+        <video
+          autoPlay={media?.videoAutoplay !== false}
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={poster || image}
+          aria-label={alt}
+          controlsList="nodownload nofullscreen noplaybackrate noremoteplayback"
+          disablePictureInPicture
+          disableRemotePlayback
+          onContextMenu={(event) => event.preventDefault()}
+        >
           <source src={video} />
         </video>
         {caption ? <div className="media-video-caption">{caption}</div> : null}
