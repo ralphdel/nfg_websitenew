@@ -43,17 +43,9 @@ export const mediaAsset = defineType({
       hidden: ({ parent }) => parent?.mediaType === "video"
     }),
     defineField({
-      name: "videoFile",
-      title: "Video file",
-      type: "file",
-      options: { accept: videoAccept },
-      hidden: videoFieldHidden
-    }),
-    defineField({
-      name: "videoUrl",
-      title: "Video URL",
-      type: "url",
-      description: "Use a direct video file URL such as .mp4 or .webm when the video is hosted elsewhere.",
+      name: "video",
+      title: "Mux Video",
+      type: "mux.video",
       hidden: videoFieldHidden
     }),
     defineField({

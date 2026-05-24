@@ -2,6 +2,7 @@ export const imageFields = `
   mediaType,
   image{..., asset->{url}},
   mobileImage{..., asset->{url}},
+  video{asset->{playbackId, assetId}},
   videoFile{asset->{url}},
   videoUrl,
   posterImage{..., asset->{url}},

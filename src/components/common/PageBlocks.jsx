@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/common/Button";
+import { MuxVideoPlayer } from "@/components/common/MuxVideoPlayer";
 
 export function PageHero({ eyebrow, title, body, primaryCta, secondaryCta, theme = "foundry", media }) {
   return (
@@ -23,10 +24,11 @@ export function PageHero({ eyebrow, title, body, primaryCta, secondaryCta, theme
 }
 
 export function MediaPlaceholder({ label, alt, theme = "foundry", media }) {
+  const playbackId = media?.playbackId || media?.video?.asset?.playbackId;
   const video = media?.videoFileUrl || media?.videoFile?.asset?.url || media?.videoUrl;
   const poster = media?.posterImage?.asset?.url || media?.posterImage;
   const image = media?.desktopImage || media?.image?.asset?.url || poster;
-  const showVideo = media?.mediaType === "video" && video;
+  const showVideo = media?.mediaType === "video" && (playbackId || video);
   const caption = showVideo ? media?.caption : "";
 
   if (showVideo) {
@@ -39,21 +41,39 @@ export function MediaPlaceholder({ label, alt, theme = "foundry", media }) {
           "--media-max-width": media?.videoMaxWidth ? `${media.videoMaxWidth}px` : "none"
         }}
       >
-        <video
-          autoPlay={media?.videoAutoplay !== false}
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster={poster || image}
-          aria-label={alt}
-          controlsList="nodownload nofullscreen noplaybackrate noremoteplayback"
-          disablePictureInPicture
-          disableRemotePlayback
-          onContextMenu={(event) => event.preventDefault()}
-        >
-          <source src={video} />
-        </video>
+        {playbackId ? (
+          <MuxVideoPlayer
+            playbackId={playbackId}
+            isLazy={true}
+            preload="none"
+            autoPlay={media?.videoAutoplay !== false}
+            muted={true}
+            loop={true}
+            playsInline={true}
+            poster={poster || image}
+            ariaLabel={alt}
+            style={{
+              aspectRatio: media?.videoAspectRatio || "16/9",
+              "--media-object-fit": media?.videoObjectFit || "cover"
+            }}
+          />
+        ) : (
+          <video
+            autoPlay={media?.videoAutoplay !== false}
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster={poster || image}
+            aria-label={alt}
+            controlsList="nodownload nofullscreen noplaybackrate noremoteplayback"
+            disablePictureInPicture
+            disableRemotePlayback
+            onContextMenu={(event) => event.preventDefault()}
+          >
+            <source src={video} />
+          </video>
+        )}
         {caption ? <div className="media-video-caption">{caption}</div> : null}
       </div>
     );

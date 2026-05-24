@@ -191,14 +191,16 @@ function normalizeMedia(media, fallbackMedia) {
   const imageUrl = media?.image?.asset?.url || media?.imageUrl || media?.desktopImage;
   const mobileImageUrl = media?.mobileImage?.asset?.url || media?.mobileImage;
   const posterUrl = media?.posterImage?.asset?.url;
+  const playbackId = media?.video?.asset?.playbackId || fallbackMedia?.playbackId;
   const videoFileUrl = media?.videoFile?.asset?.url || media?.videoFileUrl;
   const videoUrl = media?.videoUrl || fallbackMedia?.videoUrl;
-  const mediaType = media?.mediaType || fallbackMedia?.mediaType || (videoFileUrl || videoUrl ? "video" : "image");
+  const mediaType = media?.mediaType || fallbackMedia?.mediaType || (playbackId || videoFileUrl || videoUrl ? "video" : "image");
 
   return {
     ...fallbackMedia,
     ...media,
     mediaType,
+    playbackId,
     desktopImage: imageUrl || fallbackMedia?.desktopImage || fallbackMedia?.image,
     mobileImage: mobileImageUrl || fallbackMedia?.mobileImage || fallbackMedia?.desktopImage,
     posterImage: posterUrl || fallbackMedia?.posterImage,

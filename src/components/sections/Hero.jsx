@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 import { Button } from "@/components/common/Button";
 import { heroSlides } from "@/data/siteContent";
+import { MuxVideoPlayer } from "@/components/common/MuxVideoPlayer";
 
 const ROTATION_MS = 11000;
 
@@ -18,8 +19,9 @@ export function Hero({ slides = heroSlides }) {
   const isPaused = hoverPaused || userPaused || reducedMotion;
   const heroPoster = activeSlide?.media?.posterImage;
   const heroImage = activeSlide?.media?.desktopImage || heroPoster;
+  const playbackId = activeSlide?.media?.playbackId;
   const heroVideo = activeSlide?.media?.videoFileUrl || activeSlide?.media?.videoUrl;
-  const showVideo = activeSlide?.media?.mediaType === "video" && heroVideo;
+  const showVideo = activeSlide?.media?.mediaType === "video" && (playbackId || heroVideo);
   const mediaCaption = showVideo ? activeSlide?.media?.caption : "";
 
   useEffect(() => {
@@ -160,21 +162,39 @@ export function Hero({ slides = heroSlides }) {
             }}
           >
             {showVideo ? (
-              <video
-                key={heroVideo}
-                autoPlay={activeSlide.media?.videoAutoplay !== false && !reducedMotion}
-                muted
-                loop
-                controlsList="nodownload nofullscreen noplaybackrate noremoteplayback"
-                disablePictureInPicture
-                disableRemotePlayback
-                playsInline
-                preload="metadata"
-                poster={heroPoster || heroImage}
-                onContextMenu={(event) => event.preventDefault()}
-              >
-                <source src={heroVideo} />
-              </video>
+              playbackId ? (
+                <MuxVideoPlayer
+                  key={playbackId}
+                  playbackId={playbackId}
+                  isLazy={activeIndex > 0}
+                  preload={activeIndex === 0 ? "auto" : "none"}
+                  autoPlay={activeSlide.media?.videoAutoplay !== false && !reducedMotion}
+                  muted
+                  loop
+                  playsInline
+                  poster={heroPoster || heroImage}
+                  style={{
+                    aspectRatio: activeSlide.media?.videoAspectRatio || "16/9",
+                    "--media-object-fit": activeSlide.media?.videoObjectFit || "cover"
+                  }}
+                />
+              ) : (
+                <video
+                  key={heroVideo}
+                  autoPlay={activeSlide.media?.videoAutoplay !== false && !reducedMotion}
+                  muted
+                  loop
+                  controlsList="nodownload nofullscreen noplaybackrate noremoteplayback"
+                  disablePictureInPicture
+                  disableRemotePlayback
+                  playsInline
+                  preload="metadata"
+                  poster={heroPoster || heroImage}
+                  onContextMenu={(event) => event.preventDefault()}
+                >
+                  <source src={heroVideo} />
+                </video>
+              )
             ) : heroImage ? (
               <img src={heroImage} alt={activeSlide.media?.altText || activeSlide.headline} />
             ) : (
