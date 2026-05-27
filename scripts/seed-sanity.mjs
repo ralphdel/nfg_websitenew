@@ -180,6 +180,24 @@ function toMedia(media) {
   };
 }
 
+function toHeroSlide(slide, keyValue, index = 0) {
+  return {
+    _key: keyValue,
+    _type: "heroSlide",
+    eyebrow: slide.eyebrow,
+    headline: slide.headline,
+    subheadline: slide.subheadline,
+    supportText: slide.supportText,
+    media: toMedia(slide.media),
+    primaryCta: toCta(slide.primaryCta),
+    secondaryCta: toCta(slide.secondaryCta),
+    featureCards: (slide.featureCards || []).map((card, cardIndex) => toCard(card, key("feature", cardIndex))),
+    stats: slide.stats,
+    displayOrder: slide.displayOrder || index + 1,
+    active: slide.active ?? true
+  };
+}
+
 function toCard(card, keyValue) {
   if (typeof card === "string") {
     return { _key: keyValue, _type: "card", title: card, description: card };
@@ -197,6 +215,94 @@ function toCard(card, keyValue) {
     useCases: card.useCases,
     link: toCta(card.link || (card.href ? { label: card.cta || "Learn more", href: card.href } : undefined)),
     displayOrder: card.displayOrder
+  };
+}
+
+function toHomepageSupportCard(card) {
+  return {
+    title: card?.title,
+    subtitle: card?.subtitle,
+    body: card?.body,
+    bullets: card?.bullets,
+    cta: toCta(card?.cta)
+  };
+}
+
+function toSignatureUptimeSection(section) {
+  if (!section) return undefined;
+
+  return {
+    _type: "signatureUptimeSection",
+    conceptName: section.conceptName,
+    anchorId: section.anchorId,
+    eyebrow: section.eyebrow,
+    headline: section.headline,
+    introText: section.introText,
+    positioningStatement: section.positioningStatement,
+    strategicMessage: section.strategicMessage,
+    primaryCta: toCta(section.primaryCta),
+    secondaryCta: toCta(section.secondaryCta),
+    plannedSupportTitle: section.plannedSupportTitle,
+    plannedSupportSubtitle: section.plannedSupportSubtitle,
+    plannedSupportBody: section.plannedSupportBody,
+    plannedSupportBullets: section.plannedSupportBullets,
+    plannedSupportCta: toCta(section.plannedSupportCta),
+    emergencySupportTitle: section.emergencySupportTitle,
+    emergencySupportSubtitle: section.emergencySupportSubtitle,
+    emergencySupportBody: section.emergencySupportBody,
+    emergencySupportBullets: section.emergencySupportBullets,
+    emergencySupportCta: toCta(section.emergencySupportCta),
+    hiddenCostHeadline: section.hiddenCostHeadline,
+    hiddenCostBody: section.hiddenCostBody,
+    stockingHeadline: section.stockingHeadline,
+    stockingBody: section.stockingBody,
+    stockingBullets: section.stockingBullets,
+    stockingCta: toCta(section.stockingCta),
+    homepage: section.homepage
+      ? {
+          sectionId: section.homepage.sectionId,
+          eyebrow: section.homepage.eyebrow,
+          headline: section.homepage.headline,
+          body: section.homepage.body,
+          plannedCard: toHomepageSupportCard(section.homepage.plannedCard),
+          emergencyCard: toHomepageSupportCard(section.homepage.emergencyCard)
+        }
+      : undefined,
+    routesBanner: section.routesBanner
+      ? {
+          headline: section.routesBanner.headline,
+          body: section.routesBanner.body
+        }
+      : undefined,
+    strip: section.strip
+      ? {
+          title: section.strip.title,
+          body: section.strip.body,
+          primaryCta: toCta(section.strip.primaryCta),
+          secondaryCta: toCta(section.strip.secondaryCta)
+        }
+      : undefined,
+    displayOnHomepage: section.displayOnHomepage,
+    displayOnSolutionsPage: section.displayOnSolutionsPage,
+    displayOnSolutionPages: section.displayOnSolutionPages
+  };
+}
+
+function toRtqFormConfig(config) {
+  if (!config) return undefined;
+
+  return {
+    _type: "rtqFormConfig",
+    enableQueryParameterPrefill: config.enableQueryParameterPrefill,
+    supportTypeOptions: (config.supportTypeOptions || []).map((option, index) => ({
+      _key: key("support-type", index),
+      label: option.label,
+      value: option.value,
+      description: option.description,
+      defaultGuidance: option.defaultGuidance
+    })),
+    plannedSupportFields: config.plannedSupportFields,
+    emergencySupportFields: config.emergencySupportFields
   };
 }
 
@@ -366,6 +472,28 @@ const siteSettingsDoc = {
   globalCta: toCta(content.siteSettings.globalCta)
 };
 
+const signatureUptimeSolutionDoc = {
+  _id: "signatureUptimeSolution",
+  _type: "signatureUptimeSolution",
+  title: "NFG Signature Uptime Solution",
+  active: true,
+  heroSlide: toHeroSlide(content.signatureUptimeHeroSlide, "signature-hero-01", 1),
+  signatureUptimeSection: toSignatureUptimeSection(content.signatureUptimeSection),
+  rtqFormConfig: toRtqFormConfig(content.rtqFormConfig)
+};
+
+const solutionsOverviewPageDoc = {
+  _id: "solutionsOverviewPage",
+  _type: "solutionsOverviewPage",
+  title: "Solutions overview page",
+  eyebrow: content.solutionsOverviewPage.eyebrow,
+  headline: content.solutionsOverviewPage.headline,
+  body: content.solutionsOverviewPage.body,
+  primaryCta: toCta(content.solutionsOverviewPage.primaryCta),
+  secondaryCta: toCta(content.solutionsOverviewPage.secondaryCta),
+  signatureUptimeSection: toSignatureUptimeSection(content.signatureUptimeSection)
+};
+
 const tvetDoc = {
   _id: "tvetDevelopment",
   _type: "tvetDevelopment",
@@ -378,21 +506,7 @@ const homepageDoc = {
   _id: "homepage",
   _type: "homepage",
   title: "Homepage",
-  heroSlides: content.heroSlides.map((slide, index) => ({
-    _key: key("hero", index),
-    _type: "heroSlide",
-    eyebrow: slide.eyebrow,
-    headline: slide.headline,
-    subheadline: slide.subheadline,
-    supportText: slide.supportText,
-    media: toMedia(slide.media),
-    primaryCta: toCta(slide.primaryCta),
-    secondaryCta: toCta(slide.secondaryCta),
-    featureCards: (slide.featureCards || []).map((card, cardIndex) => toCard(card, key("feature", cardIndex))),
-    stats: slide.stats,
-    displayOrder: index + 1,
-    active: true
-  })),
+  heroSlides: content.heroSlides.map((slide, index) => toHeroSlide(slide, key("hero", index), index)),
   trustBadges: content.trustBadges.map((card, index) => toCard(card, key("trust", index))),
   problemSection: content.problemCards.map((card, index) => toCard(card, key("problem", index))),
   methodSteps: content.methodSteps.map((step, index) => toProcessStep(step, key("method", index), index)),
@@ -410,6 +524,8 @@ const homepageDoc = {
 
 const documents = [
   siteSettingsDoc,
+  signatureUptimeSolutionDoc,
+  solutionsOverviewPageDoc,
   ...industryDocs,
   ...capabilityDocs,
   ...certificationDocs,

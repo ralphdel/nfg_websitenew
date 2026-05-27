@@ -241,35 +241,102 @@ export const signatureUptimeSection = defineType({
   name: "signatureUptimeSection",
   title: "Signature Uptime section",
   type: "object",
+  fieldsets: [
+    { name: "core", title: "Core positioning", options: { collapsible: true, collapsed: false } },
+    { name: "planned", title: "Planned Critical-Parts Support", options: { collapsible: true, collapsed: false } },
+    { name: "emergency", title: "Emergency Manufacturing Support", options: { collapsible: true, collapsed: false } },
+    { name: "homepage", title: "Homepage short section", options: { collapsible: true, collapsed: true } },
+    { name: "solutions", title: "Solutions page blocks", options: { collapsible: true, collapsed: true } },
+    { name: "strip", title: "Solution-page strip", options: { collapsible: true, collapsed: true } },
+    { name: "display", title: "Display controls", options: { collapsible: true, collapsed: true } }
+  ],
   fields: [
-    defineField({ name: "conceptName", title: "Concept name", type: "string", initialValue: "NFG Signature Uptime Solution" }),
-    defineField({ name: "eyebrow", title: "Eyebrow", type: "string", initialValue: "NFG Signature Solution" }),
-    defineField({ name: "headline", title: "Headline", type: "string" }),
-    defineField({ name: "introText", title: "Intro text", type: "text", rows: 5 }),
-    defineField({ name: "positioningStatement", title: "Positioning statement", type: "text", rows: 3 }),
-    defineField({ name: "strategicMessage", title: "Strategic message", type: "text", rows: 3 }),
-    defineField({ name: "plannedSupportTitle", title: "Planned support title", type: "string" }),
-    defineField({ name: "plannedSupportSubtitle", title: "Planned support subtitle", type: "string" }),
-    defineField({ name: "plannedSupportBody", title: "Planned support body", type: "text", rows: 4 }),
-    defineField({ name: "plannedSupportBullets", title: "Planned support bullets", type: "array", of: [{ type: "string" }] }),
-    defineField({ name: "plannedSupportCta", title: "Planned support CTA", type: "cta" }),
-    defineField({ name: "emergencySupportTitle", title: "Emergency support title", type: "string" }),
-    defineField({ name: "emergencySupportSubtitle", title: "Emergency support subtitle", type: "string" }),
-    defineField({ name: "emergencySupportBody", title: "Emergency support body", type: "text", rows: 4 }),
-    defineField({ name: "emergencySupportBullets", title: "Emergency support bullets", type: "array", of: [{ type: "string" }] }),
-    defineField({ name: "emergencySupportCta", title: "Emergency support CTA", type: "cta" }),
-    defineField({ name: "hiddenCostHeadline", title: "Hidden cost headline", type: "string" }),
-    defineField({ name: "hiddenCostBody", title: "Hidden cost body", type: "text", rows: 5 }),
-    defineField({ name: "stockingHeadline", title: "Stocking headline", type: "string" }),
-    defineField({ name: "stockingBody", title: "Stocking body", type: "text", rows: 4 }),
-    defineField({ name: "stockingBullets", title: "Suitable for", type: "array", of: [{ type: "string" }] }),
-    defineField({ name: "primaryCta", title: "Primary CTA", type: "cta" }),
-    defineField({ name: "secondaryCta", title: "Secondary CTA", type: "cta" }),
-    defineField({ name: "stockingCta", title: "Stocking CTA", type: "cta" }),
-    defineField({ name: "displayOnHomepage", title: "Display on homepage", type: "boolean", initialValue: true }),
-    defineField({ name: "displayOnSolutionsPage", title: "Display on Solutions page", type: "boolean", initialValue: true }),
-    defineField({ name: "displayOnSolutionPages", title: "Display on solution pages", type: "boolean", initialValue: true }),
-    defineField({ name: "anchorId", title: "Anchor ID", type: "string", initialValue: "signature-uptime-solution" })
+    defineField({ name: "conceptName", title: "Concept name", type: "string", initialValue: "NFG Signature Uptime Solution", fieldset: "core" }),
+    defineField({ name: "eyebrow", title: "Eyebrow", type: "string", initialValue: "NFG Signature Solution", fieldset: "core" }),
+    defineField({ name: "headline", title: "Headline", type: "string", fieldset: "core" }),
+    defineField({ name: "introText", title: "Intro text", type: "text", rows: 5, fieldset: "core" }),
+    defineField({ name: "positioningStatement", title: "Positioning statement", type: "text", rows: 3, fieldset: "core" }),
+    defineField({ name: "strategicMessage", title: "Strategic message", type: "text", rows: 3, fieldset: "core" }),
+    defineField({ name: "primaryCta", title: "Primary CTA", type: "cta", fieldset: "core" }),
+    defineField({ name: "secondaryCta", title: "Secondary CTA", type: "cta", fieldset: "core" }),
+    defineField({ name: "plannedSupportTitle", title: "Planned support title", type: "string", fieldset: "planned" }),
+    defineField({ name: "plannedSupportSubtitle", title: "Planned support subtitle", type: "string", fieldset: "planned" }),
+    defineField({ name: "plannedSupportBody", title: "Planned support body", type: "text", rows: 4, fieldset: "planned" }),
+    defineField({ name: "plannedSupportBullets", title: "Planned support bullets", type: "array", of: [{ type: "string" }], fieldset: "planned" }),
+    defineField({ name: "plannedSupportCta", title: "Planned support CTA", type: "cta", fieldset: "planned" }),
+    defineField({ name: "emergencySupportTitle", title: "Emergency support title", type: "string", fieldset: "emergency" }),
+    defineField({ name: "emergencySupportSubtitle", title: "Emergency support subtitle", type: "string", fieldset: "emergency" }),
+    defineField({ name: "emergencySupportBody", title: "Emergency support body", type: "text", rows: 4, fieldset: "emergency" }),
+    defineField({ name: "emergencySupportBullets", title: "Emergency support bullets", type: "array", of: [{ type: "string" }], fieldset: "emergency" }),
+    defineField({ name: "emergencySupportCta", title: "Emergency support CTA", type: "cta", fieldset: "emergency" }),
+    defineField({
+      name: "homepage",
+      title: "Homepage placement",
+      type: "object",
+      fieldset: "homepage",
+      fields: [
+        defineField({ name: "sectionId", title: "Section ID", type: "string", initialValue: "homepage-signature-uptime-solution" }),
+        defineField({ name: "eyebrow", title: "Eyebrow", type: "string", initialValue: "NFG Signature Solution" }),
+        defineField({ name: "headline", title: "Headline", type: "string" }),
+        defineField({ name: "body", title: "Intro body", type: "text", rows: 6 }),
+        defineField({
+          name: "plannedCard",
+          title: "Planned support card",
+          type: "object",
+          fields: [
+            defineField({ name: "title", title: "Title", type: "string" }),
+            defineField({ name: "subtitle", title: "Subtitle", type: "string" }),
+            defineField({ name: "body", title: "Body", type: "text", rows: 4 }),
+            defineField({ name: "bullets", title: "Bullets", type: "array", of: [{ type: "string" }] }),
+            defineField({ name: "cta", title: "CTA", type: "cta" })
+          ]
+        }),
+        defineField({
+          name: "emergencyCard",
+          title: "Emergency support card",
+          type: "object",
+          fields: [
+            defineField({ name: "title", title: "Title", type: "string" }),
+            defineField({ name: "subtitle", title: "Subtitle", type: "string" }),
+            defineField({ name: "body", title: "Body", type: "text", rows: 4 }),
+            defineField({ name: "bullets", title: "Bullets", type: "array", of: [{ type: "string" }] }),
+            defineField({ name: "cta", title: "CTA", type: "cta" })
+          ]
+        })
+      ]
+    }),
+    defineField({
+      name: "routesBanner",
+      title: "Banner above six technical routes",
+      type: "object",
+      fieldset: "solutions",
+      fields: [
+        defineField({ name: "headline", title: "Headline", type: "string" }),
+        defineField({ name: "body", title: "Body", type: "text", rows: 3 })
+      ]
+    }),
+    defineField({ name: "hiddenCostHeadline", title: "Hidden cost headline", type: "string", fieldset: "solutions" }),
+    defineField({ name: "hiddenCostBody", title: "Hidden cost body", type: "text", rows: 5, fieldset: "solutions" }),
+    defineField({ name: "stockingHeadline", title: "Stocking headline", type: "string", fieldset: "solutions" }),
+    defineField({ name: "stockingBody", title: "Stocking body", type: "text", rows: 4, fieldset: "solutions" }),
+    defineField({ name: "stockingBullets", title: "Suitable for", type: "array", of: [{ type: "string" }], fieldset: "solutions" }),
+    defineField({ name: "stockingCta", title: "Stocking CTA", type: "cta", fieldset: "solutions" }),
+    defineField({
+      name: "strip",
+      title: "Reusable strip for individual solution pages",
+      type: "object",
+      fieldset: "strip",
+      fields: [
+        defineField({ name: "title", title: "Title", type: "string" }),
+        defineField({ name: "body", title: "Body", type: "text", rows: 4 }),
+        defineField({ name: "primaryCta", title: "Primary CTA", type: "cta" }),
+        defineField({ name: "secondaryCta", title: "Secondary CTA", type: "cta" })
+      ]
+    }),
+    defineField({ name: "displayOnHomepage", title: "Display on homepage", type: "boolean", initialValue: true, fieldset: "display" }),
+    defineField({ name: "displayOnSolutionsPage", title: "Display on Solutions page", type: "boolean", initialValue: true, fieldset: "display" }),
+    defineField({ name: "displayOnSolutionPages", title: "Display on solution pages", type: "boolean", initialValue: true, fieldset: "display" }),
+    defineField({ name: "anchorId", title: "Anchor ID", type: "string", initialValue: "signature-uptime-solution", fieldset: "display" })
   ]
 });
 

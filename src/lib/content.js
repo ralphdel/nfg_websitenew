@@ -288,14 +288,15 @@ function stepsToStrings(steps, fallbackItems = []) {
 }
 
 function normalizeHeroSlide(slide, fallbackSlide = {}, sourceHasSlides = false) {
+  const source = slide || {};
   return {
     ...fallbackSlide,
-    ...slide,
-    primaryCta: normalizeCta(slide?.primaryCta, fallbackSlide.primaryCta),
-    secondaryCta: normalizeCta(slide?.secondaryCta, fallbackSlide.secondaryCta),
-    media: normalizeMedia(slide?.media, fallbackSlide.media),
-    featureCards: normalizeCards(slide?.featureCards, fallbackSlide.featureCards || []).map(({ icon, ...card }) => card),
-    stats: Array.isArray(slide?.stats) ? slide.stats : sourceHasSlides ? [] : fallbackSlide.stats || []
+    ...source,
+    primaryCta: normalizeCta(source.primaryCta, fallbackSlide.primaryCta),
+    secondaryCta: normalizeCta(source.secondaryCta, fallbackSlide.secondaryCta),
+    media: normalizeMedia(source.media, fallbackSlide.media),
+    featureCards: normalizeCards(source.featureCards, fallbackSlide.featureCards || []).map(({ icon, ...card }) => card),
+    stats: Array.isArray(source.stats) ? source.stats : sourceHasSlides ? [] : fallbackSlide.stats || []
   };
 }
 
@@ -304,16 +305,16 @@ function isSignatureHeroSlide(slide) {
   return text.includes("signature uptime");
 }
 
-function normalizeHeroSlides(slides, fallbackSlides = []) {
+function normalizeHeroSlides(slides, fallbackSlides = [], signatureHeroSlide = fallback.signatureUptimeHeroSlide) {
   const sourceHasSlides = hasItems(slides);
   const source = sourceHasSlides ? slides : fallbackSlides;
   const normalized = source
     .map((slide, index) => normalizeHeroSlide(slide, fallbackSlides[index] || {}, sourceHasSlides))
     .filter((slide) => slide.headline);
 
-  if (!fallback.signatureUptimeHeroSlide || normalized.some(isSignatureHeroSlide)) return normalized;
+  if (!signatureHeroSlide || normalized.some(isSignatureHeroSlide)) return normalized;
 
-  const signatureSlide = normalizeHeroSlide(fallback.signatureUptimeHeroSlide, fallback.signatureUptimeHeroSlide, false);
+  const signatureSlide = normalizeHeroSlide(signatureHeroSlide, fallback.signatureUptimeHeroSlide, false);
   if (!normalized.length) return [signatureSlide];
 
   return [normalized[0], signatureSlide, ...normalized.slice(1)];
@@ -574,15 +575,25 @@ function normalizeCollections(raw = {}) {
   const blogPosts = normalizeCollection(raw.blogPosts, fallback.blogPosts, normalizeBlogPost, (item) => item.title && item.slug);
 
   const homepage = raw.homepage || {};
+  const signatureDoc = raw.signatureUptimeSolution || {};
+  const useSignatureDoc = signatureDoc.active !== false;
   const signatureUptimeSection = normalizeSignatureUptimeSection(
-    homepage.signatureUptimeSection || raw.solutionsOverview?.signatureUptimeSection || raw.siteSettings?.signatureUptimeSection,
+    (useSignatureDoc ? signatureDoc.signatureUptimeSection : null) ||
+      homepage.signatureUptimeSection ||
+      raw.solutionsOverview?.signatureUptimeSection ||
+      raw.siteSettings?.signatureUptimeSection,
     fallback.signatureUptimeSection
   );
   const solutionsOverview = normalizeSolutionsOverview(raw.solutionsOverview, signatureUptimeSection);
   const rtqFormConfig = {
     ...fallback.rtqFormConfig,
-    ...(raw.siteSettings?.rtqFormConfig || {})
+    ...(raw.siteSettings?.rtqFormConfig || {}),
+    ...((useSignatureDoc && signatureDoc.rtqFormConfig) || {})
   };
+  const signatureHeroSlide =
+    useSignatureDoc && signatureDoc.heroSlide
+      ? normalizeHeroSlide(signatureDoc.heroSlide, fallback.signatureUptimeHeroSlide, true)
+      : fallback.signatureUptimeHeroSlide;
 
   return {
     source: raw.source || "fallback",
@@ -604,7 +615,7 @@ function normalizeCollections(raw = {}) {
     solutionsOverview,
     rtqFormConfig,
     homepage: {
-      heroSlides: normalizeHeroSlides(homepage.heroSlides, fallback.heroSlides),
+      heroSlides: normalizeHeroSlides(homepage.heroSlides, fallback.heroSlides, signatureHeroSlide),
       signatureUptimeSection,
       trustBadges: normalizeCards(
         homepage.trustBadges,

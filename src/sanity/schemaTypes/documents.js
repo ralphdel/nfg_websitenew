@@ -71,6 +71,51 @@ export const navigationSettings = defineType({
   ]
 });
 
+export const signatureUptimeSolution = defineType({
+  name: "signatureUptimeSolution",
+  title: "NFG Signature Uptime Solution",
+  type: "document",
+  fields: [
+    defineField({ name: "title", title: "Internal title", type: "string", initialValue: "NFG Signature Uptime Solution" }),
+    defineField({
+      name: "active",
+      title: "Use this Signature Uptime content on the website",
+      type: "boolean",
+      initialValue: true
+    }),
+    defineField({
+      name: "heroSlide",
+      title: "Homepage hero slide",
+      type: "heroSlide",
+      description: "The Signature Uptime hero slide inserted after the main NFG positioning slide."
+    }),
+    defineField({
+      name: "signatureUptimeSection",
+      title: "Reusable Signature Uptime content",
+      type: "signatureUptimeSection",
+      description: "Controls the homepage section, Solutions page section, and individual solution-page strip."
+    }),
+    defineField({
+      name: "rtqFormConfig",
+      title: "RTQ / RFQ support-type config",
+      type: "rtqFormConfig",
+      description: "Controls the support-type selector guidance and field labels for planned/emergency support."
+    })
+  ],
+  preview: {
+    select: {
+      title: "title",
+      active: "active"
+    },
+    prepare({ title, active }) {
+      return {
+        title: title || "NFG Signature Uptime Solution",
+        subtitle: active === false ? "Inactive" : "Active website content"
+      };
+    }
+  }
+});
+
 export const homepage = defineType({
   name: "homepage",
   title: "Homepage",

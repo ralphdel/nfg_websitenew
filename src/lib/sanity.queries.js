@@ -102,6 +102,36 @@ export const signatureUptimeSectionFields = `
   stockingBody,
   stockingBullets,
   stockingCta{${ctaFields}},
+  homepage{
+    sectionId,
+    eyebrow,
+    headline,
+    body,
+    plannedCard{
+      title,
+      subtitle,
+      body,
+      bullets,
+      cta{${ctaFields}}
+    },
+    emergencyCard{
+      title,
+      subtitle,
+      body,
+      bullets,
+      cta{${ctaFields}}
+    }
+  },
+  routesBanner{
+    headline,
+    body
+  },
+  strip{
+    title,
+    body,
+    primaryCta{${ctaFields}},
+    secondaryCta{${ctaFields}}
+  },
   displayOnHomepage,
   displayOnSolutionsPage,
   displayOnSolutionPages
@@ -277,6 +307,13 @@ export const siteSettingsQuery = `*[_type == "siteSettings"][0]{
 }`;
 
 export const navigationSettingsQuery = `*[_type == "navigationSettings"][0]`;
+export const signatureUptimeSolutionQuery = `*[_type == "signatureUptimeSolution"][0]{
+  title,
+  active,
+  heroSlide{${heroSlideFields}},
+  signatureUptimeSection{${signatureUptimeSectionFields}},
+  rtqFormConfig{${rtqFormConfigFields}}
+}`;
 export const solutionsOverviewPageQuery = `*[_type == "solutionsOverviewPage"][0]{
   title,
   seo,
@@ -314,6 +351,7 @@ export const tvetDevelopmentQuery = `*[_type == "tvetDevelopment"][0]`;
 
 export const allEditableContentQuery = `{
   "siteSettings": ${siteSettingsQuery},
+  "signatureUptimeSolution": ${signatureUptimeSolutionQuery},
   "homepage": ${homepageQuery},
   "solutionsOverview": ${solutionsOverviewPageQuery},
   "solutions": ${solutionPagesQuery},
