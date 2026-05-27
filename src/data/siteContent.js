@@ -66,6 +66,200 @@ export const siteSettings = {
   globalCta: { label: "Send Part / Drawing", href: "/rfq" }
 };
 
+export const signatureUptimeHeroSlide = {
+  eyebrow: "NFG Signature Uptime Solution",
+  headline: "Plan Ahead. Respond Fast. Protect Production.",
+  subheadline:
+    "A failed part is not just a purchase problem - it is lost production, waiting time, emergency pressure and money lost by the hour.",
+  supportText:
+    "NFG supports clients through a two-pronged approach: planned critical-parts support before shutdowns, and emergency manufacturing support when unexpected failures occur. The earlier maintenance, planning, procurement and NFG work together, the better we can prepare materials, production routes, capacity, inspection and delivery priorities. Prioritise local Naira-based manufacturing where Nigerian capacity exists, and use valuable forex only where no local support is available. Avoid the hidden cost of late planning, import uncertainty, documentation delays, wrong specifications and plant downtime.",
+  primaryCta: { label: "Plan Critical Parts", href: "/solutions#signature-uptime-solution" },
+  secondaryCta: { label: "Request Emergency Support", href: "/rtq" },
+  media: {
+    desktopImage: "/placeholders/hero/signature-uptime-solution.jpg",
+    mobileImage: "/placeholders/hero/signature-uptime-solution.jpg",
+    altText: "Industrial planner reviewing a parts list with maintenance and foundry support",
+    caption: "Planned critical-parts support and emergency manufacturing response",
+    overlayOpacity: 0.7,
+    theme: "uptime"
+  },
+  featureCards: [
+    { title: "Plan", description: "Prepare known, repeat and shutdown-critical parts before pressure builds." },
+    { title: "Respond", description: "Review failed parts, samples, drawings and urgent production constraints." },
+    { title: "Protect", description: "Focus on uptime, local support and total production impact." }
+  ]
+};
+
+export const signatureUptimeSection = {
+  conceptName: "NFG Signature Uptime Solution",
+  anchorId: "signature-uptime-solution",
+  eyebrow: "NFG Signature Solution",
+  headline: "Plan Ahead Where You Can. Respond Fast When You Must.",
+  introText:
+    "NFG's technical solutions work best when they are connected to the client's maintenance reality. Some parts fail unexpectedly and require emergency response. Other parts are known, repeat, high-risk or shutdown-critical and should be planned before the plant is under pressure. That is why NFG supports clients through a two-pronged uptime model: planned critical-parts support and emergency manufacturing support. Both routes lead to the right technical solution - casting, machining, fabrication, reverse engineering, wear solution, corrosion protection, municipal casting or 3D printing.",
+  positioningStatement:
+    "NFG supports industrial clients through a two-pronged approach: planned critical-parts support before shutdowns and emergency manufacturing support when unexpected failures occur.",
+  strategicMessage:
+    "Prioritise local Naira-based manufacturing where Nigerian capacity exists, and use valuable forex only where no local support is available.",
+  primaryCta: { label: "Plan Critical Parts", href: "/solutions#signature-uptime-solution" },
+  secondaryCta: { label: "Request Emergency Support", href: "/rtq" },
+  plannedSupportTitle: "Planned Critical-Parts Support",
+  plannedSupportSubtitle: "The best delivery time starts before the emergency.",
+  plannedSupportBody:
+    "For known, repeat and shutdown-critical parts, NFG works with maintenance, planning and procurement teams before the emergency. When NFG understands the shutdown calendar, failure history, quantities and technical requirements early, it can prepare the manufacturing route, raw materials, tooling, production capacity, inspection requirements and delivery schedule.",
+  plannedSupportBullets: [
+    "Turnaround maintenance",
+    "Shutdown planning",
+    "Repeat wear parts",
+    "Critical spares",
+    "Long-lead parts",
+    "Obsolete parts",
+    "No-drawing parts",
+    "Minimum stock-level agreements",
+    "Consignment stocking discussions"
+  ],
+  plannedSupportCta: { label: "Create a Critical Parts Plan", href: "/rtq?supportType=planned" },
+  emergencySupportTitle: "Emergency Manufacturing Support",
+  emergencySupportSubtitle: "When the plant is waiting, NFG helps you respond.",
+  emergencySupportBody:
+    "Not every failure can be predicted. When a part breaks, wears out, corrodes or becomes unavailable, NFG helps identify the part, understand the failure, reverse-engineer where required and manufacture a practical local solution.",
+  emergencySupportBullets: [
+    "Plant stopped",
+    "Urgent breakdown",
+    "Broken or worn part",
+    "Corrosion failure",
+    "Unknown material",
+    "Missing drawing",
+    "OEM support unavailable",
+    "Import delay",
+    "Wrong or failed previous part"
+  ],
+  emergencySupportCta: { label: "Request Emergency Support", href: "/rtq?supportType=emergency" },
+  hiddenCostHeadline: "The Cheapest Part Is Not Always the Lowest-Cost Solution.",
+  hiddenCostBody:
+    "Clients often compare only the overseas part price. But the hidden cost starts when the requirement is discussed too late: poor planning, delayed approvals, missing documents, wrong specifications, import uncertainty, documentation delays, emergency pressure and lost production while the plant waits. NFG helps clients think differently: prioritise local Naira-based manufacturing where Nigerian capacity exists, and use valuable forex only where no local support is available.",
+  stockingHeadline: "Consignment Stocking for Critical Repeat Parts",
+  stockingBody:
+    "After a first successful supply, NFG and the client can agree on minimum stock levels or consignment stocking for selected repeat parts. This gives the client faster emergency replacement options and helps NFG plan raw materials and production more efficiently. The goal is fewer surprises, better delivery discipline and less plant waiting time.",
+  stockingBullets: [
+    "Repeat wear parts",
+    "Crusher parts",
+    "Cement plant spares",
+    "Quarry parts",
+    "Pump parts",
+    "Machined castings",
+    "Municipal castings",
+    "Sacrificial anodes",
+    "Other critical repeat items"
+  ],
+  stockingCta: { label: "Discuss Consignment Stocking", href: "/rtq?supportType=planned&interest=stocking" },
+  homepage: {
+    sectionId: "homepage-signature-uptime-solution",
+    eyebrow: "NFG Signature Solution",
+    headline: "Two Ways to Protect Uptime: Plan Ahead and Respond Fast.",
+    body:
+      "Not every industrial failure can be predicted. When a critical part breaks, wears out, corrodes or becomes unavailable, NFG can help identify the part, reverse-engineer the requirement and manufacture a practical local solution. That is our emergency support role. But the strongest results come when we plan together before the crisis. Maintenance knows the equipment. Planning knows the shutdown window. Procurement controls the purchase process. NFG understands the manufacturing route, raw materials, tooling, production capacity and delivery reality. When all sides work together early, we can plan better, quote better, produce better and support delivery times more realistically.",
+    plannedCard: {
+      title: "Planned Critical-Parts Support",
+      subtitle: "For shutdowns, repeat parts and known high-risk items.",
+      body:
+        "For known, repeat and shutdown-critical parts, NFG works with maintenance, planning and procurement teams before the emergency. Early planning helps NFG prepare raw materials, production routes, tooling, machining, inspection and delivery priorities.",
+      bullets: [
+        "Shutdown and turnaround maintenance planning",
+        "Repeat wear-part identification",
+        "Long-lead item planning",
+        "Obsolete or no-drawing part review",
+        "Minimum stock-level discussions",
+        "Consignment stocking where suitable"
+      ],
+      cta: { label: "Plan Critical Parts", href: "/solutions#signature-uptime-solution" }
+    },
+    emergencyCard: {
+      title: "Emergency Manufacturing Support",
+      subtitle: "For unexpected failures and urgent plant pressure.",
+      body:
+        "When a part fails unexpectedly, NFG helps respond by reviewing the failed part, identifying the problem, reverse-engineering where required and selecting the right local manufacturing route.",
+      bullets: [
+        "Broken or worn part review",
+        "Drawing/photo/sample assessment",
+        "3D laser scanning",
+        "Dimensional checks",
+        "OES spectrometer analysis",
+        "Material and wear review",
+        "Urgent quotation",
+        "Local manufacturing support"
+      ],
+      cta: { label: "Request Emergency Support", href: "/rtq" }
+    }
+  },
+  routesBanner: {
+    headline: "Six Technical Routes. One NFG Working Model.",
+    body: "Whether your requirement is planned or urgent, NFG begins with the problem, then guides you to the right solution route."
+  },
+  strip: {
+    title: "Supported by the NFG Signature Uptime Solution",
+    body:
+      "This solution can support both planned critical-parts requirements and emergency manufacturing needs. Early planning helps NFG prepare raw materials, production capacity and delivery priorities. Emergency support helps clients respond when the plant is already under pressure.",
+    primaryCta: { label: "Plan Critical Parts", href: "/solutions#signature-uptime-solution" },
+    secondaryCta: { label: "Request Emergency Support", href: "/rtq" }
+  },
+  displayOnHomepage: true,
+  displayOnSolutionsPage: true,
+  displayOnSolutionPages: true
+};
+
+export const solutionsOverviewPage = {
+  eyebrow: "Solutions",
+  headline: "Send the Problem. We Help Choose the Route.",
+  body:
+    "From broken parts and worn liners to corrosion protection, municipal castings and advanced manufacturing, NFG starts by understanding the client problem before choosing the manufacturing route.",
+  primaryCta: { label: "Plan Critical Parts", href: "/solutions#signature-uptime-solution" },
+  secondaryCta: { label: "Send Part / Drawing", href: "/rtq" },
+  signatureUptimeSection
+};
+
+export const rtqFormConfig = {
+  enableQueryParameterPrefill: true,
+  supportTypeOptions: [
+    {
+      value: "emergency",
+      label: "Emergency Support",
+      description: "The plant is stopped, under pressure, or needs urgent replacement support.",
+      defaultGuidance: "Suggested urgency: Urgent or Plant stopped."
+    },
+    {
+      value: "planned",
+      label: "Planned Critical-Parts Support",
+      description: "You are planning for shutdown, turnaround maintenance, repeat parts, minimum stock levels or consignment stocking.",
+      defaultGuidance: "Suggested urgency: Planned shutdown or Routine."
+    },
+    {
+      value: "standard",
+      label: "Standard RFQ / Technical Review",
+      description: "You want NFG to review a part, drawing, photo or manufacturing requirement.",
+      defaultGuidance: "Routine or urgent depending on user selection."
+    }
+  ],
+  plannedSupportFields: [
+    "Upcoming shutdown / turnaround date",
+    "Critical parts list available?",
+    "Repeat parts currently imported?",
+    "Parts with no drawings?",
+    "Interest in minimum stock levels?",
+    "Interest in consignment stocking?",
+    "Maintenance contact name",
+    "Planning contact name",
+    "Procurement contact name"
+  ],
+  emergencySupportFields: [
+    "Is the plant currently stopped?",
+    "How many hours/days has production been affected?",
+    "Is there an emergency shutdown date?",
+    "Is a sample part available immediately?",
+    "Is urgent site visit required?"
+  ]
+};
+
 export const heroSlides = [
   {
     eyebrow: "Built in Nigeria. Supported locally. Trusted since 1969.",
@@ -94,6 +288,7 @@ export const heroSlides = [
       { value: "Local", label: "support and accountability" }
     ]
   },
+  signatureUptimeHeroSlide,
   {
     eyebrow: "Reverse engineering",
     headline: "No Drawing? No OEM Support? We Start With the Part.",
@@ -1210,11 +1405,20 @@ export const navItems = [
     label: "Solutions",
     href: "/solutions",
     description: "Manufacturing routes for parts, wear, corrosion and reverse engineering.",
-    items: solutions.map((item) => ({
-      label: item.navTitle || item.title,
-      href: `/solutions/${item.slug}`,
-      description: item.summary
-    }))
+    items: [
+      {
+        label: "NFG Signature Uptime Solution",
+        href: "/solutions#signature-uptime-solution",
+        description:
+          "Plan ahead, respond fast and protect production through planned critical-parts support and emergency manufacturing support.",
+        featured: true
+      },
+      ...solutions.map((item) => ({
+        label: item.navTitle || item.title,
+        href: `/solutions/${item.slug}`,
+        description: item.summary
+      }))
+    ]
   },
   {
     label: "Industries",

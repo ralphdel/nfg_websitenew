@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import { Card } from "@/components/common/Card";
 import { PageHero, SectionList, TagList } from "@/components/common/PageBlocks";
-import { getCertifications, getIndustries, getResourcesContent, getSolutionBySlug, getSolutions } from "@/lib/content";
+import { SignatureUptimeStrip } from "@/components/sections/SignatureUptimeSection";
+import { getCertifications, getIndustries, getResourcesContent, getSignatureUptimeSection, getSolutionBySlug, getSolutions } from "@/lib/content";
 import Link from "next/link";
 
 function itemSlug(item) {
@@ -32,10 +33,11 @@ export default async function SolutionPage({ params }) {
   const page = await getSolutionBySlug(slug);
   if (!page) notFound();
 
-  const [industries, certifications, resources] = await Promise.all([
+  const [industries, certifications, resources, signatureUptimeSection] = await Promise.all([
     getIndustries(),
     getCertifications(),
-    getResourcesContent()
+    getResourcesContent(),
+    getSignatureUptimeSection()
   ]);
 
   const relatedIndustries = (page.relatedIndustries || [])
@@ -56,6 +58,7 @@ export default async function SolutionPage({ params }) {
         theme={page.slug.includes("corrosion") ? "marine" : page.slug.includes("reverse") ? "scan" : page.slug.includes("wear") ? "wear" : "foundry"}
         media={page.media}
       />
+      {page.showSignatureUptimeStrip === false ? null : <SignatureUptimeStrip section={signatureUptimeSection} />}
 
       <section className="section">
         <div className="container detail-grid">

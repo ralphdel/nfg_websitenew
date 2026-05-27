@@ -76,6 +76,44 @@ export const heroSlideFields = `
   active
 `;
 
+export const signatureUptimeSectionFields = `
+  conceptName,
+  anchorId,
+  eyebrow,
+  headline,
+  introText,
+  positioningStatement,
+  strategicMessage,
+  primaryCta{${ctaFields}},
+  secondaryCta{${ctaFields}},
+  plannedSupportTitle,
+  plannedSupportSubtitle,
+  plannedSupportBody,
+  plannedSupportBullets,
+  plannedSupportCta{${ctaFields}},
+  emergencySupportTitle,
+  emergencySupportSubtitle,
+  emergencySupportBody,
+  emergencySupportBullets,
+  emergencySupportCta{${ctaFields}},
+  hiddenCostHeadline,
+  hiddenCostBody,
+  stockingHeadline,
+  stockingBody,
+  stockingBullets,
+  stockingCta{${ctaFields}},
+  displayOnHomepage,
+  displayOnSolutionsPage,
+  displayOnSolutionPages
+`;
+
+export const rtqFormConfigFields = `
+  enableQueryParameterPrefill,
+  supportTypeOptions[]{title, label, value, description, defaultGuidance},
+  plannedSupportFields,
+  emergencySupportFields
+`;
+
 export const certificationFields = `
   _id,
   _type,
@@ -124,7 +162,8 @@ export const solutionPageFields = `
   relatedIndustries[]->{_id, _type, title, slug, summary, commonParts},
   relatedCaseStudies[]->{_id, _type, title, slug},
   downloads[]->{_id, _type, title, category},
-  cta{${ctaFields}}
+  cta{${ctaFields}},
+  showSignatureUptimeStrip
 `;
 
 export const industryPageFields = `
@@ -225,16 +264,29 @@ export const homepageQuery = `
   certificationsSection[]->{${certificationFields}},
   caseStudyReferences[]->{${caseStudyFields}},
   leadershipReferences[]->{${leaderFields}},
+  signatureUptimeSection{${signatureUptimeSectionFields}},
   finalCta{${ctaFields}}
 }`;
 
 export const siteSettingsQuery = `*[_type == "siteSettings"][0]{
   ...,
   globalCta{${ctaFields}},
+  signatureUptimeSection{${signatureUptimeSectionFields}},
+  rtqFormConfig{${rtqFormConfigFields}},
   defaultOgImage{..., asset->{url}}
 }`;
 
 export const navigationSettingsQuery = `*[_type == "navigationSettings"][0]`;
+export const solutionsOverviewPageQuery = `*[_type == "solutionsOverviewPage"][0]{
+  title,
+  seo,
+  eyebrow,
+  headline,
+  body,
+  primaryCta{${ctaFields}},
+  secondaryCta{${ctaFields}},
+  signatureUptimeSection{${signatureUptimeSectionFields}}
+}`;
 export const solutionPagesQuery = `*[_type == "solutionPage" && defined(slug.current)] | order(title asc){${solutionPageFields}}`;
 export const industryPagesQuery = `*[_type == "industryPage" && defined(slug.current)] | order(title asc){${industryPageFields}}`;
 export const capabilityPagesQuery = `*[_type == "capabilityPage" && defined(slug.current)] | order(title asc){${capabilityPageFields}}`;
@@ -263,6 +315,7 @@ export const tvetDevelopmentQuery = `*[_type == "tvetDevelopment"][0]`;
 export const allEditableContentQuery = `{
   "siteSettings": ${siteSettingsQuery},
   "homepage": ${homepageQuery},
+  "solutionsOverview": ${solutionsOverviewPageQuery},
   "solutions": ${solutionPagesQuery},
   "industries": ${industryPagesQuery},
   "capabilities": ${capabilityPagesQuery},

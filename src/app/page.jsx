@@ -8,6 +8,7 @@ import { NigerianContent } from "@/components/sections/NigerianContent";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { ProofSection } from "@/components/sections/ProofSection";
 import { ReverseEngineeringHighlight } from "@/components/sections/ReverseEngineeringHighlight";
+import { HomepageSignatureUptimeSection } from "@/components/sections/SignatureUptimeSection";
 import { SolutionsSection } from "@/components/sections/SolutionsSection";
 import { SkillsEducationSection } from "@/components/sections/SkillsEducationSection";
 import { TrustBar } from "@/components/sections/TrustBar";
@@ -26,6 +27,7 @@ export default async function HomePage() {
       <Hero slides={content.heroSlides} />
       <TrustBar badges={content.trustBadges} />
       <ProblemSection problems={content.problems} />
+      <HomepageSignatureUptimeSection section={content.signatureUptimeSection} />
       <HowWeWork steps={content.methodSteps} />
       <SolutionsSection solutions={content.solutions} />
       <IndustriesSection industries={content.industries} />

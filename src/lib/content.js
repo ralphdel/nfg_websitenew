@@ -287,23 +287,100 @@ function stepsToStrings(steps, fallbackItems = []) {
   return steps.map((step) => step.description || step.title).filter(Boolean);
 }
 
-function normalizeHeroSlides(slides, fallbackSlides = []) {
-  const source = hasItems(slides) ? slides : fallbackSlides;
+function normalizeHeroSlide(slide, fallbackSlide = {}, sourceHasSlides = false) {
+  return {
+    ...fallbackSlide,
+    ...slide,
+    primaryCta: normalizeCta(slide?.primaryCta, fallbackSlide.primaryCta),
+    secondaryCta: normalizeCta(slide?.secondaryCta, fallbackSlide.secondaryCta),
+    media: normalizeMedia(slide?.media, fallbackSlide.media),
+    featureCards: normalizeCards(slide?.featureCards, fallbackSlide.featureCards || []).map(({ icon, ...card }) => card),
+    stats: Array.isArray(slide?.stats) ? slide.stats : sourceHasSlides ? [] : fallbackSlide.stats || []
+  };
+}
 
-  return source
-    .map((slide, index) => {
-      const fallbackSlide = fallbackSlides[index] || {};
-      return {
-        ...fallbackSlide,
-        ...slide,
-        primaryCta: normalizeCta(slide?.primaryCta, fallbackSlide.primaryCta),
-        secondaryCta: normalizeCta(slide?.secondaryCta, fallbackSlide.secondaryCta),
-        media: normalizeMedia(slide?.media, fallbackSlide.media),
-        featureCards: normalizeCards(slide?.featureCards, fallbackSlide.featureCards || []).map(({ icon, ...card }) => card),
-        stats: Array.isArray(slide?.stats) ? slide.stats : hasItems(slides) ? [] : fallbackSlide.stats || []
-      };
-    })
+function isSignatureHeroSlide(slide) {
+  const text = `${slide?.eyebrow || ""} ${slide?.headline || ""}`.toLowerCase();
+  return text.includes("signature uptime");
+}
+
+function normalizeHeroSlides(slides, fallbackSlides = []) {
+  const sourceHasSlides = hasItems(slides);
+  const source = sourceHasSlides ? slides : fallbackSlides;
+  const normalized = source
+    .map((slide, index) => normalizeHeroSlide(slide, fallbackSlides[index] || {}, sourceHasSlides))
     .filter((slide) => slide.headline);
+
+  if (!fallback.signatureUptimeHeroSlide || normalized.some(isSignatureHeroSlide)) return normalized;
+
+  const signatureSlide = normalizeHeroSlide(fallback.signatureUptimeHeroSlide, fallback.signatureUptimeHeroSlide, false);
+  if (!normalized.length) return [signatureSlide];
+
+  return [normalized[0], signatureSlide, ...normalized.slice(1)];
+}
+
+function normalizeSignatureUptimeSection(section, fallbackSection = fallback.signatureUptimeSection) {
+  const source = section || {};
+  const homepage = source.homepage || {};
+  const fallbackHomepage = fallbackSection.homepage || {};
+  const plannedCard = homepage.plannedCard || {};
+  const emergencyCard = homepage.emergencyCard || {};
+
+  return {
+    ...fallbackSection,
+    ...source,
+    anchorId: source.anchorId || fallbackSection.anchorId || "signature-uptime-solution",
+    primaryCta: normalizeCta(source.primaryCta, fallbackSection.primaryCta),
+    secondaryCta: normalizeCta(source.secondaryCta, fallbackSection.secondaryCta),
+    plannedSupportCta: normalizeCta(source.plannedSupportCta, fallbackSection.plannedSupportCta),
+    emergencySupportCta: normalizeCta(source.emergencySupportCta, fallbackSection.emergencySupportCta),
+    stockingCta: normalizeCta(source.stockingCta, fallbackSection.stockingCta),
+    plannedSupportBullets: hasItems(source.plannedSupportBullets) ? source.plannedSupportBullets : fallbackSection.plannedSupportBullets || [],
+    emergencySupportBullets: hasItems(source.emergencySupportBullets) ? source.emergencySupportBullets : fallbackSection.emergencySupportBullets || [],
+    stockingBullets: hasItems(source.stockingBullets) ? source.stockingBullets : fallbackSection.stockingBullets || [],
+    homepage: {
+      ...fallbackHomepage,
+      ...homepage,
+      plannedCard: {
+        ...fallbackHomepage.plannedCard,
+        ...plannedCard,
+        bullets: hasItems(plannedCard.bullets) ? plannedCard.bullets : fallbackHomepage.plannedCard?.bullets || [],
+        cta: normalizeCta(plannedCard.cta, fallbackHomepage.plannedCard?.cta)
+      },
+      emergencyCard: {
+        ...fallbackHomepage.emergencyCard,
+        ...emergencyCard,
+        bullets: hasItems(emergencyCard.bullets) ? emergencyCard.bullets : fallbackHomepage.emergencyCard?.bullets || [],
+        cta: normalizeCta(emergencyCard.cta, fallbackHomepage.emergencyCard?.cta)
+      }
+    },
+    routesBanner: {
+      ...fallbackSection.routesBanner,
+      ...(source.routesBanner || {})
+    },
+    strip: {
+      ...fallbackSection.strip,
+      ...(source.strip || {}),
+      primaryCta: normalizeCta(source.strip?.primaryCta, fallbackSection.strip?.primaryCta),
+      secondaryCta: normalizeCta(source.strip?.secondaryCta, fallbackSection.strip?.secondaryCta)
+    }
+  };
+}
+
+function normalizeSolutionsOverview(page, signatureUptimeSection) {
+  const source = page || {};
+  const fallbackPage = fallback.solutionsOverviewPage || {};
+
+  return {
+    ...fallbackPage,
+    ...source,
+    eyebrow: source.eyebrow || fallbackPage.eyebrow || "Solutions",
+    headline: source.headline || source.heroHeadline || fallbackPage.headline,
+    body: source.body || source.heroBody || fallbackPage.body,
+    primaryCta: normalizeCta(source.primaryCta, fallbackPage.primaryCta),
+    secondaryCta: normalizeCta(source.secondaryCta, fallbackPage.secondaryCta),
+    signatureUptimeSection: normalizeSignatureUptimeSection(source.signatureUptimeSection || signatureUptimeSection, signatureUptimeSection)
+  };
 }
 
 function normalizeSolution(doc, fallbackDoc = {}) {
@@ -328,7 +405,8 @@ function normalizeSolution(doc, fallbackDoc = {}) {
     relatedIndustries: doc?.relatedIndustries || fallbackDoc.relatedIndustries || [],
     relatedCaseStudies: doc?.relatedCaseStudies || fallbackDoc.relatedCaseStudies || [],
     cta: normalizeCta(doc?.cta, fallbackDoc.cta),
-    icon: iconFromName(doc?.icon, fallbackDoc.icon)
+    icon: iconFromName(doc?.icon, fallbackDoc.icon),
+    showSignatureUptimeStrip: doc?.showSignatureUptimeStrip ?? fallbackDoc.showSignatureUptimeStrip ?? true
   };
 }
 
@@ -496,10 +574,23 @@ function normalizeCollections(raw = {}) {
   const blogPosts = normalizeCollection(raw.blogPosts, fallback.blogPosts, normalizeBlogPost, (item) => item.title && item.slug);
 
   const homepage = raw.homepage || {};
+  const signatureUptimeSection = normalizeSignatureUptimeSection(
+    homepage.signatureUptimeSection || raw.solutionsOverview?.signatureUptimeSection || raw.siteSettings?.signatureUptimeSection,
+    fallback.signatureUptimeSection
+  );
+  const solutionsOverview = normalizeSolutionsOverview(raw.solutionsOverview, signatureUptimeSection);
+  const rtqFormConfig = {
+    ...fallback.rtqFormConfig,
+    ...(raw.siteSettings?.rtqFormConfig || {})
+  };
 
   return {
     source: raw.source || "fallback",
-    siteSettings,
+    siteSettings: {
+      ...siteSettings,
+      signatureUptimeSection,
+      rtqFormConfig
+    },
     solutions,
     industries,
     capabilities,
@@ -509,8 +600,12 @@ function normalizeCollections(raw = {}) {
     downloads,
     faqs,
     blogPosts,
+    signatureUptimeSection,
+    solutionsOverview,
+    rtqFormConfig,
     homepage: {
       heroSlides: normalizeHeroSlides(homepage.heroSlides, fallback.heroSlides),
+      signatureUptimeSection,
       trustBadges: normalizeCards(
         homepage.trustBadges,
         certifications.filter((item) => item.displayOnHomepage).length
@@ -559,10 +654,21 @@ function pageNavItem(page, basePath, description) {
   };
 }
 
+function signatureUptimeNavItem(content) {
+  const signature = content.signatureUptimeSection || fallback.signatureUptimeSection;
+  return {
+    label: signature.conceptName || "NFG Signature Uptime Solution",
+    href: `/solutions#${signature.anchorId || "signature-uptime-solution"}`,
+    description:
+      "Plan ahead, respond fast and protect production through planned critical-parts support and emergency manufacturing support.",
+    featured: true
+  };
+}
+
 function buildNavigation(content) {
   return fallback.navItems.map((group) => {
     if (group.label === "Solutions") {
-      return { ...group, items: content.solutions.map((page) => pageNavItem(page, "/solutions")) };
+      return { ...group, items: [signatureUptimeNavItem(content), ...content.solutions.map((page) => pageNavItem(page, "/solutions"))] };
     }
     if (group.label === "Industries") {
       return { ...group, items: content.industries.map((page) => pageNavItem(page, "/industries")) };
@@ -638,6 +744,25 @@ export async function getHomepageContent() {
     ...content.homepage,
     siteSettings: content.siteSettings
   };
+}
+
+export async function getSignatureUptimeSection() {
+  const content = await getEditableContent();
+  return content.signatureUptimeSection;
+}
+
+export async function getSolutionsPageContent() {
+  const content = await getEditableContent();
+  return {
+    ...content.solutionsOverview,
+    signatureUptimeSection: content.signatureUptimeSection,
+    solutions: content.solutions
+  };
+}
+
+export async function getRtqFormConfig() {
+  const content = await getEditableContent();
+  return content.rtqFormConfig;
 }
 
 export async function getSiteSettings() {

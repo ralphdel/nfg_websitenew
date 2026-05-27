@@ -109,7 +109,7 @@ export const mediaAsset = defineType({
       name: "theme",
       title: "Visual theme",
       type: "string",
-      options: { list: ["foundry", "scan", "wear", "marine", "digital"] },
+      options: { list: ["foundry", "scan", "wear", "marine", "digital", "uptime"] },
       initialValue: "foundry"
     }),
     defineField({
@@ -234,6 +234,69 @@ export const heroSlide = defineType({
     }),
     defineField({ name: "displayOrder", title: "Display order", type: "number" }),
     defineField({ name: "active", title: "Active", type: "boolean", initialValue: true })
+  ]
+});
+
+export const signatureUptimeSection = defineType({
+  name: "signatureUptimeSection",
+  title: "Signature Uptime section",
+  type: "object",
+  fields: [
+    defineField({ name: "conceptName", title: "Concept name", type: "string", initialValue: "NFG Signature Uptime Solution" }),
+    defineField({ name: "eyebrow", title: "Eyebrow", type: "string", initialValue: "NFG Signature Solution" }),
+    defineField({ name: "headline", title: "Headline", type: "string" }),
+    defineField({ name: "introText", title: "Intro text", type: "text", rows: 5 }),
+    defineField({ name: "positioningStatement", title: "Positioning statement", type: "text", rows: 3 }),
+    defineField({ name: "strategicMessage", title: "Strategic message", type: "text", rows: 3 }),
+    defineField({ name: "plannedSupportTitle", title: "Planned support title", type: "string" }),
+    defineField({ name: "plannedSupportSubtitle", title: "Planned support subtitle", type: "string" }),
+    defineField({ name: "plannedSupportBody", title: "Planned support body", type: "text", rows: 4 }),
+    defineField({ name: "plannedSupportBullets", title: "Planned support bullets", type: "array", of: [{ type: "string" }] }),
+    defineField({ name: "plannedSupportCta", title: "Planned support CTA", type: "cta" }),
+    defineField({ name: "emergencySupportTitle", title: "Emergency support title", type: "string" }),
+    defineField({ name: "emergencySupportSubtitle", title: "Emergency support subtitle", type: "string" }),
+    defineField({ name: "emergencySupportBody", title: "Emergency support body", type: "text", rows: 4 }),
+    defineField({ name: "emergencySupportBullets", title: "Emergency support bullets", type: "array", of: [{ type: "string" }] }),
+    defineField({ name: "emergencySupportCta", title: "Emergency support CTA", type: "cta" }),
+    defineField({ name: "hiddenCostHeadline", title: "Hidden cost headline", type: "string" }),
+    defineField({ name: "hiddenCostBody", title: "Hidden cost body", type: "text", rows: 5 }),
+    defineField({ name: "stockingHeadline", title: "Stocking headline", type: "string" }),
+    defineField({ name: "stockingBody", title: "Stocking body", type: "text", rows: 4 }),
+    defineField({ name: "stockingBullets", title: "Suitable for", type: "array", of: [{ type: "string" }] }),
+    defineField({ name: "primaryCta", title: "Primary CTA", type: "cta" }),
+    defineField({ name: "secondaryCta", title: "Secondary CTA", type: "cta" }),
+    defineField({ name: "stockingCta", title: "Stocking CTA", type: "cta" }),
+    defineField({ name: "displayOnHomepage", title: "Display on homepage", type: "boolean", initialValue: true }),
+    defineField({ name: "displayOnSolutionsPage", title: "Display on Solutions page", type: "boolean", initialValue: true }),
+    defineField({ name: "displayOnSolutionPages", title: "Display on solution pages", type: "boolean", initialValue: true }),
+    defineField({ name: "anchorId", title: "Anchor ID", type: "string", initialValue: "signature-uptime-solution" })
+  ]
+});
+
+export const rtqFormConfig = defineType({
+  name: "rtqFormConfig",
+  title: "RTQ / RFQ form config",
+  type: "object",
+  fields: [
+    defineField({ name: "enableQueryParameterPrefill", title: "Enable query parameter prefill", type: "boolean", initialValue: true }),
+    defineField({
+      name: "supportTypeOptions",
+      title: "Support type options",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            defineField({ name: "label", title: "Label", type: "string" }),
+            defineField({ name: "value", title: "Value", type: "string" }),
+            defineField({ name: "description", title: "Description", type: "text", rows: 2 }),
+            defineField({ name: "defaultGuidance", title: "Default guidance", type: "string" })
+          ]
+        }
+      ]
+    }),
+    defineField({ name: "plannedSupportFields", title: "Planned support fields", type: "array", of: [{ type: "string" }] }),
+    defineField({ name: "emergencySupportFields", title: "Emergency support fields", type: "array", of: [{ type: "string" }] })
   ]
 });
 

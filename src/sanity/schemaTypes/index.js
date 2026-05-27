@@ -5,7 +5,9 @@ import {
   mediaAsset,
   portableContent,
   processStep,
+  rtqFormConfig,
   seo,
+  signatureUptimeSection,
   skillsCard
 } from "./objects";
 import {
@@ -24,6 +26,7 @@ import {
   navigationSettings,
   partner,
   siteSettings,
+  solutionsOverviewPage,
   solutionPage,
   tvetDevelopment,
   universityPartnership
@@ -37,10 +40,13 @@ export const schemaTypes = [
   skillsCard,
   processStep,
   heroSlide,
+  signatureUptimeSection,
+  rtqFormConfig,
   portableContent,
   siteSettings,
   navigationSettings,
   homepage,
+  solutionsOverviewPage,
   solutionPage,
   industryPage,
   capabilityPage,

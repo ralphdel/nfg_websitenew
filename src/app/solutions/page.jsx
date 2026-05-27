@@ -1,6 +1,8 @@
 import { Card } from "@/components/common/Card";
 import { PageHero, TagList } from "@/components/common/PageBlocks";
-import { getSolutions } from "@/lib/content";
+import { SectionHeader } from "@/components/common/SectionHeader";
+import { SolutionsSignatureUptimeSection } from "@/components/sections/SignatureUptimeSection";
+import { getSolutionsPageContent } from "@/lib/content";
 import Link from "next/link";
 
 export const metadata = {
@@ -11,26 +13,36 @@ export const metadata = {
 export const revalidate = 60;
 
 export default async function SolutionsPage() {
-  const solutions = await getSolutions();
+  const page = await getSolutionsPageContent();
+  const solutions = page.solutions;
+  const routesBanner = page.signatureUptimeSection?.routesBanner;
 
   return (
     <main>
       <PageHero
-        eyebrow="Solutions"
-        title="Send the problem. NFG helps select the route."
-        body="From broken parts and worn liners to corrosion protection and municipal castings, NFG starts by understanding the client problem before choosing the manufacturing route."
-        primaryCta={{ label: "Send Part / Drawing", href: "/rfq" }}
-        secondaryCta={{ label: "Contact Technical Sales", href: "/contact" }}
+        eyebrow={page.eyebrow}
+        title={page.headline}
+        body={page.body}
+        primaryCta={page.primaryCta}
+        secondaryCta={page.secondaryCta}
         theme="foundry"
       />
+      <SolutionsSignatureUptimeSection section={page.signatureUptimeSection} />
       <section className="section">
-        <div className="container grid grid-3">
-          {solutions.map((solution) => (
-            <Card title={solution.title} body={solution.summary} icon={solution.icon} key={solution.slug}>
-              <TagList items={solution.technologies.slice(0, 4)} />
-              <Link className="text-link" href={`/solutions/${solution.slug}`}>View solution</Link>
-            </Card>
-          ))}
+        <div className="container">
+          <SectionHeader
+            eyebrow="Technical solution routes"
+            title={routesBanner?.headline || "Six Technical Routes. One NFG Working Model."}
+            body={routesBanner?.body || "Whether your requirement is planned or urgent, NFG begins with the problem, then guides you to the right solution route."}
+          />
+          <div className="grid grid-3">
+            {solutions.map((solution) => (
+              <Card title={solution.title} body={solution.summary} icon={solution.icon} key={solution.slug}>
+                <TagList items={solution.technologies.slice(0, 4)} />
+                <Link className="text-link" href={`/solutions/${solution.slug}`}>View solution</Link>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
     </main>

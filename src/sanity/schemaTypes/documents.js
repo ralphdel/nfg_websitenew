@@ -52,7 +52,9 @@ export const siteSettings = defineType({
     }),
     defineField({ name: "defaultOgImage", title: "Default OG image", type: "image", options: { hotspot: true } }),
     defineField({ name: "footerText", title: "Footer text", type: "text", rows: 3 }),
-    defineField({ name: "globalCta", title: "Global CTA", type: "cta" })
+    defineField({ name: "globalCta", title: "Global CTA", type: "cta" }),
+    defineField({ name: "signatureUptimeSection", title: "NFG Signature Uptime Solution", type: "signatureUptimeSection" }),
+    defineField({ name: "rtqFormConfig", title: "RTQ / RFQ form config", type: "rtqFormConfig" })
   ]
 });
 
@@ -90,7 +92,24 @@ export const homepage = defineType({
     defineField({ name: "certificationsSection", title: "Certifications section", type: "array", of: [{ type: "reference", to: [{ type: "certificationOrAward" }] }] }),
     defineField({ name: "caseStudyReferences", title: "Case study references", type: "array", of: [{ type: "reference", to: [{ type: "caseStudy" }] }] }),
     defineField({ name: "leadershipReferences", title: "Leadership references", type: "array", of: [{ type: "reference", to: [{ type: "leader" }] }] }),
+    defineField({ name: "signatureUptimeSection", title: "NFG Signature Uptime Solution", type: "signatureUptimeSection" }),
     defineField({ name: "finalCta", title: "Final CTA", type: "cta" })
+  ]
+});
+
+export const solutionsOverviewPage = defineType({
+  name: "solutionsOverviewPage",
+  title: "Solutions overview page",
+  type: "document",
+  fields: [
+    defineField({ name: "title", title: "Internal title", type: "string", initialValue: "Solutions overview page" }),
+    defineField({ name: "seo", title: "SEO", type: "seo" }),
+    defineField({ name: "eyebrow", title: "Hero eyebrow", type: "string", initialValue: "Solutions" }),
+    defineField({ name: "headline", title: "Hero headline", type: "string" }),
+    defineField({ name: "body", title: "Hero body", type: "text", rows: 4 }),
+    defineField({ name: "primaryCta", title: "Primary CTA", type: "cta" }),
+    defineField({ name: "secondaryCta", title: "Secondary CTA", type: "cta" }),
+    defineField({ name: "signatureUptimeSection", title: "NFG Signature Uptime Solution", type: "signatureUptimeSection" })
   ]
 });
 
@@ -114,7 +133,8 @@ export const solutionPage = defineType({
     defineField({ name: "relatedIndustries", title: "Related industries", type: "array", of: [{ type: "reference", to: [{ type: "industryPage" }] }] }),
     defineField({ name: "relatedCaseStudies", title: "Related case studies", type: "array", of: [{ type: "reference", to: [{ type: "caseStudy" }] }] }),
     defineField({ name: "downloads", title: "Downloads", type: "array", of: [{ type: "reference", to: [{ type: "downloadAsset" }] }] }),
-    defineField({ name: "cta", title: "CTA", type: "cta" })
+    defineField({ name: "cta", title: "CTA", type: "cta" }),
+    defineField({ name: "showSignatureUptimeStrip", title: "Show Signature Uptime strip", type: "boolean", initialValue: true })
   ]
 });
 

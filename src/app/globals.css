@@ -290,6 +290,16 @@ strong {
   line-height: 1.45;
 }
 
+.mega-links a.is-featured {
+  grid-column: 1 / -1;
+  border-color: rgba(245, 166, 35, 0.42);
+  background: linear-gradient(135deg, rgba(245, 166, 35, 0.14), rgba(248, 250, 252, 0.96));
+}
+
+.mega-links a.is-featured strong {
+  color: var(--navy-d);
+}
+
 .nav-actions {
   display: inline-flex;
   align-items: center;
@@ -420,6 +430,16 @@ strong {
   background:
     linear-gradient(135deg, rgba(8, 22, 40, 0.95), rgba(22, 48, 96, 0.78)),
     linear-gradient(90deg, rgba(16, 185, 129, 0.16), transparent 42%, rgba(245, 166, 35, 0.18)),
+    var(--navy);
+}
+
+.hero-theme-uptime .hero-backdrop,
+.media-uptime,
+.page-hero-uptime {
+  background:
+    linear-gradient(135deg, rgba(8, 22, 40, 0.96), rgba(13, 34, 64, 0.76)),
+    linear-gradient(90deg, rgba(245, 166, 35, 0.24), transparent 38%, rgba(200, 46, 41, 0.16)),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 28px),
     var(--navy);
 }
 
@@ -965,6 +985,204 @@ strong {
   margin-top: 30px;
 }
 
+.signature-home {
+  background: var(--white);
+}
+
+.signature-home .section-header {
+  max-width: 980px;
+}
+
+.signature-home-grid,
+.signature-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.signature-support-card,
+.signature-panel,
+.signature-stocking-block {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 12px 34px rgba(13, 34, 64, 0.06);
+}
+
+.signature-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.signature-support-card h3,
+.signature-panel h3,
+.signature-stocking-block h3,
+.signature-cost-callout h3,
+.signature-strip h2 {
+  margin: 0 0 10px;
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.18;
+}
+
+.signature-support-card p,
+.signature-panel p,
+.signature-stocking-block p {
+  margin: 0 0 12px;
+  color: var(--grey);
+  line-height: 1.65;
+}
+
+.signature-card-subtitle {
+  margin: 0 0 8px !important;
+  color: var(--red-d) !important;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.signature-bullets {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.signature-bullets li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--grey-d);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.signature-bullets li::before {
+  content: "";
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--amber);
+}
+
+.signature-full .section-header {
+  max-width: 940px;
+}
+
+.signature-route-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 26px 0;
+  color: var(--navy);
+  font-weight: 900;
+}
+
+.signature-route-flow span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--white);
+}
+
+.signature-cost-callout {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 18px;
+  margin-top: 28px;
+  padding: 28px;
+  border-radius: 8px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--navy-d), var(--navy));
+}
+
+.signature-callout-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--navy-d);
+  background: var(--amber);
+}
+
+.signature-cost-callout h3 {
+  color: var(--amber);
+}
+
+.signature-cost-callout p {
+  max-width: 930px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.68;
+}
+
+.signature-stocking-block {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
+  gap: 24px;
+  margin-top: 20px;
+  align-items: start;
+}
+
+.signature-strip-wrap {
+  padding: 26px 0;
+  background: var(--off);
+}
+
+.signature-strip {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  padding: 22px;
+  border: 1px solid rgba(245, 166, 35, 0.28);
+  border-radius: 8px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--navy-d), var(--navy));
+}
+
+.signature-strip-icon {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--navy-d);
+  background: var(--amber);
+}
+
+.signature-strip h2 {
+  color: var(--white);
+  font-size: 22px;
+}
+
+.signature-strip p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.6;
+}
+
+.signature-strip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
 .page-hero {
   padding: calc(var(--nav-h) + 76px) 0 76px;
 }
@@ -1207,6 +1425,94 @@ strong {
   grid-column: 1 / -1;
 }
 
+.rfq-support-section,
+.rfq-conditional-section {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid rgba(245, 166, 35, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.rfq-support-section h2,
+.rfq-conditional-section h3 {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.support-type-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.support-type-option {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 10px !important;
+  min-height: 100%;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  color: var(--white) !important;
+  background: rgba(8, 22, 40, 0.46);
+}
+
+.support-type-option.is-active {
+  border-color: var(--amber);
+  background: rgba(245, 166, 35, 0.12);
+}
+
+.support-type-option input {
+  width: 16px;
+  min-height: 16px;
+  margin-top: 3px;
+  accent-color: var(--amber);
+}
+
+.support-type-option span {
+  display: grid;
+  gap: 6px;
+}
+
+.support-type-option strong {
+  color: var(--white);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.support-type-option small,
+.support-type-option em,
+.rfq-context-note,
+.rfq-form-note {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.support-type-option em {
+  color: var(--amber-l);
+  font-weight: 800;
+}
+
+.rfq-context-note,
+.rfq-form-note {
+  margin: 0;
+}
+
+.rfq-form label.is-highlighted select {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.16);
+}
+
 .rfq-form label {
   display: grid;
   gap: 7px;
@@ -1225,6 +1531,12 @@ strong {
   color: var(--white);
   background: rgba(8, 22, 40, 0.62);
   padding: 11px 12px;
+}
+
+.rfq-form .support-type-option input {
+  width: 16px;
+  min-height: 16px;
+  padding: 0;
 }
 
 .rfq-form textarea {
@@ -1523,6 +1835,15 @@ strong {
     font-weight: 700;
   }
 
+  .mobile-nav-links a.is-featured {
+    margin: 4px 0 8px;
+    padding: 12px;
+    border: 1px solid rgba(245, 166, 35, 0.36);
+    border-radius: 8px;
+    color: var(--amber);
+    background: rgba(245, 166, 35, 0.08);
+  }
+
   .mobile-cta {
     margin-top: 10px;
     padding: 16px;
@@ -1565,6 +1886,19 @@ strong {
   .grid-4,
   .grid-3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .signature-strip,
+  .signature-stocking-block {
+    grid-template-columns: 1fr;
+  }
+
+  .signature-strip-actions {
+    justify-content: flex-start;
+  }
+
+  .support-type-options {
+    grid-template-columns: 1fr;
   }
 
   .footer-grid {
@@ -1655,6 +1989,12 @@ strong {
   }
 
   .split,
+  .signature-home-grid,
+  .signature-two-column,
+  .signature-cost-callout,
+  .signature-stocking-block,
+  .signature-strip,
+  .support-type-options,
   .grid-2,
   .grid-3,
   .grid-4,
@@ -1671,9 +2011,23 @@ strong {
 
   .content-block,
   .card,
+  .signature-support-card,
+  .signature-panel,
+  .signature-cost-callout,
+  .signature-stocking-block,
+  .signature-strip,
   .rfq-form,
   .rfq-guidance {
     padding: 20px;
+  }
+
+  .signature-route-flow {
+    justify-content: flex-start;
+  }
+
+  .signature-strip-icon {
+    width: 44px;
+    height: 44px;
   }
 
   .footer-bottom {

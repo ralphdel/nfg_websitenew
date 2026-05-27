@@ -89,7 +89,7 @@ export function Navbar({ navItems: navItemsProp = navItems, siteSettings: siteSe
                 </div>
                 <div className="mega-links">
                   {item.items.map((child) => (
-                    <Link href={child.href} key={child.href} onClick={close}>
+                    <Link className={child.featured ? "is-featured" : ""} href={child.href} key={child.href} onClick={close}>
                       <strong>{child.label}</strong>
                       <span>{child.description}</span>
                     </Link>
@@ -133,7 +133,7 @@ export function Navbar({ navItems: navItemsProp = navItems, siteSettings: siteSe
                 </div>
                 <div className={`mobile-nav-links ${expanded ? "is-open" : ""}`}>
                   {item.items.map((child) => (
-                    <Link href={child.href} key={child.href} onClick={close}>
+                    <Link className={child.featured ? "is-featured" : ""} href={child.href} key={child.href} onClick={close}>
                       {child.label}
                     </Link>
                   ))}
