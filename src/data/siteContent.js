@@ -336,6 +336,15 @@ export const heroSlides = [
     headline: "Corrosion Protection Built With Nigerian Capacity.",
     subheadline:
       "Through Metec West Africa, NFG supplies sacrificial anodes and corrosion-protection assemblies for offshore, marine, power, windmill and coastal infrastructure applications.",
+    specificationTable: {
+      title: "METEC ANODE SPECIFICATIONS",
+      rows: [
+        { label: "Alloy Type", value: "Al-Zn-In (Galvalum III Equiv.)" },
+        { label: "Capacity", value: "2700 Ah/kg" },
+        { label: "Efficiency", value: "95% Minimum" },
+        { label: "Standards", value: "DNV-RP-B401 / NACE SP0169" }
+      ]
+    },
     primaryCta: { label: "Explore Corrosion Protection", href: "/solutions/corrosion-protection" },
     secondaryCta: { label: "Contact Metec", href: "/rfq?type=corrosion" },
     media: {

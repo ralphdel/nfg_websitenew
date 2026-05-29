@@ -72,6 +72,13 @@ export const heroSlideFields = `
   secondaryCta{${ctaFields}},
   featureCards[]{${cardFields}},
   stats,
+  specificationTable{
+    title,
+    rows[]{
+      label,
+      value
+    }
+  },
   displayOrder,
   active
 `;

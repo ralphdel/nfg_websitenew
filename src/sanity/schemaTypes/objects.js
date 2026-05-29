@@ -232,6 +232,29 @@ export const heroSlide = defineType({
         }
       ]
     }),
+    defineField({
+      name: "specificationTable",
+      title: "Specification Table",
+      type: "object",
+      description: "Optional structured table to show below the subheadline",
+      fields: [
+        defineField({ name: "title", title: "Table Title", type: "string" }),
+        defineField({
+          name: "rows",
+          title: "Table Rows",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              fields: [
+                defineField({ name: "label", title: "Label", type: "string" }),
+                defineField({ name: "value", title: "Value", type: "string" })
+              ]
+            }
+          ]
+        })
+      ]
+    }),
     defineField({ name: "displayOrder", title: "Display order", type: "number" }),
     defineField({ name: "active", title: "Active", type: "boolean", initialValue: true })
   ]

@@ -493,6 +493,52 @@ strong {
   line-height: 1.62;
 }
 
+.hero-spec-table-container {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 18px 24px;
+  max-width: 480px;
+}
+
+.hero-spec-table-title {
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0 0 12px 0;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.hero-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hero-spec-table td {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.hero-spec-table tr:last-child td {
+  border-bottom: none;
+}
+
+.hero-spec-table .spec-label {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.hero-spec-table .spec-value {
+  font-weight: 700;
+  text-align: right;
+  color: var(--white);
+}
+
 .hero-proof {
   max-width: 700px;
   margin: 18px 0 0;

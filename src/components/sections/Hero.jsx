@@ -144,6 +144,25 @@ export function Hero({ slides = heroSlides }) {
           <p className="hero-kicker">{activeSlide.eyebrow}</p>
           <h1>{activeSlide.headline}</h1>
           <p className="hero-sub">{activeSlide.subheadline}</p>
+          {activeSlide.specificationTable && (
+            <div className="hero-spec-table-container">
+              {activeSlide.specificationTable.title && (
+                <h4 className="hero-spec-table-title">{activeSlide.specificationTable.title}</h4>
+              )}
+              {activeSlide.specificationTable.rows && activeSlide.specificationTable.rows.length > 0 && (
+                <table className="hero-spec-table">
+                  <tbody>
+                    {activeSlide.specificationTable.rows.map((row, i) => (
+                      <tr key={i}>
+                        <td className="spec-label">{row.label}</td>
+                        <td className="spec-value">{row.value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              )}
+            </div>
+          )}
           {activeSlide.supportText ? <p className="hero-proof">{activeSlide.supportText}</p> : null}
           <div className="hero-actions">
             <Button href={activeSlide.primaryCta.href}>{activeSlide.primaryCta.label}</Button>

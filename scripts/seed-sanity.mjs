@@ -180,6 +180,18 @@ function toMedia(media) {
   };
 }
 
+function toSpecificationTable(table) {
+  if (!table) return undefined;
+  return {
+    title: table.title,
+    rows: (table.rows || []).map((row, rowIndex) => ({
+      _key: `row-${rowIndex + 1}`,
+      label: row.label,
+      value: row.value
+    }))
+  };
+}
+
 function toHeroSlide(slide, keyValue, index = 0) {
   return {
     _key: keyValue,
@@ -193,6 +205,7 @@ function toHeroSlide(slide, keyValue, index = 0) {
     secondaryCta: toCta(slide.secondaryCta),
     featureCards: (slide.featureCards || []).map((card, cardIndex) => toCard(card, key("feature", cardIndex))),
     stats: slide.stats,
+    specificationTable: toSpecificationTable(slide.specificationTable),
     displayOrder: slide.displayOrder || index + 1,
     active: slide.active ?? true
   };
