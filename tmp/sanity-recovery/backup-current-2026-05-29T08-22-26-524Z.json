@@ -1,0 +1,332 @@
+[
+  {
+    "_id": "homepage",
+    "_rev": "usPbImjoC2LtIOcJmyrofw",
+    "_type": "homepage",
+    "_updatedAt": "2026-05-29T07:25:21Z"
+  },
+  {
+    "_id": "blogPost.hardox-cco-or-casting-choosing-the-right-wear-route",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "blogPost",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "blogPost.how-to-start-reverse-engineering-when-no-drawing-exists",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "blogPost",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "blogPost.nigerian-content-as-industrial-capacity",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "blogPost",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "capabilityPage.additive-manufacturing",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "capabilityPage.digital-production-control-vezapp",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "capabilityPage.ferrous-foundry",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "capabilityPage.industrial-applications-machining-fabrication",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "capabilityPage.laser-scanning-reverse-engineering",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "capabilityPage.material-analysis",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "capabilityPage.non-ferrous-foundry-metec-west-africa",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "caseStudy.cement-plant-wear-part-localisation",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "caseStudy",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "caseStudy.offshore-corrosion-protection",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "caseStudy",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "caseStudy.quarry-crusher-parts-reverse-engineering",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "caseStudy",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "caseStudy.shell-supported-additive-manufacturing-journey",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "caseStudy",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "certificationOrAward.federal-ministry-of-industry-oem-manufacturer-s-certificate",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "certificationOrAward.gef-unido-industrial-energy-efficiency-and-recp-project",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "certificationOrAward.hardox-wearparts-certified-workshop",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "certificationOrAward.iso-50001",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "certificationOrAward.iso-9001-2015",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "certificationOrAward.shell-nigerian-content-manufacturing-recognition",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "certificationOrAward.stanford-seed-transformation-program",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "downloadAsset.company-profile",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "downloadAsset",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "downloadAsset.corrosion-protection-brochure",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "downloadAsset",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "downloadAsset.municipal-casting-catalogue",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "downloadAsset",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "downloadAsset.wear-solutions-brochure",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "downloadAsset",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "faq.can-nfg-help-if-there-is-no-drawing",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "faq",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "faq.can-nfg-support-local-alternatives-to-imported-covers",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "faq",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "faq.does-nfg-claim-full-production-replacement-through-3d-printing",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "faq",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "faq.how-do-i-know-whether-to-use-hardox-enduraclad-or-a-casting",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "faq",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "faq.what-does-metec-west-africa-provide",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "faq",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "faq.what-should-i-send-when-a-part-fails",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "faq",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "industryPage.agro-allied-general-manufacturing",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "industryPage.cement-plants",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "industryPage.dredging",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "industryPage.infrastructure-municipal-works",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "industryPage.marine-ports-windmills",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "industryPage.mining-mineral-processing",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "industryPage.oil-gas-offshore",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "industryPage.power-energy",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "industryPage.quarries-aggregates",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "leader.dr-cynthia-abima",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "leader",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "leader.nicholas-barberopoulos",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "leader",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "leader.vassily-oye-barberopoulos",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "leader",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "signatureUptimeSolution",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "signatureUptimeSolution",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "siteSettings",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "siteSettings",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "solutionPage.3d-printing-advanced-manufacturing",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "solutionPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "solutionPage.corrosion-protection",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "solutionPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "solutionPage.drainage-municipal-castings",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "solutionPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "solutionPage.machining-fabrication-assembly",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "solutionPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "solutionPage.reverse-engineering",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "solutionPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "solutionPage.wear-part-solutions",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "solutionPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "solutionsOverviewPage",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "solutionsOverviewPage",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "tvetDevelopment",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "tvetDevelopment",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  },
+  {
+    "_id": "universityPartnership.university-partnership-record",
+    "_rev": "ghCA0iPFLNDLy0OmrwtEUT",
+    "_type": "universityPartnership",
+    "_updatedAt": "2026-05-29T07:05:58Z"
+  }
+]

@@ -76,7 +76,9 @@ export const heroSlideFields = `
     title,
     rows[]{
       label,
-      value
+      labelBold,
+      value,
+      valueBold
     }
   },
   displayOrder,

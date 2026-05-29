@@ -52,6 +52,8 @@ import * as content from "../src/data/siteContent.js";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 const replaceExisting = process.argv.includes("--replace");
+const confirmReplace = process.argv.includes("--confirm-replace");
+const allowProductionReplace = process.argv.includes("--allow-production-replace");
 
 loadEnvFile(path.join(rootDir, ".env.local"));
 
@@ -59,6 +61,20 @@ const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "3hx8h0xy";
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
 const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2026-05-06";
 const token = process.env.SANITY_API_WRITE_TOKEN || process.env.SANITY_AUTH_TOKEN;
+
+if (replaceExisting && !confirmReplace) {
+  console.error(
+    "Refusing to run destructive replace without --confirm-replace. Use npm run sanity:seed for safe seeding."
+  );
+  process.exit(1);
+}
+
+if (replaceExisting && dataset === "production" && !allowProductionReplace) {
+  console.error(
+    "Refusing to replace the production dataset without --allow-production-replace. Create a backup/export first."
+  );
+  process.exit(1);
+}
 
 if (!token) {
   console.error("Missing SANITY_API_WRITE_TOKEN. Create a Sanity token with write access, add it to .env.local, then rerun npm run sanity:seed.");

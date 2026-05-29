@@ -154,8 +154,8 @@ export function Hero({ slides = heroSlides }) {
                   <tbody>
                     {activeSlide.specificationTable.rows.map((row, i) => (
                       <tr key={i}>
-                        <td className="spec-label">{row.label}</td>
-                        <td className="spec-value">{row.value}</td>
+                        <td className={`spec-label${row.labelBold ? " is-bold" : ""}`}>{row.label}</td>
+                        <td className={`spec-value${row.valueBold === false ? "" : " is-bold"}`}>{row.value}</td>
                       </tr>
                     ))}
                   </tbody>

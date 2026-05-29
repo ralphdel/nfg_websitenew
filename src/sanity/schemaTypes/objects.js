@@ -209,19 +209,32 @@ export const heroSlide = defineType({
   name: "heroSlide",
   title: "Hero slide",
   type: "object",
+  fieldsets: [
+    { name: "content", title: "Content", options: { collapsible: true, collapsed: false } },
+    { name: "table", title: "Optional specification table", options: { collapsible: true, collapsed: true } },
+    { name: "settings", title: "Display settings", options: { collapsible: true, collapsed: true } }
+  ],
   fields: [
-    defineField({ name: "eyebrow", title: "Eyebrow", type: "string" }),
-    defineField({ name: "headline", title: "Headline", type: "string", validation: (Rule) => Rule.required() }),
-    defineField({ name: "subheadline", title: "Subheadline", type: "text", rows: 3 }),
-    defineField({ name: "supportText", title: "Support text", type: "text", rows: 3 }),
-    defineField({ name: "media", title: "Media", type: "mediaAsset" }),
-    defineField({ name: "primaryCta", title: "Primary CTA", type: "cta" }),
-    defineField({ name: "secondaryCta", title: "Secondary CTA", type: "cta" }),
-    defineField({ name: "featureCards", title: "Feature cards", type: "array", of: [{ type: "card" }] }),
+    defineField({ name: "eyebrow", title: "Eyebrow", type: "string", fieldset: "content" }),
+    defineField({ name: "headline", title: "Headline", type: "string", validation: (Rule) => Rule.required(), fieldset: "content" }),
+    defineField({
+      name: "subheadline",
+      title: "Subheadline",
+      type: "text",
+      rows: 3,
+      description: "Main supporting copy shown under the headline. Use the table below only when this slide needs structured values.",
+      fieldset: "content"
+    }),
+    defineField({ name: "supportText", title: "Support text", type: "text", rows: 3, fieldset: "content" }),
+    defineField({ name: "media", title: "Media", type: "mediaAsset", fieldset: "content" }),
+    defineField({ name: "primaryCta", title: "Primary CTA", type: "cta", fieldset: "content" }),
+    defineField({ name: "secondaryCta", title: "Secondary CTA", type: "cta", fieldset: "content" }),
+    defineField({ name: "featureCards", title: "Feature cards", type: "array", of: [{ type: "card" }], fieldset: "content" }),
     defineField({
       name: "stats",
       title: "Stats",
       type: "array",
+      fieldset: "content",
       of: [
         {
           type: "object",
@@ -234,30 +247,78 @@ export const heroSlide = defineType({
     }),
     defineField({
       name: "specificationTable",
-      title: "Specification Table",
+      title: "Specification table under subheadline",
       type: "object",
-      description: "Optional structured table to show below the subheadline",
+      fieldset: "table",
+      description: "Optional. Use this only for slides that need a bold table title and label/value rows beneath the subheadline.",
       fields: [
-        defineField({ name: "title", title: "Table Title", type: "string" }),
+        defineField({
+          name: "title",
+          title: "Bold table title",
+          type: "string",
+          description: "Example: METEC ANODE SPECIFICATIONS"
+        }),
         defineField({
           name: "rows",
-          title: "Table Rows",
+          title: "Table rows",
           type: "array",
+          validation: (Rule) => Rule.max(6),
           of: [
             {
               type: "object",
+              preview: {
+                select: {
+                  title: "label",
+                  subtitle: "value"
+                }
+              },
               fields: [
-                defineField({ name: "label", title: "Label", type: "string" }),
-                defineField({ name: "value", title: "Value", type: "string" })
+                defineField({
+                  name: "label",
+                  title: "Left column label",
+                  type: "string",
+                  validation: (Rule) => Rule.required()
+                }),
+                defineField({
+                  name: "labelBold",
+                  title: "Bold left label",
+                  type: "boolean",
+                  initialValue: false
+                }),
+                defineField({
+                  name: "value",
+                  title: "Right column value",
+                  type: "string",
+                  validation: (Rule) => Rule.required()
+                }),
+                defineField({
+                  name: "valueBold",
+                  title: "Bold right value",
+                  type: "boolean",
+                  initialValue: true
+                })
               ]
             }
           ]
         })
       ]
     }),
-    defineField({ name: "displayOrder", title: "Display order", type: "number" }),
-    defineField({ name: "active", title: "Active", type: "boolean", initialValue: true })
-  ]
+    defineField({ name: "displayOrder", title: "Display order", type: "number", fieldset: "settings" }),
+    defineField({ name: "active", title: "Active", type: "boolean", initialValue: true, fieldset: "settings" })
+  ],
+  preview: {
+    select: {
+      title: "headline",
+      subtitle: "eyebrow",
+      tableTitle: "specificationTable.title"
+    },
+    prepare({ title, subtitle, tableTitle }) {
+      return {
+        title: title || "Untitled hero slide",
+        subtitle: tableTitle ? `${subtitle || "Hero slide"} • Table: ${tableTitle}` : subtitle || "Hero slide"
+      };
+    }
+  }
 });
 
 export const signatureUptimeSection = defineType({

@@ -1,0 +1,3711 @@
+[
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "homepage",
+    "_rev": "fi3CU380OsQCYNp8iaAgFG",
+    "_system": {
+      "base": {
+        "id": "homepage",
+        "rev": "HKmjuEpNtwC4qQTZoGDpUO"
+      }
+    },
+    "_type": "homepage",
+    "_updatedAt": "2026-05-29T06:45:27Z",
+    "caseStudyReferences": [
+      {
+        "_key": "case-study-01",
+        "_ref": "caseStudy.cement-plant-wear-part-localisation",
+        "_type": "reference"
+      },
+      {
+        "_key": "case-study-02",
+        "_ref": "caseStudy.quarry-crusher-parts-reverse-engineering",
+        "_type": "reference"
+      },
+      {
+        "_key": "case-study-03",
+        "_ref": "caseStudy.offshore-corrosion-protection",
+        "_type": "reference"
+      },
+      {
+        "_key": "case-study-04",
+        "_ref": "caseStudy.shell-supported-additive-manufacturing-journey",
+        "_type": "reference"
+      }
+    ],
+    "certificationsSection": [
+      {
+        "_key": "certification-01",
+        "_ref": "certificationOrAward.iso-9001-2015",
+        "_type": "reference"
+      },
+      {
+        "_key": "certification-02",
+        "_ref": "certificationOrAward.iso-50001",
+        "_type": "reference"
+      },
+      {
+        "_key": "certification-03",
+        "_ref": "certificationOrAward.federal-ministry-of-industry-oem-manufacturer-s-certificate",
+        "_type": "reference"
+      },
+      {
+        "_key": "certification-04",
+        "_ref": "certificationOrAward.hardox-wearparts-certified-workshop",
+        "_type": "reference"
+      },
+      {
+        "_key": "certification-05",
+        "_ref": "certificationOrAward.shell-nigerian-content-manufacturing-recognition",
+        "_type": "reference"
+      },
+      {
+        "_key": "certification-06",
+        "_ref": "certificationOrAward.stanford-seed-transformation-program",
+        "_type": "reference"
+      },
+      {
+        "_key": "certification-07",
+        "_ref": "certificationOrAward.gef-unido-industrial-energy-efficiency-and-recp-project",
+        "_type": "reference"
+      }
+    ],
+    "finalCta": {
+      "_type": "cta",
+      "href": "/rfq",
+      "label": "Send Part / Drawing",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "heroSlides": [
+      {
+        "_key": "hero-01",
+        "_type": "heroSlide",
+        "active": true,
+        "displayOrder": 1,
+        "eyebrow": "Built in Nigeria. Supported locally. Trusted since 1969.",
+        "featureCards": [
+          {
+            "_key": "feature-01",
+            "_type": "card",
+            "description": "Start from the failed part, drawing, photo or process issue.",
+            "title": "Identify"
+          },
+          {
+            "_key": "feature-02",
+            "_type": "card",
+            "description": "Scan, measure, analyse and select the right route.",
+            "title": "Engineer"
+          },
+          {
+            "_key": "feature-03",
+            "_type": "card",
+            "description": "Cast, machine, fabricate, protect, print or assemble locally.",
+            "title": "Manufacture"
+          }
+        ],
+        "headline": "The Local Manufacturing Backbone Supporting Nigeria and West Africa’s Industries.",
+        "media": {
+          "_type": "mediaAsset",
+          "altText": "Foundry floor and industrial manufacturing operation placeholder",
+          "mediaType": "video",
+          "overlayOpacity": 0.85,
+          "theme": "foundry",
+          "video": {
+            "_type": "mux.video",
+            "asset": {
+              "_ref": "3bd48f32-7740-4749-a310-609e9a6de400",
+              "_type": "reference",
+              "_weak": true
+            }
+          },
+          "videoAspectRatio": "4 / 3",
+          "videoAutoplay": true,
+          "videoObjectFit": "cover"
+        },
+        "primaryCta": {
+          "_type": "cta",
+          "href": "/rfq",
+          "label": "Send Us Your Broken Part / Drawing",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "secondaryCta": {
+          "_type": "cta",
+          "href": "/solutions",
+          "label": "Explore Solutions",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "subheadline": "When critical parts break, wear out, corrode, become obsolete, or are too slow, costly or uncertain to source from overseas, Nigerian Foundries Group helps you identify, reverse-engineer and manufacture practical local solutions — so your plant, mine, quarry, infrastructure project or offshore asset keeps working."
+      },
+      {
+        "_key": "bf092f435aad",
+        "_type": "heroSlide",
+        "active": true,
+        "displayOrder": 2,
+        "eyebrow": "NFG Signature Uptime Solution for Industries",
+        "headline": "Plan Ahead. Respond Fast. Protect Production.",
+        "media": {
+          "_type": "mediaAsset",
+          "altText": "NFg Signature Uptime",
+          "mediaType": "image",
+          "overlayOpacity": 0.68,
+          "theme": "foundry",
+          "videoAspectRatio": "16 / 9",
+          "videoAutoplay": true,
+          "videoObjectFit": "cover"
+        },
+        "primaryCta": {
+          "_type": "cta",
+          "label": "Plan Critical Parts",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "secondaryCta": {
+          "_type": "cta",
+          "label": "Request Emergency Support",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "subheadline": "A failed part is not just a purchase problem — it is lost production, waiting time, emergency pressure and money lost by the hour.\n\nNFG supports clients through a two-pronged approach: planned critical-parts support before shutdowns and emergency manufacturing support when unexpected failures occur. The earlier maintenance, planning, procurement and NFG work together, the better we can prepare materials, production routes, capacity, inspection and delivery priorities.",
+        "supportText": "Prioritise local Naira-based manufacturing where Nigerian capacity exists, and use valuable forex only where no local support is available. Avoid the hidden cost of late planning, import uncertainty, documentation delays, wrong specifications and plant downtime."
+      },
+      {
+        "_key": "hero-02",
+        "_type": "heroSlide",
+        "active": true,
+        "displayOrder": 2,
+        "eyebrow": "Reverse engineering",
+        "featureCards": [
+          {
+            "_key": "feature-01",
+            "_type": "card",
+            "description": "Capture geometry from worn or obsolete components.",
+            "title": "Scan"
+          },
+          {
+            "_key": "feature-02",
+            "_type": "card",
+            "description": "Review material, failure condition and operating environment.",
+            "title": "Analyse"
+          },
+          {
+            "_key": "feature-03",
+            "_type": "card",
+            "description": "Choose casting, fabrication, machining, anode, CCO or 3D printing.",
+            "title": "Route"
+          }
+        ],
+        "headline": "No Drawings? Obsolete Parts? We Can Start With What You Have.",
+        "media": {
+          "_type": "mediaAsset",
+          "altText": "Laser scanning an industrial replacement part placeholder",
+          "mediaType": "video",
+          "overlayOpacity": 0.85,
+          "theme": "scan",
+          "video": {
+            "_type": "mux.video",
+            "asset": {
+              "_ref": "995c7592-37d1-4be3-bed8-6ac213e7e493",
+              "_type": "reference",
+              "_weak": true
+            }
+          },
+          "videoAspectRatio": "4 / 3",
+          "videoAutoplay": true,
+          "videoFile": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-f4c09125f0a923ec2a59a9d339293a5b1ceb31b0-mp4",
+              "_type": "reference"
+            }
+          },
+          "videoObjectFit": "cover"
+        },
+        "primaryCta": {
+          "_type": "cta",
+          "href": "/solutions/reverse-engineering",
+          "label": "Start Reverse Engineering",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "secondaryCta": {
+          "_type": "cta",
+          "href": "/rfq",
+          "label": "Upload Drawing / Photo",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "subheadline": "Whether you have a broken sample, worn part, old drawing, photo,  draft measurements, or only the equipment details, NFG helps identify the part, understand how it works, and convert it into a manufacturable local solution.",
+        "supportText": "Using 3D laser scanning, dimensional checks, OES spectrometer analysis, digital drawings and rapid prototyping, we move from uncertain part data to the right material specification, design confirmation and manufacturing route."
+      },
+      {
+        "_key": "hero-03",
+        "_type": "heroSlide",
+        "active": true,
+        "displayOrder": 3,
+        "eyebrow": "Wear Solutions & Fabrication",
+        "featureCards": [
+          {
+            "_key": "feature-01",
+            "_type": "card",
+            "description": "Manganese and Hardox routes for high-impact service.",
+            "title": "Impact"
+          },
+          {
+            "_key": "feature-02",
+            "_type": "card",
+            "description": "High-chrome, Ni-Hard and CCO options for severe wear.",
+            "title": "Abrasion"
+          },
+          {
+            "_key": "feature-03",
+            "_type": "card",
+            "description": "Support for recurring plant maintenance needs.",
+            "title": "Repeat supply"
+          }
+        ],
+        "headline": "From Wear Problem to Ready-to-Install Wear Part.",
+        "media": {
+          "_type": "mediaAsset",
+          "altText": "Crusher, cement and mining wear-part placeholder",
+          "caption": "Complete Refurbishment of  Raymond Mill",
+          "mediaType": "video",
+          "overlayOpacity": 0.85,
+          "theme": "wear",
+          "video": {
+            "_type": "mux.video",
+            "asset": {
+              "_ref": "de3cd0e7-7d8a-42d4-85fc-2f8c31d745a4",
+              "_type": "reference",
+              "_weak": true
+            }
+          },
+          "videoAspectRatio": "16 / 9",
+          "videoAutoplay": true,
+          "videoFile": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-99ddb26c647e45d6dc2e4c99be892d62a688f407-mp4",
+              "_type": "reference"
+            }
+          },
+          "videoObjectFit": "cover"
+        },
+        "primaryCta": {
+          "_type": "cta",
+          "href": "/rfq?type=wear",
+          "label": "Solve a Wear Problem",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "secondaryCta": {
+          "_type": "cta",
+          "href": "/solutions/wear-part-solutions",
+          "label": "View Wear Solutions",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "subheadline": "NFG supports impact wear, abrasion, sliding wear, material-flow problems and VRM wear through:\n\n"
+      },
+      {
+        "_key": "hero-04",
+        "_type": "heroSlide",
+        "active": true,
+        "displayOrder": 4,
+        "eyebrow": "Corrosion protection",
+        "featureCards": [
+          {
+            "_key": "feature-01",
+            "_type": "card",
+            "description": "Locally manufactured sacrificial anodes.",
+            "title": "Anodes"
+          },
+          {
+            "_key": "feature-02",
+            "_type": "card",
+            "description": "Imenco clamp integration for offshore applications.",
+            "title": "Retrofit"
+          },
+          {
+            "_key": "feature-03",
+            "_type": "card",
+            "description": "Marine, ports, windmills, power and coastal infrastructure.",
+            "title": "Assets"
+          }
+        ],
+        "headline": "Nigerian Content for Offshore Oil & Gas Asset-Life Extension.",
+        "media": {
+          "_type": "mediaAsset",
+          "altText": "Sacrificial anodes and offshore corrosion protection placeholder",
+          "mediaType": "video",
+          "overlayOpacity": 0.85,
+          "theme": "marine",
+          "video": {
+            "_type": "mux.video",
+            "asset": {
+              "_ref": "5cfda1fc-ff8d-4d19-b161-12315446effc",
+              "_type": "reference",
+              "_weak": true
+            }
+          },
+          "videoAspectRatio": "4 / 3",
+          "videoAutoplay": true,
+          "videoFile": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-ec88e44834f4171fbc0a7d5c315cc1750629b956-mp4",
+              "_type": "reference"
+            }
+          },
+          "videoObjectFit": "cover"
+        },
+        "primaryCta": {
+          "_type": "cta",
+          "href": "/solutions/corrosion-protection",
+          "label": "Explore Corrosion Protection",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "secondaryCta": {
+          "_type": "cta",
+          "href": "/rfq?type=corrosion",
+          "label": "Contact Metec",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "subheadline": "Through Metec West Africa, NFG manufactures sacrificial anodes in Nigeria for offshore oil & gas structures.",
+        "supportText": "In partnership with Imenco Norway, we support retrofit clamp-on corrosion-protection solutions designed to extend the life of ageing offshore assets while strengthening Nigerian Content."
+      },
+      {
+        "_key": "hero-05",
+        "_type": "heroSlide",
+        "active": true,
+        "displayOrder": 5,
+        "eyebrow": "Advanced Digital Manufacturing",
+        "featureCards": [
+          {
+            "_key": "feature-01",
+            "_type": "card",
+            "description": "Better job visibility across sales, planning and production.",
+            "title": "Track"
+          },
+          {
+            "_key": "feature-02",
+            "_type": "card",
+            "description": "Rapid prototyping and part development workflows.",
+            "title": "Qualify"
+          },
+          {
+            "_key": "feature-03",
+            "_type": "card",
+            "description": "A practical transformation journey, not fake dashboards.",
+            "title": "Improve"
+          }
+        ],
+        "headline": "Five Decades of Industrial Problem-Solving. Now Building Africa’s Digital Manufacturing Future.",
+        "media": {
+          "_type": "mediaAsset",
+          "altText": "Digital production control and advanced manufacturing placeholder",
+          "mediaType": "video",
+          "overlayOpacity": 0.85,
+          "theme": "digital",
+          "video": {
+            "_type": "mux.video",
+            "asset": {
+              "_ref": "8aa6df35-85ff-4b6f-8660-d43613cbee70",
+              "_type": "reference",
+              "_weak": true
+            }
+          },
+          "videoAspectRatio": "16 / 9",
+          "videoAutoplay": true,
+          "videoFile": {
+            "_type": "file",
+            "asset": {
+              "_ref": "file-6df64443314abdba72ff810cc608012054376916-mp4",
+              "_type": "reference"
+            }
+          },
+          "videoObjectFit": "contain"
+        },
+        "primaryCta": {
+          "_type": "cta",
+          "href": "/capabilities/digital-production-control-vezapp",
+          "label": "View Digital Transformation",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "secondaryCta": {
+          "_type": "cta",
+          "href": "/solutions/3d-printing-advanced-manufacturing",
+          "label": "Explore 3D Printing",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "subheadline": "Today, NFG is expanding into advanced digital manufacturing — combining 3D laser scanning, digital engineering, polymer 3D printing and metal 3D printing to support critical part development for oil & gas, power stations, defence-related industries, marine and heavy industry.",
+        "supportText": "At the same time, we are training young engineers, technicians and industrial talent for the fast-advancing world of digital manufacturing."
+      },
+      {
+        "_key": "37ad900abc84",
+        "_type": "heroSlide",
+        "active": true,
+        "eyebrow": "Municipal Castings & Drainage Solutions-100 years lifespan",
+        "headline": "Drainage Is the First Line of Defence for Infrastructure Protection.",
+        "media": {
+          "_type": "mediaAsset",
+          "altText": "manhole cover ",
+          "mediaType": "video",
+          "overlayOpacity": 0.68,
+          "theme": "foundry",
+          "videoAspectRatio": "16 / 9",
+          "videoAutoplay": true,
+          "videoObjectFit": "cover"
+        },
+        "primaryCta": {
+          "_type": "cta",
+          "href": "/rtq",
+          "label": "Request a Drainage Casting Solution",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "secondaryCta": {
+          "_type": "cta",
+          "href": "/rtq",
+          "label": "Send Site Photos / Drawings",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "subheadline": "\nNFG designs and manufactures ductile iron municipal castings, drainage gratings, manhole covers and custom access solutions to the international BS EN 124 load-class standard — from pedestrian areas to roads, ports, industrial yards and airport-grade applications.\n\nBuilt for Nigerian conditions — sand, oil, gravel, debris, heavy traffic and coastal corrosion exposure — our ductile iron solutions deliver strength, wear resistance, water flow, maintenance access and long service life, with hinged, bolted, lockable and custom-branded anti-theft options.",
+        "supportText": "Do not protect valuable infrastructure with weak concrete slabs, poor fabricated steel covers or unsuitable composite materials that can crack, bend, lift, block water flow or fail under Nigerian conditions. Let NFG assess the site and offer the best drainage-access solution."
+      }
+    ],
+    "industryCards": [
+      {
+        "_key": "industry-01",
+        "_ref": "industryPage.cement-plants",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-02",
+        "_ref": "industryPage.mining-mineral-processing",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-03",
+        "_ref": "industryPage.quarries-aggregates",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-04",
+        "_ref": "industryPage.dredging",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-05",
+        "_ref": "industryPage.oil-gas-offshore",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-06",
+        "_ref": "industryPage.marine-ports-windmills",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-07",
+        "_ref": "industryPage.power-energy",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-08",
+        "_ref": "industryPage.infrastructure-municipal-works",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-09",
+        "_ref": "industryPage.agro-allied-general-manufacturing",
+        "_type": "reference"
+      }
+    ],
+    "leadershipReferences": [
+      {
+        "_key": "leader-01",
+        "_ref": "leader.vassily-oye-barberopoulos",
+        "_type": "reference"
+      },
+      {
+        "_key": "leader-02",
+        "_ref": "leader.nicholas-barberopoulos",
+        "_type": "reference"
+      },
+      {
+        "_key": "leader-03",
+        "_ref": "leader.dr-cynthia-abima",
+        "_type": "reference"
+      }
+    ],
+    "methodSteps": [
+      {
+        "_key": "method-01",
+        "_type": "processStep",
+        "description": "We begin with questions: where the part is used, what failed, what material was used, what load or wear condition exists, how urgent the shutdown is, and what success looks like.",
+        "details": [
+          "Operating environment",
+          "Urgency",
+          "Failure history",
+          "Success condition"
+        ],
+        "icon": "FileSearch",
+        "stepNumber": 1,
+        "title": "Understand Your Process"
+      },
+      {
+        "_key": "method-02",
+        "_type": "processStep",
+        "description": "We review the broken, worn or corroded part, drawings, photos, site conditions, operating environment and failure history.",
+        "details": [
+          "Sample part",
+          "Photos",
+          "Drawings",
+          "Site condition"
+        ],
+        "icon": "ScanLine",
+        "stepNumber": 2,
+        "title": "Identify the Part and Pain Area"
+      },
+      {
+        "_key": "method-03",
+        "_type": "processStep",
+        "description": "Where drawings are unavailable or unreliable, we use 3D laser scanning, dimensional checks, digital drawings, metal composition analysis and rapid prototyping.",
+        "details": [
+          "3D scanning",
+          "CAD drawing",
+          "Material analysis",
+          "Prototype when required"
+        ],
+        "icon": "Radar",
+        "stepNumber": 3,
+        "title": "Reverse-Engineer the Part"
+      },
+      {
+        "_key": "method-04",
+        "_type": "processStep",
+        "description": "We decide the best route: casting, machining, fabrication, Hardox, Enduraclad CCO, sacrificial anode, Imenco clamp integration, polymer 3D printing, metal 3D printing or a combined solution.",
+        "details": [
+          "Casting",
+          "Machining",
+          "Fabrication",
+          "Wear or corrosion route"
+        ],
+        "icon": "Route",
+        "stepNumber": 4,
+        "title": "Select the Manufacturing Route"
+      },
+      {
+        "_key": "method-05",
+        "_type": "processStep",
+        "description": "We issue a quotation, manufacture locally, inspect the job, deliver the part and support repeat supply where required.",
+        "details": [
+          "Quotation",
+          "Inspection",
+          "Delivery",
+          "Repeat supply support"
+        ],
+        "icon": "BadgeCheck",
+        "stepNumber": 5,
+        "title": "Quote, Manufacture and Support"
+      }
+    ],
+    "nigerianContentSection": [
+      {
+        "_key": "nigerian-content-01",
+        "_type": "card",
+        "description": "Long-term industrial manufacturing presence supporting Nigeria's basic industries.",
+        "icon": "Factory",
+        "title": "Local manufacturing since 1969"
+      },
+      {
+        "_key": "nigerian-content-02",
+        "_type": "card",
+        "description": "Metec West Africa supports local corrosion-protection capacity for offshore, marine and coastal applications.",
+        "icon": "Anchor",
+        "title": "Nigerian-made sacrificial anodes"
+      },
+      {
+        "_key": "nigerian-content-03",
+        "_type": "card",
+        "description": "Nigerian sacrificial anode manufacturing combined with international offshore clamp technology.",
+        "icon": "ShieldCheck",
+        "title": "Metec West Africa + Imenco"
+      },
+      {
+        "_key": "nigerian-content-04",
+        "_type": "card",
+        "description": "Fabricated wear-part solutions for impact and abrasion applications.",
+        "icon": "HardHat",
+        "title": "Hardox wear solutions"
+      },
+      {
+        "_key": "nigerian-content-05",
+        "_type": "card",
+        "description": "Chromium-carbide overlay options for severe sliding abrasion in heavy industry.",
+        "icon": "Layers3",
+        "title": "Enduraclad CCO wear solutions"
+      },
+      {
+        "_key": "nigerian-content-06",
+        "_type": "card",
+        "description": "Advanced part development and future localisation without overclaiming production readiness.",
+        "icon": "Microscope",
+        "title": "Shell-supported additive manufacturing journey"
+      },
+      {
+        "_key": "nigerian-content-07",
+        "_type": "card",
+        "description": "Technical collaboration and exposure for the next generation of industrial talent.",
+        "icon": "GraduationCap",
+        "title": "University partnerships"
+      },
+      {
+        "_key": "nigerian-content-08",
+        "_type": "card",
+        "description": "Support for practical industrial skills needed to scale Nigerian manufacturing.",
+        "icon": "Zap",
+        "title": "TVET and technical skills"
+      }
+    ],
+    "problemSection": [
+      {
+        "_key": "problem-01",
+        "_type": "card",
+        "description": "One failed component can stop a process, delay maintenance and create avoidable pressure.",
+        "icon": "AlertTriangle",
+        "link": {
+          "_type": "cta",
+          "href": "/rfq",
+          "label": "Learn more",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "title": "Broken or worn-out parts"
+      },
+      {
+        "_key": "problem-02",
+        "_type": "card",
+        "description": "When drawings are missing or support has ended, NFG can start with the part, photo or scan.",
+        "icon": "FileQuestion",
+        "link": {
+          "_type": "cta",
+          "href": "/solutions/reverse-engineering",
+          "label": "Learn more",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "title": "No drawing or obsolete OEM support"
+      },
+      {
+        "_key": "problem-03",
+        "_type": "card",
+        "description": "We review the material, wear pattern, failure condition and operating environment before selecting a route.",
+        "icon": "Microscope",
+        "link": {
+          "_type": "cta",
+          "href": "/capabilities/material-analysis",
+          "label": "Learn more",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "title": "Wrong material or repeated failures"
+      },
+      {
+        "_key": "problem-04",
+        "_type": "card",
+        "description": "Local manufacturing can reduce dependence on long external supply chains for critical replacement parts.",
+        "icon": "Clock3",
+        "link": {
+          "_type": "cta",
+          "href": "/nigerian-content",
+          "label": "Learn more",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "title": "Import delay and FX pressure"
+      },
+      {
+        "_key": "problem-05",
+        "_type": "card",
+        "description": "Metec West Africa supports sacrificial anodes and corrosion-protection assemblies for harsh environments.",
+        "icon": "Anchor",
+        "link": {
+          "_type": "cta",
+          "href": "/solutions/corrosion-protection",
+          "label": "Learn more",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "title": "Corrosion and offshore exposure"
+      },
+      {
+        "_key": "problem-06",
+        "_type": "card",
+        "description": "Digital production control improves internal discipline, communication and accountability.",
+        "icon": "ClipboardCheck",
+        "link": {
+          "_type": "cta",
+          "href": "/capabilities/digital-production-control-vezapp",
+          "label": "Learn more",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "title": "Poor supplier visibility"
+      }
+    ],
+    "reverseEngineeringHighlight": [
+      {
+        "_key": "reverse-01",
+        "_type": "processStep",
+        "description": "Receive part, photo or drawing",
+        "stepNumber": 1,
+        "title": "Step 1"
+      },
+      {
+        "_key": "reverse-02",
+        "_type": "processStep",
+        "description": "Understand process and failure mode",
+        "stepNumber": 2,
+        "title": "Step 2"
+      },
+      {
+        "_key": "reverse-03",
+        "_type": "processStep",
+        "description": "3D laser scan and dimensionally check",
+        "stepNumber": 3,
+        "title": "Step 3"
+      },
+      {
+        "_key": "reverse-04",
+        "_type": "processStep",
+        "description": "Create digital drawing or CAD model",
+        "stepNumber": 4,
+        "title": "Step 4"
+      },
+      {
+        "_key": "reverse-05",
+        "_type": "processStep",
+        "description": "Review metal composition where required",
+        "stepNumber": 5,
+        "title": "Step 5"
+      },
+      {
+        "_key": "reverse-06",
+        "_type": "processStep",
+        "description": "Prototype or qualify the design",
+        "stepNumber": 6,
+        "title": "Step 6"
+      },
+      {
+        "_key": "reverse-07",
+        "_type": "processStep",
+        "description": "Select manufacturing route",
+        "stepNumber": 7,
+        "title": "Step 7"
+      },
+      {
+        "_key": "reverse-08",
+        "_type": "processStep",
+        "description": "Quote and manufacture locally",
+        "stepNumber": 8,
+        "title": "Step 8"
+      }
+    ],
+    "skillsEducationSection": [
+      {
+        "_key": "skills-01",
+        "_type": "skillsCard",
+        "active": true,
+        "displayOrder": 1,
+        "icon": "GraduationCap",
+        "link": {
+          "_type": "cta",
+          "href": "/about/skills-education-foundation#university-partnerships",
+          "label": "View University Partnerships",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "points": [
+          "Engineering exposure",
+          "Foundry and manufacturing awareness",
+          "Research collaboration opportunities",
+          "Student and faculty engagement",
+          "Real industrial problem-solving"
+        ],
+        "shortDescription": "Connecting academic learning with real manufacturing challenges through university MOUs, technical engagement and industrial exposure.",
+        "title": "University Partnerships"
+      },
+      {
+        "_key": "skills-02",
+        "_type": "skillsCard",
+        "active": true,
+        "displayOrder": 2,
+        "icon": "HardHat",
+        "link": {
+          "_type": "cta",
+          "href": "/about/industrial-training",
+          "label": "Explore Industrial Training",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "points": [
+          "Foundry operations",
+          "Machining and fabrication",
+          "Quality control exposure",
+          "Engineering and reverse engineering",
+          "Workplace discipline and safety"
+        ],
+        "shortDescription": "Giving students and young technical talent exposure to foundry operations, machining, fabrication, quality control, reverse engineering and advanced manufacturing.",
+        "title": "Industrial Training"
+      },
+      {
+        "_key": "skills-03",
+        "_type": "skillsCard",
+        "active": true,
+        "displayOrder": 3,
+        "icon": "BookOpen",
+        "link": {
+          "_type": "cta",
+          "href": "/about/skills-education-foundation#foundation",
+          "label": "Learn About the Foundation",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "points": [
+          "Technical education support",
+          "Youth and skills development",
+          "Manufacturing awareness",
+          "Industrial career pathways",
+          "Community and education impact"
+        ],
+        "shortDescription": "Supporting technical education, industrial awareness and the development of future manufacturing talent.",
+        "title": "Nigerian Foundries Educational Foundation"
+      },
+      {
+        "_key": "skills-04",
+        "_type": "skillsCard",
+        "active": true,
+        "displayOrder": 4,
+        "icon": "Settings",
+        "link": {
+          "_type": "cta",
+          "href": "/about/skills-education-foundation#tvet-journey",
+          "label": "View TVET Journey",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "points": [
+          "Practical manufacturing skills",
+          "Foundry and metalworking exposure",
+          "Industrial maintenance awareness",
+          "Digital and advanced manufacturing exposure",
+          "Skills for Nigeria's industrial future"
+        ],
+        "shortDescription": "Building a structured pathway for practical manufacturing skills linked to real Nigerian industrial needs.",
+        "title": "TVET Development Journey"
+      }
+    ],
+    "solutionCards": [
+      {
+        "_key": "solution-01",
+        "_ref": "solutionPage.drainage-municipal-castings",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-02",
+        "_ref": "solutionPage.wear-part-solutions",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-03",
+        "_ref": "solutionPage.corrosion-protection",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-04",
+        "_ref": "solutionPage.reverse-engineering",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-05",
+        "_ref": "solutionPage.machining-fabrication-assembly",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-06",
+        "_ref": "solutionPage.3d-printing-advanced-manufacturing",
+        "_type": "reference"
+      }
+    ],
+    "title": "Homepage",
+    "trustBadges": [
+      {
+        "_key": "trust-01",
+        "_type": "card",
+        "description": "Long-term Nigerian industrial manufacturing experience",
+        "title": "Since 1969"
+      },
+      {
+        "_key": "trust-02",
+        "_type": "card",
+        "description": "Certificate record managed through CMS",
+        "title": "ISO 9001:2015"
+      },
+      {
+        "_key": "trust-03",
+        "_type": "card",
+        "description": "Energy management certificate record managed through CMS",
+        "title": "ISO 50001"
+      },
+      {
+        "_key": "trust-04",
+        "_type": "card",
+        "description": "Certificate image or PDF can be attached in Sanity",
+        "title": "Federal Ministry of Industry OEM Manufacturer's Certificate"
+      },
+      {
+        "_key": "trust-05",
+        "_type": "card",
+        "description": "Wear-part workshop recognition",
+        "title": "Hardox Wearparts Certified Workshop"
+      },
+      {
+        "_key": "trust-06",
+        "_type": "card",
+        "description": "Recognition record managed through CMS",
+        "title": "Shell Nigerian Content Manufacturing Recognition"
+      },
+      {
+        "_key": "trust-07",
+        "_type": "card",
+        "description": "Transformation journey proof point",
+        "title": "Stanford Seed Transformation Program Completed 2023"
+      },
+      {
+        "_key": "trust-08",
+        "_type": "card",
+        "description": "IEE and resource efficient cleaner production record",
+        "title": "GEF-UNIDO Industrial Energy Efficiency Project"
+      },
+      {
+        "_key": "trust-09",
+        "_type": "card",
+        "description": "Corrosion-protection partnership positioning",
+        "title": "Metec West Africa + Imenco Partnership"
+      }
+    ],
+    "wearComparison": [
+      {
+        "_key": "wear-01",
+        "_type": "card",
+        "description": "Best suited for fabricated wear parts, dump bodies, chutes, liners, hoppers and structural areas where high-strength wear plate is the right route.",
+        "icon": "HardHat",
+        "subtitle": "Impact and abrasion",
+        "title": "Hardox Wearparts",
+        "useCases": [
+          "Impact wear",
+          "Abrasion",
+          "Fabricated wear structures",
+          "Replacement liners"
+        ]
+      },
+      {
+        "_key": "wear-02",
+        "_type": "card",
+        "description": "Chromium-carbide overlay solutions for high-wear surfaces such as cement, mining and heavy-process areas where sliding abrasion dominates.",
+        "icon": "ShieldCheck",
+        "subtitle": "Severe sliding abrasion",
+        "title": "Enduraclad / CCO Solutions",
+        "useCases": [
+          "VRM areas",
+          "Chutes",
+          "Wear liners",
+          "High-abrasion surfaces"
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "blogPost.hardox-cco-or-casting-choosing-the-right-wear-route",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "blogPost",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "category": "Wear solutions",
+    "excerpt": "Impact, abrasion and service environment should guide the route before price comparison.",
+    "publishDate": "2026-05-09",
+    "slug": {
+      "_type": "slug",
+      "current": "hardox-cco-or-casting-choosing-the-right-wear-route"
+    },
+    "title": "Hardox, CCO or casting: choosing the right wear route"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "blogPost.how-to-start-reverse-engineering-when-no-drawing-exists",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "blogPost",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "category": "Reverse engineering",
+    "excerpt": "What to send, what NFG reviews and how a broken part becomes a manufacturable route.",
+    "publishDate": "2026-05-09",
+    "slug": {
+      "_type": "slug",
+      "current": "how-to-start-reverse-engineering-when-no-drawing-exists"
+    },
+    "title": "How to start reverse engineering when no drawing exists"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "blogPost.nigerian-content-as-industrial-capacity",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "blogPost",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "category": "Nigerian Content",
+    "excerpt": "Local manufacturing matters when strategic industries need practical accountability close to site.",
+    "publishDate": "2026-05-09",
+    "slug": {
+      "_type": "slug",
+      "current": "nigerian-content-as-industrial-capacity"
+    },
+    "title": "Nigerian Content as industrial capacity"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "capabilityPage.additive-manufacturing",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "capabilities": [
+      "Polymer 3D printing",
+      "Metal 3D printing",
+      "Rapid prototyping",
+      "Design validation",
+      "Pattern development"
+    ],
+    "materials": [
+      "Polymer printing materials",
+      "Metal additive materials under qualification"
+    ],
+    "processes": [
+      "Digital model preparation",
+      "Prototype",
+      "Review and qualify",
+      "Feed learning into local manufacturing"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "additive-manufacturing"
+    },
+    "summary": "Polymer and metal 3D printing for rapid prototyping, design validation, pattern development, advanced part development and future localisation.",
+    "title": "Additive Manufacturing"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "capabilityPage.digital-production-control-vezapp",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "capabilities": [
+      "Production tracking",
+      "Scheduling discipline",
+      "Quality checkpoints",
+      "Accountability",
+      "Communication flow"
+    ],
+    "materials": [
+      "Digital operating discipline"
+    ],
+    "processes": [
+      "Order intake",
+      "Planning",
+      "Production checkpoints",
+      "Management visibility"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "digital-production-control-vezapp"
+    },
+    "summary": "Production tracking, scheduling discipline, quality checkpoints and accountability between sales, planning, production and management.",
+    "title": "Digital Production Control / Vezapp"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "capabilityPage.ferrous-foundry",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "capabilities": [
+      "Steel and iron castings",
+      "Manganese steel",
+      "High-chrome iron",
+      "Grey iron",
+      "Ductile iron",
+      "Ni-Hard",
+      "Alloy steels"
+    ],
+    "materials": [
+      "Manganese steel",
+      "High-chrome iron",
+      "Grey iron",
+      "Ductile iron",
+      "Ni-Hard",
+      "Moly-chrome",
+      "Stainless steel"
+    ],
+    "processes": [
+      "Pattern review",
+      "Melting",
+      "Casting",
+      "Heat treatment where required",
+      "Inspection"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "ferrous-foundry"
+    },
+    "summary": "Steel and iron castings in manganese steel, high-chrome iron, grey iron, ductile iron, Ni-Hard, stainless steel and alloy steels for cement, mining and quarry applications.",
+    "title": "Ferrous Foundry"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "capabilityPage.industrial-applications-machining-fabrication",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "capabilities": [
+      "CNC machining",
+      "Fabrication",
+      "Welding",
+      "Assembly",
+      "Repairs",
+      "Industrial parts"
+    ],
+    "materials": [
+      "Steel",
+      "Cast iron",
+      "Stainless steel",
+      "Hardox",
+      "Application-specific materials"
+    ],
+    "processes": [
+      "Drawing/sample review",
+      "Machining",
+      "Fabrication",
+      "Welding",
+      "Inspection"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "industrial-applications-machining-fabrication"
+    },
+    "summary": "CNC machining, fabrication, welding, assembly, repairs and industrial part support through Industrial Applications Ltd.",
+    "title": "Industrial Applications / Machining & Fabrication"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "capabilityPage.laser-scanning-reverse-engineering",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "capabilities": [
+      "3D laser scanning",
+      "Measurement",
+      "CAD drawings",
+      "Part identification",
+      "Design development"
+    ],
+    "materials": [
+      "Material depends on analysis and operating service"
+    ],
+    "processes": [
+      "Receive part",
+      "Scan and measure",
+      "Create digital model",
+      "Select manufacturing route"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "laser-scanning-reverse-engineering"
+    },
+    "summary": "3D laser scanning, measurement, CAD/digital drawings, part identification and design development for obsolete or unavailable parts.",
+    "title": "Laser Scanning & Reverse Engineering"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "capabilityPage.material-analysis",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "capabilities": [
+      "Metal composition analysis",
+      "Material verification",
+      "Failure review support",
+      "Material selection"
+    ],
+    "materials": [
+      "Ferrous and non-ferrous materials subject to application"
+    ],
+    "processes": [
+      "Sample review",
+      "Composition analysis",
+      "Failure-condition discussion",
+      "Material recommendation"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "material-analysis"
+    },
+    "summary": "Metal composition analysis, material verification, failure review support and material selection for critical industrial replacement parts.",
+    "title": "Material Analysis"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "capabilityPage.non-ferrous-foundry-metec-west-africa",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "capabilityPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "capabilities": [
+      "Sacrificial anodes",
+      "Non-ferrous casting",
+      "Offshore corrosion-protection support",
+      "Marine corrosion support"
+    ],
+    "materials": [
+      "Aluminium anodes",
+      "Zinc anodes",
+      "Non-ferrous alloys"
+    ],
+    "processes": [
+      "Application review",
+      "Material selection",
+      "Casting",
+      "Assembly support"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "non-ferrous-foundry-metec-west-africa"
+    },
+    "summary": "Sacrificial anodes and non-ferrous corrosion-protection castings for oil and gas, marine, offshore and industrial applications.",
+    "title": "Non-Ferrous Foundry / Metec West Africa"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "caseStudy.cement-plant-wear-part-localisation",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "caseStudy",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "clientNameDisplay": "Confidential cement client",
+    "confidentialityStatus": "confidential",
+    "featured": true,
+    "manufacturingRoute": "Wear casting, machining and wear-solution review",
+    "materials": [
+      "High-chrome iron",
+      "Manganese steel",
+      "Wear materials subject to application"
+    ],
+    "nfgApproach": "NFG reviewed the wear condition, considered local manufacturing routes and supported practical replacement-part supply.",
+    "problem": "Critical wear parts were creating maintenance pressure and dependence on imported spares.",
+    "result": "A local support pathway for recurring cement plant wear needs. Performance numbers are intentionally omitted until approved for publication.",
+    "slug": {
+      "_type": "slug",
+      "current": "cement-plant-wear-part-localisation"
+    },
+    "title": "Cement plant wear-part localisation"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "caseStudy.offshore-corrosion-protection",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "caseStudy",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "clientNameDisplay": "Confidential offshore application",
+    "confidentialityStatus": "confidential",
+    "featured": true,
+    "manufacturingRoute": "Sacrificial anodes and corrosion-protection assembly support",
+    "materials": [
+      "Aluminium anodes",
+      "Zinc anodes"
+    ],
+    "nfgApproach": "Metec West Africa sacrificial anode capability combined with Imenco-aligned clamp positioning.",
+    "problem": "Offshore corrosion exposure required practical local manufacturing and retrofit support.",
+    "result": "Nigerian Content pathway for corrosion-protection assemblies.",
+    "slug": {
+      "_type": "slug",
+      "current": "offshore-corrosion-protection"
+    },
+    "title": "Offshore corrosion protection"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "caseStudy.quarry-crusher-parts-reverse-engineering",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "caseStudy",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "clientNameDisplay": "Confidential quarry operator",
+    "confidentialityStatus": "confidential",
+    "featured": true,
+    "manufacturingRoute": "Reverse engineering, casting and machining",
+    "materials": [
+      "Manganese steel",
+      "High-chrome iron"
+    ],
+    "nfgApproach": "Laser measurement, drawing generation and replacement-part development from a sample component.",
+    "problem": "Imported crusher spares created avoidable delay and drawings were not always available.",
+    "result": "A manufacturable local route for replacement crusher parts.",
+    "slug": {
+      "_type": "slug",
+      "current": "quarry-crusher-parts-reverse-engineering"
+    },
+    "title": "Quarry crusher parts reverse engineering"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "caseStudy.shell-supported-additive-manufacturing-journey",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "caseStudy",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "clientNameDisplay": "Internal capability development",
+    "confidentialityStatus": "approved summary only",
+    "featured": true,
+    "manufacturingRoute": "Digital engineering, additive manufacturing and qualification pathway",
+    "materials": [
+      "Polymer and metal additive manufacturing materials under qualification"
+    ],
+    "nfgApproach": "Advanced manufacturing capability development using polymer and metal 3D printing for prototyping and qualification.",
+    "problem": "Nigeria needs a practical pathway toward local development of more complex industrial parts.",
+    "result": "Part development capability positioned as a journey, not an overclaimed production promise.",
+    "slug": {
+      "_type": "slug",
+      "current": "shell-supported-additive-manufacturing-journey"
+    },
+    "title": "Shell-supported additive manufacturing journey"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "certificationOrAward.federal-ministry-of-industry-oem-manufacturer-s-certificate",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "category": "Manufacturing recognition",
+    "description": "OEM manufacturer's certificate record with verification status and downloadable PDF support.",
+    "displayOnHomepage": true,
+    "issuingBody": "Federal Ministry of Industry",
+    "title": "Federal Ministry of Industry OEM Manufacturer's Certificate",
+    "verificationStatus": "pending",
+    "year": "To verify"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "certificationOrAward.gef-unido-industrial-energy-efficiency-and-recp-project",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "category": "Energy and cleaner production",
+    "description": "Industrial energy efficiency and resource efficient cleaner production project recognition.",
+    "displayOnHomepage": true,
+    "issuingBody": "GEF-UNIDO",
+    "title": "GEF-UNIDO Industrial Energy Efficiency & RECP Project",
+    "verificationStatus": "pending",
+    "year": "To verify"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "certificationOrAward.hardox-wearparts-certified-workshop",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "category": "Workshop recognition",
+    "description": "Wearparts recognition record. Certificate media can be uploaded through Sanity.",
+    "displayOnHomepage": true,
+    "issuingBody": "Hardox Wearparts",
+    "title": "Hardox Wearparts Certified Workshop",
+    "verificationStatus": "pending",
+    "year": "To verify"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "certificationOrAward.iso-50001",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "category": "Energy",
+    "description": "Energy management certification record. Upload certificate image or PDF when approved.",
+    "displayOnHomepage": true,
+    "issuingBody": "Certification body to be confirmed in CMS",
+    "title": "ISO 50001",
+    "verificationStatus": "pending",
+    "year": "To verify"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "certificationOrAward.iso-9001-2015",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_system": {
+      "base": {
+        "id": "certificationOrAward.iso-9001-2015",
+        "rev": "QXQS4eMC94GhnyJB7zg2MA"
+      }
+    },
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-27T14:19:05Z",
+    "category": "Quality",
+    "description": "Quality management certification record. Upload certificate image or PDF when approved.",
+    "displayOnHomepage": true,
+    "issuingBody": "Certification body to be confirmed in CMS",
+    "title": "ISO 9001:2015",
+    "verificationStatus": "internal only",
+    "year": "To verify"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "certificationOrAward.shell-nigerian-content-manufacturing-recognition",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "category": "Nigerian Content",
+    "description": "Recognition record managed conservatively until certificate evidence is uploaded.",
+    "displayOnHomepage": true,
+    "issuingBody": "Shell",
+    "title": "Shell Nigerian Content Manufacturing Recognition",
+    "verificationStatus": "pending",
+    "year": "To verify"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "certificationOrAward.stanford-seed-transformation-program",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "certificationOrAward",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "category": "Transformation",
+    "description": "Transformation program completion record for NFG's operational improvement journey.",
+    "displayOnHomepage": true,
+    "issuingBody": "Stanford Seed",
+    "title": "Stanford Seed Transformation Program",
+    "verificationStatus": "pending",
+    "year": "2023"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "downloadAsset.company-profile",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "downloadAsset",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "category": "Company",
+    "description": "Overview of NFG's group capability, sectors served and contact routes.",
+    "title": "Company profile"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "downloadAsset.corrosion-protection-brochure",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "downloadAsset",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "category": "Solutions",
+    "description": "Metec West Africa sacrificial anodes and corrosion-protection assembly positioning.",
+    "title": "Corrosion protection brochure"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "downloadAsset.municipal-casting-catalogue",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "downloadAsset",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "category": "Product catalogue",
+    "description": "Maintenance hole covers, manhole covers, gratings and municipal casting categories.",
+    "title": "Municipal casting catalogue"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "downloadAsset.wear-solutions-brochure",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "downloadAsset",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "category": "Solutions",
+    "description": "Hardox, Enduraclad CCO, castings and reverse engineering for severe wear environments.",
+    "title": "Wear solutions brochure"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "faq.can-nfg-help-if-there-is-no-drawing",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "faq",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "answer": "Yes. NFG can start with the sample part, photo or scan, then review geometry, material and failure condition before recommending a manufacturing route.",
+    "category": "Reverse engineering",
+    "question": "Can NFG help if there is no drawing?"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "faq.can-nfg-support-local-alternatives-to-imported-covers",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "faq",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "answer": "Yes. NFG supports maintenance hole covers, manhole covers, gratings and utility access castings for municipal, estate and industrial needs.",
+    "category": "Municipal castings",
+    "question": "Can NFG support local alternatives to imported covers?"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "faq.does-nfg-claim-full-production-replacement-through-3d-printing",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "faq",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "answer": "No. NFG presents 3D printing as an advanced manufacturing journey for rapid prototyping, part development, qualification and future localisation.",
+    "category": "3D printing",
+    "question": "Does NFG claim full production replacement through 3D printing?"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "faq.how-do-i-know-whether-to-use-hardox-enduraclad-or-a-casting",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "faq",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "answer": "The route depends on the wear mode, impact level, geometry, operating environment and available sample or drawing.",
+    "category": "Wear parts",
+    "question": "How do I know whether to use Hardox, Enduraclad or a casting?"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "faq.what-does-metec-west-africa-provide",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "faq",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "answer": "Metec West Africa supports sacrificial anodes and corrosion-protection assemblies for offshore, marine, power, windmill and coastal applications.",
+    "category": "Corrosion protection",
+    "question": "What does Metec West Africa provide?"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "faq.what-should-i-send-when-a-part-fails",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "faq",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "answer": "Send a photo, drawing, broken or worn sample, equipment name, quantity, urgency and any known material or operating condition.",
+    "category": "RFQ process",
+    "question": "What should I send when a part fails?"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "industryPage.agro-allied-general-manufacturing",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "commonParts": [
+      "Machined spares",
+      "Fabricated parts",
+      "Castings",
+      "Repair parts",
+      "Obsolete components"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?industry=manufacturing",
+      "label": "Send a Manufacturing Part",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "industryPainPoints": [
+      {
+        "_key": "pain-01",
+        "_type": "card",
+        "description": "Replacement parts, worn parts, obsolete spares and repairs.",
+        "icon": "Layers3",
+        "title": "Pain"
+      }
+    ],
+    "nfgSolutions": [
+      {
+        "_key": "solution-01",
+        "_type": "card",
+        "description": "Machining, fabrication, castings and reverse engineering.",
+        "title": "NFG fit"
+      },
+      {
+        "_key": "route-01",
+        "_type": "card",
+        "description": "Machining",
+        "title": "Machining"
+      },
+      {
+        "_key": "route-02",
+        "_type": "card",
+        "description": "Fabrication",
+        "title": "Fabrication"
+      },
+      {
+        "_key": "route-03",
+        "_type": "card",
+        "description": "Casting",
+        "title": "Casting"
+      },
+      {
+        "_key": "route-04",
+        "_type": "card",
+        "description": "Reverse engineering",
+        "title": "Reverse engineering"
+      }
+    ],
+    "relatedSolutions": [
+      {
+        "_key": "solution-01",
+        "_ref": "solutionPage.machining-fabrication-assembly",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-02",
+        "_ref": "solutionPage.reverse-engineering",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-03",
+        "_ref": "solutionPage.3d-printing-advanced-manufacturing",
+        "_type": "reference"
+      }
+    ],
+    "relevantMaterials": [
+      "Steel",
+      "Stainless steel",
+      "Iron castings",
+      "Application-specific alloys"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "agro-allied-general-manufacturing"
+    },
+    "title": "Agro-Allied & General Manufacturing"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "industryPage.cement-plants",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "commonParts": [
+      "Crusher parts",
+      "Liners",
+      "VRM areas",
+      "Jaw plates",
+      "Blow bars",
+      "Chutes"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?industry=cement",
+      "label": "Solve a Cement Plant Wear Problem",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "industryPainPoints": [
+      {
+        "_key": "pain-01",
+        "_type": "card",
+        "description": "Wear parts, liners, crusher parts, VRM areas, shutdown risk and imported spares.",
+        "icon": "Factory",
+        "title": "Pain"
+      }
+    ],
+    "nfgSolutions": [
+      {
+        "_key": "solution-01",
+        "_type": "card",
+        "description": "High-chrome castings, manganese steel, Enduraclad CCO, Hardox, machining and reverse engineering.",
+        "title": "NFG fit"
+      },
+      {
+        "_key": "route-01",
+        "_type": "card",
+        "description": "Casting",
+        "title": "Casting"
+      },
+      {
+        "_key": "route-02",
+        "_type": "card",
+        "description": "Machining",
+        "title": "Machining"
+      },
+      {
+        "_key": "route-03",
+        "_type": "card",
+        "description": "Fabrication",
+        "title": "Fabrication"
+      },
+      {
+        "_key": "route-04",
+        "_type": "card",
+        "description": "Reverse engineering",
+        "title": "Reverse engineering"
+      },
+      {
+        "_key": "route-05",
+        "_type": "card",
+        "description": "Wear solution selection",
+        "title": "Wear solution selection"
+      }
+    ],
+    "relatedSolutions": [
+      {
+        "_key": "solution-01",
+        "_ref": "solutionPage.wear-part-solutions",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-02",
+        "_ref": "solutionPage.reverse-engineering",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-03",
+        "_ref": "solutionPage.machining-fabrication-assembly",
+        "_type": "reference"
+      }
+    ],
+    "relevantMaterials": [
+      "High-chrome iron",
+      "Manganese steel",
+      "Hardox",
+      "Enduraclad CCO",
+      "Ni-Hard"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "cement-plants"
+    },
+    "title": "Cement Plants"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "industryPage.dredging",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "commonParts": [
+      "Dredging wear parts",
+      "Pump and pipeline wear components",
+      "Fabricated assemblies"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?industry=dredging",
+      "label": "Discuss Dredging Parts",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "industryPainPoints": [
+      {
+        "_key": "pain-01",
+        "_type": "card",
+        "description": "Abrasion, corrosion and harsh operating conditions.",
+        "icon": "Waves",
+        "title": "Pain"
+      }
+    ],
+    "nfgSolutions": [
+      {
+        "_key": "solution-01",
+        "_type": "card",
+        "description": "Wear-resistant castings, fabricated parts, machining and corrosion-support options.",
+        "title": "NFG fit"
+      },
+      {
+        "_key": "route-01",
+        "_type": "card",
+        "description": "Casting",
+        "title": "Casting"
+      },
+      {
+        "_key": "route-02",
+        "_type": "card",
+        "description": "Fabrication",
+        "title": "Fabrication"
+      },
+      {
+        "_key": "route-03",
+        "_type": "card",
+        "description": "Machining",
+        "title": "Machining"
+      },
+      {
+        "_key": "route-04",
+        "_type": "card",
+        "description": "Corrosion support",
+        "title": "Corrosion support"
+      }
+    ],
+    "relatedSolutions": [
+      {
+        "_key": "solution-01",
+        "_ref": "solutionPage.wear-part-solutions",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-02",
+        "_ref": "solutionPage.corrosion-protection",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-03",
+        "_ref": "solutionPage.machining-fabrication-assembly",
+        "_type": "reference"
+      }
+    ],
+    "relevantMaterials": [
+      "Wear-resistant castings",
+      "Steel",
+      "Application-specific alloys"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "dredging"
+    },
+    "title": "Dredging"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "industryPage.infrastructure-municipal-works",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "commonParts": [
+      "Maintenance hole covers",
+      "Manhole covers",
+      "Drainage gratings",
+      "Utility access covers"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?industry=infrastructure",
+      "label": "Request Municipal Casting Support",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "industryPainPoints": [
+      {
+        "_key": "pain-01",
+        "_type": "card",
+        "description": "Imported covers, drainage failures, poor-quality castings and urban infrastructure needs.",
+        "icon": "Building2",
+        "title": "Pain"
+      }
+    ],
+    "nfgSolutions": [
+      {
+        "_key": "solution-01",
+        "_type": "card",
+        "description": "Maintenance hole covers, manhole covers, gratings and drainage design support.",
+        "title": "NFG fit"
+      },
+      {
+        "_key": "route-01",
+        "_type": "card",
+        "description": "Casting",
+        "title": "Casting"
+      },
+      {
+        "_key": "route-02",
+        "_type": "card",
+        "description": "Design support",
+        "title": "Design support"
+      },
+      {
+        "_key": "route-03",
+        "_type": "card",
+        "description": "Machining where required",
+        "title": "Machining where required"
+      }
+    ],
+    "relatedSolutions": [
+      {
+        "_key": "solution-01",
+        "_ref": "solutionPage.drainage-municipal-castings",
+        "_type": "reference"
+      }
+    ],
+    "relevantMaterials": [
+      "Ductile iron",
+      "Grey iron",
+      "Steel and iron castings"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "infrastructure-municipal-works"
+    },
+    "title": "Infrastructure & Municipal Works"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "industryPage.marine-ports-windmills",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "commonParts": [
+      "Anodes",
+      "Fabricated components",
+      "Maintenance parts",
+      "Coastal infrastructure components"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?industry=marine",
+      "label": "Discuss Marine Protection",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "industryPainPoints": [
+      {
+        "_key": "pain-01",
+        "_type": "card",
+        "description": "Corrosion, coastal exposure and structural degradation.",
+        "icon": "Ship",
+        "title": "Pain"
+      }
+    ],
+    "nfgSolutions": [
+      {
+        "_key": "solution-01",
+        "_type": "card",
+        "description": "Anodes, corrosion protection, fabricated components and maintenance support.",
+        "title": "NFG fit"
+      },
+      {
+        "_key": "route-01",
+        "_type": "card",
+        "description": "Corrosion protection",
+        "title": "Corrosion protection"
+      },
+      {
+        "_key": "route-02",
+        "_type": "card",
+        "description": "Fabrication",
+        "title": "Fabrication"
+      },
+      {
+        "_key": "route-03",
+        "_type": "card",
+        "description": "Machining",
+        "title": "Machining"
+      },
+      {
+        "_key": "route-04",
+        "_type": "card",
+        "description": "Maintenance support",
+        "title": "Maintenance support"
+      }
+    ],
+    "relatedSolutions": [
+      {
+        "_key": "solution-01",
+        "_ref": "solutionPage.corrosion-protection",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-02",
+        "_ref": "solutionPage.machining-fabrication-assembly",
+        "_type": "reference"
+      }
+    ],
+    "relevantMaterials": [
+      "Anode materials",
+      "Steel",
+      "Non-ferrous materials"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "marine-ports-windmills"
+    },
+    "title": "Marine / Ports / Windmills"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "industryPage.mining-mineral-processing",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "commonParts": [
+      "Crusher liners",
+      "Jaw plates",
+      "Cones",
+      "Mantles",
+      "Chutes",
+      "Hoppers"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?industry=mining",
+      "label": "Discuss Mining Wear Parts",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "industryPainPoints": [
+      {
+        "_key": "pain-01",
+        "_type": "card",
+        "description": "Abrasive wear, impact wear, crusher parts and downtime.",
+        "icon": "Pickaxe",
+        "title": "Pain"
+      }
+    ],
+    "nfgSolutions": [
+      {
+        "_key": "solution-01",
+        "_type": "card",
+        "description": "Manganese castings, high-chrome iron, Hardox, Enduraclad and reverse engineering.",
+        "title": "NFG fit"
+      },
+      {
+        "_key": "route-01",
+        "_type": "card",
+        "description": "Casting",
+        "title": "Casting"
+      },
+      {
+        "_key": "route-02",
+        "_type": "card",
+        "description": "Hardox fabrication",
+        "title": "Hardox fabrication"
+      },
+      {
+        "_key": "route-03",
+        "_type": "card",
+        "description": "CCO",
+        "title": "CCO"
+      },
+      {
+        "_key": "route-04",
+        "_type": "card",
+        "description": "Reverse engineering",
+        "title": "Reverse engineering"
+      }
+    ],
+    "relatedSolutions": [
+      {
+        "_key": "solution-01",
+        "_ref": "solutionPage.wear-part-solutions",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-02",
+        "_ref": "solutionPage.reverse-engineering",
+        "_type": "reference"
+      }
+    ],
+    "relevantMaterials": [
+      "Manganese steel",
+      "High-chrome iron",
+      "Hardox",
+      "Enduraclad CCO"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "mining-mineral-processing"
+    },
+    "title": "Mining & Mineral Processing"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "industryPage.oil-gas-offshore",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "commonParts": [
+      "Sacrificial anodes",
+      "Corrosion-protection assemblies",
+      "Fabricated components",
+      "Machined parts"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?industry=oil-gas",
+      "label": "Discuss Offshore Corrosion Protection",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "industryPainPoints": [
+      {
+        "_key": "pain-01",
+        "_type": "card",
+        "description": "Corrosion, Local Content requirements, retrofit difficulty and imported offshore systems.",
+        "icon": "Anchor",
+        "title": "Pain"
+      }
+    ],
+    "nfgSolutions": [
+      {
+        "_key": "solution-01",
+        "_type": "card",
+        "description": "Sacrificial anodes, Metec West Africa, Imenco clamp integration, fabrication, machining and 3D printing development pathway.",
+        "title": "NFG fit"
+      },
+      {
+        "_key": "route-01",
+        "_type": "card",
+        "description": "Anode manufacturing",
+        "title": "Anode manufacturing"
+      },
+      {
+        "_key": "route-02",
+        "_type": "card",
+        "description": "Clamp integration",
+        "title": "Clamp integration"
+      },
+      {
+        "_key": "route-03",
+        "_type": "card",
+        "description": "Fabrication",
+        "title": "Fabrication"
+      },
+      {
+        "_key": "route-04",
+        "_type": "card",
+        "description": "Machining",
+        "title": "Machining"
+      },
+      {
+        "_key": "route-05",
+        "_type": "card",
+        "description": "Advanced part development",
+        "title": "Advanced part development"
+      }
+    ],
+    "relatedSolutions": [
+      {
+        "_key": "solution-01",
+        "_ref": "solutionPage.corrosion-protection",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-02",
+        "_ref": "solutionPage.machining-fabrication-assembly",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-03",
+        "_ref": "solutionPage.3d-printing-advanced-manufacturing",
+        "_type": "reference"
+      }
+    ],
+    "relevantMaterials": [
+      "Aluminium anodes",
+      "Zinc anodes",
+      "Steel assemblies",
+      "Application-specific materials"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "oil-gas-offshore"
+    },
+    "title": "Oil & Gas / Offshore"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "industryPage.power-energy",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "commonParts": [
+      "Replacement parts",
+      "Machined components",
+      "Fabricated assemblies",
+      "Corrosion-protection items"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?industry=power",
+      "label": "Review a Power/Energy Part",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "industryPainPoints": [
+      {
+        "_key": "pain-01",
+        "_type": "card",
+        "description": "Critical spares, corrosion, replacement parts and local capacity.",
+        "icon": "Bolt",
+        "title": "Pain"
+      }
+    ],
+    "nfgSolutions": [
+      {
+        "_key": "solution-01",
+        "_type": "card",
+        "description": "Castings, machining, fabrication, corrosion protection and reverse engineering.",
+        "title": "NFG fit"
+      },
+      {
+        "_key": "route-01",
+        "_type": "card",
+        "description": "Casting",
+        "title": "Casting"
+      },
+      {
+        "_key": "route-02",
+        "_type": "card",
+        "description": "Machining",
+        "title": "Machining"
+      },
+      {
+        "_key": "route-03",
+        "_type": "card",
+        "description": "Fabrication",
+        "title": "Fabrication"
+      },
+      {
+        "_key": "route-04",
+        "_type": "card",
+        "description": "Reverse engineering",
+        "title": "Reverse engineering"
+      },
+      {
+        "_key": "route-05",
+        "_type": "card",
+        "description": "Corrosion protection",
+        "title": "Corrosion protection"
+      }
+    ],
+    "relatedSolutions": [
+      {
+        "_key": "solution-01",
+        "_ref": "solutionPage.reverse-engineering",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-02",
+        "_ref": "solutionPage.machining-fabrication-assembly",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-03",
+        "_ref": "solutionPage.corrosion-protection",
+        "_type": "reference"
+      }
+    ],
+    "relevantMaterials": [
+      "Alloy steels",
+      "Iron castings",
+      "Stainless steel",
+      "Application-specific materials"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "power-energy"
+    },
+    "title": "Power & Energy"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "industryPage.quarries-aggregates",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "industryPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "commonParts": [
+      "Jaw plates",
+      "Cones",
+      "Mantles",
+      "Blow bars",
+      "Liners"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?industry=quarry",
+      "label": "Send a Quarry Crusher Part",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "industryPainPoints": [
+      {
+        "_key": "pain-01",
+        "_type": "card",
+        "description": "Crusher wear, emergency replacements and imported spares.",
+        "icon": "Hammer",
+        "title": "Pain"
+      }
+    ],
+    "nfgSolutions": [
+      {
+        "_key": "solution-01",
+        "_type": "card",
+        "description": "Jaw plates, cones, mantles, blow bars and liners supported through casting and reverse engineering.",
+        "title": "NFG fit"
+      },
+      {
+        "_key": "route-01",
+        "_type": "card",
+        "description": "Casting",
+        "title": "Casting"
+      },
+      {
+        "_key": "route-02",
+        "_type": "card",
+        "description": "Machining",
+        "title": "Machining"
+      },
+      {
+        "_key": "route-03",
+        "_type": "card",
+        "description": "Reverse engineering",
+        "title": "Reverse engineering"
+      }
+    ],
+    "relatedSolutions": [
+      {
+        "_key": "solution-01",
+        "_ref": "solutionPage.wear-part-solutions",
+        "_type": "reference"
+      },
+      {
+        "_key": "solution-02",
+        "_ref": "solutionPage.reverse-engineering",
+        "_type": "reference"
+      }
+    ],
+    "relevantMaterials": [
+      "Manganese steel",
+      "High-chrome iron",
+      "Ni-Hard"
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "quarries-aggregates"
+    },
+    "title": "Quarries & Aggregates"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "leader.dr-cynthia-abima",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "leader",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "areaOfResponsibility": "Ferrous foundry technical leadership",
+    "displayOrder": 3,
+    "featuredOnHomepage": true,
+    "name": "Dr Cynthia Abima",
+    "quote": "Material choice and process discipline matter before the mould is poured.",
+    "role": "Head of Ferrous Foundry",
+    "shortBio": "Representing the new generation of technical leadership at NFG, combining quality discipline, metallurgical understanding and operational responsibility."
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "leader.nicholas-barberopoulos",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "leader",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "areaOfResponsibility": "Operations, delivery and group coordination",
+    "displayOrder": 2,
+    "featuredOnHomepage": true,
+    "name": "Nicholas Barberopoulos",
+    "quote": "The job is not just making a part. It is making the route dependable.",
+    "role": "Deputy Managing Director",
+    "shortBio": "Supporting operational delivery across foundry, machining, fabrication, corrosion protection and advanced manufacturing activities."
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "leader.vassily-oye-barberopoulos",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "leader",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "areaOfResponsibility": "Group leadership, strategy and industrial transformation",
+    "displayOrder": 1,
+    "featuredOnHomepage": true,
+    "name": "Vassily Oye Barberopoulos",
+    "quote": "Local manufacturing must solve real operational problems for industry.",
+    "role": "Managing Director",
+    "shortBio": "Leading NFG's evolution from a long-established foundry business into an integrated industrial manufacturing and reverse-engineering group."
+  },
+  {
+    "_createdAt": "2026-05-28T10:47:32Z",
+    "_id": "signatureUptimeSolution",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "signatureUptimeSolution",
+    "_updatedAt": "2026-05-28T10:47:32Z",
+    "active": true,
+    "heroSlide": {
+      "_key": "signature-hero-01",
+      "_type": "heroSlide",
+      "active": true,
+      "displayOrder": 2,
+      "eyebrow": "NFG Signature Uptime Solution",
+      "featureCards": [
+        {
+          "_key": "feature-01",
+          "_type": "card",
+          "description": "Prepare known, repeat and shutdown-critical parts before pressure builds.",
+          "title": "Plan"
+        },
+        {
+          "_key": "feature-02",
+          "_type": "card",
+          "description": "Review failed parts, samples, drawings and urgent production constraints.",
+          "title": "Respond"
+        },
+        {
+          "_key": "feature-03",
+          "_type": "card",
+          "description": "Focus on uptime, local support and total production impact.",
+          "title": "Protect"
+        }
+      ],
+      "headline": "Plan Ahead. Respond Fast. Protect Production.",
+      "media": {
+        "_type": "mediaAsset",
+        "altText": "Industrial planner reviewing a parts list with maintenance and foundry support",
+        "caption": "Planned critical-parts support and emergency manufacturing response",
+        "mediaType": "image",
+        "overlayOpacity": 0.7,
+        "theme": "uptime"
+      },
+      "primaryCta": {
+        "_type": "cta",
+        "href": "/solutions#signature-uptime-solution",
+        "label": "Plan Critical Parts",
+        "linkType": "internal",
+        "style": "primary"
+      },
+      "secondaryCta": {
+        "_type": "cta",
+        "href": "/rtq",
+        "label": "Request Emergency Support",
+        "linkType": "internal",
+        "style": "primary"
+      },
+      "subheadline": "A failed part is not just a purchase problem - it is lost production, waiting time, emergency pressure and money lost by the hour.",
+      "supportText": "NFG supports clients through a two-pronged approach: planned critical-parts support before shutdowns, and emergency manufacturing support when unexpected failures occur. The earlier maintenance, planning, procurement and NFG work together, the better we can prepare materials, production routes, capacity, inspection and delivery priorities. Prioritise local Naira-based manufacturing where Nigerian capacity exists, and use valuable forex only where no local support is available. Avoid the hidden cost of late planning, import uncertainty, documentation delays, wrong specifications and plant downtime."
+    },
+    "rtqFormConfig": {
+      "_type": "rtqFormConfig",
+      "emergencySupportFields": [
+        "Is the plant currently stopped?",
+        "How many hours/days has production been affected?",
+        "Is there an emergency shutdown date?",
+        "Is a sample part available immediately?",
+        "Is urgent site visit required?"
+      ],
+      "enableQueryParameterPrefill": true,
+      "plannedSupportFields": [
+        "Upcoming shutdown / turnaround date",
+        "Critical parts list available?",
+        "Repeat parts currently imported?",
+        "Parts with no drawings?",
+        "Interest in minimum stock levels?",
+        "Interest in consignment stocking?",
+        "Maintenance contact name",
+        "Planning contact name",
+        "Procurement contact name"
+      ],
+      "supportTypeOptions": [
+        {
+          "_key": "support-type-01",
+          "defaultGuidance": "Suggested urgency: Urgent or Plant stopped.",
+          "description": "The plant is stopped, under pressure, or needs urgent replacement support.",
+          "label": "Emergency Support",
+          "value": "emergency"
+        },
+        {
+          "_key": "support-type-02",
+          "defaultGuidance": "Suggested urgency: Planned shutdown or Routine.",
+          "description": "You are planning for shutdown, turnaround maintenance, repeat parts, minimum stock levels or consignment stocking.",
+          "label": "Planned Critical-Parts Support",
+          "value": "planned"
+        },
+        {
+          "_key": "support-type-03",
+          "defaultGuidance": "Routine or urgent depending on user selection.",
+          "description": "You want NFG to review a part, drawing, photo or manufacturing requirement.",
+          "label": "Standard RFQ / Technical Review",
+          "value": "standard"
+        }
+      ]
+    },
+    "signatureUptimeSection": {
+      "_type": "signatureUptimeSection",
+      "anchorId": "signature-uptime-solution",
+      "conceptName": "NFG Signature Uptime Solution",
+      "displayOnHomepage": true,
+      "displayOnSolutionPages": true,
+      "displayOnSolutionsPage": true,
+      "emergencySupportBody": "Not every failure can be predicted. When a part breaks, wears out, corrodes or becomes unavailable, NFG helps identify the part, understand the failure, reverse-engineer where required and manufacture a practical local solution.",
+      "emergencySupportBullets": [
+        "Plant stopped",
+        "Urgent breakdown",
+        "Broken or worn part",
+        "Corrosion failure",
+        "Unknown material",
+        "Missing drawing",
+        "OEM support unavailable",
+        "Import delay",
+        "Wrong or failed previous part"
+      ],
+      "emergencySupportCta": {
+        "_type": "cta",
+        "href": "/rtq?supportType=emergency",
+        "label": "Request Emergency Support",
+        "linkType": "internal",
+        "style": "primary"
+      },
+      "emergencySupportSubtitle": "When the plant is waiting, NFG helps you respond.",
+      "emergencySupportTitle": "Emergency Manufacturing Support",
+      "eyebrow": "NFG Signature Solution",
+      "headline": "Plan Ahead Where You Can. Respond Fast When You Must.",
+      "hiddenCostBody": "Clients often compare only the overseas part price. But the hidden cost starts when the requirement is discussed too late: poor planning, delayed approvals, missing documents, wrong specifications, import uncertainty, documentation delays, emergency pressure and lost production while the plant waits. NFG helps clients think differently: prioritise local Naira-based manufacturing where Nigerian capacity exists, and use valuable forex only where no local support is available.",
+      "hiddenCostHeadline": "The Cheapest Part Is Not Always the Lowest-Cost Solution.",
+      "homepage": {
+        "body": "Not every industrial failure can be predicted. When a critical part breaks, wears out, corrodes or becomes unavailable, NFG can help identify the part, reverse-engineer the requirement and manufacture a practical local solution. That is our emergency support role. But the strongest results come when we plan together before the crisis. Maintenance knows the equipment. Planning knows the shutdown window. Procurement controls the purchase process. NFG understands the manufacturing route, raw materials, tooling, production capacity and delivery reality. When all sides work together early, we can plan better, quote better, produce better and support delivery times more realistically.",
+        "emergencyCard": {
+          "body": "When a part fails unexpectedly, NFG helps respond by reviewing the failed part, identifying the problem, reverse-engineering where required and selecting the right local manufacturing route.",
+          "bullets": [
+            "Broken or worn part review",
+            "Drawing/photo/sample assessment",
+            "3D laser scanning",
+            "Dimensional checks",
+            "OES spectrometer analysis",
+            "Material and wear review",
+            "Urgent quotation",
+            "Local manufacturing support"
+          ],
+          "cta": {
+            "_type": "cta",
+            "href": "/rtq",
+            "label": "Request Emergency Support",
+            "linkType": "internal",
+            "style": "primary"
+          },
+          "subtitle": "For unexpected failures and urgent plant pressure.",
+          "title": "Emergency Manufacturing Support"
+        },
+        "eyebrow": "NFG Signature Solution",
+        "headline": "Two Ways to Protect Uptime: Plan Ahead and Respond Fast.",
+        "plannedCard": {
+          "body": "For known, repeat and shutdown-critical parts, NFG works with maintenance, planning and procurement teams before the emergency. Early planning helps NFG prepare raw materials, production routes, tooling, machining, inspection and delivery priorities.",
+          "bullets": [
+            "Shutdown and turnaround maintenance planning",
+            "Repeat wear-part identification",
+            "Long-lead item planning",
+            "Obsolete or no-drawing part review",
+            "Minimum stock-level discussions",
+            "Consignment stocking where suitable"
+          ],
+          "cta": {
+            "_type": "cta",
+            "href": "/solutions#signature-uptime-solution",
+            "label": "Plan Critical Parts",
+            "linkType": "internal",
+            "style": "primary"
+          },
+          "subtitle": "For shutdowns, repeat parts and known high-risk items.",
+          "title": "Planned Critical-Parts Support"
+        },
+        "sectionId": "homepage-signature-uptime-solution"
+      },
+      "introText": "NFG's technical solutions work best when they are connected to the client's maintenance reality. Some parts fail unexpectedly and require emergency response. Other parts are known, repeat, high-risk or shutdown-critical and should be planned before the plant is under pressure. That is why NFG supports clients through a two-pronged uptime model: planned critical-parts support and emergency manufacturing support. Both routes lead to the right technical solution - casting, machining, fabrication, reverse engineering, wear solution, corrosion protection, municipal casting or 3D printing.",
+      "plannedSupportBody": "For known, repeat and shutdown-critical parts, NFG works with maintenance, planning and procurement teams before the emergency. When NFG understands the shutdown calendar, failure history, quantities and technical requirements early, it can prepare the manufacturing route, raw materials, tooling, production capacity, inspection requirements and delivery schedule.",
+      "plannedSupportBullets": [
+        "Turnaround maintenance",
+        "Shutdown planning",
+        "Repeat wear parts",
+        "Critical spares",
+        "Long-lead parts",
+        "Obsolete parts",
+        "No-drawing parts",
+        "Minimum stock-level agreements",
+        "Consignment stocking discussions"
+      ],
+      "plannedSupportCta": {
+        "_type": "cta",
+        "href": "/rtq?supportType=planned",
+        "label": "Create a Critical Parts Plan",
+        "linkType": "internal",
+        "style": "primary"
+      },
+      "plannedSupportSubtitle": "The best delivery time starts before the emergency.",
+      "plannedSupportTitle": "Planned Critical-Parts Support",
+      "positioningStatement": "NFG supports industrial clients through a two-pronged approach: planned critical-parts support before shutdowns and emergency manufacturing support when unexpected failures occur.",
+      "primaryCta": {
+        "_type": "cta",
+        "href": "/solutions#signature-uptime-solution",
+        "label": "Plan Critical Parts",
+        "linkType": "internal",
+        "style": "primary"
+      },
+      "routesBanner": {
+        "body": "Whether your requirement is planned or urgent, NFG begins with the problem, then guides you to the right solution route.",
+        "headline": "Six Technical Routes. One NFG Working Model."
+      },
+      "secondaryCta": {
+        "_type": "cta",
+        "href": "/rtq",
+        "label": "Request Emergency Support",
+        "linkType": "internal",
+        "style": "primary"
+      },
+      "stockingBody": "After a first successful supply, NFG and the client can agree on minimum stock levels or consignment stocking for selected repeat parts. This gives the client faster emergency replacement options and helps NFG plan raw materials and production more efficiently. The goal is fewer surprises, better delivery discipline and less plant waiting time.",
+      "stockingBullets": [
+        "Repeat wear parts",
+        "Crusher parts",
+        "Cement plant spares",
+        "Quarry parts",
+        "Pump parts",
+        "Machined castings",
+        "Municipal castings",
+        "Sacrificial anodes",
+        "Other critical repeat items"
+      ],
+      "stockingCta": {
+        "_type": "cta",
+        "href": "/rtq?supportType=planned&interest=stocking",
+        "label": "Discuss Consignment Stocking",
+        "linkType": "internal",
+        "style": "primary"
+      },
+      "stockingHeadline": "Consignment Stocking for Critical Repeat Parts",
+      "strategicMessage": "Prioritise local Naira-based manufacturing where Nigerian capacity exists, and use valuable forex only where no local support is available.",
+      "strip": {
+        "body": "This solution can support both planned critical-parts requirements and emergency manufacturing needs. Early planning helps NFG prepare raw materials, production capacity and delivery priorities. Emergency support helps clients respond when the plant is already under pressure.",
+        "primaryCta": {
+          "_type": "cta",
+          "href": "/solutions#signature-uptime-solution",
+          "label": "Plan Critical Parts",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "secondaryCta": {
+          "_type": "cta",
+          "href": "/rtq",
+          "label": "Request Emergency Support",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "title": "Supported by the NFG Signature Uptime Solution"
+      }
+    },
+    "title": "NFG Signature Uptime Solution"
+  },
+  {
+    "_createdAt": "2026-05-09T21:40:32Z",
+    "_id": "siteSettings",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "siteSettings",
+    "_updatedAt": "2026-05-09T21:40:32Z",
+    "address": "Head Office and Otta Factory, Lynson Chemical Avenue, Km-38 Abeokuta-Lagos Expressway, Sango-Ota, Ogun State, Nigeria.",
+    "defaultSeoDescription": "Nigerian Foundries Group helps industrial clients identify, reverse-engineer and locally manufacture critical replacement parts, wear parts, municipal castings, sacrificial anodes, corrosion-protection assemblies, machined components, fabricated parts and 3D-printed solutions for cement, mining, oil and gas, marine, power, infrastructure and manufacturing across Nigeria and West Africa.",
+    "defaultSeoTitle": "Nigerian Foundries Group | Industrial Manufacturing and Reverse Engineering",
+    "footerText": "Industrial castings, wear solutions, corrosion protection, machining, fabrication, reverse engineering and advanced manufacturing. Built in Nigeria. Supported locally. Trusted since 1969.",
+    "generalPhones": [
+      "+234 817 260 7269",
+      "+234 803 402 6017",
+      "+234 807 089 2156",
+      "+234 807 089 0880"
+    ],
+    "globalCta": {
+      "_type": "cta",
+      "href": "/rfq",
+      "label": "Send Part / Drawing",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "officeHours": "Monday - Friday, 8:00 - 17:00",
+    "primaryEmail": "info@nigerianfoundriesgroup.com",
+    "primaryPhone": "+234 803 402 6015",
+    "registeredOffice": "1 Adeyemi Bero Crescent, Plot A, Block XII, Ilupeju Industrial Estate, off Anthony/Oshodi Expressway, Lagos, Nigeria.",
+    "salesEmail": "sales@nigerianfoundriesgroup.com",
+    "salesPhones": [
+      "+234 803 402 6015",
+      "+234 909 364 2770",
+      "+234 807 089 0850",
+      "+234 817 652 6478"
+    ],
+    "shortName": "NFG",
+    "siteTitle": "Nigerian Foundries Group",
+    "whatsappNumber": "2348034026015"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "solutionPage.3d-printing-advanced-manufacturing",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "solutionPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "applications": [
+      "Rapid prototyping",
+      "Pattern development",
+      "Design visualisation",
+      "Design qualification",
+      "Advanced part development",
+      "Future localisation"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?type=3d-printing",
+      "label": "Explore 3D Printing",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "customerProblems": [
+      {
+        "_key": "problem-01",
+        "_type": "card",
+        "description": "Need for rapid prototype",
+        "title": "Need for rapid prototype"
+      },
+      {
+        "_key": "problem-02",
+        "_type": "card",
+        "description": "Design visualisation",
+        "title": "Design visualisation"
+      },
+      {
+        "_key": "problem-03",
+        "_type": "card",
+        "description": "Pattern development",
+        "title": "Pattern development"
+      },
+      {
+        "_key": "problem-04",
+        "_type": "card",
+        "description": "Future localisation",
+        "title": "Future localisation"
+      },
+      {
+        "_key": "problem-05",
+        "_type": "card",
+        "description": "Qualification pathway",
+        "title": "Qualification pathway"
+      }
+    ],
+    "materials": [
+      "Polymer printing materials",
+      "Metal additive manufacturing materials under qualification"
+    ],
+    "navTitle": "3D Printing & Advanced Manufacturing",
+    "processSteps": [
+      {
+        "_key": "process-01",
+        "_type": "processStep",
+        "description": "Understand part development need",
+        "stepNumber": 1,
+        "title": "Step 1"
+      },
+      {
+        "_key": "process-02",
+        "_type": "processStep",
+        "description": "Prepare digital model",
+        "stepNumber": 2,
+        "title": "Step 2"
+      },
+      {
+        "_key": "process-03",
+        "_type": "processStep",
+        "description": "Prototype or qualify",
+        "stepNumber": 3,
+        "title": "Step 3"
+      },
+      {
+        "_key": "process-04",
+        "_type": "processStep",
+        "description": "Feed learning into manufacturing route",
+        "stepNumber": 4,
+        "title": "Step 4"
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "_key": "industry-01",
+        "_ref": "industryPage.oil-gas-offshore",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-02",
+        "_ref": "industryPage.power-energy",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-03",
+        "_ref": "industryPage.agro-allied-general-manufacturing",
+        "_type": "reference"
+      }
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "3d-printing-advanced-manufacturing"
+    },
+    "summary": "Polymer and metal 3D printing support for rapid prototyping, pattern development, design visualisation, qualification and future localisation.",
+    "technologies": [
+      "Polymer 3D printing",
+      "Metal 3D printing",
+      "Digital engineering",
+      "Prototype review"
+    ],
+    "title": "3D Printing and Advanced Manufacturing for Industrial Development"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "solutionPage.corrosion-protection",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "solutionPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "applications": [
+      "Offshore oil and gas structures",
+      "Marine vessels",
+      "Ports",
+      "Windmills",
+      "Jetties",
+      "Subsea structures",
+      "Coastal infrastructure",
+      "Power assets"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?type=corrosion",
+      "label": "Discuss Corrosion Protection",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "customerProblems": [
+      {
+        "_key": "problem-01",
+        "_type": "card",
+        "description": "Offshore corrosion",
+        "title": "Offshore corrosion"
+      },
+      {
+        "_key": "problem-02",
+        "_type": "card",
+        "description": "Coastal exposure",
+        "title": "Coastal exposure"
+      },
+      {
+        "_key": "problem-03",
+        "_type": "card",
+        "description": "Retrofit difficulty",
+        "title": "Retrofit difficulty"
+      },
+      {
+        "_key": "problem-04",
+        "_type": "card",
+        "description": "Imported corrosion systems",
+        "title": "Imported corrosion systems"
+      },
+      {
+        "_key": "problem-05",
+        "_type": "card",
+        "description": "Nigerian Content requirements",
+        "title": "Nigerian Content requirements"
+      }
+    ],
+    "materials": [
+      "Aluminium anodes",
+      "Zinc anodes",
+      "Non-ferrous corrosion-protection materials"
+    ],
+    "navTitle": "Corrosion Protection",
+    "processSteps": [
+      {
+        "_key": "process-01",
+        "_type": "processStep",
+        "description": "Understand asset and exposure",
+        "stepNumber": 1,
+        "title": "Step 1"
+      },
+      {
+        "_key": "process-02",
+        "_type": "processStep",
+        "description": "Select anode requirement",
+        "stepNumber": 2,
+        "title": "Step 2"
+      },
+      {
+        "_key": "process-03",
+        "_type": "processStep",
+        "description": "Plan assembly or clamp integration",
+        "stepNumber": 3,
+        "title": "Step 3"
+      },
+      {
+        "_key": "process-04",
+        "_type": "processStep",
+        "description": "Manufacture locally and support delivery",
+        "stepNumber": 4,
+        "title": "Step 4"
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "_key": "industry-01",
+        "_ref": "industryPage.oil-gas-offshore",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-02",
+        "_ref": "industryPage.marine-ports-windmills",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-03",
+        "_ref": "industryPage.power-energy",
+        "_type": "reference"
+      }
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "corrosion-protection"
+    },
+    "summary": "Sacrificial anodes and corrosion-protection assemblies through Metec West Africa, with Imenco clamp integration for offshore retrofit applications.",
+    "technologies": [
+      "Metec West Africa sacrificial anodes",
+      "Imenco clamp integration",
+      "Fabrication",
+      "Machining"
+    ],
+    "title": "Corrosion-Protection Solutions for Offshore, Marine and Industrial Assets"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "solutionPage.drainage-municipal-castings",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "solutionPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "applications": [
+      "Maintenance hole covers",
+      "Manhole covers",
+      "Drainage gratings",
+      "Road infrastructure castings",
+      "Estate and high-rise building drainage",
+      "Industrial facility drainage access",
+      "Utility access covers"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?type=municipal",
+      "label": "Need a local alternative to imported covers?",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "customerProblems": [
+      {
+        "_key": "problem-01",
+        "_type": "card",
+        "description": "Imported covers",
+        "title": "Imported covers"
+      },
+      {
+        "_key": "problem-02",
+        "_type": "card",
+        "description": "Poor-quality castings",
+        "title": "Poor-quality castings"
+      },
+      {
+        "_key": "problem-03",
+        "_type": "card",
+        "description": "Drainage failures",
+        "title": "Drainage failures"
+      },
+      {
+        "_key": "problem-04",
+        "_type": "card",
+        "description": "Urban infrastructure needs",
+        "title": "Urban infrastructure needs"
+      }
+    ],
+    "materials": [
+      "Ductile iron",
+      "Grey iron",
+      "Steel and iron castings"
+    ],
+    "navTitle": "Drainage & Municipal Castings",
+    "processSteps": [
+      {
+        "_key": "process-01",
+        "_type": "processStep",
+        "description": "Review load/application need",
+        "stepNumber": 1,
+        "title": "Step 1"
+      },
+      {
+        "_key": "process-02",
+        "_type": "processStep",
+        "description": "Confirm drawing or sample",
+        "stepNumber": 2,
+        "title": "Step 2"
+      },
+      {
+        "_key": "process-03",
+        "_type": "processStep",
+        "description": "Select casting route",
+        "stepNumber": 3,
+        "title": "Step 3"
+      },
+      {
+        "_key": "process-04",
+        "_type": "processStep",
+        "description": "Quote and manufacture locally",
+        "stepNumber": 4,
+        "title": "Step 4"
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "_key": "industry-01",
+        "_ref": "industryPage.infrastructure-municipal-works",
+        "_type": "reference"
+      }
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "drainage-municipal-castings"
+    },
+    "summary": "Maintenance hole covers, manhole covers, drainage gratings and road infrastructure castings for municipal, estate, high-rise and industrial facility use.",
+    "technologies": [
+      "Casting",
+      "Design support",
+      "Machining where required"
+    ],
+    "title": "Drainage and Municipal Casting Solutions"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "solutionPage.machining-fabrication-assembly",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "solutionPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "applications": [
+      "Machining",
+      "CNC machining",
+      "Welding",
+      "Fabrication",
+      "Repair",
+      "Assembly",
+      "Machined castings",
+      "Shafts",
+      "Housings",
+      "Wear assemblies"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?type=machining",
+      "label": "Request Machining / Fabrication Support",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "customerProblems": [
+      {
+        "_key": "problem-01",
+        "_type": "card",
+        "description": "Worn parts",
+        "title": "Worn parts"
+      },
+      {
+        "_key": "problem-02",
+        "_type": "card",
+        "description": "Repair requirement",
+        "title": "Repair requirement"
+      },
+      {
+        "_key": "problem-03",
+        "_type": "card",
+        "description": "Machining bottlenecks",
+        "title": "Machining bottlenecks"
+      },
+      {
+        "_key": "problem-04",
+        "_type": "card",
+        "description": "Assembly work",
+        "title": "Assembly work"
+      },
+      {
+        "_key": "problem-05",
+        "_type": "card",
+        "description": "Legacy components",
+        "title": "Legacy components"
+      }
+    ],
+    "materials": [
+      "Steel",
+      "Iron castings",
+      "Stainless steel",
+      "Hardox",
+      "Application-specific materials"
+    ],
+    "navTitle": "Machining, Fabrication & Assembly",
+    "processSteps": [
+      {
+        "_key": "process-01",
+        "_type": "processStep",
+        "description": "Review requirement",
+        "stepNumber": 1,
+        "title": "Step 1"
+      },
+      {
+        "_key": "process-02",
+        "_type": "processStep",
+        "description": "Confirm drawing/sample",
+        "stepNumber": 2,
+        "title": "Step 2"
+      },
+      {
+        "_key": "process-03",
+        "_type": "processStep",
+        "description": "Machine, fabricate or repair",
+        "stepNumber": 3,
+        "title": "Step 3"
+      },
+      {
+        "_key": "process-04",
+        "_type": "processStep",
+        "description": "Inspect and deliver",
+        "stepNumber": 4,
+        "title": "Step 4"
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "_key": "industry-01",
+        "_ref": "industryPage.power-energy",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-02",
+        "_ref": "industryPage.agro-allied-general-manufacturing",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-03",
+        "_ref": "industryPage.oil-gas-offshore",
+        "_type": "reference"
+      }
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "machining-fabrication-assembly"
+    },
+    "summary": "Industrial Applications Ltd supports machining, CNC machining, welding, fabrication, repair, assembly and machined castings.",
+    "technologies": [
+      "CNC machining",
+      "Fabrication",
+      "Welding",
+      "Assembly",
+      "Repair support"
+    ],
+    "title": "Machining, Fabrication and Assembly for Industrial Parts"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "solutionPage.reverse-engineering",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "solutionPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "applications": [
+      "Replacement parts",
+      "Legacy components",
+      "Crusher parts",
+      "Machined parts",
+      "Assemblies",
+      "Prototype and pattern development"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?type=reverse-engineering",
+      "label": "Start Reverse Engineering",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "customerProblems": [
+      {
+        "_key": "problem-01",
+        "_type": "card",
+        "description": "No drawing",
+        "title": "No drawing"
+      },
+      {
+        "_key": "problem-02",
+        "_type": "card",
+        "description": "Obsolete OEM support",
+        "title": "Obsolete OEM support"
+      },
+      {
+        "_key": "problem-03",
+        "_type": "card",
+        "description": "Unknown material",
+        "title": "Unknown material"
+      },
+      {
+        "_key": "problem-04",
+        "_type": "card",
+        "description": "Unclear failure mode",
+        "title": "Unclear failure mode"
+      },
+      {
+        "_key": "problem-05",
+        "_type": "card",
+        "description": "Need for a local repeatable part",
+        "title": "Need for a local repeatable part"
+      }
+    ],
+    "materials": [
+      "Material depends on application and analysis"
+    ],
+    "navTitle": "Reverse Engineering",
+    "processSteps": [
+      {
+        "_key": "process-01",
+        "_type": "processStep",
+        "description": "Receive part, photo or drawing",
+        "stepNumber": 1,
+        "title": "Step 1"
+      },
+      {
+        "_key": "process-02",
+        "_type": "processStep",
+        "description": "Understand process and failure mode",
+        "stepNumber": 2,
+        "title": "Step 2"
+      },
+      {
+        "_key": "process-03",
+        "_type": "processStep",
+        "description": "3D laser scan",
+        "stepNumber": 3,
+        "title": "Step 3"
+      },
+      {
+        "_key": "process-04",
+        "_type": "processStep",
+        "description": "Create 3D digital drawing",
+        "stepNumber": 4,
+        "title": "Step 4"
+      },
+      {
+        "_key": "process-05",
+        "_type": "processStep",
+        "description": "Conduct metal composition analysis",
+        "stepNumber": 5,
+        "title": "Step 5"
+      },
+      {
+        "_key": "process-06",
+        "_type": "processStep",
+        "description": "Prototype where required",
+        "stepNumber": 6,
+        "title": "Step 6"
+      },
+      {
+        "_key": "process-07",
+        "_type": "processStep",
+        "description": "Select manufacturing route",
+        "stepNumber": 7,
+        "title": "Step 7"
+      },
+      {
+        "_key": "process-08",
+        "_type": "processStep",
+        "description": "Quote and manufacture",
+        "stepNumber": 8,
+        "title": "Step 8"
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "_key": "industry-01",
+        "_ref": "industryPage.cement-plants",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-02",
+        "_ref": "industryPage.mining-mineral-processing",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-03",
+        "_ref": "industryPage.agro-allied-general-manufacturing",
+        "_type": "reference"
+      }
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "reverse-engineering"
+    },
+    "summary": "3D laser scanning, dimensional checks, digital drawings, material analysis and rapid prototyping when drawings are missing or unreliable.",
+    "technologies": [
+      "3D laser scanning",
+      "Digital drawings",
+      "Metal composition analysis",
+      "Rapid prototyping",
+      "CAD review"
+    ],
+    "title": "From Broken Part to Digital Manufacturing Solution"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "solutionPage.wear-part-solutions",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "solutionPage",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "applications": [
+      "Jaw plates",
+      "Mantles",
+      "Cones",
+      "Blow bars",
+      "Liners",
+      "Grates",
+      "Chutes",
+      "Hoppers",
+      "VRM areas",
+      "Dredging wear parts"
+    ],
+    "cta": {
+      "_type": "cta",
+      "href": "/rfq?type=wear",
+      "label": "Send Us Your Worn Part",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "customerProblems": [
+      {
+        "_key": "problem-01",
+        "_type": "card",
+        "description": "Abrasive wear",
+        "title": "Abrasive wear"
+      },
+      {
+        "_key": "problem-02",
+        "_type": "card",
+        "description": "Impact wear",
+        "title": "Impact wear"
+      },
+      {
+        "_key": "problem-03",
+        "_type": "card",
+        "description": "Crusher shutdowns",
+        "title": "Crusher shutdowns"
+      },
+      {
+        "_key": "problem-04",
+        "_type": "card",
+        "description": "Imported spares",
+        "title": "Imported spares"
+      },
+      {
+        "_key": "problem-05",
+        "_type": "card",
+        "description": "Repeated liner failure",
+        "title": "Repeated liner failure"
+      }
+    ],
+    "materials": [
+      "Manganese steel",
+      "High-chrome iron",
+      "Ni-Hard",
+      "Moly-chrome steel",
+      "Ductile iron",
+      "Grey iron",
+      "Stainless steel",
+      "Hardox steel",
+      "CCO plates"
+    ],
+    "navTitle": "Wear Part Solutions",
+    "processSteps": [
+      {
+        "_key": "process-01",
+        "_type": "processStep",
+        "description": "Identify wear mode",
+        "stepNumber": 1,
+        "title": "Step 1"
+      },
+      {
+        "_key": "process-02",
+        "_type": "processStep",
+        "description": "Review material and equipment",
+        "stepNumber": 2,
+        "title": "Step 2"
+      },
+      {
+        "_key": "process-03",
+        "_type": "processStep",
+        "description": "Select casting, Hardox or CCO route",
+        "stepNumber": 3,
+        "title": "Step 3"
+      },
+      {
+        "_key": "process-04",
+        "_type": "processStep",
+        "description": "Manufacture and support repeat supply",
+        "stepNumber": 4,
+        "title": "Step 4"
+      }
+    ],
+    "relatedIndustries": [
+      {
+        "_key": "industry-01",
+        "_ref": "industryPage.cement-plants",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-02",
+        "_ref": "industryPage.mining-mineral-processing",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-03",
+        "_ref": "industryPage.quarries-aggregates",
+        "_type": "reference"
+      },
+      {
+        "_key": "industry-04",
+        "_ref": "industryPage.dredging",
+        "_type": "reference"
+      }
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "wear-part-solutions"
+    },
+    "summary": "Castings, Hardox fabricated wear parts, Enduraclad chromium-carbide overlay plates, machining, fabrication and reverse engineering for severe wear.",
+    "technologies": [
+      "Foundry castings",
+      "Hardox fabrication",
+      "Enduraclad CCO",
+      "Machining",
+      "Reverse engineering"
+    ],
+    "title": "Wear Part Solutions for Mines, Cement, Quarries and Dredging"
+  },
+  {
+    "_createdAt": "2026-05-28T10:47:32Z",
+    "_id": "solutionsOverviewPage",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "solutionsOverviewPage",
+    "_updatedAt": "2026-05-28T10:47:32Z",
+    "body": "From broken parts and worn liners to corrosion protection, municipal castings and advanced manufacturing, NFG starts by understanding the client problem before choosing the manufacturing route.",
+    "eyebrow": "Solutions",
+    "headline": "Send the Problem. We Help Choose the Route.",
+    "primaryCta": {
+      "_type": "cta",
+      "href": "/solutions#signature-uptime-solution",
+      "label": "Plan Critical Parts",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "secondaryCta": {
+      "_type": "cta",
+      "href": "/rtq",
+      "label": "Send Part / Drawing",
+      "linkType": "internal",
+      "style": "primary"
+    },
+    "signatureUptimeSection": {
+      "_type": "signatureUptimeSection",
+      "anchorId": "signature-uptime-solution",
+      "conceptName": "NFG Signature Uptime Solution",
+      "displayOnHomepage": true,
+      "displayOnSolutionPages": true,
+      "displayOnSolutionsPage": true,
+      "emergencySupportBody": "Not every failure can be predicted. When a part breaks, wears out, corrodes or becomes unavailable, NFG helps identify the part, understand the failure, reverse-engineer where required and manufacture a practical local solution.",
+      "emergencySupportBullets": [
+        "Plant stopped",
+        "Urgent breakdown",
+        "Broken or worn part",
+        "Corrosion failure",
+        "Unknown material",
+        "Missing drawing",
+        "OEM support unavailable",
+        "Import delay",
+        "Wrong or failed previous part"
+      ],
+      "emergencySupportCta": {
+        "_type": "cta",
+        "href": "/rtq?supportType=emergency",
+        "label": "Request Emergency Support",
+        "linkType": "internal",
+        "style": "primary"
+      },
+      "emergencySupportSubtitle": "When the plant is waiting, NFG helps you respond.",
+      "emergencySupportTitle": "Emergency Manufacturing Support",
+      "eyebrow": "NFG Signature Solution",
+      "headline": "Plan Ahead Where You Can. Respond Fast When You Must.",
+      "hiddenCostBody": "Clients often compare only the overseas part price. But the hidden cost starts when the requirement is discussed too late: poor planning, delayed approvals, missing documents, wrong specifications, import uncertainty, documentation delays, emergency pressure and lost production while the plant waits. NFG helps clients think differently: prioritise local Naira-based manufacturing where Nigerian capacity exists, and use valuable forex only where no local support is available.",
+      "hiddenCostHeadline": "The Cheapest Part Is Not Always the Lowest-Cost Solution.",
+      "homepage": {
+        "body": "Not every industrial failure can be predicted. When a critical part breaks, wears out, corrodes or becomes unavailable, NFG can help identify the part, reverse-engineer the requirement and manufacture a practical local solution. That is our emergency support role. But the strongest results come when we plan together before the crisis. Maintenance knows the equipment. Planning knows the shutdown window. Procurement controls the purchase process. NFG understands the manufacturing route, raw materials, tooling, production capacity and delivery reality. When all sides work together early, we can plan better, quote better, produce better and support delivery times more realistically.",
+        "emergencyCard": {
+          "body": "When a part fails unexpectedly, NFG helps respond by reviewing the failed part, identifying the problem, reverse-engineering where required and selecting the right local manufacturing route.",
+          "bullets": [
+            "Broken or worn part review",
+            "Drawing/photo/sample assessment",
+            "3D laser scanning",
+            "Dimensional checks",
+            "OES spectrometer analysis",
+            "Material and wear review",
+            "Urgent quotation",
+            "Local manufacturing support"
+          ],
+          "cta": {
+            "_type": "cta",
+            "href": "/rtq",
+            "label": "Request Emergency Support",
+            "linkType": "internal",
+            "style": "primary"
+          },
+          "subtitle": "For unexpected failures and urgent plant pressure.",
+          "title": "Emergency Manufacturing Support"
+        },
+        "eyebrow": "NFG Signature Solution",
+        "headline": "Two Ways to Protect Uptime: Plan Ahead and Respond Fast.",
+        "plannedCard": {
+          "body": "For known, repeat and shutdown-critical parts, NFG works with maintenance, planning and procurement teams before the emergency. Early planning helps NFG prepare raw materials, production routes, tooling, machining, inspection and delivery priorities.",
+          "bullets": [
+            "Shutdown and turnaround maintenance planning",
+            "Repeat wear-part identification",
+            "Long-lead item planning",
+            "Obsolete or no-drawing part review",
+            "Minimum stock-level discussions",
+            "Consignment stocking where suitable"
+          ],
+          "cta": {
+            "_type": "cta",
+            "href": "/solutions#signature-uptime-solution",
+            "label": "Plan Critical Parts",
+            "linkType": "internal",
+            "style": "primary"
+          },
+          "subtitle": "For shutdowns, repeat parts and known high-risk items.",
+          "title": "Planned Critical-Parts Support"
+        },
+        "sectionId": "homepage-signature-uptime-solution"
+      },
+      "introText": "NFG's technical solutions work best when they are connected to the client's maintenance reality. Some parts fail unexpectedly and require emergency response. Other parts are known, repeat, high-risk or shutdown-critical and should be planned before the plant is under pressure. That is why NFG supports clients through a two-pronged uptime model: planned critical-parts support and emergency manufacturing support. Both routes lead to the right technical solution - casting, machining, fabrication, reverse engineering, wear solution, corrosion protection, municipal casting or 3D printing.",
+      "plannedSupportBody": "For known, repeat and shutdown-critical parts, NFG works with maintenance, planning and procurement teams before the emergency. When NFG understands the shutdown calendar, failure history, quantities and technical requirements early, it can prepare the manufacturing route, raw materials, tooling, production capacity, inspection requirements and delivery schedule.",
+      "plannedSupportBullets": [
+        "Turnaround maintenance",
+        "Shutdown planning",
+        "Repeat wear parts",
+        "Critical spares",
+        "Long-lead parts",
+        "Obsolete parts",
+        "No-drawing parts",
+        "Minimum stock-level agreements",
+        "Consignment stocking discussions"
+      ],
+      "plannedSupportCta": {
+        "_type": "cta",
+        "href": "/rtq?supportType=planned",
+        "label": "Create a Critical Parts Plan",
+        "linkType": "internal",
+        "style": "primary"
+      },
+      "plannedSupportSubtitle": "The best delivery time starts before the emergency.",
+      "plannedSupportTitle": "Planned Critical-Parts Support",
+      "positioningStatement": "NFG supports industrial clients through a two-pronged approach: planned critical-parts support before shutdowns and emergency manufacturing support when unexpected failures occur.",
+      "primaryCta": {
+        "_type": "cta",
+        "href": "/solutions#signature-uptime-solution",
+        "label": "Plan Critical Parts",
+        "linkType": "internal",
+        "style": "primary"
+      },
+      "routesBanner": {
+        "body": "Whether your requirement is planned or urgent, NFG begins with the problem, then guides you to the right solution route.",
+        "headline": "Six Technical Routes. One NFG Working Model."
+      },
+      "secondaryCta": {
+        "_type": "cta",
+        "href": "/rtq",
+        "label": "Request Emergency Support",
+        "linkType": "internal",
+        "style": "primary"
+      },
+      "stockingBody": "After a first successful supply, NFG and the client can agree on minimum stock levels or consignment stocking for selected repeat parts. This gives the client faster emergency replacement options and helps NFG plan raw materials and production more efficiently. The goal is fewer surprises, better delivery discipline and less plant waiting time.",
+      "stockingBullets": [
+        "Repeat wear parts",
+        "Crusher parts",
+        "Cement plant spares",
+        "Quarry parts",
+        "Pump parts",
+        "Machined castings",
+        "Municipal castings",
+        "Sacrificial anodes",
+        "Other critical repeat items"
+      ],
+      "stockingCta": {
+        "_type": "cta",
+        "href": "/rtq?supportType=planned&interest=stocking",
+        "label": "Discuss Consignment Stocking",
+        "linkType": "internal",
+        "style": "primary"
+      },
+      "stockingHeadline": "Consignment Stocking for Critical Repeat Parts",
+      "strategicMessage": "Prioritise local Naira-based manufacturing where Nigerian capacity exists, and use valuable forex only where no local support is available.",
+      "strip": {
+        "body": "This solution can support both planned critical-parts requirements and emergency manufacturing needs. Early planning helps NFG prepare raw materials, production capacity and delivery priorities. Emergency support helps clients respond when the plant is already under pressure.",
+        "primaryCta": {
+          "_type": "cta",
+          "href": "/solutions#signature-uptime-solution",
+          "label": "Plan Critical Parts",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "secondaryCta": {
+          "_type": "cta",
+          "href": "/rtq",
+          "label": "Request Emergency Support",
+          "linkType": "internal",
+          "style": "primary"
+        },
+        "title": "Supported by the NFG Signature Uptime Solution"
+      }
+    },
+    "title": "Solutions overview page"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "tvetDevelopment",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "tvetDevelopment",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "accreditationBody": "",
+    "currentStatus": "planning",
+    "lastUpdated": "2026-05-09",
+    "managementApprovedForPublicDisplay": false,
+    "publicStatusText": "TVET development journey",
+    "skillAreas": [
+      "Foundry and metal casting",
+      "Pattern and moulding awareness",
+      "Machining and fabrication",
+      "Welding and repair",
+      "Quality inspection",
+      "Corrosion protection",
+      "Laser scanning and reverse engineering",
+      "3D printing and rapid prototyping",
+      "Production planning and digital tracking",
+      "Safety and workplace discipline"
+    ],
+    "title": "TVET development journey"
+  },
+  {
+    "_createdAt": "2026-05-09T21:42:11Z",
+    "_id": "universityPartnership.university-partnership-record",
+    "_rev": "HKmjuEpNtwC4qQTZoGDpUO",
+    "_type": "universityPartnership",
+    "_updatedAt": "2026-05-09T21:42:11Z",
+    "collaborationType": [
+      "Student industrial visits",
+      "Foundry awareness",
+      "Engineering project support"
+    ],
+    "displayOnHomepage": false,
+    "displayOrder": 1,
+    "location": "Nigeria",
+    "mouStatus": "draft",
+    "shortDescription": "CMS-managed university partnership item. Add each confirmed MOU individually with logo, photos, collaboration details and verification status.",
+    "slug": {
+      "_type": "slug",
+      "current": "university-partnership-record"
+    },
+    "universityName": "University partnership record",
+    "verificationStatus": "pending",
+    "yearSigned": "To verify"
+  }
+]
