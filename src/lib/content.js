@@ -48,8 +48,8 @@ import {
   Zap
 } from "lucide-react";
 import * as fallback from "@/data/siteContent";
-import { sanityClient, projectId } from "@/lib/sanity.client";
-import { hasSanityConfig } from "@/lib/sanity.env";
+import { sanityClient } from "@/lib/sanity.client";
+import { hasSanityConfig, projectId } from "@/lib/sanity.env";
 import { allEditableContentQuery } from "@/lib/sanity.queries";
 
 const iconMap = {

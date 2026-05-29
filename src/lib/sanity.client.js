@@ -9,7 +9,7 @@ const isServer = typeof window === "undefined";
 
 export const sanityClient = createClient({
   projectId,
-  dataset || "production",
+  dataset: dataset || "production",
   apiVersion,
   useCdn: !isServer,
   token,
