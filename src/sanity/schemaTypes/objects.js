@@ -269,7 +269,17 @@ export const heroSlide = defineType({
               preview: {
                 select: {
                   title: "label",
-                  subtitle: "value"
+                  subtitle: "value",
+                  labelBold: "labelBold",
+                  valueBold: "valueBold"
+                },
+                prepare({ title, subtitle, labelBold, valueBold }) {
+                  const left = `${title || "Label"}${labelBold ? " [bold]" : ""}`;
+                  const right = `${subtitle || "Value"}${valueBold ? " [bold]" : ""}`;
+                  return {
+                    title: left,
+                    subtitle: right
+                  };
                 }
               },
               fields: [

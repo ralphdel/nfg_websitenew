@@ -128,7 +128,7 @@ async function fetchHistoricalDocument(documentId, time) {
   }
 
   const payload = await response.json();
-  const document = payload.documents?.[0];
+  const document = sanitizeHistoricalDocument(payload.documents?.[0]);
 
   if (!document) {
     console.warn(`No historical document found for ${documentId} at ${time}`);
@@ -136,6 +136,18 @@ async function fetchHistoricalDocument(documentId, time) {
   }
 
   return document;
+}
+
+function sanitizeHistoricalDocument(document) {
+  if (!document || typeof document !== "object") return document;
+
+  const clone = JSON.parse(JSON.stringify(document));
+  delete clone._rev;
+  delete clone._updatedAt;
+  delete clone._createdAt;
+  delete clone._system;
+
+  return clone;
 }
 
 function loadEnvFile(filePath) {
