@@ -1,8 +1,6 @@
 import { createClient } from "@sanity/client";
+import { apiVersion, dataset, projectId } from "./sanity.env";
 
-export const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2026-05-06";
-export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
-export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "3hx8h0xy";
 const token = process.env.SANITY_API_READ_TOKEN || undefined;
 
 // Server-side: skip CDN for fresh data on every revalidation
@@ -11,7 +9,7 @@ const isServer = typeof window === "undefined";
 
 export const sanityClient = createClient({
   projectId,
-  dataset,
+  dataset || "production",
   apiVersion,
   useCdn: !isServer,
   token,

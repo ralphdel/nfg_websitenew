@@ -173,6 +173,7 @@ export function Hero({ slides = heroSlides }) {
         </div>
 
         <aside className="hero-media-card" aria-label="Current hero media">
+          {mediaCaption ? <div className="hero-media-caption">{mediaCaption}</div> : null}
           <div
             className="hero-media-frame"
             style={{
@@ -219,7 +220,6 @@ export function Hero({ slides = heroSlides }) {
             ) : (
               <div className="hero-media-empty" aria-hidden="true" />
             )}
-            {mediaCaption ? <div className="hero-media-caption">{mediaCaption}</div> : null}
           </div>
         </aside>
       </div>
@@ -227,8 +227,23 @@ export function Hero({ slides = heroSlides }) {
       <div className="container hero-feature-strip" aria-label="Slide supporting details">
         {(activeSlide.featureCards || []).map((card) => (
           <article key={card.title}>
-            <h2>{card.title}</h2>
-            <p>{card.description}</p>
+            <div
+              className={`hero-feature-visual${card.image?.asset?.url || card.image ? " has-image" : ""}`}
+              aria-hidden="true"
+              style={
+                card.image?.asset?.url || card.image
+                  ? { backgroundImage: `linear-gradient(135deg, rgba(8, 22, 40, 0.08), rgba(8, 22, 40, 0.48)), url("${card.image?.asset?.url || card.image}")` }
+                  : undefined
+              }
+            >
+              {!(card.image?.asset?.url || card.image) ? (
+                <span>{(card.title || "?").slice(0, 1).toUpperCase()}</span>
+              ) : null}
+            </div>
+            <div className="hero-feature-copy">
+              <h2>{card.title}</h2>
+              <p>{card.description}</p>
+            </div>
           </article>
         ))}
       </div>

@@ -568,7 +568,9 @@ strong {
 .hero-media-card {
   align-self: stretch;
   min-height: 380px;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   overflow: hidden;
   padding: 0;
   border: 1px solid rgba(245, 166, 35, 0.24);
@@ -628,6 +630,16 @@ strong {
   backdrop-filter: blur(8px);
 }
 
+.hero-media-caption {
+  position: relative;
+  top: auto;
+  left: auto;
+  z-index: 1;
+  max-width: none;
+  width: auto;
+  margin: 16px 16px 0;
+}
+
 .hero-feature-strip {
   position: relative;
   z-index: 2;
@@ -638,12 +650,47 @@ strong {
 }
 
 .hero-feature-strip article {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
   min-height: 112px;
   padding: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   background: rgba(8, 22, 40, 0.58);
   backdrop-filter: blur(10px);
+}
+
+.hero-feature-visual {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at top left, rgba(236, 181, 46, 0.26), transparent 58%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-feature-visual.has-image {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.hero-feature-visual span {
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.hero-feature-copy {
+  min-width: 0;
 }
 
 .hero-feature-strip h2 {
@@ -2023,7 +2070,13 @@ strong {
   }
 
   .hero-feature-strip article {
+    grid-template-columns: 64px minmax(0, 1fr);
     min-height: auto;
+  }
+
+  .hero-feature-visual {
+    width: 64px;
+    height: 64px;
   }
 
   .section,

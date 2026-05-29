@@ -49,6 +49,7 @@ import {
 } from "lucide-react";
 import * as fallback from "@/data/siteContent";
 import { sanityClient, projectId } from "@/lib/sanity.client";
+import { hasSanityConfig } from "@/lib/sanity.env";
 import { allEditableContentQuery } from "@/lib/sanity.queries";
 
 const iconMap = {
@@ -710,7 +711,7 @@ function buildFooterNavigation(content) {
 }
 
 async function fetchEditableContent() {
-  if (!projectId || projectId === "replace-me") return { source: "fallback" };
+  if (!hasSanityConfig || !projectId || projectId === "replace-me") return { source: "fallback" };
 
   const maxRetries = 2;
 
