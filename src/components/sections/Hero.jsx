@@ -232,7 +232,7 @@ export function Hero({ slides = heroSlides }) {
               aria-hidden="true"
               style={
                 card.image?.asset?.url || card.image
-                  ? { backgroundImage: `linear-gradient(135deg, rgba(8, 22, 40, 0.08), rgba(8, 22, 40, 0.48)), url("${card.image?.asset?.url || card.image}")` }
+                  ? { "--feature-card-image": `url("${card.image?.asset?.url || card.image}")` }
                   : undefined
               }
             >

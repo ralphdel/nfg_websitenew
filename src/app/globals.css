@@ -651,10 +651,10 @@ strong {
 
 .hero-feature-strip article {
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
+  grid-template-columns: 84px minmax(0, 1fr);
   align-items: center;
   gap: 14px;
-  min-height: 112px;
+  min-height: 124px;
   padding: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
@@ -665,8 +665,8 @@ strong {
 .hero-feature-visual {
   display: grid;
   place-items: center;
-  width: 72px;
-  height: 72px;
+  width: 84px;
+  height: 84px;
   border-radius: 10px;
   background:
     radial-gradient(circle at top left, rgba(236, 181, 46, 0.26), transparent 58%),
@@ -679,6 +679,13 @@ strong {
 
 .hero-feature-visual.has-image {
   border-color: rgba(255, 255, 255, 0.18);
+  background-color: rgba(6, 18, 33, 0.82);
+  background-image:
+    linear-gradient(135deg, rgba(8, 22, 40, 0.08), rgba(8, 22, 40, 0.48)),
+    var(--feature-card-image);
+  background-size: cover, contain;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .hero-feature-visual span {
@@ -2070,13 +2077,13 @@ strong {
   }
 
   .hero-feature-strip article {
-    grid-template-columns: 64px minmax(0, 1fr);
+    grid-template-columns: 72px minmax(0, 1fr);
     min-height: auto;
   }
 
   .hero-feature-visual {
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
   }
 
   .section,
