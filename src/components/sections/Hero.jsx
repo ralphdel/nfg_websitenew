@@ -170,6 +170,19 @@ export function Hero({ slides = heroSlides }) {
               {activeSlide.secondaryCta.label}
             </Button>
           </div>
+          {(activeSlide.featureCards || []).length > 0 ? (
+            <div className="hero-proof-chips" aria-label="Slide proof chips">
+              {(activeSlide.featureCards || []).map((card) => (
+                <span
+                  className="hero-proof-chip"
+                  key={card.title}
+                  title={card.description || card.title}
+                >
+                  {card.title}
+                </span>
+              ))}
+            </div>
+          ) : null}
         </div>
 
         <aside className="hero-media-card" aria-label="Current hero media">
@@ -222,30 +235,6 @@ export function Hero({ slides = heroSlides }) {
             )}
           </div>
         </aside>
-      </div>
-
-      <div className="container hero-feature-strip" aria-label="Slide supporting details">
-        {(activeSlide.featureCards || []).map((card) => (
-          <article key={card.title}>
-            <div
-              className={`hero-feature-visual${card.image?.asset?.url || card.image ? " has-image" : ""}`}
-              aria-hidden="true"
-              style={
-                card.image?.asset?.url || card.image
-                  ? { "--feature-card-image": `url("${card.image?.asset?.url || card.image}")` }
-                  : undefined
-              }
-            >
-              {!(card.image?.asset?.url || card.image) ? (
-                <span>{(card.title || "?").slice(0, 1).toUpperCase()}</span>
-              ) : null}
-            </div>
-            <div className="hero-feature-copy">
-              <h2>{card.title}</h2>
-              <p>{card.description}</p>
-            </div>
-          </article>
-        ))}
       </div>
 
       <div className="container hero-controls">

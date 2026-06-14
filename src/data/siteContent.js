@@ -68,12 +68,10 @@ export const siteSettings = {
 
 export const signatureUptimeHeroSlide = {
   eyebrow: "NFG Signature Uptime Solution",
-  headline: "Plan Ahead. Respond Fast. Protect Production.",
+  headline: "Let Us Plan Together. Respond Fast. Protect Your Production.",
   subheadline:
-    "A failed part is not just a purchase problem - it is lost production, waiting time, emergency pressure and money lost by the hour.",
-  supportText:
-    "NFG supports clients through a two-pronged approach: planned critical-parts support before shutdowns, and emergency manufacturing support when unexpected failures occur. The earlier maintenance, planning, procurement and NFG work together, the better we can prepare materials, production routes, capacity, inspection and delivery priorities. Prioritise local Naira-based manufacturing where Nigerian capacity exists, and use valuable forex only where no local support is available. Avoid the hidden cost of late planning, import uncertainty, documentation delays, wrong specifications and plant downtime.",
-  primaryCta: { label: "Plan Critical Parts", href: "/solutions#signature-uptime-solution" },
+    "When a critical part fails, the real cost is not just the part - it is lost production, waiting time, emergency pressure and money lost by the hour. NFG supports industries through a two-pronged signature approach: planned critical-parts support before shutdowns, and emergency manufacturing support when unexpected failures occur. Client maintenance, planning and procurement teams must align early with NFG Sales Engineers while NFG prepares raw materials, production routes, tooling, capacity, machining, inspection and delivery priorities.",
+  primaryCta: { label: "Plan Critical Parts With NFG", href: "/solutions#signature-uptime-solution" },
   secondaryCta: { label: "Request Emergency Support", href: "/rtq" },
   media: {
     desktopImage: "/placeholders/hero/signature-uptime-solution.jpg",
@@ -84,9 +82,11 @@ export const signatureUptimeHeroSlide = {
     theme: "uptime"
   },
   featureCards: [
-    { title: "Plan", description: "Prepare known, repeat and shutdown-critical parts before pressure builds." },
-    { title: "Respond", description: "Review failed parts, samples, drawings and urgent production constraints." },
-    { title: "Protect", description: "Focus on uptime, local support and total production impact." }
+    { title: "Planned Critical Parts", description: "Prepare known, repeat and shutdown-critical parts before pressure builds." },
+    { title: "Emergency Manufacturing Support", description: "Review failed parts, samples, drawings and urgent production constraints." },
+    { title: "Reverse Engineering", description: "Start from the part and move toward a manufacturable route." },
+    { title: "Local Manufacturing Routes", description: "Keep the work local where Nigerian capacity exists." },
+    { title: "Consignment Stocking Available", description: "Support repeat spares planning and faster response." }
   ]
 };
 
@@ -262,13 +262,11 @@ export const rtqFormConfig = {
 
 export const heroSlides = [
   {
-    eyebrow: "Built in Nigeria. Supported locally. Trusted since 1969.",
-    headline: "We Keep Africa's Industries Growing.",
+    eyebrow: "Trusted Since 1969 • Built for Industrial Resilience",
+    headline: "We Are The Manufacturing Backbone Helping Nigeria and West Africa's Industries Stay Productive.",
     subheadline:
-      "We work with you and provide tailor-made manufactured parts and  creating innovative solutions,on time and every time.",
-    supportText:
-      "Since 1969, NFG has supported Nigeria's basic industries with castings, machining, fabrication, sacrificial anodes, Hardox wear solutions, Enduraclad chromium-carbide overlay solutions, laser scanning, digital engineering and 3D printing.",
-    primaryCta: { label: "Send Us Your Broken Part / Drawing", href: "/rfq" },
+      "When global supply chains are unstable, local manufacturing capacity for parts becomes essential. NFG helps cement plants, mines, quarries, infrastructure projects and offshore assets reduce dependence on uncertain imports by identifying, reverse-engineering and locally manufacturing practical solutions for parts that break, wear out, corrode or become obsolete. Ferrous and non-ferrous foundry casting, machining, fabrication, wear solutions, corrosion protection, digital engineering and additive manufacturing keep that response practical.",
+    primaryCta: { label: "Send Us Your Part / Drawing", href: "/rtq" },
     secondaryCta: { label: "Explore Solutions", href: "/solutions" },
     media: {
       desktopImage: "/placeholders/hero/foundry-pouring-or-industrial-floor.jpg",
@@ -279,9 +277,11 @@ export const heroSlides = [
       theme: "foundry"
     },
     featureCards: [
-      { title: "Identify", description: "Start from the failed part, drawing, photo or process issue." },
-      { title: "Engineer", description: "Scan, measure, analyse and select the right route." },
-      { title: "Manufacture", description: "Cast, machine, fabricate, protect, print or assemble locally." }
+      { title: "Since 1969", description: "Long-term Nigerian industrial manufacturing experience." },
+      { title: "ISO 9001:2015 & ISO 50001", description: "Core management systems tracked through CMS records." },
+      { title: "SSAB-certified Hardox® Wearparts Centre", description: "Wear-part workshop recognition." },
+      { title: "Federal Ministry of Industry OEM Manufacturer Certificate", description: "Certificate record managed through Sanity." },
+      { title: "Metal & Polymer Additive Manufacturing", description: "Advanced part-development capability." }
     ],
     stats: [
       { value: "1969", label: "industrial manufacturing roots" },
@@ -291,11 +291,11 @@ export const heroSlides = [
   signatureUptimeHeroSlide,
   {
     eyebrow: "Reverse engineering",
-    headline: "No Drawing? No OEM Support? We Start With the Part.",
+    headline: "No Drawing? No OEM Support? We Can Start With What You Have.",
     subheadline:
-      "We use 3D laser scanning, digital drawings, dimensional checks, material analysis and rapid prototyping to move from sample part to manufacturable solution.",
+      "When a part is broken, worn, obsolete or unsupported by the OEM, the real challenge is understanding the part, material, failure, operating condition and the best way to manufacture it locally. NFG helps clients move from uncertainty to a practical manufacturing route using sample parts, old drawings, photos, rough dimensions or equipment details. 3D laser scanning, dimensional checks, OES spectro analysis, CAD drawings, rapid prototyping and route selection help move the work forward.",
     primaryCta: { label: "Start Reverse Engineering", href: "/solutions/reverse-engineering" },
-    secondaryCta: { label: "Upload Drawing / Photo", href: "/rfq" },
+    secondaryCta: { label: "Upload Part / Drawing / Photo", href: "/rtq" },
     media: {
       desktopImage: "/placeholders/hero/laser-scanning-part.jpg",
       mobileImage: "/placeholders/hero/hero-laser-scanning.jpg",
@@ -305,18 +305,20 @@ export const heroSlides = [
       theme: "scan"
     },
     featureCards: [
-      { title: "Scan", description: "Capture geometry from worn or obsolete components." },
-      { title: "Analyse", description: "Review material, failure condition and operating environment." },
-      { title: "Route", description: "Choose casting, fabrication, machining, anode, CCO or 3D printing." }
+      { title: "3D Laser Scanning", description: "Capture geometry from worn or obsolete components." },
+      { title: "OES Spectro Analysis", description: "Review material, failure condition and operating environment." },
+      { title: "Digital Drawings", description: "Convert the part into production data." },
+      { title: "Rapid Prototyping", description: "Prove the route before committing to production." },
+      { title: "Manufacturing Route Selection", description: "Choose casting, fabrication, machining, anode, CCO or 3D printing." }
     ]
   },
   {
-    eyebrow: "Wear solutions",
-    headline: "Wear Parts for Cement, Mines, Quarries and Dredging.",
+    eyebrow: "Wear Solutions for Cement, Mining, Quarries & Dredging",
+    headline: "Wear Is Not Just Damage. It Is Lost Production.",
     subheadline:
-      "From manganese and high-chrome castings to Hardox fabricated wear parts and Enduraclad chromium-carbide overlay plates, we help clients fight impact, abrasion and severe wear.",
-    primaryCta: { label: "Solve a Wear Problem", href: "/rfq?type=wear" },
-    secondaryCta: { label: "View Wear Solutions", href: "/solutions/wear-part-solutions" },
+      "In cement plants, mines, mineral-processing plants, quarries and dredging operations, wear attacks production every day through impact, abrasion, sliding wear, erosion, corrosion and repeated part failure. NFG helps clients fight wear first through engineered foundry castings - manganese steel, high-chrome iron, Ni-Hard, moly-chrome and other wear alloys - supported by machining, fabrication, Hardox® wear plate solutions and Enduraclad® CCO technologies.",
+    primaryCta: { label: "Explore Wear Solutions", href: "/solutions/wear-part-solutions" },
+    secondaryCta: { label: "Send Worn Part / Drawing", href: "/rtq" },
     media: {
       desktopImage: "/placeholders/hero/wear-parts-crusher-cement.jpg",
       mobileImage: "/placeholders/hero/hero-wear-parts.jpg",
@@ -326,16 +328,19 @@ export const heroSlides = [
       theme: "wear"
     },
     featureCards: [
-      { title: "Impact", description: "Manganese and Hardox routes for high-impact service." },
-      { title: "Abrasion", description: "High-chrome, Ni-Hard and CCO options for severe wear." },
-      { title: "Repeat supply", description: "Support for recurring plant maintenance needs." }
+      { title: "Wear Castings", description: "Lead route for repeat wear parts." },
+      { title: "Manganese Steel", description: "Impact and work-hardening crusher parts." },
+      { title: "High-Chrome Iron", description: "Severe abrasion and wear areas." },
+      { title: "Hardox® Wearparts Centre", description: "Premium wear-plate processing support." },
+      { title: "Enduraclad® Approved Workshop", description: "CCO and hardfacing route support." },
+      { title: "Machining & Fabrication", description: "Finish and assemble the part properly." }
     ]
   },
   {
-    eyebrow: "Corrosion protection",
-    headline: "Corrosion Protection Built With Nigerian Capacity.",
+    eyebrow: "Corrosion Protection & Offshore Asset-Life Extension",
+    headline: "Nigerian-Made Anodes Protecting Offshore Assets Where Failure Is Not an Option.",
     subheadline:
-      "Through Metec West Africa, NFG supplies sacrificial anodes and corrosion-protection assemblies for offshore, marine, power, windmill and coastal infrastructure applications.",
+      "Every offshore platform, FPSO, subsea pipeline, mooring system, vessel and marine structure fights corrosion every day. In offshore oil and gas, corrosion protection is asset integrity, safety, production continuity and lifecycle protection. Through Metec West Africa, NFG manufactures sacrificial anodes and cathodic protection solutions in Nigeria for offshore oil and gas, marine, power and coastal infrastructure, with Imenco Norway supporting retrofit CP applications where required.",
     specificationTable: {
       title: "METEC ANODE SPECIFICATIONS",
       rows: [
@@ -346,7 +351,7 @@ export const heroSlides = [
       ]
     },
     primaryCta: { label: "Explore Corrosion Protection", href: "/solutions/corrosion-protection" },
-    secondaryCta: { label: "Contact Metec", href: "/rfq?type=corrosion" },
+    secondaryCta: { label: "Discuss Retrofit CP / Anode Requirements", href: "/rtq" },
     media: {
       desktopImage: "/placeholders/hero/sacrificial-anodes-offshore.jpg",
       mobileImage: "/placeholders/hero/hero-sacrificial-anodes.jpg",
@@ -356,18 +361,21 @@ export const heroSlides = [
       theme: "marine"
     },
     featureCards: [
-      { title: "Anodes", description: "Locally manufactured sacrificial anodes." },
-      { title: "Retrofit", description: "Imenco clamp integration for offshore applications." },
-      { title: "Assets", description: "Marine, ports, windmills, power and coastal infrastructure." }
+      { title: "Egina", description: "Project reference / asset context." },
+      { title: "Usan", description: "Project reference / asset context." },
+      { title: "Akpo", description: "Project reference / asset context." },
+      { title: "Bonga", description: "Project reference / asset context." },
+      { title: "Imenco Norway", description: "Retrofit CP support partner." },
+      { title: "Nigerian Content", description: "Local manufacturing and accountability." }
     ]
   },
   {
-    eyebrow: "Digital and advanced manufacturing",
-    headline: "From Foundry Reverse Engineering We Transitioned to Digital Manucfacturing in 2025.",
+    eyebrow: "Advanced Digital & Additive Manufacturing",
+    headline: "We Are Turning Reverse Engineering Experience Into Africa's Manufacturing Future.",
     subheadline:
-      "3D Plastic and Metal 3D printing, digital engineering; a disciplined transformation journey.",
-    primaryCta: { label: "View Digital Transformation", href: "/capabilities/digital-production-control-vezapp" },
-    secondaryCta: { label: "Explore 3D Printing", href: "/solutions/3d-printing-advanced-manufacturing" },
+      "NFG's move into Additive Manufacturing - better known as 3D printing - is built on over five decades of identifying, redesigning and manufacturing critical industrial parts through castings, machining, fabrication, material analysis and reverse engineering. Today, NFG combines 3D laser scanning, digital engineering, polymer 3D printing and metal additive manufacturing to support advanced part development for oil and gas, power stations, marine, heavy industry, critical national infrastructure and security-service applications.",
+    primaryCta: { label: "Explore Additive Manufacturing", href: "/solutions/3d-printing-advanced-manufacturing" },
+    secondaryCta: { label: "View 3D Printing Capabilities", href: "/capabilities/additive-manufacturing" },
     media: {
       desktopImage: "/placeholders/hero/vezapp-3d-printing-dashboard.jpg",
       mobileImage: "/placeholders/hero/hero-vezapp-digital.jpg",
@@ -377,9 +385,36 @@ export const heroSlides = [
       theme: "digital"
     },
     featureCards: [
-      { title: "Track", description: "Better job visibility across sales, planning and production." },
-      { title: "Qualify", description: "Rapid prototyping and part development workflows." },
-      { title: "Improve", description: "A practical transformation journey, not fake dashboards." }
+      { title: "3D Laser Scanning", description: "Capture geometry and part intent." },
+      { title: "Digital Engineering", description: "Design the route before production." },
+      { title: "Polymer 3D Printing", description: "Prototype and validate quickly." },
+      { title: "Metal Additive Manufacturing", description: "Advance complex part development." },
+      { title: "Reverse Engineering", description: "Move from sample part to manufacturable data." },
+      { title: "Youth Skills Development", description: "Build the next generation of industrial talent." }
+    ]
+  },
+  {
+    eyebrow: "Municipal Castings & Drainage Solutions",
+    headline: "Drainage Protects the Value and Security of Your Infrastructure.",
+    subheadline:
+      "A factory, estate, road, port, airport, industrial yard or public facility can be worth millions - but poor drainage can slowly damage it. NFG designs and manufactures ductile iron municipal castings, drainage gratings, manhole covers and custom access solutions to the BS EN 124 load-class standard - from pedestrian areas and estates to roads, ports, industrial yards and airport-grade applications. Built for Nigerian conditions - sand, oil, gravel, debris, heavy traffic and coastal corrosion exposure - NFG solutions are engineered for strength, water flow, maintenance access and long service life, with hinged, bolted, lockable and custom-branded anti-theft options. For high-security locations, NFG can provide bolted, lockable and controlled-access cover designs that support inspection, access control and tamper resistance.",
+    primaryCta: { label: "Request a Drainage Review", href: "/rtq" },
+    secondaryCta: { label: "Send Site Photos / Drawings", href: "/rtq" },
+    media: {
+      desktopImage: "/placeholders/hero/maintenance-hole-cover-installed.jpg",
+      mobileImage: "/placeholders/hero/hero-wear-parts.jpg",
+      altText: "Municipal castings and drainage access placeholder",
+      caption: "Municipal castings and drainage access solutions",
+      overlayOpacity: 0.7,
+      theme: "foundry"
+    },
+    featureCards: [
+      { title: "BS EN 124 Load Classes", description: "Load-classed municipal access solutions." },
+      { title: "Ductile Iron", description: "Strength, water flow and service life." },
+      { title: "Custom-Made Covers", description: "Built for the site, not a generic slab." },
+      { title: "Lockable Anti-Theft Options", description: "Support controlled access and security." },
+      { title: "High-Security Bolting", description: "Inspection-ready and tamper-resistant." },
+      { title: "Roads • Estates • Ports • Airports", description: "Applications across infrastructure types." }
     ]
   }
 ];
@@ -388,14 +423,16 @@ export const trustBadges = [
   { title: "Since 1969", detail: "Long-term Nigerian industrial manufacturing experience", verificationStatus: "verified" },
   { title: "ISO 9001:2015", detail: "Certificate record managed through CMS", verificationStatus: "pending" },
   { title: "ISO 50001", detail: "Energy management certificate record managed through CMS", verificationStatus: "pending" },
+  { title: "SSAB-certified Hardox Wearparts Centre", detail: "Wear-part workshop recognition", verificationStatus: "pending" },
+  { title: "Metec West Africa", detail: "Corrosion-protection manufacturing capability", verificationStatus: "pending" },
+  { title: "Shell Nigerian Content Recognition", detail: "Recognition record managed through CMS", verificationStatus: "pending" },
+  { title: "Stanford Seed Transformation", detail: "Transformation journey proof point", verificationStatus: "pending" },
   {
-    title: "Federal Ministry of Industry OEM Manufacturer's Certificate",
+    title: "Federal Ministry of Industry OEM Manufacturer Certificate",
     detail: "Certificate image or PDF can be attached in Sanity",
     verificationStatus: "pending"
   },
-  { title: "Hardox Wearparts Certified Workshop", detail: "Wear-part workshop recognition", verificationStatus: "pending" },
-  { title: "Shell Nigerian Content Manufacturing Recognition", detail: "Recognition record managed through CMS", verificationStatus: "pending" },
-  { title: "Stanford Seed Transformation Program Completed 2023", detail: "Transformation journey proof point", verificationStatus: "pending" },
+  { title: "Metal & Polymer Additive Manufacturing", detail: "Advanced part-development capability", verificationStatus: "pending" },
   { title: "GEF-UNIDO Industrial Energy Efficiency Project", detail: "IEE and resource efficient cleaner production record", verificationStatus: "pending" },
   { title: "Metec West Africa + Imenco Partnership", detail: "Corrosion-protection partnership positioning", verificationStatus: "pending" }
 ];

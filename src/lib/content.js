@@ -321,6 +321,21 @@ function normalizeHeroSlides(slides, fallbackSlides = [], signatureHeroSlide = f
   return [normalized[0], signatureSlide, ...normalized.slice(1)];
 }
 
+function shouldUseLocalHomepageHero(homepageSlides) {
+  const firstHeadline = homepageSlides?.[0]?.headline || "";
+  const firstEyebrow = homepageSlides?.[0]?.eyebrow || "";
+  const firstSupportText = homepageSlides?.[0]?.supportText || "";
+  const secondHeadline = homepageSlides?.[1]?.headline || "";
+
+  return (
+    firstHeadline.includes("Local Manufacturing Backbone") ||
+    firstHeadline.includes("We Keep Africa's Industries Growing") ||
+    firstEyebrow.includes("Supporting and Building Industrial Resilience") ||
+    firstSupportText.includes("Through castings, machining, fabrication, wear solutions, corrosion protection, digital engineering and additive manufacturing") ||
+    secondHeadline.includes("Plan Together. Respond Fast. Protect Production.")
+  );
+}
+
 function normalizeSignatureUptimeSection(section, fallbackSection = fallback.signatureUptimeSection) {
   const source = section || {};
   const homepage = source.homepage || {};
@@ -616,10 +631,14 @@ function normalizeCollections(raw = {}) {
     solutionsOverview,
     rtqFormConfig,
     homepage: {
-      heroSlides: normalizeHeroSlides(homepage.heroSlides, fallback.heroSlides, signatureHeroSlide),
+      heroSlides: normalizeHeroSlides(
+        shouldUseLocalHomepageHero(homepage.heroSlides) ? fallback.heroSlides : homepage.heroSlides,
+        fallback.heroSlides,
+        signatureHeroSlide
+      ),
       signatureUptimeSection,
       trustBadges: normalizeCards(
-        homepage.trustBadges,
+        shouldUseLocalHomepageHero(homepage.heroSlides) ? fallback.trustBadges : homepage.trustBadges,
         certifications.filter((item) => item.displayOnHomepage).length
           ? certifications.filter((item) => item.displayOnHomepage)
           : fallback.trustBadges

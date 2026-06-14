@@ -565,6 +565,30 @@ strong {
   margin-top: 28px;
 }
 
+.hero-proof-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  max-width: 760px;
+}
+
+.hero-proof-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  backdrop-filter: blur(8px);
+}
+
 .hero-media-card {
   align-self: stretch;
   min-height: 380px;
@@ -713,6 +737,17 @@ strong {
   color: rgba(255, 255, 255, 0.66);
   font-size: 12px;
   line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .hero-proof-chips {
+    gap: 6px;
+  }
+
+  .hero-proof-chip {
+    max-width: 100%;
+    white-space: normal;
+  }
 }
 
 .hero-controls {

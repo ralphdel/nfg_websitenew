@@ -1,0 +1,570 @@
+HERO 1
+
+Trusted Since 1969 â€¢ Built for Industrial Resilience
+We Are The Manufacturing Backbone Helping Nigeria and West Africaâ€™s Industries Stay Productive.
+When global supply chains are unstable, local manufacturing capacity for parts becomes essential. NFG helps cement plants, mines, quarries, infrastructure projects, and offshore assets reduce their dependence on uncertain imports by identifying, reverse-engineering, and locally manufacturing practical solutions for parts that break, wear out, corrode, or become obsolete.
+Through Ferrous and Non-Ferrous foundry casting, machining, fabrication, wear solutions, corrosion protection, digital engineering, and additive manufacturing, we support the industries that keep Nigeria and West Africa working â€” helping them become more self-reliant, resilient, and able to withstand disruption.
+CTA 1: Send Us Your Part / DrawingCTA 2: Explore Solutions
+Where to put proof badges
+Do not overload the hero text. Put proof in three layers:
+1. Small proof chips inside Hero 1
+Under the CTA buttons, add 4â€“5 small badges only:
+Since 1969ISO 9001:2015 & ISO 50001SSAB-certified HardoxÂ® Wearparts CentreFederal Ministry of Industry OEM Manufacturer CertificateMetal & Polymer Additive Manufacturing
+These should be text chips, not large logos.
+2. Full trust/proof strip directly below the hero carousel
+After the rotating hero section, add a horizontal proof bar:
+Trusted Since 1969 | ISO 9001:2015 | ISO 50001 | SSAB-certified HardoxÂ® Wearparts Centre | Metec West Africa | Shell Nigerian Content Recognition | Stanford Seed Transformation
+
+CTA 1: Send Us Your Part / DrawingCTA 2: Explore Solutions
+Badges are small visual trust markers on the website, not necessarily PDFs or PPTs.
+Think of them like quick proof labels that a visitor sees immediately.
+Example badges:
+Since 1969ISO 9001:2015 CertifiedISO 50001 CertifiedSSAB-certified HardoxÂ® Wearparts CentreEnduracladÂ® Approved WorkshopFederal Ministry of Industry OEM Manufacturer CertificateShell Nigerian Content RecognitionStanford Seed Transformation Program
+They can appear as:
+Text chipsSmall rounded labels under the hero section. Example:Since 1969 | ISO 9001:2015 | HardoxÂ® Wearparts Centre
+Logo badgesActual logos/icons, if approved for use. Example: HardoxÂ® Wearparts logo, ISO logo, Stanford Seed logo, Shell recognition logo if allowed. 
+Clickable proof badgesA badge can link to a PDF certificate or proof document. Example:Click ISO 9001:2015 â†’ opens the ISO certificate PDF. 
+Downloadable proof documentsThese are not the badge itself. They are the supporting evidence behind the badge, usually PDFs.
+HERO 2
+NFG Signature Uptime Solution
+Let Us Plan Together. Respond Fast. Protect your Production.
+When a critical part fails, the real cost is not just the part â€” it is lost production, waiting time, emergency pressure and money lost by the hour.
+NFG supports industries through a two-pronged signature approach: planned critical-parts support before shutdowns, and emergency manufacturing support when unexpected failures occur.
+Planning must happen on both sides. Your maintenance, planning and procurement teams must align early with NFG Sales Engineers. In the meantime, NFG prepares raw materials, production routes, tooling, capacity, machining, inspection and delivery priorities. The earlier we plan together, the better we can protect uptime.
+Prioritise local Naira-based manufacturing where Nigerian capacity exists, and use valuable forex only where local support is unavailable. Avoid the hidden costs of late planning, delayed approvals, incorrect specifications, import uncertainty, and plant downtime.
+CTA 1: Plan Critical Parts With NFGCTA 2: Request Emergency Support
+Suggested proof badges for Hero 2
+Under the CTA buttons, use small text chips, not PDFs:
+Planned Critical PartsEmergency Manufacturing SupportReverse EngineeringLocal Manufacturing RoutesConsignment Stocking Available
+These badges explain the model quickly.
+Where deeper proof should go
+Directly below the hero or in the dedicated NFG Signature Uptime Solution section, add a small visual block:
+Client side must plan
+NFG must plan
+Maintenance identifies critical parts
+        Raw materials
+Planning shares shutdown dates
+        Production slots
+Procurement starts approvals early
+        Tooling and methoding
+Operations confirms urgency
+         Machining and inspection
+Stores agree on minimum stock levels
+          Delivery priorities
+Then add this callout:
+Good delivery is not magic. It is joint planning between the clientâ€™s maintenance, planning and procurement teams â€” and NFGâ€™s manufacturing system.
+CTA routing
+Plan Critical Parts With NFG â†’ /solutions#signature-uptime-solutionRequest Emergency Support â†’ /rtq
+My recommendation: keep Hero 2 focused on joint planning + emergency support. Do not add too many certifications here. This hero is about the working model, not proof of capability.
+HERO 3
+
+Reverse Engineering
+No Drawing? No OEM Support? We Can Start With What You Have.
+When a part is broken, worn, obsolete or unsupported by the OEM, the problem is not only the missing drawing. The real challenge is understanding the part, the material, the failure, the operating condition and the best way to manufacture it locally.
+NFG helps clients move from uncertainty to a practical manufacturing route. Whether you have a sample part, an old drawing, a photo, rough dimensions, or only the equipment details, we can identify the part, study how it works, and develop the data needed for production.
+Using 3D laser scanning, dimensional checks, OES spectro analysis, CAD drawings and rapid prototyping, we confirm geometry, material direction and design intent â€” then select the right route: casting, machining, fabrication, HardoxÂ® wear solutions, EnduracladÂ® CCO, sacrificial anodes, polymer 3D printing, metal additive manufacturing or a combined solution.
+CTA 1: Start Reverse EngineeringCTA 2: Upload Part / Drawing / Photo
+Suggested proof badges for Hero 3
+Use small chips under the CTA buttons:
+3D Laser ScanningOES Spectro AnalysisDigital DrawingsRapid PrototypingManufacturing Route Selection
+These badges tell the visitor: NFG has a structured engineering process, not guesswork.
+Deeper proof section below Hero 3
+Add a compact process strip immediately below the hero or inside the Reverse Engineering page:
+Step
+What NFG does
+Why it matters
+1
+Identify the part
+Confirms what the client actually needs
+2
+Study the failure
+Discuss failure and changes to avoids the same problem
+3
+Scan and measure
+Builds reliable geometry
+4
+Analyse material
+Guides alloy/material selection
+5
+Create digital drawings
+Converts the part into production data
+6
+Select manufacturing route
+Chooses casting, machining, fabrication, 3D printing or combined route
+Add this callout:
+Reverse engineering is not copying. It is understanding the part well enough to manufacture it reliably.
+CTA routing
+Start Reverse Engineering â†’ /solutions/reverse-engineeringUpload Part / Drawing / Photo â†’ /rtq
+My advice: Hero 3 should remain focused on uncertainty becoming manufacturing clarity. Do not overload it with HardoxÂ®, EnduracladÂ® or 3D printing details; mention them only as possible routes after the engineering review.
+
+
+HERO 4
+
+Wear Solutions for Cement, Mining, Quarries & Dredging
+Wear Is Not Just Damage. It Is Lost Production.
+In cement plants, mines, mineral-processing plants, quarries and dredging operations, wear attacks production every day through impact, abrasion, sliding wear, erosion, corrosion and repeated part failure.
+NFG helps clients fight wear first through engineered foundry castings â€” manganese steel, high-chrome iron, Ni-Hard, moly-chrome and other wear alloys â€” supported by machining, fabrication, HardoxÂ® wear plate solutions and EnduracladÂ® CCO technologies.
+From crusher parts, liners, hammers, blow bars, pump parts, and dredging components to chute liners, buckets, truck bodies, VRM wear areas, and plant refurbishments, NFG helps clients select the right wear route, manufacture locally, plan for repeat supply, and respond when failures stop production.
+CTA 1: Explore Wear SolutionsCTA 2: Send Worn Part / Drawing
+Hero 4 proof badges
+Under the CTA buttons, use short chips:
+Wear CastingsManganese SteelHi-Chrome IronHardoxÂ® Wearparts CentreEnduracladÂ® Approved WorkshopMachining & Fabrication
+Do not put too much detail in the hero. Let the hero explain the pain and the routes. The separate pages will do the education.
+
+Yes. For Hero 4, we should make wear castings the lead route, because that is NFGâ€™s core strength and largest credibility base. HardoxÂ® and EnduracladÂ® should then appear as premium wear technology routes, not as replacements for castings.
+Revised Hero 4
+Wear Solutions for Cement, Mining, Quarries & Dredging
+Wear Is Not Just Damage. It Is Lost Production.
+In cement plants, mines, mineral-processing plants, quarries and dredging operations, wear attacks production every day through impact, abrasion, sliding wear, erosion, corrosion and repeated part failure.
+NFG helps clients fight wear first through engineered foundry castings â€” manganese steel, high-chrome iron, Ni-Hard, moly-chrome and other wear alloys â€” supported by machining, fabrication, HardoxÂ® wear plate solutions and EnduracladÂ® CCO technologies.
+From crusher parts, liners, hammers, blow bars, pump parts and dredging components to chute liners, buckets, truck bodies, VRM wear areas and plant refurbishments, NFG helps clients select the right wear route, manufacture locally, plan repeat supply and respond when failures stop production.
+CTA 1: Explore Wear SolutionsCTA 2: Send Worn Part / Drawing
+Hero 4 proof badges
+Under the CTA buttons, use short chips:
+Wear CastingsManganese SteelHigh-Chrome IronHardoxÂ® Wearparts CentreEnduracladÂ® Approved WorkshopMachining & Fabrication
+Do not put too much detail in the hero. Let the hero explain the pain and the routes. The separate pages will do the education.
+
+Recommended page structure
+Since you want separate pages, I recommend this:
+Parent page
+/solutions/wear-part-solutions
+This is the overview and route selector.
+Child pages
+/solutions/wear-part-solutions/wear-castingsPriority page. This should come first.
+/solutions/wear-part-solutions/hardox-wear-solutionsHardoxÂ® distributor, stockist and SSAB-certified wear centre page.
+/solutions/wear-part-solutions/enduraclad-cco-hardfacingEnduracladÂ® CCO, SUPERFLOWÂ®, VRM and hardfacing page.
+The parent page should explain: â€œWear is not one problem, so NFG has several routes.â€
+
+Parent Wear Solutions page layout
+Hero
+Choose the Right Wear Route Before You Choose the Material.
+Wear can come from impact, sliding abrasion, gouging, corrosion, erosion, poor flow, wrong material or poor installation. NFG reviews the application first, then recommends the right route: castings, HardoxÂ® wear plate, EnduracladÂ® CCO, machining, fabrication or a combined solution.
+Route selector table
+Wear problem
+Best NFG route to review
+Crusher impact, rock-on-metal shock
+Wear castings
+Cement/mining liners and cast parts
+Manganese, high-chrome, Ni-Hard, moly-chrome
+Buckets, truck bodies, chutes, fabricated wear parts
+HardoxÂ® wear solutions
+Severe sliding abrasion
+EnduracladÂ® CCO
+Sticky material / poor flow
+EnduracladÂ® SUPERFLOWÂ®
+VRM roller/table wear
+EnduracladÂ® VRM hardfacing route
+Plant unit repair or modification
+Machining + fabrication + wear route
+Then show three large cards: Wear Castings, HardoxÂ®, EnduracladÂ®.
+
+Page 1: Wear Castings â€” priority page
+Page title
+Wear Castings for Cement, Mining, Quarries & Dredging
+Core headline
+Cast Wear Parts Are Metallurgy, Heat Treatment and Application Knowledge â€” Not Just Metal Shapes.
+What to put on this page
+1. The industrial pain
+Explain that crushers, mills, pumps, dredging systems, chutes and mineral-processing equipment suffer repeated wear, and wrong material selection causes early failure.
+2. NFG materials
+Use simple cards:
+Material route
+Typical use
+Manganese steel
+Impact and work-hardening crusher parts
+High-chrome iron
+Severe abrasion liners and grinding/wear areas
+Ni-Hard
+Abrasion-resistant dredging and slurry applications
+Moly-chrome steels
+Selected high-wear and impact applications
+Ductile / grey iron
+Lower-wear industrial components where suitable
+3. Typical castings
+Jaw plates
+Mantles and concaves
+Blow bars
+Hammers
+Mill liners
+Crusher liners
+Pump casings
+Impellers
+Dredging wear parts
+Grinding and crushing components
+Custom reverse-engineered wear castings
+4. NFG method
+Part review â†’ failure discussion â†’ material analysis â†’ pattern/methoding â†’ casting â†’ heat treatment â†’ machining â†’ inspection â†’ repeat supply.
+5. Planning message
+Tie it to the Signature Uptime Solution:
+Wear castings should not always be ordered after failure. For repeat parts, NFG and the client should plan minimum stock levels, raw materials, patterns and production slots before shutdowns.
+6. CTA
+Review a Cast Wear Part â†’ /rtqPlan Repeat Wear Castings â†’ /solutions#signature-uptime-solution
+This page should be the strongest because castings are your foundation.
+
+Page 2: HardoxÂ® Wear Solutions
+Page title
+HardoxÂ® Wear Solutions by Nigerian Foundries Limited
+Core headline
+Do Not Just Buy the Plate. Get the Wear Part Made Right.
+What to put on this page
+1. NFG positioning
+Nigerian Foundries Limited is a distributor and stockist of HardoxÂ® wear plate grades, subject to stock availability and application requirements, and an SSAB-certified HardoxÂ® Wearparts Centre.
+2. Why processing matters
+Explain clearly:
+HardoxÂ® wear plate is premium engineered steel. If it is heated wrongly, bent with poor tooling, welded without correct technique or fabricated without understanding the application, the client can lose the performance they paid for.
+3. NFL capability
+Genuine HardoxÂ® wear plate
+Local stock access
+CNC plasma cutting
+CNC laser cutting
+CNC press brake bending
+Controlled welding
+Fabrication
+Machine shop finishing
+Equipment modifications
+Ready-to-install parts
+Repeat wear kits
+4. Applications
+Chute liners made with HardoxÂ® wear plate
+Hopper liners
+Buckets
+Truck body components
+Material-handling parts
+Screens and feeders
+Equipment modifications
+Cut-to-shape wear kits
+5. Cost argument
+The lowest plate price is not always the lowest-cost wear solution. Poor processing, wrong grade selection, repeat failure and downtime cost more than proper local processing.
+6. CTA
+Request HardoxÂ® Wear Review â†’ /rtq
+
+Page 3: EnduracladÂ® CCO & Hardfacing
+Page title
+EnduracladÂ® CCO & Hardfacing Solutions
+Core headline
+Engineered Overlay and Hardfacing Technologies for Severe Wear.
+What to put on this page
+1. NFG positioning
+NFG is an EnduracladÂ® approved workshop, distributor and stockist for Nigeria and West Africa.
+2. What EnduracladÂ® is
+Explain it independently:
+EnduracladÂ® CCO plate is a bimetallic wear product: a carbide-rich overlay bonded to a weldable mild steel base. The base allows welding and fabrication, while the overlay provides the wear protection.
+The uploaded Enduraclad material shows its product range includes ECI60, ECI80, CTC6000, ECIMAXI and EMEX, with CCO plates designed for different abrasion and impact conditions, plus fabrication services such as cutting, forming, stud attachment and fabrication.
+3. Product routes
+EnduracladÂ® route
+Best message
+ECI60
+General CCO wear protection
+ECI80
+Higher-wear CCO applications
+CTC6000Â®
+Severe abrasion and demanding wear
+ECIMAXI
+Extremely severe abrasion
+EMEX
+Severe abrasion with severe impact
+SUPERFLOWÂ®
+Polished CCO for sticky material and flow problems
+4. VRM hardfacing
+This deserves a strong subsection:
+NFG is preparing to offer in-situ VRM hardfacing in Nigeria by end of 2026 using EnduracladÂ® controlled hardfacing wires/coils.
+Use for:
+VRM roller tyres
+Grinding tables
+Mill liners
+Nozzle rings
+Separator parts
+Ducting and protection areas
+5. Applications
+Cement plants
+Mining
+Mineral processing
+Quarries
+Chutes
+Hoppers
+Transfer points
+Feeders
+Screen decks
+VRM wear areas
+6. CTA
+Request EnduracladÂ® Wear Review â†’ /rtqDiscuss VRM Hardfacing Planning â†’ /rtq
+
+Navigation recommendation
+Under Solutions â†’ Wear Part Solutions, show:
+Wear Part Solutions Overview
+Wear Castings
+HardoxÂ® Wear Solutions
+EnduracladÂ® CCO & Hardfacing
+This order is important. It tells the market:
+NFG is first a foundry and industrial manufacturer. HardoxÂ® and EnduracladÂ® are premium technology routes inside the larger NFG wear-solution system.
+My advice: build the castings page first, then HardoxÂ®, then EnduracladÂ®.
+Homepage
+â”‚
+â”œâ”€â”€ Hero 4: Wear Solutions for Cement, Mining, Quarries & Dredging
+â”‚   â”‚
+â”‚   â”œâ”€â”€ CTA 1: Explore Wear Solutions
+â”‚   â”‚       â†“
+â”‚   â”‚   /solutions/wear-part-solutions
+â”‚   â”‚
+â”‚   â”œâ”€â”€ CTA 2: Send Worn Part / Drawing
+â”‚   â”‚       â†“
+â”‚   â”‚   /rtq
+â”‚
+â””â”€â”€ Main navigation
+        â†“
+    Solutions
+        â†“
+Wear Part Solutions
+
+1. Parent page: Wear Part Solutions Overview
+URL:
+/solutions/wear-part-solutions
+Purpose:
+This page explains that wear is not one problem, so NFG has different routes.
+It should not go too deep. It should guide the client to the correct page.
+Page structure
+Wear Part Solutions Overviewâ”‚â”œâ”€â”€ Heroâ”‚   "Wear Is Not Just Damage. It Is Lost Production."â”‚â”œâ”€â”€ Quick explanationâ”‚   Wear affects cement, mines, quarries, dredging and mineral processing.â”‚â”œâ”€â”€ Wear Route Selectorâ”‚   A simple table showing which problem needs which solution route.â”‚â”œâ”€â”€ Three main solution cardsâ”‚   1. Wear Castingsâ”‚   2. HardoxÂ® Wear Solutionsâ”‚   3. EnduracladÂ® CCO & Hardfacingâ”‚â”œâ”€â”€ NFG Signature Uptime stripâ”‚   Plan wear parts before shutdowns / emergency support when failures happen.â”‚â””â”€â”€ CTA    Request Wear Review / Send Worn Part
+
+2. The three dedicated pages under Wear Solutions
+These are child pages.
+/solutions/wear-part-solutions/wear-castings/solutions/wear-part-solutions/hardox-wear-solutions/solutions/wear-part-solutions/enduraclad-cco-hardfacing
+The order is important.
+Priority order
+1. Wear Castings2. HardoxÂ® Wear Solutions3. EnduracladÂ® CCO & Hardfacing
+Why this order?
+Because NFGâ€™s core is still foundry manufacturing. HardoxÂ® and EnduracladÂ® are powerful premium routes, but castings remain the foundation.
+
+Schematic view
+WEAR PART SOLUTIONS/solutions/wear-part-solutionsâ”‚â”œâ”€â”€ 1. Wear Castingsâ”‚      /wear-castingsâ”‚â”œâ”€â”€ 2. HardoxÂ® Wear Solutionsâ”‚      /hardox-wear-solutionsâ”‚â””â”€â”€ 3. EnduracladÂ® CCO & Hardfacing       /enduraclad-cco-hardfacing
+
+What each page should contain
+A. Wear Castings page â€” priority page
+URL:
+/solutions/wear-part-solutions/wear-castings
+Main message:
+Cast Wear Parts Are Metallurgy, Heat Treatment and Application Knowledge â€” Not Just Metal Shapes.
+This page should explain:
+Problem:Crushers, mills, pumps, dredging systems and mineral-processing equipment suffer impact, abrasion and repeated wear.NFG solution:Manganese steel, high-chrome iron, Ni-Hard, moly-chrome steels and other wear castings.Typical parts:Jaw plates, mantles, concaves, blow bars, hammers, liners, pump casings, impellers, dredging wear parts.NFG strength:Reverse engineering, metallurgy, pattern/methoding, casting, heat treatment, machining, inspection and repeat supply.
+CTA:
+Review a Cast Wear Part â†’ /rtqPlan Repeat Wear Castings â†’ /solutions#signature-uptime-solution
+
+B. HardoxÂ® Wear Solutions page
+URL:
+/solutions/wear-part-solutions/hardox-wear-solutions
+Main message:
+Do Not Just Buy the Plate. Get the Wear Part Made Right.
+This page should explain:
+Problem:Clients buy premium HardoxÂ® wear plate but process it wrongly.Risk:Wrong heating, wrong bending, wrong welding and wrong grade selection can damage the performance paid for.NFG solution:Distributor and stockist of HardoxÂ® wear plate grades, subject to availability and application requirements.SSAB-certified HardoxÂ® Wearparts Centre.CNC plasma cutting, laser cutting, CNC press brake bending, welding, fabrication, machining and ready-to-install wear parts.Typical parts:Chute liners, hopper liners, buckets, truck bodies, material-handling parts, cut-to-shape wear kits, equipment modifications.
+CTA:
+Request HardoxÂ® Wear Review â†’ /rtq
+
+C. EnduracladÂ® CCO & Hardfacing page
+URL:
+/solutions/wear-part-solutions/enduraclad-cco-hardfacing
+Main message:
+Engineered CCO, SUPERFLOWÂ® and Hardfacing Technologies for Severe Wear.
+This page should stand on its own. Do not compare it too much with HardoxÂ®.
+It should explain:
+Problem:Severe sliding abrasion, sticky material, poor flow, VRM wear and high-wear surfaces.NFG solution:NFG is an EnduracladÂ® approved workshop, distributor and stockist for Nigeria and West Africa.Technology:CCO plates, carbide-rich overlay, weldable mild steel backing, SUPERFLOWÂ® polished CCO, VRM hardfacing pathway.Product routes:ECI60, ECI80, CTC6000, ECIMAXI, EMEX, SUPERFLOWÂ®.Upcoming:In-situ VRM hardfacing in Nigeria by end of 2026 using EnduracladÂ® controlled hardfacing wires/coils.Typical parts:Chutes, hoppers, transfer points, feeders, screen decks, mill liners, VRM rollers, grinding tables, nozzle rings.
+CTA:
+Request EnduracladÂ® Wear Review â†’ /rtqDiscuss VRM Hardfacing Planning â†’ /rtq
+
+What goes on the homepage Hero 4?
+The homepage hero should not explain all three pages in detail. It should only open the door.
+Use this structure:
+Hero 4: Wear Solutions for Cement, Mining, Quarries & DredgingHeadline:Wear Is Not Just Damage. It Is Lost Production.Short body:NFG helps clients fight wear through castings, HardoxÂ® wear solutions, EnduracladÂ® CCO, machining, fabrication and future VRM hardfacing support.CTA 1:Explore Wear Solutions â†’ /solutions/wear-part-solutionsCTA 2:Send Worn Part / Drawing â†’ /rtq
+Then on the Wear Overview page, the client chooses the route.
+
+Navigation menu structure
+Under Solutions, arrange it like this:
+Solutionsâ”‚â”œâ”€â”€ Reverse Engineeringâ”œâ”€â”€ Wear Part Solutionsâ”‚     â”œâ”€â”€ Overviewâ”‚     â”œâ”€â”€ Wear Castingsâ”‚     â”œâ”€â”€ HardoxÂ® Wear Solutionsâ”‚     â””â”€â”€ EnduracladÂ® CCO & Hardfacingâ”œâ”€â”€ Corrosion Protectionâ”œâ”€â”€ Drainage & Municipal Castingsâ”œâ”€â”€ Machining, Fabrication & Assemblyâ””â”€â”€ Advanced Digital & Additive Manufacturing
+If the menu becomes too crowded, show only:
+Wear Part Solutions
+Then inside that page, show the three route cards.
+
+The easiest way to understand it
+Homepage Hero 4= AdvertisementWear Part Solutions Overview Page= Guide / decision mapWear Castings Page= Deep technical page for castingsHardoxÂ® Page= Deep technical page for HardoxÂ®EnduracladÂ® Page= Deep technical page for EnduracladÂ®
+
+My recommendation
+Build it in this order:
+Phase 1:Create /solutions/wear-part-solutions overview page properly.Phase 2:Create Wear Castings page first.Phase 3:Create HardoxÂ® page.Phase 4:Create EnduracladÂ® page.Phase 5:Add videos, photos, brochures and project examples.
+This keeps the website organised and stops HardoxÂ® and EnduracladÂ® from swallowing the main casting story.
+HardoxÂ® Wear Solutions by Nigerian Foundries Limited
+Do Not Just Buy the Plate. Get the Wear Part Made Right.
+HardoxÂ® wear plate is ideal for industries where abrasion, impact, material handling and equipment wear are constant problems â€” including mining, mineral processing, cement plants, cement batching plants, quarries and construction.
+Nigerian Foundries Limited is a distributor and stockist of HardoxÂ® wear plate grades, subject to stock availability and application requirements, and an SSAB-certified HardoxÂ® Wearparts Centre in Nigeria. Our wear-solution facilities are located at Otta, Ogun State, where we support clients with genuine HardoxÂ® wear plate, CNC cutting, bending, welding, fabrication, machining and ready-to-install wear parts.
+This matters because HardoxÂ® wear plate is a premium engineered material. Its performance depends not only on buying the correct plate, but on selecting the right grade and processing it properly. If HardoxÂ® wear plate is heated wrongly, bent with poor tooling, welded without proper control or fabricated without understanding the application, the client may lose the performance they paid for.
+NFL helps clients protect that investment by supplying genuine HardoxÂ® wear plate and processing it through an approved wear centre equipped with CNC plasma cutting, laser cutting, CNC press brake bending, fabrication and machine shop support.
+The advantage is practical: local stock access, local processing, Naira-based support where available, reduced dependence on fresh imports, better repeat supply planning and finished wear parts made for Nigerian operating conditions.
+CTA 1: Request HardoxÂ® Wear ReviewCTA 2: Send Photos / DrawingsCTA 3: Plan Repeat Wear Parts
+Corrosion Protection & Offshore Asset-Life Extension
+Nigerian-Made Anodes Protecting Offshore Assets Where Failure Is Not an Option.
+Every offshore platform, FPSO, subsea pipeline, mooring system, vessel and marine structure fights corrosion every day. In offshore oil & gas, corrosion protection is not optional â€” it is asset integrity, safety, production continuity and lifecycle protection.
+Through Metec West Africa, NFG manufactures sacrificial anodes and cathodic protection solutions in Nigeria for offshore oil & gas, marine, power and coastal infrastructure. Quality is critical: alloy chemistry, casting integrity, current output, testing and inspection determine whether the anode will protect the asset as designed.
+Metec West Africa has supplied major operators and contractors, including Chevron, Shell, ExxonMobil, TotalEnergies, Samsung Heavy Industries, Saipem and FMC/OneSubsea, with project references including Egina, Usan, Akpo, Bonga and other offshore assets.
+Through our partnership with Imenco Norway, we attach our Made-In-Nigeria anodes to the Imenco retrofit clamp-on cathodic protection systems for ageing offshore installations â€” helping extend asset life, reduce welding and diver intervention risks, and strengthen Nigerian Content in critical offshore integrity solutions.
+CTA 1: Explore Corrosion ProtectionCTA 2: Discuss Retrofit CP / Anode Requirements
+Worked for 7s
+For Hero 5, do not put many pictures inside the hero. It will become noisy. The hero must first sell the message:
+offshore corrosion protection + Nigerian-made anodes + asset-life extension.
+Use pictures in layers.
+Best layout for Hero 5
+1. Main background image / video
+Use a strong offshore visual:
+FPSO / offshore platform / subsea structure / marine asset in harsh sea environment
+This creates the emotional context: steel in seawater needs protection.
+Add a dark navy overlay so the text is readable.
+2. Right-side image tiles
+On desktop, place 2 or 3 small image cards on the right side of the hero.
+Use:
+Metec sacrificial anodes being produced or stacked
+Anodes installed on piles / offshore structure
+Imenco clamp-on CP system / retrofit clamp image
+This tells the story visually:
+Manufacture locally â†’ install offshore â†’ extend asset life.
+3. Proof badges under the CTA
+Use text badges, not pictures:
+EginaUsanAkpoBongaChevronShellExxonMobilTotalEnergiesImenco Norway
+Only use client logos if legally approved. Text badges are safer.
+
+Recommended hero layout
+[Full-width offshore background image/video with dark overlay]Left side:Eyebrow:Corrosion Protection & Offshore Asset-Life ExtensionHeadline:Nigerian-Made Anodes Protecting Offshore Assets Where Failure Is Not an Option.Body copy:Every offshore platform, FPSO, subsea pipeline, mooring system and marine structure fights corrosion every day...CTA:Explore Corrosion ProtectionDiscuss Retrofit CP / Anode RequirementsProof chips:Egina | Usan | Akpo | Bonga | Imenco Norway | Nigerian ContentRight side:[Image tile 1: Metec anodes][Image tile 2: Anodes installed offshore][Image tile 3: Clamp-on CP / Imenco retrofit]
+
+Where to put project pictures
+Do not crowd the hero with all project photos.
+Put a section immediately below Hero 5:
+Proven Offshore Project Experience
+Use a grid like this:
+Project / Asset
+Visual
+Egina
+Project/anode image or offshore placeholder
+Usan
+Project/anode image
+Akpo
+Project/anode image
+Bonga
+Mooring chain / FPSO / clamp image
+Saipem SHR piles
+Anodes attached to piles
+Imenco retrofit CP
+Clamp-on CP product image
+This is where you show depth.
+
+My preferred image choices
+For Hero 5 itself:
+Main background: offshore platform / FPSO / sea environment 
+Tile 1: Metec anodes manufactured in Nigeria 
+Tile 2: anodes attached to offshore piles or structures 
+Tile 3: Imenco clamp-on retrofit CP system 
+This combination communicates:
+Nigeria manufacturing + offshore proof + asset-life extension.
+Avoid making the hero a project gallery. Keep the hero powerful, then put the full project proof section below.
+I want to use for imenco their youtube video. Where do I place
+Worked for a couple of seconds
+Place the Imenco YouTube video not inside the main Hero 5 background, but as a supporting video block immediately below the Hero 5 section.
+Why: the hero must stay clean and sell the message quickly. The Imenco video is powerful, but it should be used as proof and education, not as the first thing that competes with your headline.
+Best placement
+Hero 5: Corrosion Protection & Offshore Asset-Life Extensionâ”‚â”œâ”€â”€ Main hero messageâ”œâ”€â”€ CTA 1: Explore Corrosion Protectionâ”œâ”€â”€ CTA 2: Discuss Retrofit CP / Anode Requirementsâ”œâ”€â”€ Proof chips: Egina | Usan | Akpo | Bonga | Imenco Norwayâ”‚â†“Immediately below hero:Video section: Imenco Retrofit CP Technology
+Suggested section below Hero 5
+Imenco Norway Retrofit CP Technology
+Extending Offshore Asset Life Without Major Structural Replacement.
+For ageing offshore installations, retrofit cathodic protection can be a practical way to extend asset life, reduce welding risk and improve corrosion protection without major structural replacement.
+Through Metec West Africaâ€™s partnership with Imenco Norway, Nigerian-made sacrificial anodes can be integrated with proven clamp-on CP retrofit technology for offshore oil & gas assets, mooring systems, pipelines, tubulars and marine structures.
+Watch how Imenco retrofit CP systems support offshore asset-life extension.
+Then embed the YouTube video.
+CTA under video:
+Discuss Retrofit CP Application â†’ /rtqExplore Metec Corrosion Protection â†’ /solutions/corrosion-protection
+Layout idea
+[Left side]Headline + short explanation + CTA[Right side]Embedded YouTube video thumbnailPlay button overlay
+On mobile, stack it:
+TextVideoCTA buttons
+Do not do this
+Do not autoplay the YouTube video in the hero. It can slow the page, distract from the message, and may look too promotional.
+Better: use a strong thumbnail with a play button and title:
+â€œWatch: Imenco Clamp-On CP Retrofit Technologyâ€
+Where else to repeat it
+Use the same video again on:
+Corrosion Protection dedicated pageUnder a section called â€œRetrofit CP & Asset-Life Extensionâ€
+Nigerian Content / Metec + Imenco pageUnder a section called â€œInternational Technology + Nigerian-Made Anodesâ€
+Resources / Videos pageAs part of a technical education library 
+My recommendation: Hero introduces Imenco. The section below the hero shows the video. The dedicated Corrosion page explains the technology properly.
+
+
+HERO 6
+Advanced Digital & Additive Manufacturing
+We Are Turning Reverse Engineering Experience Into Africaâ€™s Manufacturing Future.
+NFGâ€™s move into Additive Manufacturing â€” better known as 3D printing â€” is built on over five decades of identifying, redesigning and manufacturing critical industrial parts through castings, machining, fabrication, material analysis and reverse engineering.
+Today, we combine 3D laser scanning, digital engineering, polymer 3D printing and metal Additive Manufacturing to support advanced part development for oil & gas, power stations, marine, heavy industry, critical national infrastructure and security-service applications.
+Our deeper mission is to expose young Nigerian engineers, technicians and industrial talent to the future of manufacturing â€” so they can help build, repair, localise and innovate in a fast-changing world.
+CTA 1: Explore Additive ManufacturingCTA 2: View 3D Printing Capabilities
+Suggested proof badges for Hero 6
+Use small chips under the CTAs:
+3D Laser ScanningDigital EngineeringPolymer 3D PrintingMetal Additive ManufacturingReverse EngineeringYouth Skills Development
+Where deeper proof should go
+Below the hero, create a section called:
+From Reverse Engineering to Additive Manufacturing
+Use a simple visual flow:
+NFG foundation
+Digital manufacturing future
+Part identification
+3D laser scanning
+Material understanding
+Digital engineering
+Pattern and polymer industrial parts
+Polymer 3D printing
+Complex industrial parts
+Metal Additive Manufacturing
+Manufacturing judgement
+Route selection and qualification
+Graduate trainees / young engineers
+Future industrial skills
+Callout line:
+Additive Manufacturing is not replacing NFGâ€™s foundry and machining experience. It is extending it into the future.
+
+Municipal Castings & Drainage Solutions
+Drainage Protects the Value and Security of Your Infrastructure.
+A factory, estate, road, port, airport, industrial yard or public facility can be worth millions â€” but poor drainage can slowly damage it. Flooding, erosion, blocked access, unsafe openings, dirt build-up, failed pavements and repeated repairs all reduce the value, safety and performance of the asset.
+NFG designs and manufactures ductile iron municipal castings, drainage gratings, manhole covers and custom access solutions to the BS EN 124 load-class standard â€” from pedestrian areas and estates to roads, ports, industrial yards and airport-grade applications.
+Built for Nigerian conditions â€” sand, oil, gravel, debris, heavy traffic and coastal corrosion exposure â€” our ductile iron solutions are engineered for strength, water flow, maintenance access and long service life, with hinged, bolted, lockable and custom-branded anti-theft options.
+For high-security locations such as presidential facilities, governorsâ€™ residences, embassies, airports, government buildings and critical infrastructure, NFG can provide special bolted, lockable and controlled-access cover designs that support inspection, access control and tamper resistance.
+Do not protect valuable infrastructure with weak concrete slabs, poor fabricated steel covers or unsuitable composite materials that can crack, bend, lift, block water flow or fail under Nigerian conditions.
+CTA 1: Request a Drainage ReviewCTA 2: Send Site Photos / Drawings
+Yes, this is a good selling point, but it must be written carefully. I would not use the word â€œterroristâ€ in the hero. It is too sensitive and can distract from the engineering message.
+The right language is:
+high-security sites, controlled access, tamper resistance, inspection readiness and asset protection.
+There is a real basis for this. The U.S. Secret Service says its protective mission includes protecting U.S. and visiting world leaders, and major event security guidance notes that manhole covers may be secured near special event venues as part of security preparation. (secretservice.gov)
+Here is the revised Hero 7:
+Municipal Castings & Drainage Solutions
+Drainage Protects the Value and Security of Your Infrastructure.
+A factory, estate, road, port, airport, industrial yard or public facility can be worth millions â€” but poor drainage can slowly damage it. Flooding, erosion, blocked access, unsafe openings, dirt build-up, failed pavements and repeated repairs all reduce the value, safety and performance of the asset.
+NFG designs and manufactures ductile iron municipal castings, drainage gratings, manhole covers and custom access solutions to the BS EN 124 load-class standard â€” from pedestrian areas and estates to roads, ports, industrial yards and airport-grade applications.
+Built for Nigerian conditions â€” sand, oil, gravel, debris, heavy traffic and coastal corrosion exposure â€” our ductile iron solutions are engineered for strength, water flow, maintenance access and long service life, with hinged, bolted, lockable and custom-branded anti-theft options.
+For high-security locations such as presidential facilities, governorsâ€™ residences, embassies, airports, government buildings and critical infrastructure, NFG can provide special bolted, lockable and controlled-access cover designs that support inspection, access control and tamper resistance.
+Do not protect valuable infrastructure with weak concrete slabs, poor fabricated steel covers or unsuitable composite materials that can crack, bend, lift, block water flow or fail under Nigerian conditions.
+CTA 1: Request a Drainage ReviewCTA 2: Send Site Photos / Drawings
+Suggested proof badges for Hero 7
+Use these chips under the CTAs:
+BS EN 124 Load ClassesDuctile IronCustom-Made CoversLockable Anti-Theft OptionsHigh-Security BoltingRoads â€¢ Estates â€¢ Ports â€¢ Airports
+Where to expand this on the page
+Add a subsection below the hero, not inside the hero:
+High-Security Access Covers for Sensitive Sites
+Some locations require more than ordinary drainage covers. Presidential facilities, governorsâ€™ residences, embassies, airports, military-sensitive public assets, government buildings and critical infrastructure require covers that can be inspected, secured and controlled.
+Use a small table:
+Requirement
+NFG design response
+Anti-theft
+Bolted, hinged or lockable covers
+Controlled access
+Special fasteners and access-control options
+Inspection readiness
+Covers that can be opened, inspected and re-secured
+Public identity
+Custom branding, crest or authority marking
+Heavy traffic
+Correct BS EN 124 load-class selection
+Nigerian site conditions
+Ductile iron strength, durability and maintainability
+Final line:
+For sensitive sites, a manhole cover is not just a cover. It is part of the siteâ€™s drainage, safety and access-control system.
+
