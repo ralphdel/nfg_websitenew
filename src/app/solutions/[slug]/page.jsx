@@ -4,9 +4,14 @@ import { MediaPlaceholder, PageHero, SectionList, TagList } from "@/components/c
 import { Button } from "@/components/common/Button";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { SignatureUptimeStrip } from "@/components/sections/SignatureUptimeSection";
+import {
+  AdditiveManufacturingFlowSection,
+  ReverseEngineeringProcessSection
+} from "@/components/sections/EngineeringUpgradeSections";
 import { getCertifications, getIndustries, getResourcesContent, getSignatureUptimeSection, getSolutionBySlug, getSolutions } from "@/lib/content";
 import Link from "next/link";
 import { corrosionProtectionPage } from "@/data/corrosionContent";
+import { additiveManufacturingPage, reverseEngineeringPage } from "@/data/engineeringUpgradeContent";
 
 function itemSlug(item) {
   if (!item) return "";
@@ -25,6 +30,34 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const page = await getSolutionBySlug(slug);
+  if (slug === "reverse-engineering") {
+    return {
+      title: reverseEngineeringPage.metaTitle,
+      description: reverseEngineeringPage.metaDescription,
+      openGraph: {
+        title: reverseEngineeringPage.metaTitle,
+        description: reverseEngineeringPage.metaDescription
+      },
+      twitter: {
+        title: reverseEngineeringPage.metaTitle,
+        description: reverseEngineeringPage.metaDescription
+      }
+    };
+  }
+  if (slug === "3d-printing-advanced-manufacturing") {
+    return {
+      title: additiveManufacturingPage.metaTitle,
+      description: additiveManufacturingPage.metaDescription,
+      openGraph: {
+        title: additiveManufacturingPage.metaTitle,
+        description: additiveManufacturingPage.metaDescription
+      },
+      twitter: {
+        title: additiveManufacturingPage.metaTitle,
+        description: additiveManufacturingPage.metaDescription
+      }
+    };
+  }
   if (slug === "corrosion-protection") {
     return {
       title: corrosionProtectionPage.metaTitle,
@@ -55,6 +88,42 @@ export default async function SolutionPage({ params }) {
       return industries.find((item) => item.slug === slug) || (typeof industry === "object" ? industry : null);
     })
     .filter(Boolean);
+
+  if (slug === "reverse-engineering") {
+    return (
+      <main>
+        <PageHero
+          eyebrow={reverseEngineeringPage.hero.eyebrow}
+          title={reverseEngineeringPage.hero.title}
+          body={reverseEngineeringPage.hero.body}
+          primaryCta={reverseEngineeringPage.hero.primaryCta}
+          secondaryCta={reverseEngineeringPage.hero.secondaryCta}
+          chips={reverseEngineeringPage.hero.chips}
+          theme="scan"
+        />
+        <ReverseEngineeringProcessSection section={reverseEngineeringPage.process} />
+        {page.showSignatureUptimeStrip === false ? null : <SignatureUptimeStrip section={signatureUptimeSection} />}
+      </main>
+    );
+  }
+
+  if (slug === "3d-printing-advanced-manufacturing") {
+    return (
+      <main>
+        <PageHero
+          eyebrow={additiveManufacturingPage.hero.eyebrow}
+          title={additiveManufacturingPage.hero.title}
+          body={additiveManufacturingPage.hero.body}
+          primaryCta={additiveManufacturingPage.hero.primaryCta}
+          secondaryCta={additiveManufacturingPage.hero.secondaryCta}
+          chips={additiveManufacturingPage.hero.chips}
+          theme="digital"
+        />
+        <AdditiveManufacturingFlowSection section={additiveManufacturingPage.flow} />
+        {page.showSignatureUptimeStrip === false ? null : <SignatureUptimeStrip section={signatureUptimeSection} />}
+      </main>
+    );
+  }
 
   if (slug === "corrosion-protection") {
     return (
