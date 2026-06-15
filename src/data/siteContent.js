@@ -565,13 +565,13 @@ export const solutions = [
     slug: "corrosion-protection",
     icon: Anchor,
     summary:
-      "Sacrificial anodes and corrosion-protection assemblies through Metec West Africa, with Imenco clamp integration for offshore retrofit applications.",
+      "Nigerian-made sacrificial anodes and cathodic protection solutions for offshore oil & gas, marine, power and coastal infrastructure, with retrofit CP support through Imenco Norway.",
     hero:
-      "Nigerian-made corrosion-protection capability for offshore, marine, ports, windmills, jetties, subsea structures and coastal infrastructure.",
+      "Corrosion protection is asset integrity, safety, production continuity and lifecycle protection for offshore and marine infrastructure.",
     customerProblems: ["Offshore corrosion", "Coastal exposure", "Retrofit difficulty", "Imported corrosion systems", "Nigerian Content requirements"],
     applications: ["Offshore oil and gas structures", "Marine vessels", "Ports", "Windmills", "Jetties", "Subsea structures", "Coastal infrastructure", "Power assets"],
     materials: ["Aluminium anodes", "Zinc anodes", "Non-ferrous corrosion-protection materials"],
-    technologies: ["Metec West Africa sacrificial anodes", "Imenco clamp integration", "Fabrication", "Machining"],
+    technologies: ["Metec West Africa sacrificial anodes", "Imenco retrofit CP support", "Fabrication", "Machining", "Inspection"],
     processSteps: ["Understand asset and exposure", "Select anode requirement", "Plan assembly or clamp integration", "Manufacture locally and support delivery"],
     media: ["corrosion-anodes.jpg"],
     cta: { label: "Discuss Corrosion Protection", href: "/rfq?type=corrosion" },
