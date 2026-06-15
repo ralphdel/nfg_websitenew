@@ -321,6 +321,42 @@ function normalizeHeroSlides(slides, fallbackSlides = [], signatureHeroSlide = f
   return [normalized[0], signatureSlide, ...normalized.slice(1)];
 }
 
+function hasPlayableHeroMedia(media) {
+  return Boolean(media?.playbackId || media?.videoFileUrl || media?.videoUrl);
+}
+
+function mergeHomepageHeroMedia(homepageSlides, fallbackSlides = [], signatureHeroSlide = fallback.signatureUptimeHeroSlide) {
+  const localSlides = normalizeHeroSlides(fallbackSlides, fallbackSlides, signatureHeroSlide);
+  const cmsSlides = normalizeHeroSlides(homepageSlides, fallbackSlides, signatureHeroSlide);
+
+  return localSlides.map((slide, index) => {
+    const cmsMedia = cmsSlides[index]?.media;
+    if (!cmsMedia) return slide;
+
+    const playableVideo = hasPlayableHeroMedia(cmsMedia);
+    const mergedMedia = {
+      ...slide.media,
+      ...cmsMedia,
+      desktopImage: cmsMedia.desktopImage || slide.media?.desktopImage,
+      mobileImage: cmsMedia.mobileImage || slide.media?.mobileImage || slide.media?.desktopImage,
+      posterImage: cmsMedia.posterImage || slide.media?.posterImage || slide.media?.desktopImage,
+      mediaType: playableVideo ? "video" : "image",
+      videoAutoplay: false
+    };
+
+    if (!playableVideo) {
+      mergedMedia.playbackId = undefined;
+      mergedMedia.videoFileUrl = undefined;
+      mergedMedia.videoUrl = undefined;
+    }
+
+    return {
+      ...slide,
+      media: mergedMedia
+    };
+  });
+}
+
 function shouldUseLocalHomepageHero(homepageSlides) {
   const firstHeadline = homepageSlides?.[0]?.headline || "";
   const firstEyebrow = homepageSlides?.[0]?.eyebrow || "";
@@ -610,6 +646,7 @@ function normalizeCollections(raw = {}) {
     useSignatureDoc && signatureDoc.heroSlide
       ? normalizeHeroSlide(signatureDoc.heroSlide, fallback.signatureUptimeHeroSlide, true)
       : fallback.signatureUptimeHeroSlide;
+  const useLocalHomepageHero = shouldUseLocalHomepageHero(homepage.heroSlides);
 
   return {
     source: raw.source || "fallback",
@@ -631,14 +668,12 @@ function normalizeCollections(raw = {}) {
     solutionsOverview,
     rtqFormConfig,
     homepage: {
-      heroSlides: normalizeHeroSlides(
-        shouldUseLocalHomepageHero(homepage.heroSlides) ? fallback.heroSlides : homepage.heroSlides,
-        fallback.heroSlides,
-        signatureHeroSlide
-      ),
+      heroSlides: useLocalHomepageHero
+        ? mergeHomepageHeroMedia(homepage.heroSlides, fallback.heroSlides, signatureHeroSlide)
+        : normalizeHeroSlides(homepage.heroSlides, fallback.heroSlides, signatureHeroSlide),
       signatureUptimeSection,
       trustBadges: normalizeCards(
-        shouldUseLocalHomepageHero(homepage.heroSlides) ? fallback.trustBadges : homepage.trustBadges,
+        useLocalHomepageHero ? fallback.trustBadges : homepage.trustBadges,
         certifications.filter((item) => item.displayOnHomepage).length
           ? certifications.filter((item) => item.displayOnHomepage)
           : fallback.trustBadges

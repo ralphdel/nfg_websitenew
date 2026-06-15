@@ -297,7 +297,7 @@ export const heroSlides = [
     primaryCta: { label: "Start Reverse Engineering", href: "/solutions/reverse-engineering" },
     secondaryCta: { label: "Upload Part / Drawing / Photo", href: "/rtq" },
     media: {
-      desktopImage: "/placeholders/hero/laser-scanning-part.jpg",
+      desktopImage: "/placeholders/hero/signature-uptime-solution.jpg",
       mobileImage: "/placeholders/hero/hero-laser-scanning.jpg",
       altText: "Laser scanning an industrial replacement part placeholder",
       caption: "Laser scanning, CAD and dimensional review",
@@ -377,7 +377,7 @@ export const heroSlides = [
     primaryCta: { label: "Explore Additive Manufacturing", href: "/solutions/3d-printing-advanced-manufacturing" },
     secondaryCta: { label: "View 3D Printing Capabilities", href: "/capabilities/additive-manufacturing" },
     media: {
-      desktopImage: "/placeholders/hero/vezapp-3d-printing-dashboard.jpg",
+      desktopImage: "/placeholders/hero/signature-uptime-solution.jpg",
       mobileImage: "/placeholders/hero/hero-vezapp-digital.jpg",
       altText: "Digital production control and advanced manufacturing placeholder",
       caption: "Vezapp, digital engineering and 3D printing",
