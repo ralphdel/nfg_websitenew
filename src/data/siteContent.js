@@ -269,7 +269,7 @@ export const heroSlides = [
     primaryCta: { label: "Send Us Your Part / Drawing", href: "/rtq" },
     secondaryCta: { label: "Explore Solutions", href: "/solutions" },
     media: {
-      desktopImage: "/placeholders/hero/foundry-pouring-or-industrial-floor.jpg",
+      desktopImage: "/placeholders/hero/signature-uptime-solution.jpg",
       mobileImage: "/placeholders/hero/hero-foundry-pouring.jpg",
       altText: "Foundry floor and industrial manufacturing operation placeholder",
       caption: "Foundry pouring or industrial floor photography",
@@ -320,7 +320,7 @@ export const heroSlides = [
     primaryCta: { label: "Explore Wear Solutions", href: "/solutions/wear-part-solutions" },
     secondaryCta: { label: "Send Worn Part / Drawing", href: "/rtq" },
     media: {
-      desktopImage: "/placeholders/hero/wear-parts-crusher-cement.jpg",
+      desktopImage: "/placeholders/hero/signature-uptime-solution.jpg",
       mobileImage: "/placeholders/hero/hero-wear-parts.jpg",
       altText: "Crusher, cement and mining wear-part placeholder",
       caption: "Crusher liners, chutes and heavy wear areas",
@@ -353,7 +353,7 @@ export const heroSlides = [
     primaryCta: { label: "Explore Corrosion Protection", href: "/solutions/corrosion-protection" },
     secondaryCta: { label: "Discuss Retrofit CP / Anode Requirements", href: "/rtq" },
     media: {
-      desktopImage: "/placeholders/hero/sacrificial-anodes-offshore.jpg",
+      desktopImage: "/placeholders/hero/signature-uptime-solution.jpg",
       mobileImage: "/placeholders/hero/hero-sacrificial-anodes.jpg",
       altText: "Sacrificial anodes and offshore corrosion protection placeholder",
       caption: "Metec West Africa sacrificial anode capability",
@@ -401,8 +401,8 @@ export const heroSlides = [
     primaryCta: { label: "Request a Drainage Review", href: "/rtq" },
     secondaryCta: { label: "Send Site Photos / Drawings", href: "/rtq" },
     media: {
-      desktopImage: "/placeholders/hero/maintenance-hole-cover-installed.jpg",
-      mobileImage: "/placeholders/hero/hero-wear-parts.jpg",
+      desktopImage: "/placeholders/hero/signature-uptime-solution.jpg",
+      mobileImage: "/placeholders/hero/signature-uptime-solution.jpg",
       altText: "Municipal castings and drainage access placeholder",
       caption: "Municipal castings and drainage access solutions",
       overlayOpacity: 0.7,

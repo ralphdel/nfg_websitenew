@@ -18,8 +18,8 @@ export const drainageMunicipalPage = {
       "Roads / Estates / Ports / Airports"
     ],
     media: {
-      desktopImage: "/placeholders/hero/maintenance-hole-cover-installed.jpg",
-      mobileImage: "/placeholders/hero/maintenance-hole-cover-installed.jpg",
+      desktopImage: "/placeholders/hero/signature-uptime-solution.jpg",
+      mobileImage: "/placeholders/hero/signature-uptime-solution.jpg",
       altText: "Drainage and municipal castings placeholder",
       caption: "Drainage, access-cover and municipal casting solutions",
       overlayOpacity: 0.7,
