@@ -16,7 +16,7 @@ export const revalidate = 60;
 
 export async function generateStaticParams() {
   const solutions = await getSolutions();
-  return solutions.map((item) => ({ slug: item.slug }));
+  return solutions.filter((item) => item.slug !== "wear-part-solutions").map((item) => ({ slug: item.slug }));
 }
 
 export async function generateMetadata({ params }) {

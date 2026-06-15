@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/common/Button";
 import { MuxVideoPlayer } from "@/components/common/MuxVideoPlayer";
 
-export function PageHero({ eyebrow, title, body, primaryCta, secondaryCta, theme = "foundry", media }) {
+export function PageHero({ eyebrow, title, body, primaryCta, secondaryCta, tertiaryCta, chips = [], theme = "foundry", media }) {
   return (
     <section className={`page-hero page-hero-${theme}`}>
       <div className="container page-hero-grid">
@@ -14,8 +14,10 @@ export function PageHero({ eyebrow, title, body, primaryCta, secondaryCta, theme
             <div className="hero-actions">
               {primaryCta ? <Button href={primaryCta.href}>{primaryCta.label}</Button> : null}
               {secondaryCta ? <Button href={secondaryCta.href} variant="ghost">{secondaryCta.label}</Button> : null}
+              {tertiaryCta ? <Button href={tertiaryCta.href} variant="ghost">{tertiaryCta.label}</Button> : null}
             </div>
           ) : null}
+          {chips.length ? <TagList items={chips} light /> : null}
         </div>
         <MediaPlaceholder label={eyebrow || title} alt={media?.altText || `${title} media placeholder`} theme={theme} media={media} />
       </div>
