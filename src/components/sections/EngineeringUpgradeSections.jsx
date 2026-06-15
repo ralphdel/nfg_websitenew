@@ -73,3 +73,91 @@ export function AdditiveManufacturingFlowSection({ section }) {
     </section>
   );
 }
+
+export function DrainageMunicipalUpgradeSections({ page }) {
+  if (!page) return null;
+
+  return (
+    <>
+      <section className="section section-off">
+        <div className="container">
+          <SectionHeader align="left" title={page.valueSection.title} body={page.valueSection.body} />
+          <div className="grid grid-3">
+            {page.valueSection.cards.map((card) => (
+              <Card title={card.title} body={card.body} key={card.title} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <SectionHeader align="left" title={page.solutionsSection.title} body={page.solutionsSection.body} />
+          <div className="content-block">
+            <div className="list-grid">
+              {page.solutionsSection.items.map((item) => (
+                <article key={item}>
+                  <span />
+                  <p>{item}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-off">
+        <div className="container">
+          <SectionHeader align="left" title={page.securitySection.title} body={page.securitySection.body} />
+          <div className="wear-route-table-wrap">
+            <table className="wear-route-table">
+              <thead>
+                <tr>
+                  <th>Requirement</th>
+                  <th>NFG design response</th>
+                </tr>
+              </thead>
+              <tbody>
+                {page.securitySection.rows.map((row) => (
+                  <tr key={row.requirement}>
+                    <td>{row.requirement}</td>
+                    <td>{row.response}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="content-block" style={{ marginTop: "24px" }}>
+            <h2>{page.securitySection.callout}</h2>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="content-block">
+            <p className="eyebrow">Engineering note</p>
+            <h2>{page.warningSection.title}</h2>
+            <p>{page.warningSection.body}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="final-cta">
+        <div className="container final-grid">
+          <div>
+            <p className="eyebrow">Drainage review</p>
+            <h2>{page.finalCta.title}</h2>
+            <p>{page.finalCta.body}</p>
+            <div className="cta-actions">
+              <Button href={page.finalCta.primaryCta.href}>{page.finalCta.primaryCta.label}</Button>
+              <Button href={page.finalCta.secondaryCta.href} variant="ghost">
+                {page.finalCta.secondaryCta.label}
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

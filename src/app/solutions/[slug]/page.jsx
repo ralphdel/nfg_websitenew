@@ -5,12 +5,14 @@ import { Button } from "@/components/common/Button";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { SignatureUptimeStrip } from "@/components/sections/SignatureUptimeSection";
 import {
+  DrainageMunicipalUpgradeSections,
   AdditiveManufacturingFlowSection,
   ReverseEngineeringProcessSection
 } from "@/components/sections/EngineeringUpgradeSections";
 import { getCertifications, getIndustries, getResourcesContent, getSignatureUptimeSection, getSolutionBySlug, getSolutions } from "@/lib/content";
 import Link from "next/link";
 import { corrosionProtectionPage } from "@/data/corrosionContent";
+import { drainageMunicipalPage } from "@/data/drainageContent";
 import { additiveManufacturingPage, reverseEngineeringPage } from "@/data/engineeringUpgradeContent";
 
 function itemSlug(item) {
@@ -62,6 +64,20 @@ export async function generateMetadata({ params }) {
     return {
       title: corrosionProtectionPage.metaTitle,
       description: corrosionProtectionPage.metaDescription
+    };
+  }
+  if (slug === "drainage-municipal-castings") {
+    return {
+      title: drainageMunicipalPage.metaTitle,
+      description: drainageMunicipalPage.metaDescription,
+      openGraph: {
+        title: drainageMunicipalPage.metaTitle,
+        description: drainageMunicipalPage.metaDescription
+      },
+      twitter: {
+        title: drainageMunicipalPage.metaTitle,
+        description: drainageMunicipalPage.metaDescription
+      }
     };
   }
   return {
@@ -252,6 +268,25 @@ export default async function SolutionPage({ params }) {
           </div>
         </section>
 
+        {page.showSignatureUptimeStrip === false ? null : <SignatureUptimeStrip section={signatureUptimeSection} />}
+      </main>
+    );
+  }
+
+  if (slug === "drainage-municipal-castings") {
+    return (
+      <main>
+        <PageHero
+          eyebrow={drainageMunicipalPage.hero.eyebrow}
+          title={drainageMunicipalPage.hero.title}
+          body={drainageMunicipalPage.hero.body}
+          primaryCta={drainageMunicipalPage.hero.primaryCta}
+          secondaryCta={drainageMunicipalPage.hero.secondaryCta}
+          chips={drainageMunicipalPage.hero.chips}
+          theme="foundry"
+          media={drainageMunicipalPage.hero.media}
+        />
+        <DrainageMunicipalUpgradeSections page={drainageMunicipalPage} />
         {page.showSignatureUptimeStrip === false ? null : <SignatureUptimeStrip section={signatureUptimeSection} />}
       </main>
     );
