@@ -17,6 +17,9 @@ export function Hero({ slides = heroSlides }) {
   const lastWheelSlideAt = useRef(0);
   const activeSlide = useMemo(() => slides[activeIndex] || slides[0], [activeIndex, slides]);
   const isPaused = hoverPaused || userPaused || reducedMotion;
+  const bodyParagraphs = Array.isArray(activeSlide?.bodyParagraphs)
+    ? activeSlide.bodyParagraphs.filter((paragraph) => typeof paragraph === "string" && paragraph.trim())
+    : [];
   const heroPoster = activeSlide?.media?.posterImage;
   const heroImage = activeSlide?.media?.desktopImage || heroPoster;
   const playbackId = activeSlide?.media?.playbackId;
@@ -144,7 +147,17 @@ export function Hero({ slides = heroSlides }) {
         <div className="hero-copy">
           <p className="hero-kicker">{activeSlide.eyebrow}</p>
           <h1>{activeSlide.headline}</h1>
-          <p className="hero-sub">{activeSlide.subheadline}</p>
+          {bodyParagraphs.length ? (
+            <div className="hero-subcopy">
+              {bodyParagraphs.map((paragraph) => (
+                <p className="hero-sub" key={paragraph}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          ) : (
+            <p className="hero-sub">{activeSlide.body || activeSlide.subheadline}</p>
+          )}
           {activeSlide.specificationTable && (
             <div className="hero-spec-table-container">
               {activeSlide.specificationTable.title && (

@@ -493,6 +493,12 @@ strong {
   line-height: 1.62;
 }
 
+.hero-subcopy {
+  display: grid;
+  gap: 14px;
+  max-width: 700px;
+}
+
 .hero-spec-table-container {
   margin-top: 20px;
   background: rgba(255, 255, 255, 0.05);
@@ -1272,6 +1278,72 @@ strong {
   margin: 0;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.68;
+}
+
+.signature-planning-block {
+  margin-bottom: 28px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 12px 34px rgba(13, 34, 64, 0.06);
+}
+
+.signature-planning-block h3 {
+  margin: 0 0 16px;
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.18;
+}
+
+.signature-planning-table-wrap {
+  overflow-x: auto;
+}
+
+.signature-planning-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+}
+
+.signature-planning-table th,
+.signature-planning-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.signature-planning-table th {
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--off);
+}
+
+.signature-planning-table td {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.signature-planning-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.signature-planning-callout {
+  margin-top: 16px;
+  padding: 16px 18px;
+  border-left: 4px solid var(--amber);
+  border-radius: 8px;
+  color: var(--navy);
+  background: linear-gradient(135deg, rgba(245, 166, 35, 0.12), rgba(248, 250, 252, 0.96));
+  font-weight: 700;
+  line-height: 1.6;
 }
 
 .signature-stocking-block {

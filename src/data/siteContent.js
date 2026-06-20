@@ -68,7 +68,13 @@ export const siteSettings = {
 
 export const signatureUptimeHeroSlide = {
   eyebrow: "NFG Signature Uptime Solution",
-  headline: "Let Us Plan Together. Respond Fast. Protect Your Production.",
+  headline: "Let Us Plan Together. Respond Fast. Protect your Production.",
+  bodyParagraphs: [
+    "When a critical part fails, the real cost is not just the part — it is lost production, waiting time, emergency pressure and money lost by the hour.",
+    "NFG supports industries through a two-pronged signature approach: planned critical-parts support before shutdowns, and emergency manufacturing support when unexpected failures occur.",
+    "Planning must happen on both sides. Your maintenance, planning and procurement teams must align early with NFG Sales Engineers. In the meantime, NFG prepares raw materials, production routes, tooling, capacity, machining, inspection and delivery priorities. The earlier we plan together, the better we can protect uptime.",
+    "Prioritise local Naira-based manufacturing where Nigerian capacity exists, and use valuable forex only where local support is unavailable. Avoid the hidden costs of late planning, delayed approvals, incorrect specifications, import uncertainty, and plant downtime."
+  ],
   subheadline:
     "When a critical part fails, the real cost is not just the part - it is lost production, waiting time, emergency pressure and money lost by the hour. NFG supports industries through a two-pronged signature approach: planned critical-parts support before shutdowns, and emergency manufacturing support when unexpected failures occur. Client maintenance, planning and procurement teams must align early with NFG Sales Engineers while NFG prepares raw materials, production routes, tooling, capacity, machining, inspection and delivery priorities.",
   primaryCta: { label: "Plan Critical Parts With NFG", href: "/solutions#signature-uptime-solution" },
@@ -138,6 +144,19 @@ export const signatureUptimeSection = {
   hiddenCostHeadline: "The Cheapest Part Is Not Always the Lowest-Cost Solution.",
   hiddenCostBody:
     "Clients often compare only the overseas part price. But the hidden cost starts when the requirement is discussed too late: poor planning, delayed approvals, missing documents, wrong specifications, import uncertainty, documentation delays, emergency pressure and lost production while the plant waits. NFG helps clients think differently: prioritise local Naira-based manufacturing where Nigerian capacity exists, and use valuable forex only where no local support is available.",
+  planningBlock: {
+    title: "Planning Must Happen on Both Sides",
+    headers: ["Client side must plan", "NFG must plan"],
+    rows: [
+      ["Maintenance identifies critical parts", "Raw materials"],
+      ["Planning shares shutdown dates", "Production slots"],
+      ["Procurement starts approvals early", "Tooling and methoding"],
+      ["Operations confirms urgency", "Machining and inspection"],
+      ["Stores agree on minimum stock levels", "Delivery priorities"]
+    ],
+    callout:
+      "Good delivery is not magic. It is joint planning between the client's maintenance, planning and procurement teams - and NFG's manufacturing system."
+  },
   stockingHeadline: "Consignment Stocking for Critical Repeat Parts",
   stockingBody:
     "After a first successful supply, NFG and the client can agree on minimum stock levels or consignment stocking for selected repeat parts. This gives the client faster emergency replacement options and helps NFG plan raw materials and production more efficiently. The goal is fewer surprises, better delivery discipline and less plant waiting time.",
@@ -264,6 +283,10 @@ export const heroSlides = [
   {
     eyebrow: "Trusted Since 1969 • Built for Industrial Resilience",
     headline: "We Are The Manufacturing Backbone Helping Nigeria and West Africa's Industries Stay Productive.",
+    bodyParagraphs: [
+      "When global supply chains are unstable, local manufacturing capacity for parts becomes essential. NFG helps cement plants, mines, quarries, infrastructure projects, and offshore assets reduce their dependence on uncertain imports by identifying, reverse-engineering, and locally manufacturing practical solutions for parts that break, wear out, corrode, or become obsolete.",
+      "Through Ferrous and Non-Ferrous foundry casting, machining, fabrication, wear solutions, corrosion protection, digital engineering, and additive manufacturing, we support the industries that keep Nigeria and West Africa working — helping them become more self-reliant, resilient, and able to withstand disruption."
+    ],
     subheadline:
       "When global supply chains are unstable, local manufacturing capacity for parts becomes essential. NFG helps cement plants, mines, quarries, infrastructure projects and offshore assets reduce dependence on uncertain imports by identifying, reverse-engineering and locally manufacturing practical solutions for parts that break, wear out, corrode or become obsolete. Ferrous and non-ferrous foundry casting, machining, fabrication, wear solutions, corrosion protection, digital engineering and additive manufacturing keep that response practical.",
     primaryCta: { label: "Send Us Your Part / Drawing", href: "/rtq" },
@@ -292,6 +315,11 @@ export const heroSlides = [
   {
     eyebrow: "Reverse engineering",
     headline: "No Drawing? No OEM Support? We Can Start With What You Have.",
+    bodyParagraphs: [
+      "When a part is broken, worn, obsolete or unsupported by the OEM, the problem is not only the missing drawing. The real challenge is understanding the part, the material, the failure, the operating condition and the best way to manufacture it locally.",
+      "NFG helps clients move from uncertainty to a practical manufacturing route. Whether you have a sample part, an old drawing, a photo, rough dimensions, or only the equipment details, we can identify the part, study how it works, and develop the data needed for production.",
+      "Using 3D laser scanning, dimensional checks, OES spectro analysis, CAD drawings and rapid prototyping, we confirm geometry, material direction and design intent — then select the right route: casting, machining, fabrication, Hardox® wear solutions, Enduraclad® CCO, sacrificial anodes, polymer 3D printing, metal additive manufacturing or a combined solution."
+    ],
     subheadline:
       "When a part is broken, worn, obsolete or unsupported by the OEM, the real challenge is understanding the part, material, failure, operating condition and the best way to manufacture it locally. NFG helps clients move from uncertainty to a practical manufacturing route using sample parts, old drawings, photos, rough dimensions or equipment details. 3D laser scanning, dimensional checks, OES spectro analysis, CAD drawings, rapid prototyping and route selection help move the work forward.",
     primaryCta: { label: "Start Reverse Engineering", href: "/solutions/reverse-engineering" },
@@ -315,6 +343,11 @@ export const heroSlides = [
   {
     eyebrow: "Wear Solutions for Cement, Mining, Quarries & Dredging",
     headline: "Wear Is Not Just Damage. It Is Lost Production.",
+    bodyParagraphs: [
+      "In cement plants, mines, mineral-processing plants, quarries and dredging operations, wear attacks production every day through impact, abrasion, sliding wear, erosion, corrosion and repeated part failure.",
+      "NFG helps clients fight wear first through engineered foundry castings — manganese steel, high-chrome iron, Ni-Hard, moly-chrome and other wear alloys — supported by machining, fabrication, Hardox® wear plate solutions and Enduraclad® CCO technologies.",
+      "From crusher parts, liners, hammers, blow bars, pump parts and dredging components to chute liners, buckets, truck bodies, VRM wear areas and plant refurbishments, NFG helps clients select the right wear route, manufacture locally, plan repeat supply and respond when failures stop production."
+    ],
     subheadline:
       "In cement plants, mines, mineral-processing plants, quarries and dredging operations, wear attacks production every day through impact, abrasion, sliding wear, erosion, corrosion and repeated part failure. NFG helps clients fight wear first through engineered foundry castings - manganese steel, high-chrome iron, Ni-Hard, moly-chrome and other wear alloys - supported by machining, fabrication, Hardox® wear plate solutions and Enduraclad® CCO technologies.",
     primaryCta: { label: "Explore Wear Solutions", href: "/solutions/wear-part-solutions" },
@@ -339,6 +372,12 @@ export const heroSlides = [
   {
     eyebrow: "Corrosion Protection & Offshore Asset-Life Extension",
     headline: "Nigerian-Made Anodes Protecting Offshore Assets Where Failure Is Not an Option.",
+    bodyParagraphs: [
+      "Every offshore platform, FPSO, subsea pipeline, mooring system, vessel and marine structure fights corrosion every day. In offshore oil & gas, corrosion protection is not optional — it is asset integrity, safety, production continuity and lifecycle protection.",
+      "Through Metec West Africa, NFG manufactures sacrificial anodes and cathodic protection solutions in Nigeria for offshore oil & gas, marine, power and coastal infrastructure. Quality is critical: alloy chemistry, casting integrity, current output, testing and inspection determine whether the anode will protect the asset as designed.",
+      "Metec West Africa has supplied major operators and contractors, including Chevron, Shell, ExxonMobil, TotalEnergies, Samsung Heavy Industries, Saipem and FMC/OneSubsea, with project references including Egina, Usan, Akpo, Bonga and other offshore assets.",
+      "Through our partnership with Imenco Norway, we attach our Made-In-Nigeria anodes to the Imenco retrofit clamp-on cathodic protection systems for ageing offshore installations — helping extend asset life, reduce welding and diver intervention risks, and strengthen Nigerian Content in critical offshore integrity solutions."
+    ],
     subheadline:
       "Every offshore platform, FPSO, subsea pipeline, mooring system, vessel and marine structure fights corrosion every day. In offshore oil and gas, corrosion protection is asset integrity, safety, production continuity and lifecycle protection. Through Metec West Africa, NFG manufactures sacrificial anodes and cathodic protection solutions in Nigeria for offshore oil and gas, marine, power and coastal infrastructure, with Imenco Norway supporting retrofit CP applications where required.",
     specificationTable: {
@@ -372,6 +411,11 @@ export const heroSlides = [
   {
     eyebrow: "Advanced Digital & Additive Manufacturing",
     headline: "We Are Turning Reverse Engineering Experience Into Africa's Manufacturing Future.",
+    bodyParagraphs: [
+      "NFG’s move into Additive Manufacturing — better known as 3D printing — is built on over five decades of identifying, redesigning and manufacturing critical industrial parts through castings, machining, fabrication, material analysis and reverse engineering.",
+      "Today, we combine 3D laser scanning, digital engineering, polymer 3D printing and metal Additive Manufacturing to support advanced part development for oil & gas, power stations, marine, heavy industry, critical national infrastructure and security-service applications.",
+      "Our deeper mission is to expose young Nigerian engineers, technicians and industrial talent to the future of manufacturing — so they can help build, repair, localise and innovate in a fast-changing world."
+    ],
     subheadline:
       "NFG's move into Additive Manufacturing - better known as 3D printing - is built on over five decades of identifying, redesigning and manufacturing critical industrial parts through castings, machining, fabrication, material analysis and reverse engineering. Today, NFG combines 3D laser scanning, digital engineering, polymer 3D printing and metal additive manufacturing to support advanced part development for oil and gas, power stations, marine, heavy industry, critical national infrastructure and security-service applications.",
     primaryCta: { label: "Explore Additive Manufacturing", href: "/solutions/3d-printing-advanced-manufacturing" },
@@ -396,6 +440,13 @@ export const heroSlides = [
   {
     eyebrow: "Municipal Castings & Drainage Solutions",
     headline: "Drainage Protects the Value and Security of Your Infrastructure.",
+    bodyParagraphs: [
+      "A factory, estate, road, port, airport, industrial yard or public facility can be worth millions — but poor drainage can slowly damage it. Flooding, erosion, blocked access, unsafe openings, dirt build-up, failed pavements and repeated repairs all reduce the value, safety and performance of the asset.",
+      "NFG designs and manufactures ductile iron municipal castings, drainage gratings, manhole covers and custom access solutions to the BS EN 124 load-class standard — from pedestrian areas and estates to roads, ports, industrial yards and airport-grade applications.",
+      "Built for Nigerian conditions — sand, oil, gravel, debris, heavy traffic and coastal corrosion exposure — our ductile iron solutions are engineered for strength, water flow, maintenance access and long service life, with hinged, bolted, lockable and custom-branded anti-theft options.",
+      "For high-security locations such as presidential facilities, governors' residences, embassies, airports, government buildings and critical infrastructure, NFG can provide special bolted, lockable and controlled-access cover designs that support inspection, access control and tamper resistance.",
+      "Do not protect valuable infrastructure with weak concrete slabs, poor fabricated steel covers or unsuitable composite materials that can crack, bend, lift, block water flow or fail under Nigerian conditions."
+    ],
     subheadline:
       "A factory, estate, road, port, airport, industrial yard or public facility can be worth millions - but poor drainage can slowly damage it. NFG designs and manufactures ductile iron municipal castings, drainage gratings, manhole covers and custom access solutions to the BS EN 124 load-class standard - from pedestrian areas and estates to roads, ports, industrial yards and airport-grade applications. Built for Nigerian conditions - sand, oil, gravel, debris, heavy traffic and coastal corrosion exposure - NFG solutions are engineered for strength, water flow, maintenance access and long service life, with hinged, bolted, lockable and custom-branded anti-theft options. For high-security locations, NFG can provide bolted, lockable and controlled-access cover designs that support inspection, access control and tamper resistance.",
     primaryCta: { label: "Request a Drainage Review", href: "/rtq" },

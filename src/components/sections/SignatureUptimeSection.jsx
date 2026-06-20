@@ -77,10 +77,41 @@ export function HomepageSignatureUptimeSection({ section = fallbackSignatureUpti
 export function SolutionsSignatureUptimeSection({ section = fallbackSignatureUptimeSection }) {
   if (section.displayOnSolutionsPage === false) return null;
 
+  const planningBlock = section.planningBlock || fallbackSignatureUptimeSection.planningBlock;
+
   return (
     <section className="section section-off signature-full" id={section.anchorId || "signature-uptime-solution"}>
       <div className="container">
         <SectionHeader eyebrow={section.eyebrow} title={section.headline} body={section.introText} />
+
+        {planningBlock ? (
+          <div className="signature-planning-block">
+            <h3>{planningBlock.title}</h3>
+            <div className="signature-planning-table-wrap">
+              <table className="signature-planning-table">
+                <thead>
+                  <tr>
+                    {(planningBlock.headers || []).map((header) => (
+                      <th key={header} scope="col">
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {(planningBlock.rows || []).map((row) => (
+                    <tr key={row.join(" | ")}>
+                      {row.map((cell) => (
+                        <td key={cell}>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {planningBlock.callout ? <p className="signature-planning-callout">{planningBlock.callout}</p> : null}
+          </div>
+        ) : null}
 
         <div className="signature-two-column">
           <article className="signature-panel">

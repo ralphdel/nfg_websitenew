@@ -135,6 +135,11 @@ function hasItems(value) {
   return Array.isArray(value) && value.length > 0;
 }
 
+function normalizeParagraphArray(value) {
+  if (!Array.isArray(value)) return [];
+  return value.map((item) => (typeof item === "string" ? item.trim() : "")).filter(Boolean);
+}
+
 function normalizeSlug(slug) {
   if (!slug) return "";
   if (typeof slug === "string") return slug;
@@ -290,9 +295,19 @@ function stepsToStrings(steps, fallbackItems = []) {
 
 function normalizeHeroSlide(slide, fallbackSlide = {}, sourceHasSlides = false) {
   const source = slide || {};
+  const sourceParagraphs = normalizeParagraphArray(source.bodyParagraphs);
+  const fallbackParagraphs = normalizeParagraphArray(fallbackSlide.bodyParagraphs);
+  const sourceBody = source.body || source.subheadline || "";
+  const fallbackBody = fallbackSlide.body || fallbackSlide.subheadline || "";
+  const resolvedBodyParagraphs = sourceParagraphs.length ? sourceParagraphs : sourceBody ? [] : fallbackParagraphs;
+  const resolvedBody = sourceBody || fallbackBody || resolvedBodyParagraphs.join(" ");
+
   return {
     ...fallbackSlide,
     ...source,
+    bodyParagraphs: resolvedBodyParagraphs,
+    body: resolvedBody || resolvedBodyParagraphs.join(" "),
+    subheadline: resolvedBody || resolvedBodyParagraphs.join(" "),
     primaryCta: normalizeCta(source.primaryCta, fallbackSlide.primaryCta),
     secondaryCta: normalizeCta(source.secondaryCta, fallbackSlide.secondaryCta),
     media: normalizeMedia(source.media, fallbackSlide.media),
@@ -330,8 +345,13 @@ function mergeHomepageHeroMedia(homepageSlides, fallbackSlides = [], signatureHe
   const cmsSlides = normalizeHeroSlides(homepageSlides, fallbackSlides, signatureHeroSlide);
 
   return localSlides.map((slide, index) => {
+    const cmsSlide = cmsSlides[index];
     const cmsMedia = cmsSlides[index]?.media;
     if (!cmsMedia) return slide;
+
+    const cmsBodyParagraphs = normalizeParagraphArray(cmsSlide?.bodyParagraphs);
+    const resolvedBodyParagraphs = cmsBodyParagraphs.length ? cmsBodyParagraphs : normalizeParagraphArray(slide.bodyParagraphs);
+    const resolvedBody = cmsSlide?.bodyParagraphs?.length ? cmsSlide.body || cmsSlide.subheadline || "" : slide.body || slide.subheadline || "";
 
     const playableVideo = hasPlayableHeroMedia(cmsMedia);
     const mergedMedia = {
@@ -352,6 +372,9 @@ function mergeHomepageHeroMedia(homepageSlides, fallbackSlides = [], signatureHe
 
     return {
       ...slide,
+      bodyParagraphs: resolvedBodyParagraphs,
+      body: resolvedBody,
+      subheadline: resolvedBody,
       media: mergedMedia
     };
   });
@@ -360,6 +383,7 @@ function mergeHomepageHeroMedia(homepageSlides, fallbackSlides = [], signatureHe
 function shouldUseLocalHomepageHero(homepageSlides) {
   const firstHeadline = homepageSlides?.[0]?.headline || "";
   const firstEyebrow = homepageSlides?.[0]?.eyebrow || "";
+  const firstBody = homepageSlides?.[0]?.body || homepageSlides?.[0]?.subheadline || "";
   const firstSupportText = homepageSlides?.[0]?.supportText || "";
   const secondHeadline = homepageSlides?.[1]?.headline || "";
 
@@ -367,6 +391,8 @@ function shouldUseLocalHomepageHero(homepageSlides) {
     firstHeadline.includes("Local Manufacturing Backbone") ||
     firstHeadline.includes("We Keep Africa's Industries Growing") ||
     firstEyebrow.includes("Supporting and Building Industrial Resilience") ||
+    firstBody.includes("industries cannot depend only on overseas supply") ||
+    firstBody.includes("Pandemics, wars, shipping disruptions") ||
     firstSupportText.includes("Through castings, machining, fabrication, wear solutions, corrosion protection, digital engineering and additive manufacturing") ||
     secondHeadline.includes("Plan Together. Respond Fast. Protect Production.")
   );
@@ -410,6 +436,10 @@ function normalizeSignatureUptimeSection(section, fallbackSection = fallback.sig
     routesBanner: {
       ...fallbackSection.routesBanner,
       ...(source.routesBanner || {})
+    },
+    planningBlock: {
+      ...(fallbackSection.planningBlock || {}),
+      ...(source.planningBlock || {})
     },
     strip: {
       ...fallbackSection.strip,

@@ -66,6 +66,7 @@ export const heroSlideFields = `
   eyebrow,
   headline,
   subheadline,
+  bodyParagraphs,
   supportText,
   media{${imageFields}},
   primaryCta{${ctaFields}},

@@ -225,6 +225,14 @@ export const heroSlide = defineType({
       description: "Main supporting copy shown under the headline. Use the table below only when this slide needs structured values.",
       fieldset: "content"
     }),
+    defineField({
+      name: "bodyParagraphs",
+      title: "Body Paragraphs",
+      type: "array",
+      of: [{ type: "text", rows: 3 }],
+      description: "Each item renders as one paragraph; use this for multi-paragraph hero copy; fallback to existing body when empty.",
+      fieldset: "content"
+    }),
     defineField({ name: "supportText", title: "Support text", type: "text", rows: 3, fieldset: "content" }),
     defineField({ name: "media", title: "Media", type: "mediaAsset", fieldset: "content" }),
     defineField({ name: "primaryCta", title: "Primary CTA", type: "cta", fieldset: "content" }),
