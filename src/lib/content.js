@@ -378,8 +378,7 @@ function mergeHomepageHeroMedia(homepageSlides, fallbackSlides = [], signatureHe
       desktopImage: cmsMedia.desktopImage || slide.media?.desktopImage,
       mobileImage: cmsMedia.mobileImage || slide.media?.mobileImage || slide.media?.desktopImage,
       posterImage: cmsMedia.posterImage || slide.media?.posterImage || slide.media?.desktopImage,
-      mediaType: playableVideo ? "video" : "image",
-      videoAutoplay: false
+      mediaType: playableVideo ? "video" : "image"
     };
 
     if (!playableVideo) {

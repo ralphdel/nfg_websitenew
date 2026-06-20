@@ -32,6 +32,7 @@ export function MediaPlaceholder({ label, alt, theme = "foundry", media }) {
   const image = media?.desktopImage || media?.image?.asset?.url || poster;
   const showVideo = media?.mediaType === "video" && (playbackId || video);
   const caption = showVideo ? media?.caption : "";
+  const shouldAutoplay = false;
 
   if (showVideo) {
     return (
@@ -48,7 +49,7 @@ export function MediaPlaceholder({ label, alt, theme = "foundry", media }) {
             playbackId={playbackId}
             isLazy={true}
             preload="none"
-            autoPlay={media?.videoAutoplay !== false}
+            autoPlay={shouldAutoplay}
             muted={true}
             loop={true}
             playsInline={true}
@@ -61,7 +62,7 @@ export function MediaPlaceholder({ label, alt, theme = "foundry", media }) {
           />
         ) : (
           <video
-            autoPlay={media?.videoAutoplay !== false}
+            autoPlay={shouldAutoplay}
             muted
             loop
             playsInline

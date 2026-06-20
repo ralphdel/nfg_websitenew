@@ -29,7 +29,7 @@ export function Hero({ slides = heroSlides }) {
   const playbackId = activeSlide?.media?.playbackId;
   const heroVideo = activeSlide?.media?.videoFileUrl || activeSlide?.media?.videoUrl;
   const showVideo = activeSlide?.media?.mediaType === "video" && (playbackId || heroVideo);
-  const heroShouldAutoplay = false;
+  const heroShouldAutoplay = showVideo && activeSlide.media?.videoAutoplay !== false && !reducedMotion;
   const mediaCaption = showVideo ? activeSlide?.media?.caption : "";
 
   useEffect(() => {
@@ -221,7 +221,7 @@ export function Hero({ slides = heroSlides }) {
                   playbackId={playbackId}
                   isLazy={activeIndex > 0}
                   preload={activeIndex === 0 ? "auto" : "none"}
-                  autoPlay={heroShouldAutoplay && activeSlide.media?.videoAutoplay !== false && !reducedMotion}
+                  autoPlay={heroShouldAutoplay}
                   muted
                   loop
                   playsInline
@@ -234,7 +234,7 @@ export function Hero({ slides = heroSlides }) {
               ) : (
                 <video
                   key={heroVideo}
-                  autoPlay={heroShouldAutoplay && activeSlide.media?.videoAutoplay !== false && !reducedMotion}
+                  autoPlay={heroShouldAutoplay}
                   muted
                   loop
                   controlsList="nodownload nofullscreen noplaybackrate noremoteplayback"
