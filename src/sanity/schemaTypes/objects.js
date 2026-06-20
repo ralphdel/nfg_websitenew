@@ -3,16 +3,18 @@ import { defineField, defineType } from "sanity";
 const videoAccept = "video/mp4,video/webm,video/ogg,video/quicktime";
 const videoFieldHidden = ({ parent }) => parent?.mediaType !== "video";
 
-function createHighlightableBlock(description) {
+function createHighlightableBlock() {
   return {
     type: "block",
-    ...(description ? { description } : {}),
+    styles: [{ title: "Normal", value: "normal" }],
+    lists: [],
     marks: {
       decorators: [
         { title: "Strong", value: "strong" },
         { title: "Emphasis", value: "em" },
         { title: "Yellow Highlight", value: "highlight" }
-      ]
+      ],
+      annotations: []
     }
   };
 }
@@ -251,13 +253,9 @@ export const heroSlide = defineType({
       name: "bodyRichText",
       title: "Body Rich Text",
       type: "array",
-      of: [
-        createHighlightableBlock(
-          "Each block becomes one paragraph. Use the Yellow Highlight mark only for words/phrases MD wants emphasized."
-        )
-      ],
       description:
-        "Use this when selected words need styling such as yellow highlight. Each block renders as a paragraph. Use the Yellow Highlight mark only for words/phrases MD wants emphasized.",
+        "Use this when selected words need styling such as yellow highlight. Each block renders as one paragraph. Use the Yellow Highlight mark only for words/phrases MD wants emphasized.",
+      of: [createHighlightableBlock()],
       fieldset: "content"
     }),
     defineField({ name: "supportText", title: "Support text", type: "text", rows: 3, fieldset: "content" }),
