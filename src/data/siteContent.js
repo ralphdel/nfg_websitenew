@@ -155,7 +155,7 @@ export const signatureUptimeSection = {
       ["Stores agree on minimum stock levels", "Delivery priorities"]
     ],
     callout:
-      "Good delivery is not magic. It is joint planning between the client's maintenance, planning and procurement teams - and NFG's manufacturing system."
+      "Good delivery is not magic. It is joint planning between the client’s maintenance, planning and procurement teams — and NFG’s manufacturing system."
   },
   stockingHeadline: "Consignment Stocking for Critical Repeat Parts",
   stockingBody:
