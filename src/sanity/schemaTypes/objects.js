@@ -3,6 +3,20 @@ import { defineField, defineType } from "sanity";
 const videoAccept = "video/mp4,video/webm,video/ogg,video/quicktime";
 const videoFieldHidden = ({ parent }) => parent?.mediaType !== "video";
 
+function createHighlightableBlock(description) {
+  return {
+    type: "block",
+    ...(description ? { description } : {}),
+    marks: {
+      decorators: [
+        { title: "Strong", value: "strong" },
+        { title: "Emphasis", value: "em" },
+        { title: "Yellow Highlight", value: "highlight" }
+      ]
+    }
+  };
+}
+
 export const seo = defineType({
   name: "seo",
   title: "SEO",
@@ -230,7 +244,20 @@ export const heroSlide = defineType({
       title: "Body Paragraphs",
       type: "array",
       of: [{ type: "text", rows: 3 }],
-      description: "Each item renders as one paragraph; use this for multi-paragraph hero copy; fallback to existing body when empty.",
+      description: "Use this for plain paragraph copy. Each item renders as one paragraph. Use Body Rich Text instead when selected words need Yellow Highlight styling.",
+      fieldset: "content"
+    }),
+    defineField({
+      name: "bodyRichText",
+      title: "Body Rich Text",
+      type: "array",
+      of: [
+        createHighlightableBlock(
+          "Each block becomes one paragraph. Use the Yellow Highlight mark only for words/phrases MD wants emphasized."
+        )
+      ],
+      description:
+        "Use this when selected words need styling such as yellow highlight. Each block renders as a paragraph. Use the Yellow Highlight mark only for words/phrases MD wants emphasized.",
       fieldset: "content"
     }),
     defineField({ name: "supportText", title: "Support text", type: "text", rows: 3, fieldset: "content" }),
@@ -474,7 +501,7 @@ export const portableContent = defineType({
   title: "Portable content",
   type: "array",
   of: [
-    { type: "block" },
+    createHighlightableBlock(),
     { type: "image", options: { hotspot: true } },
     { type: "file" }
   ]

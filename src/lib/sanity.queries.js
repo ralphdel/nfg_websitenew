@@ -66,6 +66,10 @@ export const heroSlideFields = `
   eyebrow,
   headline,
   subheadline,
+  bodyRichText[]{
+    ...,
+    markDefs[]{...}
+  },
   bodyParagraphs,
   supportText,
   media{${imageFields}},

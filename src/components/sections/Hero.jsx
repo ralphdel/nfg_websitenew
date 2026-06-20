@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 import { Button } from "@/components/common/Button";
 import { heroSlides } from "@/data/siteContent";
 import { MuxVideoPlayer } from "@/components/common/MuxVideoPlayer";
+import { RichText } from "@/components/common/RichText";
 
 const ROTATION_MS = 11000;
 
@@ -17,6 +18,9 @@ export function Hero({ slides = heroSlides }) {
   const lastWheelSlideAt = useRef(0);
   const activeSlide = useMemo(() => slides[activeIndex] || slides[0], [activeIndex, slides]);
   const isPaused = hoverPaused || userPaused || reducedMotion;
+  const bodyRichText = Array.isArray(activeSlide?.bodyRichText)
+    ? activeSlide.bodyRichText.filter((block) => block?._type === "block" && Array.isArray(block.children) && block.children.length)
+    : [];
   const bodyParagraphs = Array.isArray(activeSlide?.bodyParagraphs)
     ? activeSlide.bodyParagraphs.filter((paragraph) => typeof paragraph === "string" && paragraph.trim())
     : [];
@@ -147,7 +151,9 @@ export function Hero({ slides = heroSlides }) {
         <div className="hero-copy">
           <p className="hero-kicker">{activeSlide.eyebrow}</p>
           <h1>{activeSlide.headline}</h1>
-          {bodyParagraphs.length ? (
+          {bodyRichText.length ? (
+            <RichText value={bodyRichText} className="hero-subcopy" paragraphClassName="hero-sub" />
+          ) : bodyParagraphs.length ? (
             <div className="hero-subcopy">
               {bodyParagraphs.map((paragraph) => (
                 <p className="hero-sub" key={paragraph}>

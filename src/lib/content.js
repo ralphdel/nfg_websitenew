@@ -140,6 +140,11 @@ function normalizeParagraphArray(value) {
   return value.map((item) => (typeof item === "string" ? item.trim() : "")).filter(Boolean);
 }
 
+function normalizeRichTextBlocks(value) {
+  if (!Array.isArray(value)) return [];
+  return value.filter((block) => block?._type === "block" && Array.isArray(block.children) && block.children.length > 0);
+}
+
 function normalizeSlug(slug) {
   if (!slug) return "";
   if (typeof slug === "string") return slug;
@@ -295,16 +300,21 @@ function stepsToStrings(steps, fallbackItems = []) {
 
 function normalizeHeroSlide(slide, fallbackSlide = {}, sourceHasSlides = false) {
   const source = slide || {};
+  const sourceRichText = normalizeRichTextBlocks(source.bodyRichText);
+  const fallbackRichText = normalizeRichTextBlocks(fallbackSlide.bodyRichText);
   const sourceParagraphs = normalizeParagraphArray(source.bodyParagraphs);
   const fallbackParagraphs = normalizeParagraphArray(fallbackSlide.bodyParagraphs);
   const sourceBody = source.body || source.subheadline || "";
   const fallbackBody = fallbackSlide.body || fallbackSlide.subheadline || "";
-  const resolvedBodyParagraphs = sourceParagraphs.length ? sourceParagraphs : sourceBody ? [] : fallbackParagraphs;
+  const resolvedBodyRichText = sourceRichText.length ? sourceRichText : sourceParagraphs.length || sourceBody ? [] : fallbackRichText;
+  const resolvedBodyParagraphs =
+    resolvedBodyRichText.length ? [] : sourceParagraphs.length ? sourceParagraphs : sourceBody ? [] : fallbackParagraphs;
   const resolvedBody = sourceBody || fallbackBody || resolvedBodyParagraphs.join(" ");
 
   return {
     ...fallbackSlide,
     ...source,
+    bodyRichText: resolvedBodyRichText,
     bodyParagraphs: resolvedBodyParagraphs,
     body: resolvedBody || resolvedBodyParagraphs.join(" "),
     subheadline: resolvedBody || resolvedBodyParagraphs.join(" "),
@@ -349,9 +359,17 @@ function mergeHomepageHeroMedia(homepageSlides, fallbackSlides = [], signatureHe
     const cmsMedia = cmsSlides[index]?.media;
     if (!cmsMedia) return slide;
 
+    const cmsBodyRichText = normalizeRichTextBlocks(cmsSlide?.bodyRichText);
     const cmsBodyParagraphs = normalizeParagraphArray(cmsSlide?.bodyParagraphs);
-    const resolvedBodyParagraphs = cmsBodyParagraphs.length ? cmsBodyParagraphs : normalizeParagraphArray(slide.bodyParagraphs);
-    const resolvedBody = cmsSlide?.bodyParagraphs?.length ? cmsSlide.body || cmsSlide.subheadline || "" : slide.body || slide.subheadline || "";
+    const resolvedBodyRichText = cmsBodyRichText.length ? cmsBodyRichText : normalizeRichTextBlocks(slide.bodyRichText);
+    const resolvedBodyParagraphs = resolvedBodyRichText.length
+      ? []
+      : cmsBodyParagraphs.length
+        ? cmsBodyParagraphs
+        : normalizeParagraphArray(slide.bodyParagraphs);
+    const resolvedBody = cmsBodyRichText.length || cmsBodyParagraphs.length
+      ? cmsSlide.body || cmsSlide.subheadline || ""
+      : slide.body || slide.subheadline || "";
 
     const playableVideo = hasPlayableHeroMedia(cmsMedia);
     const mergedMedia = {
@@ -372,6 +390,7 @@ function mergeHomepageHeroMedia(homepageSlides, fallbackSlides = [], signatureHe
 
     return {
       ...slide,
+      bodyRichText: resolvedBodyRichText,
       bodyParagraphs: resolvedBodyParagraphs,
       body: resolvedBody,
       subheadline: resolvedBody,
