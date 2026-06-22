@@ -7,8 +7,33 @@ function normalizeStringArray(value) {
   return value.map((item) => (typeof item === "string" ? item.trim() : "")).filter(Boolean);
 }
 
+function normalizeBlockChildren(children) {
+  if (!Array.isArray(children)) return [];
+
+  return children.filter((child) => {
+    if (child?._type !== "span") return false;
+    return typeof child.text === "string" && child.text.trim();
+  });
+}
+
 function isPortableTextBlock(value) {
-  return value?._type === "block" && hasItems(value.children);
+  return value?._type === "block" && normalizeBlockChildren(value.children).length > 0;
+}
+
+export function hasMeaningfulPortableText(value) {
+  if (!Array.isArray(value) || !value.length) return false;
+  return value.some((block) => isPortableTextBlock(block));
+}
+
+export function normalizeMeaningfulPortableText(value) {
+  if (!hasMeaningfulPortableText(value)) return [];
+  return value
+    .filter((block) => block?._type === "block")
+    .map((block) => ({
+      ...block,
+      children: normalizeBlockChildren(block.children)
+    }))
+    .filter((block) => block.children.length > 0);
 }
 
 function getMarkKey(mark) {
@@ -29,7 +54,7 @@ function applyMarks(text, marks = [], keyPrefix = "mark") {
 }
 
 function renderBlockChildren(children = [], blockIndex = 0) {
-  return children.map((child, childIndex) => {
+  return normalizeBlockChildren(children).map((child, childIndex) => {
     if (child?._type !== "span") return null;
 
     const text = child.text || "";
@@ -65,9 +90,7 @@ export function RichText({ value, className = "", paragraphClassName = "" }) {
     );
   }
 
-  if (!hasItems(value)) return null;
-
-  const blocks = value.filter(isPortableTextBlock);
+  const blocks = normalizeMeaningfulPortableText(value);
   if (!blocks.length) return null;
 
   return (

@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 import { Button } from "@/components/common/Button";
 import { heroSlides } from "@/data/siteContent";
 import { MuxVideoPlayer } from "@/components/common/MuxVideoPlayer";
-import { RichText } from "@/components/common/RichText";
+import { hasMeaningfulPortableText, normalizeMeaningfulPortableText, RichText } from "@/components/common/RichText";
 
 const ROTATION_MS = 11000;
 
@@ -18,12 +18,15 @@ export function Hero({ slides = heroSlides }) {
   const lastWheelSlideAt = useRef(0);
   const activeSlide = useMemo(() => slides[activeIndex] || slides[0], [activeIndex, slides]);
   const isPaused = hoverPaused || userPaused || reducedMotion;
-  const bodyRichText = Array.isArray(activeSlide?.bodyRichText)
-    ? activeSlide.bodyRichText.filter((block) => block?._type === "block" && Array.isArray(block.children) && block.children.length)
-    : [];
+  const bodyRichText = normalizeMeaningfulPortableText(activeSlide?.bodyRichText);
   const bodyParagraphs = Array.isArray(activeSlide?.bodyParagraphs)
     ? activeSlide.bodyParagraphs.filter((paragraph) => typeof paragraph === "string" && paragraph.trim())
     : [];
+  const legacyBody = typeof activeSlide?.body === "string" && activeSlide.body.trim()
+    ? activeSlide.body.trim()
+    : typeof activeSlide?.subheadline === "string" && activeSlide.subheadline.trim()
+      ? activeSlide.subheadline.trim()
+      : "";
   const heroPoster = activeSlide?.media?.posterImage;
   const heroImage = activeSlide?.media?.desktopImage || heroPoster;
   const playbackId = activeSlide?.media?.playbackId;
@@ -154,7 +157,7 @@ export function Hero({ slides = heroSlides }) {
         <div className="hero-copy">
           <p className="hero-kicker">{activeSlide.eyebrow}</p>
           <h1>{activeSlide.headline}</h1>
-          {bodyRichText.length ? (
+          {hasMeaningfulPortableText(bodyRichText) ? (
             <RichText value={bodyRichText} className="hero-subcopy" paragraphClassName="hero-sub" />
           ) : bodyParagraphs.length ? (
             <div className="hero-subcopy">
@@ -164,9 +167,9 @@ export function Hero({ slides = heroSlides }) {
                 </p>
               ))}
             </div>
-          ) : (
-            <p className="hero-sub">{activeSlide.body || activeSlide.subheadline}</p>
-          )}
+          ) : legacyBody ? (
+            <p className="hero-sub">{legacyBody}</p>
+          ) : null}
           {activeSlide.specificationTable && (
             <div className="hero-spec-table-container">
               {activeSlide.specificationTable.title && (

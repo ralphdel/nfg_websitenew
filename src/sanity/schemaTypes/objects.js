@@ -293,7 +293,8 @@ export const heroSlide = defineType({
       title: "Body Paragraphs",
       type: "array",
       of: [{ type: "text", rows: 3 }],
-      description: "Use this for plain paragraph copy. Each item renders as one paragraph. Use Body Rich Text instead when selected words need Yellow Highlight styling.",
+      description:
+        "Use this for plain paragraph copy. Each item renders as one paragraph. If Body Rich Text has meaningful content, Body Rich Text is used instead.",
       fieldset: "content"
     }),
     defineField({
@@ -301,7 +302,7 @@ export const heroSlide = defineType({
       title: "Body Rich Text",
       type: "array",
       description:
-        "Use this when selected words need styling such as yellow highlight. Each block renders as one paragraph. Use the Yellow Highlight mark only for words/phrases MD wants emphasized.",
+        "Optional. Use this only when selected words need yellow-highlight styling. Copy/write the full paragraph text here, then highlight only the selected words/phrases. If this field is empty, the website uses Body Paragraphs.",
       of: [createHighlightableBlock()],
       fieldset: "content"
     }),

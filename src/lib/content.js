@@ -140,9 +140,27 @@ function normalizeParagraphArray(value) {
   return value.map((item) => (typeof item === "string" ? item.trim() : "")).filter(Boolean);
 }
 
+function normalizeRichTextChildren(children) {
+  if (!Array.isArray(children)) return [];
+  return children.filter((child) => child?._type === "span" && typeof child.text === "string" && child.text.trim());
+}
+
+function hasMeaningfulPortableText(value) {
+  if (!Array.isArray(value) || !value.length) return false;
+  return value.some(
+    (block) => block?._type === "block" && normalizeRichTextChildren(block.children).length > 0
+  );
+}
+
 function normalizeRichTextBlocks(value) {
-  if (!Array.isArray(value)) return [];
-  return value.filter((block) => block?._type === "block" && Array.isArray(block.children) && block.children.length > 0);
+  if (!hasMeaningfulPortableText(value)) return [];
+  return value
+    .filter((block) => block?._type === "block")
+    .map((block) => ({
+      ...block,
+      children: normalizeRichTextChildren(block.children)
+    }))
+    .filter((block) => block.children.length > 0);
 }
 
 function normalizeSlug(slug) {

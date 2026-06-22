@@ -20,10 +20,11 @@ test("homepage returns 200 and key hero/trust content renders", async ({ page, r
 
 test("hero slide 2 copy renders in paragraphs and image fallback stays safe", async ({ page }) => {
   await page.goto("/");
-  await page.getByRole("tab", { name: `Show slide 2: ${hero2Headline}` }).click();
-
-  await expect(page.getByRole("heading", { name: hero2Headline })).toBeVisible();
+  await expect(page.locator(".hero-copy h1")).toHaveText(hero2Headline, { timeout: 15000 });
   await expect(page.locator(".hero-copy .hero-subcopy .hero-sub")).toHaveCount(4);
+  await expect(page.locator(".hero-copy .hero-subcopy .hero-sub").first()).toContainText(
+    "When a critical part fails, the real cost is not just the part"
+  );
   await expect(page.locator(".hero-media-frame img")).toBeVisible();
   await expect(page.locator(".hero-media-frame mux-player, .hero-media-frame video")).toHaveCount(0);
 });
