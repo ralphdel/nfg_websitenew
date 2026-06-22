@@ -16,9 +16,6 @@
     "sanity:seed": "node scripts/seed-sanity.mjs",
     "sanity:seed:replace": "node scripts/seed-sanity.mjs --replace"
   },
-  "devDependencies": {
-    "@playwright/test": "^1.56.0"
-  },
   "dependencies": {
     "@mux/mux-player-react": "^3.13.0",
     "@sanity/client": "^7.22.0",
