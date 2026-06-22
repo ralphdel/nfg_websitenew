@@ -8,8 +8,16 @@
     "build": "next build",
     "start": "next start",
     "studio": "sanity dev",
+    "qa:build": "npx next typegen && npm run build",
+    "qa:e2e": "playwright test",
+    "qa:e2e:headed": "playwright test --headed",
+    "qa:e2e:ui": "playwright test --ui",
+    "qa:e2e:report": "playwright show-report",
     "sanity:seed": "node scripts/seed-sanity.mjs",
     "sanity:seed:replace": "node scripts/seed-sanity.mjs --replace"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0"
   },
   "dependencies": {
     "@mux/mux-player-react": "^3.13.0",
@@ -27,5 +35,8 @@
   },
   "overrides": {
     "postcss": "8.5.12"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.0"
   }
 }
