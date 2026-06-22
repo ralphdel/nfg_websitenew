@@ -1,8 +1,5 @@
 import { defineField, defineType } from "sanity";
 
-const videoAccept = "video/mp4,video/webm,video/ogg,video/quicktime";
-const videoFieldHidden = ({ parent }) => parent?.mediaType !== "video";
-
 function createHighlightableBlock() {
   return {
     type: "block",
@@ -36,40 +33,54 @@ export const mediaAsset = defineType({
   name: "mediaAsset",
   title: "Media asset",
   type: "object",
+  initialValue: {
+    mediaType: "image",
+    videoAutoplay: true,
+    videoMuted: true,
+    videoLoop: true,
+    videoPlaysInline: true,
+    videoAspectRatio: "16 / 9",
+    videoObjectFit: "cover",
+    theme: "foundry",
+    overlayOpacity: 0.68
+  },
   fields: [
     defineField({
       name: "mediaType",
       title: "Media type",
       type: "string",
       options: { list: ["image", "video"] },
-      initialValue: "image"
+      initialValue: "image",
+      description:
+        "Media Type controls whether the hero uses image or video. If no valid Mux video is attached, the site safely falls back to image."
     }),
     defineField({
       name: "image",
       title: "Desktop image",
       type: "image",
       options: { hotspot: true },
-      hidden: ({ parent }) => parent?.mediaType === "video"
+      description: "Primary desktop image. Also used as a safe fallback when no valid hero video is available."
     }),
     defineField({
       name: "mobileImage",
       title: "Mobile image",
       type: "image",
       options: { hotspot: true },
-      hidden: ({ parent }) => parent?.mediaType === "video"
+      description: "Optional mobile-specific image fallback for smaller screens."
     }),
     defineField({
       name: "video",
       title: "Mux Video",
       type: "mux.video",
-      hidden: videoFieldHidden
+      description:
+        "Upload a Mux video here. It will only render as the hero background when Media Type is set to Video and the video asset is valid."
     }),
     defineField({
       name: "posterImage",
-      title: "Video poster image",
+      title: "Video poster / fallback image",
       type: "image",
       options: { hotspot: true },
-      hidden: videoFieldHidden
+      description: "Shown while the hero video loads and used as a backup image when needed."
     }),
     defineField({
       name: "videoAspectRatio",
@@ -84,7 +95,7 @@ export const mediaAsset = defineType({
         ]
       },
       initialValue: "16 / 9",
-      hidden: videoFieldHidden
+      description: "Choose how the hero video frame should be sized when Media Type is set to Video."
     }),
     defineField({
       name: "videoObjectFit",
@@ -97,22 +108,45 @@ export const mediaAsset = defineType({
         ]
       },
       initialValue: "cover",
-      hidden: videoFieldHidden
+      description: "Default hero video fit. Cover is recommended for most slides."
     }),
     defineField({
       name: "videoMaxWidth",
       title: "Video max width",
       type: "number",
       description: "Optional display width in pixels for page media. Leave empty to use the layout default.",
-      validation: (Rule) => Rule.min(240).max(1600),
-      hidden: videoFieldHidden
+      validation: (Rule) => Rule.min(240).max(1600)
     }),
     defineField({
       name: "videoAutoplay",
       title: "Autoplay when used as hero/background",
       type: "boolean",
       initialValue: true,
-      hidden: videoFieldHidden
+      description: "Hero videos autoplay when valid. Leave enabled for standard homepage hero behavior."
+    }),
+    defineField({
+      name: "videoMuted",
+      title: "Muted hero playback",
+      type: "boolean",
+      initialValue: true,
+      readOnly: true,
+      description: "Locked on for browser-safe hero autoplay."
+    }),
+    defineField({
+      name: "videoLoop",
+      title: "Loop hero playback",
+      type: "boolean",
+      initialValue: true,
+      readOnly: true,
+      description: "Locked on for continuous hero playback."
+    }),
+    defineField({
+      name: "videoPlaysInline",
+      title: "Play inline on mobile",
+      type: "boolean",
+      initialValue: true,
+      readOnly: true,
+      description: "Locked on for browser-safe inline hero playback."
     }),
     defineField({ name: "altText", title: "Alt text", type: "string", validation: (Rule) => Rule.required() }),
     defineField({
@@ -225,6 +259,19 @@ export const heroSlide = defineType({
   name: "heroSlide",
   title: "Hero slide",
   type: "object",
+  initialValue: {
+    media: {
+      mediaType: "image",
+      videoAutoplay: true,
+      videoMuted: true,
+      videoLoop: true,
+      videoPlaysInline: true,
+      videoAspectRatio: "16 / 9",
+      videoObjectFit: "cover",
+      theme: "foundry",
+      overlayOpacity: 0.68
+    }
+  },
   fieldsets: [
     { name: "content", title: "Content", options: { collapsible: true, collapsed: false } },
     { name: "table", title: "Optional specification table", options: { collapsible: true, collapsed: true } },
@@ -259,7 +306,23 @@ export const heroSlide = defineType({
       fieldset: "content"
     }),
     defineField({ name: "supportText", title: "Support text", type: "text", rows: 3, fieldset: "content" }),
-    defineField({ name: "media", title: "Media", type: "mediaAsset", fieldset: "content" }),
+    defineField({
+      name: "media",
+      title: "Media",
+      type: "mediaAsset",
+      fieldset: "content",
+      initialValue: {
+        mediaType: "image",
+        videoAutoplay: true,
+        videoMuted: true,
+        videoLoop: true,
+        videoPlaysInline: true,
+        videoAspectRatio: "16 / 9",
+        videoObjectFit: "cover",
+        theme: "foundry",
+        overlayOpacity: 0.68
+      }
+    }),
     defineField({ name: "primaryCta", title: "Primary CTA", type: "cta", fieldset: "content" }),
     defineField({ name: "secondaryCta", title: "Secondary CTA", type: "cta", fieldset: "content" }),
     defineField({ name: "featureCards", title: "Feature cards", type: "array", of: [{ type: "card" }], fieldset: "content" }),

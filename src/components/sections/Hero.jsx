@@ -30,6 +30,9 @@ export function Hero({ slides = heroSlides }) {
   const heroVideo = activeSlide?.media?.videoFileUrl || activeSlide?.media?.videoUrl;
   const showVideo = activeSlide?.media?.mediaType === "video" && (playbackId || heroVideo);
   const heroShouldAutoplay = showVideo && activeSlide.media?.videoAutoplay !== false && !reducedMotion;
+  const heroShouldMute = activeSlide?.media?.videoMuted !== false;
+  const heroShouldLoop = activeSlide?.media?.videoLoop !== false;
+  const heroShouldPlayInline = activeSlide?.media?.videoPlaysInline !== false;
   const mediaCaption = showVideo ? activeSlide?.media?.caption : "";
 
   useEffect(() => {
@@ -222,9 +225,9 @@ export function Hero({ slides = heroSlides }) {
                   isLazy={activeIndex > 0}
                   preload={activeIndex === 0 ? "auto" : "none"}
                   autoPlay={heroShouldAutoplay}
-                  muted
-                  loop
-                  playsInline
+                  muted={heroShouldMute}
+                  loop={heroShouldLoop}
+                  playsInline={heroShouldPlayInline}
                   poster={heroPoster || heroImage}
                   style={{
                     aspectRatio: activeSlide.media?.videoAspectRatio || "16/9",
@@ -235,12 +238,12 @@ export function Hero({ slides = heroSlides }) {
                 <video
                   key={heroVideo}
                   autoPlay={heroShouldAutoplay}
-                  muted
-                  loop
+                  muted={heroShouldMute}
+                  loop={heroShouldLoop}
                   controlsList="nodownload nofullscreen noplaybackrate noremoteplayback"
                   disablePictureInPicture
                   disableRemotePlayback
-                  playsInline
+                  playsInline={heroShouldPlayInline}
                   preload="metadata"
                   poster={heroPoster || heroImage}
                   onContextMenu={(event) => event.preventDefault()}
